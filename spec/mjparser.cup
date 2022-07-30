@@ -1,0 +1,281 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    //redefined methods for error reporting (changed error message)
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSyntax error!", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatal syntax error! Parsing stopped!", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+/* terminals */
+
+terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT, GOTO, INSTANCEOF, NEW, VOID, CLASS, THIS, ENUM, SUPER;
+terminal LBRACE, RBRACE, LBRACKET, RBRACKET, LPAREN, RPAREN;
+terminal SEMI, COMMA, COLON, DOT;
+terminal ASSIGN;
+terminal IS_EQUAL, NOT_EQUAL, GREATER, GREATER_OR_EQUAL, LESS, LESS_OR_EQUAL;
+terminal INC, DEC;
+terminal PLUS, MINUS, MUL, DIV, MOD, QQ; 
+terminal OR, AND;
+terminal String IDENT;
+terminal Integer NUMBER;
+terminal Character CHAR;
+terminal Boolean BOOL;
+
+/* =========================================================================== */
+/* nonterminals */
+
+nonterminal Program, ProgramName, ProgramDeclListNullable, ProgramDecl;
+nonterminal ConstDecl, ConstType, ConstAssignList, ConstAssign, ConstName;
+nonterminal VarDecl, VarType, VarList, Var, VarName, VarDeclListNullable;
+nonterminal ClassDecl, ClassName, ClassExtendsOptional, ClassBody, ClassParentType, ClassBodyMethodsOptional;
+nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
+nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
+nonterminal Type;
+nonterminal Statement, StatementLabelOptional, StatementListNullable;
+nonterminal SingleStatement;
+nonterminal Statements;
+
+nonterminal Label;
+
+
+nonterminal Constant;
+nonterminal BracketsOptional;
+
+
+/* =========================================================================== */
+/* precedences */
+
+precedence left ELSE;
+
+/* =========================================================================== */
+/* Program */
+
+Program ::= (Program) PROG ProgramName ProgramDeclListNullable LBRACE MethodDeclListNullable RBRACE;
+
+ProgramName ::= (ProgramName) IDENT:programName;
+
+ProgramDeclListNullable ::=
+					(ProgramDeclList) ProgramDeclListNullable ProgramDecl
+				|
+					(EmptyProgramDeclList) /* epsilon */
+				;
+				
+ProgramDecl ::=
+					(ProgramDeclConst) ConstDecl
+				|
+					(ProgramDeclVar) VarDecl
+				|
+					(ProgramDeclClass) ClassDecl
+				;
+				
+/* =========================================================================== */
+/* ConstDecl */
+
+ConstDecl ::= (ConstDecl) CONST ConstType ConstAssignList SEMI;
+
+ConstType ::= (ConstType) Type:constType;
+
+ConstAssignList ::=
+					(ConstListSingle) ConstAssign
+				|
+					(ConstListMany) ConstAssignList COMMA ConstAssign
+				;
+
+ConstAssign ::= (ConstAssign) ConstName ASSIGN Constant;
+
+ConstName ::= (ConstName) IDENT:constName;
+
+/* =========================================================================== */
+/* Constant */
+
+Constant ::=
+				(NumConst) NUMBER:number
+			|
+				(CharConst) CHAR:char
+			|
+				(BoolConst) BOOL:bool
+			;
+
+/* =========================================================================== */
+/* VarDecl */
+
+VarDecl ::= (VarDecl) VarType VarList SEMI;
+
+VarType ::= (VarType) Type:varType;
+
+VarList ::=
+				(VarListSingle) Var
+			|
+				(VarListMany) VarList COMMA Var
+			|
+				(VarListError) error:l
+				{: 
+					parser.report_error("Error recovery in VarList at line "+lleft+". Recovered to next , or ;", null);
+				:}
+			;	
+				
+Var ::= (Var) VarName BracketsOptional;		
+		
+VarName ::= (VarName) IDENT:varName;
+
+VarDeclListNullable ::=
+					(VarDeclList) VarDeclListNullable VarDecl
+				|
+					(EmptyVarDeclListNullable) /* epsilon */
+				;
+
+/* =========================================================================== */
+/* ClassDecl */
+
+ClassDecl ::= (ClassDecl) CLASS ClassName ClassExtendsOptional LBRACE ClassBody RBRACE;
+
+ClassName ::= (ClassName) IDENT:className;
+
+ClassExtendsOptional ::= 
+							(ClassExtendsYes) EXTENDS ClassParentType
+						|
+							(ClassExtendsNo) /* epsilon */
+						;
+
+ClassParentType ::= (ClassParentType) Type:classParentType;
+
+ClassBody ::= (ClassBody) VarDeclListNullable ClassBodyMethodsOptional;
+
+ClassBodyMethodsOptional ::=
+								(ClassBodyMethodsYes) LBRACE MethodDeclListNullable RBRACE
+							|
+								(ClassBodyMethodsNo) /* epsilon */
+							;
+							
+/* =========================================================================== */
+/* MethodDecl */
+			
+MethodDecl ::= (MethodDecl) MethodReturnType MethodName LPAREN FormParsOptional RPAREN VarDeclListNullable LBRACE StatementListNullable RBRACE;
+
+MethodReturnType ::=
+						(MethodReturnTypeRegular) Type:methodReturnType
+					|
+						(MethodReturnTypeVoid) VOID
+					;
+					
+MethodName ::= (MethodName) IDENT:methodName;
+
+MethodDeclListNullable ::=
+							(MethodDeclList) MethodDeclListNullable MethodDecl
+						|
+							(EmptyMethodDeclList) /* epsilon */
+						;			
+							
+/* =========================================================================== */
+/* FormPars */	
+
+FormPars ::=
+				(FormParsSingle) FormPar
+			|
+				(FormParsMany) FormPars COMMA FormPar
+			; 
+
+FormPar ::= (FormPar) FormParType FormParName BracketsOptional;
+
+FormParType ::= (FormParType) Type:formParType;
+
+FormParName ::= (FormParName) IDENT:formParName;
+
+FormParsOptional ::= 
+					(FormParsYes) FormPars
+				|
+					(FormParsNo) /* epsilon */
+				;
+				
+/* =========================================================================== */
+/* Type */
+
+Type ::= (Type) IDENT:typeName;
+
+/* =========================================================================== */
+/* Statement */
+
+Statement ::=
+				(StatementSingle) StatementLabelOptional SingleStatement
+			|
+				(StatementMany) Statements
+			;
+
+StatementLabelOptional ::=
+							(StatementLabelYes) Label COLON
+						|
+							(StatementLabelNo) /* epsilon */
+						;
+						
+StatementListNullable ::=
+							(StatementList) StatementListNullable Statement
+						|
+							(EmptyStatementList) /* epsilon */
+						;
+
+/* =========================================================================== */
+/* SingleStatement */
+
+
+/* =========================================================================== */
+/* Statements */
+
+/* =========================================================================== */
+/* BracketsOptional */
+				
+BracketsOptional ::=
+						(BracketsYes) LBRACKET RBRACKET
+					|
+						(BracketsNo) /* epsilon */
+					;		
+		
+/* =========================================================================== */

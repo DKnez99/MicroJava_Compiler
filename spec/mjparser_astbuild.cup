@@ -1,0 +1,307 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    //redefined methods for error reporting (changed error message)
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSyntax error!", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatal syntax error! Parsing stopped!", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" at line ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+/* =========================================================================== */
+/* =========================================================================== */
+/* =========================================================================== */
+/* terminals */
+
+terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT, GOTO, INSTANCEOF, NEW, VOID, CLASS, THIS, ENUM, SUPER;
+terminal LBRACE, RBRACE, LBRACKET, RBRACKET, LPAREN, RPAREN;
+terminal SEMI, COMMA, COLON, DOT;
+terminal ASSIGN;
+terminal IS_EQUAL, NOT_EQUAL, GREATER, GREATER_OR_EQUAL, LESS, LESS_OR_EQUAL;
+terminal INC, DEC;
+terminal PLUS, MINUS, MUL, DIV, MOD, QQ; 
+terminal OR, AND;
+terminal String IDENT;
+terminal Integer NUMBER;
+terminal Character CHAR;
+terminal Boolean BOOL;
+
+/* =========================================================================== */
+/* nonterminals */
+
+nonterminal Program Program;
+nonterminal ProgramName ProgramName;
+nonterminal ProgramDeclListNullable ProgramDeclListNullable;
+nonterminal ProgramDecl ProgramDecl;
+nonterminal ConstDecl ConstDecl;
+nonterminal ConstType ConstType;
+nonterminal ConstAssignList ConstAssignList;
+nonterminal ConstAssign ConstAssign;
+nonterminal ConstName ConstName;
+nonterminal VarDecl VarDecl;
+nonterminal VarType VarType;
+nonterminal VarList VarList;
+nonterminal Var Var;
+nonterminal VarName VarName;
+nonterminal VarDeclListNullable VarDeclListNullable;
+nonterminal ClassDecl ClassDecl;
+nonterminal ClassName ClassName;
+nonterminal ClassExtendsOptional ClassExtendsOptional;
+nonterminal ClassBody ClassBody;
+nonterminal ClassParentType ClassParentType;
+nonterminal ClassBodyMethodsOptional ClassBodyMethodsOptional;
+nonterminal MethodDecl MethodDecl;
+nonterminal MethodReturnType MethodReturnType;
+nonterminal MethodName MethodName;
+nonterminal MethodDeclListNullable MethodDeclListNullable;
+nonterminal FormPars FormPars;
+nonterminal FormPar FormPar;
+nonterminal FormParType FormParType;
+nonterminal FormParName FormParName;
+nonterminal FormParsOptional FormParsOptional;
+nonterminal Type Type;
+nonterminal Statement Statement;
+nonterminal StatementLabelOptional StatementLabelOptional;
+nonterminal StatementListNullable StatementListNullable;
+nonterminal SingleStatement SingleStatement;
+nonterminal Statements Statements;
+
+nonterminal Label Label;
+
+
+nonterminal Constant Constant;
+nonterminal BracketsOptional BracketsOptional;
+
+
+/* =========================================================================== */
+/* precedences */
+
+precedence left ELSE;
+
+/* =========================================================================== */
+/* Program */
+
+Program ::= (Program) PROG ProgramName:P1 ProgramDeclListNullable:P2 LBRACE MethodDeclListNullable:M3 RBRACE {: RESULT=new Program(P1, P2, M3); RESULT.setLine(P1left); :};
+
+ProgramName ::= (ProgramName) IDENT:programName {: RESULT=new ProgramName(programName); RESULT.setLine(programNameleft); :};
+
+ProgramDeclListNullable ::=
+					(ProgramDeclList) ProgramDeclListNullable:P1 ProgramDecl:P2 {: RESULT=new ProgramDeclList(P1, P2); RESULT.setLine(P1left); :}
+				|
+					(EmptyProgramDeclList) {: RESULT=new EmptyProgramDeclList(); :} /* epsilon */
+				;
+				
+ProgramDecl ::=
+					(ProgramDeclConst) ConstDecl:C1 {: RESULT=new ProgramDeclConst(C1); RESULT.setLine(C1left); :}
+				|
+					(ProgramDeclVar) VarDecl:V1 {: RESULT=new ProgramDeclVar(V1); RESULT.setLine(V1left); :}
+				|
+					(ProgramDeclClass) ClassDecl:C1 {: RESULT=new ProgramDeclClass(C1); RESULT.setLine(C1left); :}
+				;
+				
+/* =========================================================================== */
+/* ConstDecl */
+
+ConstDecl ::= (ConstDecl) CONST ConstType:C1 ConstAssignList:C2 SEMI {: RESULT=new ConstDecl(C1, C2); RESULT.setLine(C1left); :};
+
+ConstType ::= (ConstType) Type:constType {: RESULT=new ConstType(constType); RESULT.setLine(constTypeleft); :};
+
+ConstAssignList ::=
+					(ConstListSingle) ConstAssign:C1 {: RESULT=new ConstListSingle(C1); RESULT.setLine(C1left); :}
+				|
+					(ConstListMany) ConstAssignList:C1 COMMA ConstAssign:C2 {: RESULT=new ConstListMany(C1, C2); RESULT.setLine(C1left); :}
+				;
+
+ConstAssign ::= (ConstAssign) ConstName:C1 ASSIGN Constant:C2 {: RESULT=new ConstAssign(C1, C2); RESULT.setLine(C1left); :};
+
+ConstName ::= (ConstName) IDENT:constName {: RESULT=new ConstName(constName); RESULT.setLine(constNameleft); :};
+
+/* =========================================================================== */
+/* Constant */
+
+Constant ::=
+				(NumConst) NUMBER:number {: RESULT=new NumConst(number); RESULT.setLine(numberleft); :}
+			|
+				(CharConst) CHAR:char {: RESULT=new CharConst(char); RESULT.setLine(charleft); :}
+			|
+				(BoolConst) BOOL:bool {: RESULT=new BoolConst(bool); RESULT.setLine(boolleft); :}
+			;
+
+/* =========================================================================== */
+/* VarDecl */
+
+VarDecl ::= (VarDecl) VarType:V1 VarList:V2 SEMI {: RESULT=new VarDecl(V1, V2); RESULT.setLine(V1left); :};
+
+VarType ::= (VarType) Type:varType {: RESULT=new VarType(varType); RESULT.setLine(varTypeleft); :};
+
+VarList ::=
+				(VarListSingle) Var:V1 {: RESULT=new VarListSingle(V1); RESULT.setLine(V1left); :}
+			|
+				(VarListMany) VarList:V1 COMMA Var:V2 {: RESULT=new VarListMany(V1, V2); RESULT.setLine(V1left); :}
+			|
+				(VarListError) error:l
+				{: 
+					parser.report_error("Error recovery in VarList at line "+lleft+". Recovered to next , or ;", null);
+				:} {: RESULT=new VarListError(); :}
+			;	
+				
+Var ::= (Var) VarName:V1 BracketsOptional:B2 {: RESULT=new Var(V1, B2); RESULT.setLine(V1left); :};		
+		
+VarName ::= (VarName) IDENT:varName {: RESULT=new VarName(varName); RESULT.setLine(varNameleft); :};
+
+VarDeclListNullable ::=
+					(VarDeclList) VarDeclListNullable:V1 VarDecl:V2 {: RESULT=new VarDeclList(V1, V2); RESULT.setLine(V1left); :}
+				|
+					(EmptyVarDeclListNullable) {: RESULT=new EmptyVarDeclListNullable(); :} /* epsilon */
+				;
+
+/* =========================================================================== */
+/* ClassDecl */
+
+ClassDecl ::= (ClassDecl) CLASS ClassName:C1 ClassExtendsOptional:C2 LBRACE ClassBody:C3 RBRACE {: RESULT=new ClassDecl(C1, C2, C3); RESULT.setLine(C1left); :};
+
+ClassName ::= (ClassName) IDENT:className {: RESULT=new ClassName(className); RESULT.setLine(classNameleft); :};
+
+ClassExtendsOptional ::= 
+							(ClassExtendsYes) EXTENDS ClassParentType:C1 {: RESULT=new ClassExtendsYes(C1); RESULT.setLine(C1left); :}
+						|
+							(ClassExtendsNo) {: RESULT=new ClassExtendsNo(); :} /* epsilon */
+						;
+
+ClassParentType ::= (ClassParentType) Type:classParentType {: RESULT=new ClassParentType(classParentType); RESULT.setLine(classParentTypeleft); :};
+
+ClassBody ::= (ClassBody) VarDeclListNullable:V1 ClassBodyMethodsOptional:C2 {: RESULT=new ClassBody(V1, C2); RESULT.setLine(V1left); :};
+
+ClassBodyMethodsOptional ::=
+								(ClassBodyMethodsYes) LBRACE MethodDeclListNullable:M1 RBRACE {: RESULT=new ClassBodyMethodsYes(M1); RESULT.setLine(M1left); :}
+							|
+								(ClassBodyMethodsNo) {: RESULT=new ClassBodyMethodsNo(); :} /* epsilon */
+							;
+							
+/* =========================================================================== */
+/* MethodDecl */
+			
+MethodDecl ::= (MethodDecl) MethodReturnType:M1 MethodName:M2 LPAREN FormParsOptional:F3 RPAREN VarDeclListNullable:V4 LBRACE StatementListNullable:S5 RBRACE {: RESULT=new MethodDecl(M1, M2, F3, V4, S5); RESULT.setLine(M1left); :};
+
+MethodReturnType ::=
+						(MethodReturnTypeRegular) Type:methodReturnType {: RESULT=new MethodReturnTypeRegular(methodReturnType); RESULT.setLine(methodReturnTypeleft); :}
+					|
+						(MethodReturnTypeVoid) VOID {: RESULT=new MethodReturnTypeVoid(); :}
+					;
+					
+MethodName ::= (MethodName) IDENT:methodName {: RESULT=new MethodName(methodName); RESULT.setLine(methodNameleft); :};
+
+MethodDeclListNullable ::=
+							(MethodDeclList) MethodDeclListNullable:M1 MethodDecl:M2 {: RESULT=new MethodDeclList(M1, M2); RESULT.setLine(M1left); :}
+						|
+							(EmptyMethodDeclList) {: RESULT=new EmptyMethodDeclList(); :} /* epsilon */
+						;			
+							
+/* =========================================================================== */
+/* FormPars */	
+
+FormPars ::=
+				(FormParsSingle) FormPar:F1 {: RESULT=new FormParsSingle(F1); RESULT.setLine(F1left); :}
+			|
+				(FormParsMany) FormPars:F1 COMMA FormPar:F2 {: RESULT=new FormParsMany(F1, F2); RESULT.setLine(F1left); :}
+			; 
+
+FormPar ::= (FormPar) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormPar(F1, F2, B3); RESULT.setLine(F1left); :};
+
+FormParType ::= (FormParType) Type:formParType {: RESULT=new FormParType(formParType); RESULT.setLine(formParTypeleft); :};
+
+FormParName ::= (FormParName) IDENT:formParName {: RESULT=new FormParName(formParName); RESULT.setLine(formParNameleft); :};
+
+FormParsOptional ::= 
+					(FormParsYes) FormPars:F1 {: RESULT=new FormParsYes(F1); RESULT.setLine(F1left); :}
+				|
+					(FormParsNo) {: RESULT=new FormParsNo(); :} /* epsilon */
+				;
+				
+/* =========================================================================== */
+/* Type */
+
+Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};
+
+/* =========================================================================== */
+/* Statement */
+
+Statement ::=
+				(StatementSingle) StatementLabelOptional:S1 SingleStatement:S2 {: RESULT=new StatementSingle(S1, S2); RESULT.setLine(S1left); :}
+			|
+				(StatementMany) Statements:S1 {: RESULT=new StatementMany(S1); RESULT.setLine(S1left); :}
+			;
+
+StatementLabelOptional ::=
+							(StatementLabelYes) Label:L1 COLON {: RESULT=new StatementLabelYes(L1); RESULT.setLine(L1left); :}
+						|
+							(StatementLabelNo) {: RESULT=new StatementLabelNo(); :} /* epsilon */
+						;
+						
+StatementListNullable ::=
+							(StatementList) StatementListNullable:S1 Statement:S2 {: RESULT=new StatementList(S1, S2); RESULT.setLine(S1left); :}
+						|
+							(EmptyStatementList) {: RESULT=new EmptyStatementList(); :} /* epsilon */
+						;
+
+/* =========================================================================== */
+/* SingleStatement */
+
+
+/* =========================================================================== */
+/* Statements */
+
+/* =========================================================================== */
+/* BracketsOptional */
+				
+BracketsOptional ::=
+						(BracketsYes) LBRACKET RBRACKET {: RESULT=new BracketsYes(); :}
+					|
+						(BracketsNo) {: RESULT=new BracketsNo(); :} /* epsilon */
+					;		
+		
+/* =========================================================================== */

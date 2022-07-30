@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 12:34:55
+// 30/6/2022 17:7:56
 
 
 package src.rs.ac.bg.etf.pp1.ast;
 
-public class VarListError extends VarList {
+public class RelopExprNo extends RelopExprOptional {
 
-    public VarListError () {
+    public RelopExprNo () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class VarListError extends VarList {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("VarListError(\n");
+        buffer.append("RelopExprNo(\n");
 
         buffer.append(tab);
-        buffer.append(") [VarListError]");
+        buffer.append(") [RelopExprNo]");
         return buffer.toString();
     }
 }

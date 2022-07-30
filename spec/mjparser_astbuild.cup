@@ -57,7 +57,7 @@ scan with {:
 /* =========================================================================== */
 /* terminals */
 
-terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT, GOTO, INSTANCEOF, NEW, VOID, CLASS, THIS, ENUM, SUPER;
+terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT,  NEW, VOID, CLASS, THIS, ENUM, SUPER;
 terminal LBRACE, RBRACE, LBRACKET, RBRACKET, LPAREN, RPAREN;
 terminal SEMI, COMMA, COLON, DOT;
 terminal ASSIGN;
@@ -66,9 +66,9 @@ terminal INC, DEC;
 terminal PLUS, MINUS, MUL, DIV, MOD, QQ; 
 terminal OR, AND;
 terminal String IDENT;
-terminal Integer NUMBER;
-terminal Character CHAR;
-terminal Boolean BOOL;
+terminal Integer NUMBER_CONST;
+terminal Character CHAR_CONST;
+terminal Boolean BOOL_CONST;
 
 /* =========================================================================== */
 /* nonterminals */
@@ -119,8 +119,15 @@ nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
 nonterminal Expr Expr;
 nonterminal ExprOptional ExprOptional;
+nonterminal RelopExprOptional RelopExprOptional;
+nonterminal NegativeExprOptional NegativeExprOptional;
+nonterminal ExprInBracketsOptional ExprInBracketsOptional;
 nonterminal Term Term;
+nonterminal AddopTermListNullable AddopTermListNullable;
 nonterminal Factor Factor;
+nonterminal FactorType FactorType;
+nonterminal MulopFactorListNullable MulopFactorListNullable;
+nonterminal FactorDesignatorParenOptional FactorDesignatorParenOptional;
 nonterminal Designator Designator;
 nonterminal Label Label;
 nonterminal Assignop Assignop;
@@ -184,14 +191,14 @@ VarList ::=
 				(VarListSingle) Var:V1 {: RESULT=new VarListSingle(V1); RESULT.setLine(V1left); :}
 			|
 				(VarListMany) VarList:V1 COMMA Var:V2 {: RESULT=new VarListMany(V1, V2); RESULT.setLine(V1left); :}
-			|
-				(VarListError) error:l
-				{: 
-					parser.report_error("Error recovery in VarList at line "+lleft+". Recovered to next , or ;", null);
-				:} {: RESULT=new VarListError(); :}
 			;	
 				
-Var ::= (Var) VarName:V1 BracketsOptional:B2 {: RESULT=new Var(V1, B2); RESULT.setLine(V1left); :};		
+Var ::=
+			(Var) VarName:V1 BracketsOptional:B2 {: RESULT=new Var(V1, B2); RESULT.setLine(V1left); :}
+		|		
+			(VarError) error:l
+			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :} {: RESULT=new VarError(); :}
+		;
 		
 VarName ::= (VarName) IDENT:varName {: RESULT=new VarName(varName); RESULT.setLine(varNameleft); :};
 
@@ -252,8 +259,13 @@ FormPars ::=
 				(FormParsMany) FormPars:F1 COMMA FormPar:F2 {: RESULT=new FormParsMany(F1, F2); RESULT.setLine(F1left); :}
 			; 
 
-FormPar ::= (FormPar) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormPar(F1, F2, B3); RESULT.setLine(F1left); :};
-
+FormPar ::=
+				(FormPar) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormPar(F1, F2, B3); RESULT.setLine(F1left); :}
+			|
+				(FormParError) error:l
+				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :} {: RESULT=new FormParError(); :}
+			;
+			
 FormParType ::= (FormParType) Type:formParType {: RESULT=new FormParType(formParType); RESULT.setLine(formParTypeleft); :};
 
 FormParName ::= (FormParName) IDENT:formParName {: RESULT=new FormParName(formParName); RESULT.setLine(formParNameleft); :};
@@ -318,7 +330,7 @@ SingleStatementElseOptional ::=
 							;
 
 SingleStatementPrintNumConstOptional ::=
-											(SingleStatementPrintNumConstYes) COMMA NUMBER:printNumber {: RESULT=new SingleStatementPrintNumConstYes(printNumber); RESULT.setLine(printNumberleft); :}
+											(SingleStatementPrintNumConstYes) COMMA NUMBER_CONST:printNumber {: RESULT=new SingleStatementPrintNumConstYes(printNumber); RESULT.setLine(printNumberleft); :}
 										|
 											(SingleStatementPrintNumConstNo) {: RESULT=new SingleStatementPrintNumConstNo(); :} /* epsilon */
 										;
@@ -335,9 +347,7 @@ DesignatorStatement ::=
 							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI {: RESULT=new DesignatorStatementAssign(desination, expr); RESULT.setLine(desinationleft); :}
 						|
 							(DesignatorStatementAssignError) error:l SEMI
-							{:
-								parser.report_error("Error recovery in DesignatorStatementAssignError at line "+lleft+". Recovered to next ;", null);
-							:} {: RESULT=new DesignatorStatementAssignError(); :}
+							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :} {: RESULT=new DesignatorStatementAssignError(); :}
 						|
 							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional:A1 RPAREN SEMI {: RESULT=new DesignatorStatementFunctionCall(functionName, A1); RESULT.setLine(functionNameleft); :}
 						|
@@ -345,6 +355,7 @@ DesignatorStatement ::=
 						|
 							(DesignatorStatementPostDec) Designator:varName DEC SEMI {: RESULT=new DesignatorStatementPostDec(varName); RESULT.setLine(varNameleft); :}
 						;
+						
 /* =========================================================================== */
 /* ActPars */
 
@@ -359,16 +370,160 @@ ActParsOptional ::=
 					|
 						(ActParsNo) {: RESULT=new ActParsNo(); :}	/* epsilon */
 					;
-											
+
+/* =========================================================================== */
+/* Condition */
+
+Condition ::=
+				(ConditionSingle) CondTerm:C1 {: RESULT=new ConditionSingle(C1); RESULT.setLine(C1left); :}
+			|
+				(ConditionMany) Condition:C1 OR CondTerm:C2 {: RESULT=new ConditionMany(C1, C2); RESULT.setLine(C1left); :}
+			|
+				(ConditionError) Condition:C1 error:l
+				{: parser.report_error("Error recovery (level B) in condition at line " + lleft + ". Recovered to the next )", null); :} {: RESULT=new ConditionError(C1); RESULT.setLine(C1left); :}
+			;
+
+/* =========================================================================== */
+/* CondTerm */
+
+CondTerm ::=
+				(CondTermSingle) CondFact:C1 {: RESULT=new CondTermSingle(C1); RESULT.setLine(C1left); :}
+			|
+				(CondTermMany) CondTerm:C1 AND CondFact:C2 {: RESULT=new CondTermMany(C1, C2); RESULT.setLine(C1left); :}
+			;
+
+/* =========================================================================== */
+/* CondFact */
+
+CondFact ::= (CondFact) Expr:E1 RelopExprOptional:R2 {: RESULT=new CondFact(E1, R2); RESULT.setLine(E1left); :};
+
+/* =========================================================================== */
+/* Expr */
+
+Expr ::=
+			(ExprTerm) NegativeExprOptional:N1 Term:T2 AddopTermListNullable:A3 {: RESULT=new ExprTerm(N1, T2, A3); RESULT.setLine(N1left); :}
+		;
+		
+NegativeExprOptional ::=
+							(NegativeExprYes) MINUS {: RESULT=new NegativeExprYes(); :}
+						|
+							(NegativeExprNo) {: RESULT=new NegativeExprNo(); :} /* epsilon */
+						;
+ExprOptional ::=
+					(ExprYes) Expr:E1 {: RESULT=new ExprYes(E1); RESULT.setLine(E1left); :}
+				|
+					(ExprNo) {: RESULT=new ExprNo(); :} /* epsilon */
+				;
+
+ExprInBracketsOptional ::=
+							(ExprInBracketsYes) LBRACKET Expr:E1 RBRACKET {: RESULT=new ExprInBracketsYes(E1); RESULT.setLine(E1left); :}
+						|
+							(ExprInBracketsNo) {: RESULT=new ExprInBracketsNo(); :} /* epsilon */
+						;
+
+RelopExprOptional ::=
+						(RelopExprYes) Relop:R1 Expr:E2 {: RESULT=new RelopExprYes(R1, E2); RESULT.setLine(R1left); :}
+					|
+						(RelopExprNo) {: RESULT=new RelopExprNo(); :} /* epsilon */
+					;
+
+/* =========================================================================== */
+/* Term */
+
+Term ::= (Term) Factor:F1 MulopFactorListNullable:M2 {: RESULT=new Term(F1, M2); RESULT.setLine(F1left); :};
+
+/* =========================================================================== */
+/* Factor */
+
+Factor ::=
+				(FactorDesignator) Designator:D1 FactorDesignatorParenOptional:F2 {: RESULT=new FactorDesignator(D1, F2); RESULT.setLine(D1left); :}
+			|
+				(FactorConstant) Constant:C1 {: RESULT=new FactorConstant(C1); RESULT.setLine(C1left); :}
+			|
+				(FactorNewType) NEW Type:objectType ExprInBracketsOptional:E1 {: RESULT=new FactorNewType(objectType, E1); RESULT.setLine(objectTypeleft); :}
+			|
+				(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}	
+			;
+			
+FactorDesignatorParenOptional ::=
+									(FactorDesignatorParenYes) LPAREN ActParsOptional:A1 RPAREN {: RESULT=new FactorDesignatorParenYes(A1); RESULT.setLine(A1left); :}
+								|
+									(FactorDesignatorParenNo) {: RESULT=new FactorDesignatorParenNo(); :} /* epsilon */
+								;
+
+MulopFactorListNullable ::=
+								(MulopFactorList) MulopFactorListNullable:M1 Mulop:M2 Factor:F3 {: RESULT=new MulopFactorList(M1, M2, F3); RESULT.setLine(M1left); :}
+							|
+								(EmptyMulopFactorList) {: RESULT=new EmptyMulopFactorList(); :} /* epsilon */
+							;		
+
+/* =========================================================================== */
+/* Designator */
+			
+Designator ::=	
+					(DesignatorClassEntity) Designator:designatorEntityName DOT IDENT:classField {: RESULT=new DesignatorClassEntity(designatorEntityName, classField); RESULT.setLine(designatorEntityNameleft); :}
+				|
+					(DesignatorArray) Designator:designatorArrayName LBRACKET Expr:arrayIndex RBRACKET {: RESULT=new DesignatorArray(designatorArrayName, arrayIndex); RESULT.setLine(designatorArrayNameleft); :}
+				|
+					(DesignatorDefault) IDENT:designatorName {: RESULT=new DesignatorDefault(designatorName); RESULT.setLine(designatorNameleft); :}
+				; 
+
+/* =========================================================================== */
+/* Label */
+			
+
+
+/* =========================================================================== */
+/* Assignop */
+
+Assignop ::= (Assign) ASSIGN {: RESULT=new Assign(); :};
+
+/* =========================================================================== */
+/* Relop */
+
+Relop ::= 
+			(IsEqual) IS_EQUAL {: RESULT=new IsEqual(); :}
+		|
+			(NotEqual) NOT_EQUAL {: RESULT=new NotEqual(); :}
+		|
+			(GreaterThan) GREATER {: RESULT=new GreaterThan(); :}
+		|
+			(GreaterOrEqualTo) GREATER_OR_EQUAL {: RESULT=new GreaterOrEqualTo(); :}
+		|
+			(LessThan) LESS {: RESULT=new LessThan(); :}
+		|
+			(LessOrEqualTo) LESS_OR_EQUAL {: RESULT=new LessOrEqualTo(); :}
+		;
+
+/* =========================================================================== */
+/* Addop */
+
+Addop ::=
+			(Plus) PLUS {: RESULT=new Plus(); :}
+		|
+			(Minus) MINUS {: RESULT=new Minus(); :}
+		;
+
+/* =========================================================================== */
+/* Mulop */
+
+Mulop ::= 
+			(Mul) MUL {: RESULT=new Mul(); :}
+		|
+			(Div) DIV {: RESULT=new Div(); :}
+		|
+			(Mod) MOD {: RESULT=new Mod(); :}
+		;
+
 /* =========================================================================== */
 /* Constant */
 
 Constant ::=
-				(NumConst) NUMBER:number {: RESULT=new NumConst(number); RESULT.setLine(numberleft); :}
+				(NumConst) NUMBER_CONST:numberValue {: RESULT=new NumConst(numberValue); RESULT.setLine(numberValueleft); :}
 			|
-				(CharConst) CHAR:char {: RESULT=new CharConst(char); RESULT.setLine(charleft); :}
+				(CharConst) CHAR_CONST:charValue {: RESULT=new CharConst(charValue); RESULT.setLine(charValueleft); :}
 			|
-				(BoolConst) BOOL:bool {: RESULT=new BoolConst(bool); RESULT.setLine(boolleft); :}
+				(BoolConst) BOOL_CONST:boolValue {: RESULT=new BoolConst(boolValue); RESULT.setLine(boolValueleft); :}
 			;
 
 /* =========================================================================== */

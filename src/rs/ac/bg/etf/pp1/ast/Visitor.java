@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 12:34:55
+// 30/6/2022 17:7:56
 
 
 package src.rs.ac.bg.etf.pp1.ast;
@@ -15,15 +15,17 @@ public interface Visitor {
     public void visit(StatementListNullable StatementListNullable);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
+    public void visit(AddopTermListNullable AddopTermListNullable);
+    public void visit(RelopExprOptional RelopExprOptional);
     public void visit(ProgramDecl ProgramDecl);
     public void visit(Addop Addop);
+    public void visit(ExprInBracketsOptional ExprInBracketsOptional);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(VarList VarList);
     public void visit(ClassExtendsOptional ClassExtendsOptional);
     public void visit(Designator Designator);
     public void visit(StatementLabelOptional StatementLabelOptional);
-    public void visit(Term Term);
     public void visit(Condition Condition);
     public void visit(FormParsOptional FormParsOptional);
     public void visit(ClassBodyMethodsOptional ClassBodyMethodsOptional);
@@ -31,15 +33,18 @@ public interface Visitor {
     public void visit(SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional);
     public void visit(Expr Expr);
     public void visit(SingleStatementElseOptional SingleStatementElseOptional);
+    public void visit(FactorDesignatorParenOptional FactorDesignatorParenOptional);
     public void visit(ActPars ActPars);
     public void visit(ProgramDeclListNullable ProgramDeclListNullable);
     public void visit(DesignatorStatement DesignatorStatement);
     public void visit(BracketsOptional BracketsOptional);
+    public void visit(NegativeExprOptional NegativeExprOptional);
     public void visit(MethodReturnType MethodReturnType);
     public void visit(ConstAssignList ConstAssignList);
+    public void visit(MulopFactorListNullable MulopFactorListNullable);
     public void visit(Statement Statement);
+    public void visit(FactorType FactorType);
     public void visit(VarDeclListNullable VarDeclListNullable);
-    public void visit(CondFact CondFact);
     public void visit(SingleStatement SingleStatement);
     public void visit(FormPars FormPars);
     public void visit(BracketsNo BracketsNo);
@@ -47,6 +52,45 @@ public interface Visitor {
     public void visit(BoolConst BoolConst);
     public void visit(CharConst CharConst);
     public void visit(NumConst NumConst);
+    public void visit(Mod Mod);
+    public void visit(Div Div);
+    public void visit(Mul Mul);
+    public void visit(Minus Minus);
+    public void visit(Plus Plus);
+    public void visit(LessOrEqualTo LessOrEqualTo);
+    public void visit(LessThan LessThan);
+    public void visit(GreaterOrEqualTo GreaterOrEqualTo);
+    public void visit(GreaterThan GreaterThan);
+    public void visit(NotEqual NotEqual);
+    public void visit(IsEqual IsEqual);
+    public void visit(Assign Assign);
+    public void visit(DesignatorDefault DesignatorDefault);
+    public void visit(DesignatorArray DesignatorArray);
+    public void visit(DesignatorClassEntity DesignatorClassEntity);
+    public void visit(EmptyMulopFactorList EmptyMulopFactorList);
+    public void visit(MulopFactorList MulopFactorList);
+    public void visit(FactorDesignatorParenNo FactorDesignatorParenNo);
+    public void visit(FactorDesignatorParenYes FactorDesignatorParenYes);
+    public void visit(FactorExpr FactorExpr);
+    public void visit(FactorNewType FactorNewType);
+    public void visit(FactorConstant FactorConstant);
+    public void visit(FactorDesignator FactorDesignator);
+    public void visit(Term Term);
+    public void visit(RelopExprNo RelopExprNo);
+    public void visit(RelopExprYes RelopExprYes);
+    public void visit(ExprInBracketsNo ExprInBracketsNo);
+    public void visit(ExprInBracketsYes ExprInBracketsYes);
+    public void visit(ExprNo ExprNo);
+    public void visit(ExprYes ExprYes);
+    public void visit(NegativeExprNo NegativeExprNo);
+    public void visit(NegativeExprYes NegativeExprYes);
+    public void visit(ExprTerm ExprTerm);
+    public void visit(CondFact CondFact);
+    public void visit(CondTermMany CondTermMany);
+    public void visit(CondTermSingle CondTermSingle);
+    public void visit(ConditionError ConditionError);
+    public void visit(ConditionMany ConditionMany);
+    public void visit(ConditionSingle ConditionSingle);
     public void visit(ActParsNo ActParsNo);
     public void visit(ActParsYes ActParsYes);
     public void visit(ActParsMany ActParsMany);
@@ -80,6 +124,7 @@ public interface Visitor {
     public void visit(FormParsYes FormParsYes);
     public void visit(FormParName FormParName);
     public void visit(FormParType FormParType);
+    public void visit(FormParError FormParError);
     public void visit(FormPar FormPar);
     public void visit(FormParsMany FormParsMany);
     public void visit(FormParsSingle FormParsSingle);
@@ -100,8 +145,8 @@ public interface Visitor {
     public void visit(EmptyVarDeclListNullable EmptyVarDeclListNullable);
     public void visit(VarDeclList VarDeclList);
     public void visit(VarName VarName);
+    public void visit(VarError VarError);
     public void visit(Var Var);
-    public void visit(VarListError VarListError);
     public void visit(VarListMany VarListMany);
     public void visit(VarListSingle VarListSingle);
     public void visit(VarType VarType);

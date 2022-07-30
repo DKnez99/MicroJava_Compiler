@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 12:34:55
+// 30/6/2022 17:7:56
 
 
 package src.rs.ac.bg.etf.pp1.ast;
@@ -15,15 +15,17 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(StatementListNullable StatementListNullable) { }
     public void visit(Relop Relop) { }
     public void visit(Assignop Assignop) { }
+    public void visit(AddopTermListNullable AddopTermListNullable) { }
+    public void visit(RelopExprOptional RelopExprOptional) { }
     public void visit(ProgramDecl ProgramDecl) { }
     public void visit(Addop Addop) { }
+    public void visit(ExprInBracketsOptional ExprInBracketsOptional) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(VarList VarList) { }
     public void visit(ClassExtendsOptional ClassExtendsOptional) { }
     public void visit(Designator Designator) { }
     public void visit(StatementLabelOptional StatementLabelOptional) { }
-    public void visit(Term Term) { }
     public void visit(Condition Condition) { }
     public void visit(FormParsOptional FormParsOptional) { }
     public void visit(ClassBodyMethodsOptional ClassBodyMethodsOptional) { }
@@ -31,15 +33,18 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional) { }
     public void visit(Expr Expr) { }
     public void visit(SingleStatementElseOptional SingleStatementElseOptional) { }
+    public void visit(FactorDesignatorParenOptional FactorDesignatorParenOptional) { }
     public void visit(ActPars ActPars) { }
     public void visit(ProgramDeclListNullable ProgramDeclListNullable) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
     public void visit(BracketsOptional BracketsOptional) { }
+    public void visit(NegativeExprOptional NegativeExprOptional) { }
     public void visit(MethodReturnType MethodReturnType) { }
     public void visit(ConstAssignList ConstAssignList) { }
+    public void visit(MulopFactorListNullable MulopFactorListNullable) { }
     public void visit(Statement Statement) { }
+    public void visit(FactorType FactorType) { }
     public void visit(VarDeclListNullable VarDeclListNullable) { }
-    public void visit(CondFact CondFact) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(FormPars FormPars) { }
     public void visit(BracketsNo BracketsNo) { visit(); }
@@ -47,6 +52,45 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(BoolConst BoolConst) { visit(); }
     public void visit(CharConst CharConst) { visit(); }
     public void visit(NumConst NumConst) { visit(); }
+    public void visit(Mod Mod) { visit(); }
+    public void visit(Div Div) { visit(); }
+    public void visit(Mul Mul) { visit(); }
+    public void visit(Minus Minus) { visit(); }
+    public void visit(Plus Plus) { visit(); }
+    public void visit(LessOrEqualTo LessOrEqualTo) { visit(); }
+    public void visit(LessThan LessThan) { visit(); }
+    public void visit(GreaterOrEqualTo GreaterOrEqualTo) { visit(); }
+    public void visit(GreaterThan GreaterThan) { visit(); }
+    public void visit(NotEqual NotEqual) { visit(); }
+    public void visit(IsEqual IsEqual) { visit(); }
+    public void visit(Assign Assign) { visit(); }
+    public void visit(DesignatorDefault DesignatorDefault) { visit(); }
+    public void visit(DesignatorArray DesignatorArray) { visit(); }
+    public void visit(DesignatorClassEntity DesignatorClassEntity) { visit(); }
+    public void visit(EmptyMulopFactorList EmptyMulopFactorList) { visit(); }
+    public void visit(MulopFactorList MulopFactorList) { visit(); }
+    public void visit(FactorDesignatorParenNo FactorDesignatorParenNo) { visit(); }
+    public void visit(FactorDesignatorParenYes FactorDesignatorParenYes) { visit(); }
+    public void visit(FactorExpr FactorExpr) { visit(); }
+    public void visit(FactorNewType FactorNewType) { visit(); }
+    public void visit(FactorConstant FactorConstant) { visit(); }
+    public void visit(FactorDesignator FactorDesignator) { visit(); }
+    public void visit(Term Term) { visit(); }
+    public void visit(RelopExprNo RelopExprNo) { visit(); }
+    public void visit(RelopExprYes RelopExprYes) { visit(); }
+    public void visit(ExprInBracketsNo ExprInBracketsNo) { visit(); }
+    public void visit(ExprInBracketsYes ExprInBracketsYes) { visit(); }
+    public void visit(ExprNo ExprNo) { visit(); }
+    public void visit(ExprYes ExprYes) { visit(); }
+    public void visit(NegativeExprNo NegativeExprNo) { visit(); }
+    public void visit(NegativeExprYes NegativeExprYes) { visit(); }
+    public void visit(ExprTerm ExprTerm) { visit(); }
+    public void visit(CondFact CondFact) { visit(); }
+    public void visit(CondTermMany CondTermMany) { visit(); }
+    public void visit(CondTermSingle CondTermSingle) { visit(); }
+    public void visit(ConditionError ConditionError) { visit(); }
+    public void visit(ConditionMany ConditionMany) { visit(); }
+    public void visit(ConditionSingle ConditionSingle) { visit(); }
     public void visit(ActParsNo ActParsNo) { visit(); }
     public void visit(ActParsYes ActParsYes) { visit(); }
     public void visit(ActParsMany ActParsMany) { visit(); }
@@ -80,6 +124,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormParsYes FormParsYes) { visit(); }
     public void visit(FormParName FormParName) { visit(); }
     public void visit(FormParType FormParType) { visit(); }
+    public void visit(FormParError FormParError) { visit(); }
     public void visit(FormPar FormPar) { visit(); }
     public void visit(FormParsMany FormParsMany) { visit(); }
     public void visit(FormParsSingle FormParsSingle) { visit(); }
@@ -100,8 +145,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(EmptyVarDeclListNullable EmptyVarDeclListNullable) { visit(); }
     public void visit(VarDeclList VarDeclList) { visit(); }
     public void visit(VarName VarName) { visit(); }
+    public void visit(VarError VarError) { visit(); }
     public void visit(Var Var) { visit(); }
-    public void visit(VarListError VarListError) { visit(); }
     public void visit(VarListMany VarListMany) { visit(); }
     public void visit(VarListSingle VarListSingle) { visit(); }
     public void visit(VarType VarType) { visit(); }

@@ -59,15 +59,14 @@ import java_cup.runtime.Symbol;
 "continue"	{ return new_symbol(sym.CONTINUE, yytext()); }
 "this"		{ return new_symbol(sym.THIS, yytext()); }
 "super"		{ return new_symbol(sym.SUPER, yytext()); }
-"instanceof" { return new_symbol(sym.INSTANCEOF, yytext()); }
 
 //types of tokens
 
-"true"							{ return new_symbol(sym.BOOL, true); }
-"false"							{ return new_symbol(sym.BOOL, false); }
+"true"							{ return new_symbol(sym.BOOL_CONST, true); }
+"false"							{ return new_symbol(sym.BOOL_CONST, false); }
 ([a-z]|[A-Z])[a-z|A-Z|0-9|_]* 	{ return new_symbol(sym.IDENT, yytext()); }
-[0-9]+  						{ return new_symbol(sym.NUMBER, new Integer (yytext())); }
-'.'								{ return new_symbol(sym.CHAR, yytext().charAt(1)); }
+[0-9]+  						{ return new_symbol(sym.NUMBER_CONST, new Integer (yytext())); }
+'.'								{ return new_symbol(sym.CHAR_CONST, yytext().charAt(1)); }
 
 
 //operators

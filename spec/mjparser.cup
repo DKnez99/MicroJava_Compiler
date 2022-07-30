@@ -57,7 +57,7 @@ scan with {:
 /* =========================================================================== */
 /* terminals */
 
-terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT, GOTO, INSTANCEOF, NEW, VOID, CLASS, THIS, ENUM, SUPER;
+terminal PROG, CONST, EXTENDS, IF, ELSE, DO, WHILE, BREAK, CONTINUE, RETURN, READ, PRINT,  NEW, VOID, CLASS, THIS, ENUM, SUPER;
 terminal LBRACE, RBRACE, LBRACKET, RBRACKET, LPAREN, RPAREN;
 terminal SEMI, COMMA, COLON, DOT;
 terminal ASSIGN;
@@ -66,9 +66,9 @@ terminal INC, DEC;
 terminal PLUS, MINUS, MUL, DIV, MOD, QQ; 
 terminal OR, AND;
 terminal String IDENT;
-terminal Integer NUMBER;
-terminal Character CHAR;
-terminal Boolean BOOL;
+terminal Integer NUMBER_CONST;
+terminal Character CHAR_CONST;
+terminal Boolean BOOL_CONST;
 
 /* =========================================================================== */
 /* nonterminals */
@@ -88,9 +88,9 @@ nonterminal ActPars, ActParsOptional;
 nonterminal Condition;
 nonterminal CondTerm;
 nonterminal CondFact;
-nonterminal Expr, ExprOptional;
-nonterminal Term;
-nonterminal Factor;
+nonterminal Expr, ExprOptional, RelopExprOptional, NegativeExprOptional, ExprInBracketsOptional;
+nonterminal Term, AddopTermListNullable;
+nonterminal Factor, FactorType, MulopFactorListNullable, FactorDesignatorParenOptional;
 nonterminal Designator;
 nonterminal Label;
 nonterminal Assignop, Relop, Addop, Mulop;
@@ -151,14 +151,14 @@ VarList ::=
 				(VarListSingle) Var
 			|
 				(VarListMany) VarList COMMA Var
-			|
-				(VarListError) error:l
-				{: 
-					parser.report_error("Error recovery in VarList at line "+lleft+". Recovered to next , or ;", null);
-				:}
 			;	
 				
-Var ::= (Var) VarName BracketsOptional;		
+Var ::=
+			(Var) VarName BracketsOptional
+		|		
+			(VarError) error:l
+			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :}
+		;
 		
 VarName ::= (VarName) IDENT:varName;
 
@@ -219,8 +219,13 @@ FormPars ::=
 				(FormParsMany) FormPars COMMA FormPar
 			; 
 
-FormPar ::= (FormPar) FormParType FormParName BracketsOptional;
-
+FormPar ::=
+				(FormPar) FormParType FormParName BracketsOptional
+			|
+				(FormParError) error:l
+				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :}
+			;
+			
 FormParType ::= (FormParType) Type:formParType;
 
 FormParName ::= (FormParName) IDENT:formParName;
@@ -285,7 +290,7 @@ SingleStatementElseOptional ::=
 							;
 
 SingleStatementPrintNumConstOptional ::=
-											(SingleStatementPrintNumConstYes) COMMA NUMBER:printNumber
+											(SingleStatementPrintNumConstYes) COMMA NUMBER_CONST:printNumber
 										|
 											(SingleStatementPrintNumConstNo) /* epsilon */
 										;
@@ -302,9 +307,7 @@ DesignatorStatement ::=
 							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI
 						|
 							(DesignatorStatementAssignError) error:l SEMI
-							{:
-								parser.report_error("Error recovery in DesignatorStatementAssignError at line "+lleft+". Recovered to next ;", null);
-							:}
+							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :}
 						|
 							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional RPAREN SEMI
 						|
@@ -331,17 +334,156 @@ ActParsOptional ::=
 /* =========================================================================== */
 /* Condition */
 
+Condition ::=
+				(ConditionSingle) CondTerm
+			|
+				(ConditionMany) Condition OR CondTerm
+			|
+				(ConditionError) Condition error:l
+				{: parser.report_error("Error recovery (level B) in condition at line " + lleft + ". Recovered to the next )", null); :}
+			;
 
-										
+/* =========================================================================== */
+/* CondTerm */
+
+CondTerm ::=
+				(CondTermSingle) CondFact
+			|
+				(CondTermMany) CondTerm AND CondFact
+			;
+
+/* =========================================================================== */
+/* CondFact */
+
+CondFact ::= (CondFact) Expr RelopExprOptional;
+
+/* =========================================================================== */
+/* Expr */
+
+Expr ::=
+			(ExprTerm) NegativeExprOptional Term AddopTermListNullable
+		;
+		
+NegativeExprOptional ::=
+							(NegativeExprYes) MINUS
+						|
+							(NegativeExprNo) /* epsilon */
+						;
+ExprOptional ::=
+					(ExprYes) Expr
+				|
+					(ExprNo) /* epsilon */
+				;
+
+ExprInBracketsOptional ::=
+							(ExprInBracketsYes) LBRACKET Expr RBRACKET
+						|
+							(ExprInBracketsNo) /* epsilon */
+						;
+
+RelopExprOptional ::=
+						(RelopExprYes) Relop Expr
+					|
+						(RelopExprNo) /* epsilon */
+					;
+
+/* =========================================================================== */
+/* Term */
+
+Term ::= (Term) Factor MulopFactorListNullable;
+
+/* =========================================================================== */
+/* Factor */
+
+Factor ::=
+				(FactorDesignator) Designator FactorDesignatorParenOptional
+			|
+				(FactorConstant) Constant
+			|
+				(FactorNewType) NEW Type:objectType ExprInBracketsOptional
+			|
+				(FactorExpr) LPAREN Expr RPAREN	
+			;
+			
+FactorDesignatorParenOptional ::=
+									(FactorDesignatorParenYes) LPAREN ActParsOptional RPAREN
+								|
+									(FactorDesignatorParenNo) /* epsilon */
+								;
+
+MulopFactorListNullable ::=
+								(MulopFactorList) MulopFactorListNullable Mulop Factor
+							|
+								(EmptyMulopFactorList) /* epsilon */
+							;		
+
+/* =========================================================================== */
+/* Designator */
+			
+Designator ::=	
+					(DesignatorClassEntity) Designator:designatorEntityName DOT IDENT:classField
+				|
+					(DesignatorArray) Designator:designatorArrayName LBRACKET Expr:arrayIndex RBRACKET
+				|
+					(DesignatorDefault) IDENT:designatorName
+				; 
+
+/* =========================================================================== */
+/* Label */
+			
+
+
+/* =========================================================================== */
+/* Assignop */
+
+Assignop ::= (Assign) ASSIGN;
+
+/* =========================================================================== */
+/* Relop */
+
+Relop ::= 
+			(IsEqual) IS_EQUAL
+		|
+			(NotEqual) NOT_EQUAL
+		|
+			(GreaterThan) GREATER
+		|
+			(GreaterOrEqualTo) GREATER_OR_EQUAL
+		|
+			(LessThan) LESS
+		|
+			(LessOrEqualTo) LESS_OR_EQUAL
+		;
+
+/* =========================================================================== */
+/* Addop */
+
+Addop ::=
+			(Plus) PLUS
+		|
+			(Minus) MINUS
+		;
+
+/* =========================================================================== */
+/* Mulop */
+
+Mulop ::= 
+			(Mul) MUL
+		|
+			(Div) DIV
+		|
+			(Mod) MOD
+		;
+
 /* =========================================================================== */
 /* Constant */
 
 Constant ::=
-				(NumConst) NUMBER:number
+				(NumConst) NUMBER_CONST:numberValue
 			|
-				(CharConst) CHAR:char
+				(CharConst) CHAR_CONST:charValue
 			|
-				(BoolConst) BOOL:bool
+				(BoolConst) BOOL_CONST:boolValue
 			;
 
 /* =========================================================================== */

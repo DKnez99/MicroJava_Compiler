@@ -108,14 +108,27 @@ nonterminal Statement Statement;
 nonterminal StatementLabelOptional StatementLabelOptional;
 nonterminal StatementListNullable StatementListNullable;
 nonterminal SingleStatement SingleStatement;
+nonterminal SingleStatementElseOptional SingleStatementElseOptional;
+nonterminal SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional;
 nonterminal Statements Statements;
-
+nonterminal DesignatorStatement DesignatorStatement;
+nonterminal ActPars ActPars;
+nonterminal ActParsOptional ActParsOptional;
+nonterminal Condition Condition;
+nonterminal CondTerm CondTerm;
+nonterminal CondFact CondFact;
+nonterminal Expr Expr;
+nonterminal ExprOptional ExprOptional;
+nonterminal Term Term;
+nonterminal Factor Factor;
+nonterminal Designator Designator;
 nonterminal Label Label;
-
-
+nonterminal Assignop Assignop;
+nonterminal Relop Relop;
+nonterminal Addop Addop;
+nonterminal Mulop Mulop;
 nonterminal Constant Constant;
 nonterminal BracketsOptional BracketsOptional;
-
 
 /* =========================================================================== */
 /* precedences */
@@ -159,17 +172,6 @@ ConstAssignList ::=
 ConstAssign ::= (ConstAssign) ConstName:C1 ASSIGN Constant:C2 {: RESULT=new ConstAssign(C1, C2); RESULT.setLine(C1left); :};
 
 ConstName ::= (ConstName) IDENT:constName {: RESULT=new ConstName(constName); RESULT.setLine(constNameleft); :};
-
-/* =========================================================================== */
-/* Constant */
-
-Constant ::=
-				(NumConst) NUMBER:number {: RESULT=new NumConst(number); RESULT.setLine(numberleft); :}
-			|
-				(CharConst) CHAR:char {: RESULT=new CharConst(char); RESULT.setLine(charleft); :}
-			|
-				(BoolConst) BOOL:bool {: RESULT=new BoolConst(bool); RESULT.setLine(boolleft); :}
-			;
 
 /* =========================================================================== */
 /* VarDecl */
@@ -291,9 +293,83 @@ StatementListNullable ::=
 /* =========================================================================== */
 /* SingleStatement */
 
+SingleStatement ::=
+					(SingleStatementDesignatorStatement) DesignatorStatement:D1 SEMI {: RESULT=new SingleStatementDesignatorStatement(D1); RESULT.setLine(D1left); :}
+				|
+					(SingleStatementIf) IF LPAREN Condition:C1 RPAREN Statement:S2 SingleStatementElseOptional:S3 {: RESULT=new SingleStatementIf(C1, S2, S3); RESULT.setLine(C1left); :}
+				|
+					(SingleStatementDo) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMI {: RESULT=new SingleStatementDo(S1, C2); RESULT.setLine(S1left); :}
+				|
+					(SingleStatementBreak) BREAK SEMI {: RESULT=new SingleStatementBreak(); :}
+				|
+					(SingleStatementContinue) CONTINUE SEMI {: RESULT=new SingleStatementContinue(); :}
+				|
+					(SingleStatementReturn) RETURN ExprOptional:E1 SEMI {: RESULT=new SingleStatementReturn(E1); RESULT.setLine(E1left); :}
+				|
+					(SingleStatementRead) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new SingleStatementRead(D1); RESULT.setLine(D1left); :}
+				|
+					(SingleStatementPrint) PRINT LPAREN Expr:E1 SingleStatementPrintNumConstOptional:S2 RPAREN SEMI {: RESULT=new SingleStatementPrint(E1, S2); RESULT.setLine(E1left); :}
+				;
+				
+SingleStatementElseOptional ::=
+								(SingleStatementElseYes) ELSE Statement:S1 {: RESULT=new SingleStatementElseYes(S1); RESULT.setLine(S1left); :}
+							|
+								(SingleStatementElseNo) {: RESULT=new SingleStatementElseNo(); :} /* epsilon */
+							;
+
+SingleStatementPrintNumConstOptional ::=
+											(SingleStatementPrintNumConstYes) COMMA NUMBER:printNumber {: RESULT=new SingleStatementPrintNumConstYes(printNumber); RESULT.setLine(printNumberleft); :}
+										|
+											(SingleStatementPrintNumConstNo) {: RESULT=new SingleStatementPrintNumConstNo(); :} /* epsilon */
+										;
 
 /* =========================================================================== */
 /* Statements */
+
+Statements ::= (Statements) LBRACE StatementListNullable:S1 RBRACE {: RESULT=new Statements(S1); RESULT.setLine(S1left); :};
+
+/* =========================================================================== */
+/* DesignatorStatement */
+
+DesignatorStatement ::=
+							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI {: RESULT=new DesignatorStatementAssign(desination, expr); RESULT.setLine(desinationleft); :}
+						|
+							(DesignatorStatementAssignError) error:l SEMI
+							{:
+								parser.report_error("Error recovery in DesignatorStatementAssignError at line "+lleft+". Recovered to next ;", null);
+							:} {: RESULT=new DesignatorStatementAssignError(); :}
+						|
+							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional:A1 RPAREN SEMI {: RESULT=new DesignatorStatementFunctionCall(functionName, A1); RESULT.setLine(functionNameleft); :}
+						|
+							(DesignatorStatementPostInc) Designator:varName INC SEMI {: RESULT=new DesignatorStatementPostInc(varName); RESULT.setLine(varNameleft); :}
+						|
+							(DesignatorStatementPostDec) Designator:varName DEC SEMI {: RESULT=new DesignatorStatementPostDec(varName); RESULT.setLine(varNameleft); :}
+						;
+/* =========================================================================== */
+/* ActPars */
+
+ActPars ::= 
+			(ActParsSingle) Expr:E1 {: RESULT=new ActParsSingle(E1); RESULT.setLine(E1left); :}
+		|
+			(ActParsMany) ActPars:A1 COMMA Expr:E2 {: RESULT=new ActParsMany(A1, E2); RESULT.setLine(A1left); :}
+		;
+
+ActParsOptional ::= 
+						(ActParsYes) ActPars:A1 {: RESULT=new ActParsYes(A1); RESULT.setLine(A1left); :}
+					|
+						(ActParsNo) {: RESULT=new ActParsNo(); :}	/* epsilon */
+					;
+											
+/* =========================================================================== */
+/* Constant */
+
+Constant ::=
+				(NumConst) NUMBER:number {: RESULT=new NumConst(number); RESULT.setLine(numberleft); :}
+			|
+				(CharConst) CHAR:char {: RESULT=new CharConst(char); RESULT.setLine(charleft); :}
+			|
+				(BoolConst) BOOL:bool {: RESULT=new BoolConst(bool); RESULT.setLine(boolleft); :}
+			;
 
 /* =========================================================================== */
 /* BracketsOptional */

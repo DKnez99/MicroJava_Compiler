@@ -81,15 +81,21 @@ nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
 nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
 nonterminal Type;
 nonterminal Statement, StatementLabelOptional, StatementListNullable;
-nonterminal SingleStatement;
+nonterminal SingleStatement, SingleStatementElseOptional, SingleStatementPrintNumConstOptional;
 nonterminal Statements;
-
+nonterminal DesignatorStatement;
+nonterminal ActPars, ActParsOptional;
+nonterminal Condition;
+nonterminal CondTerm;
+nonterminal CondFact;
+nonterminal Expr, ExprOptional;
+nonterminal Term;
+nonterminal Factor;
+nonterminal Designator;
 nonterminal Label;
-
-
+nonterminal Assignop, Relop, Addop, Mulop;
 nonterminal Constant;
 nonterminal BracketsOptional;
-
 
 /* =========================================================================== */
 /* precedences */
@@ -133,17 +139,6 @@ ConstAssignList ::=
 ConstAssign ::= (ConstAssign) ConstName ASSIGN Constant;
 
 ConstName ::= (ConstName) IDENT:constName;
-
-/* =========================================================================== */
-/* Constant */
-
-Constant ::=
-				(NumConst) NUMBER:number
-			|
-				(CharConst) CHAR:char
-			|
-				(BoolConst) BOOL:bool
-			;
 
 /* =========================================================================== */
 /* VarDecl */
@@ -265,9 +260,89 @@ StatementListNullable ::=
 /* =========================================================================== */
 /* SingleStatement */
 
+SingleStatement ::=
+					(SingleStatementDesignatorStatement) DesignatorStatement SEMI
+				|
+					(SingleStatementIf) IF LPAREN Condition RPAREN Statement SingleStatementElseOptional
+				|
+					(SingleStatementDo) DO Statement WHILE LPAREN Condition RPAREN SEMI
+				|
+					(SingleStatementBreak) BREAK SEMI
+				|
+					(SingleStatementContinue) CONTINUE SEMI
+				|
+					(SingleStatementReturn) RETURN ExprOptional SEMI
+				|
+					(SingleStatementRead) READ LPAREN Designator RPAREN SEMI
+				|
+					(SingleStatementPrint) PRINT LPAREN Expr SingleStatementPrintNumConstOptional RPAREN SEMI
+				;
+				
+SingleStatementElseOptional ::=
+								(SingleStatementElseYes) ELSE Statement
+							|
+								(SingleStatementElseNo) /* epsilon */
+							;
+
+SingleStatementPrintNumConstOptional ::=
+											(SingleStatementPrintNumConstYes) COMMA NUMBER:printNumber
+										|
+											(SingleStatementPrintNumConstNo) /* epsilon */
+										;
 
 /* =========================================================================== */
 /* Statements */
+
+Statements ::= (Statements) LBRACE StatementListNullable RBRACE;
+
+/* =========================================================================== */
+/* DesignatorStatement */
+
+DesignatorStatement ::=
+							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI
+						|
+							(DesignatorStatementAssignError) error:l SEMI
+							{:
+								parser.report_error("Error recovery in DesignatorStatementAssignError at line "+lleft+". Recovered to next ;", null);
+							:}
+						|
+							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional RPAREN SEMI
+						|
+							(DesignatorStatementPostInc) Designator:varName INC SEMI
+						|
+							(DesignatorStatementPostDec) Designator:varName DEC SEMI
+						;
+						
+/* =========================================================================== */
+/* ActPars */
+
+ActPars ::= 
+			(ActParsSingle) Expr
+		|
+			(ActParsMany) ActPars COMMA Expr
+		;
+
+ActParsOptional ::= 
+						(ActParsYes) ActPars
+					|
+						(ActParsNo)	/* epsilon */
+					;
+
+/* =========================================================================== */
+/* Condition */
+
+
+										
+/* =========================================================================== */
+/* Constant */
+
+Constant ::=
+				(NumConst) NUMBER:number
+			|
+				(CharConst) CHAR:char
+			|
+				(BoolConst) BOOL:bool
+			;
 
 /* =========================================================================== */
 /* BracketsOptional */

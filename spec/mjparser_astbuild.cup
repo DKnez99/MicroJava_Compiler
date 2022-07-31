@@ -105,7 +105,6 @@ nonterminal FormParName FormParName;
 nonterminal FormParsOptional FormParsOptional;
 nonterminal Type Type;
 nonterminal Statement Statement;
-nonterminal StatementLabelOptional StatementLabelOptional;
 nonterminal StatementListNullable StatementListNullable;
 nonterminal SingleStatement SingleStatement;
 nonterminal SingleStatementElseOptional SingleStatementElseOptional;
@@ -194,7 +193,7 @@ VarList ::=
 			;	
 				
 Var ::=
-			(Var) VarName:V1 BracketsOptional:B2 {: RESULT=new Var(V1, B2); RESULT.setLine(V1left); :}
+			(VarOk) VarName:V1 BracketsOptional:B2 {: RESULT=new VarOk(V1, B2); RESULT.setLine(V1left); :}
 		|		
 			(VarError) error:l
 			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :} {: RESULT=new VarError(); :}
@@ -260,7 +259,7 @@ FormPars ::=
 			; 
 
 FormPar ::=
-				(FormPar) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormPar(F1, F2, B3); RESULT.setLine(F1left); :}
+				(FormParOk) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormParOk(F1, F2, B3); RESULT.setLine(F1left); :}
 			|
 				(FormParError) error:l
 				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :} {: RESULT=new FormParError(); :}
@@ -285,16 +284,12 @@ Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(type
 /* Statement */
 
 Statement ::=
-				(StatementSingle) StatementLabelOptional:S1 SingleStatement:S2 {: RESULT=new StatementSingle(S1, S2); RESULT.setLine(S1left); :}
+				(StatementLabeled) Label:L1 COLON SingleStatement:S2 {: RESULT=new StatementLabeled(L1, S2); RESULT.setLine(L1left); :}
 			|
-				(StatementMany) Statements:S1 {: RESULT=new StatementMany(S1); RESULT.setLine(S1left); :}
+				(StatementSingle) SingleStatement:S1 {: RESULT=new StatementSingle(S1); RESULT.setLine(S1left); :}
+			|
+				(StatementBlock) Statements:S1 {: RESULT=new StatementBlock(S1); RESULT.setLine(S1left); :}
 			;
-
-StatementLabelOptional ::=
-							(StatementLabelYes) Label:L1 COLON {: RESULT=new StatementLabelYes(L1); RESULT.setLine(L1left); :}
-						|
-							(StatementLabelNo) {: RESULT=new StatementLabelNo(); :} /* epsilon */
-						;
 						
 StatementListNullable ::=
 							(StatementList) StatementListNullable:S1 Statement:S2 {: RESULT=new StatementList(S1, S2); RESULT.setLine(S1left); :}
@@ -402,8 +397,10 @@ CondFact ::= (CondFact) Expr:E1 RelopExprOptional:R2 {: RESULT=new CondFact(E1, 
 
 Expr ::=
 			(ExprTerm) NegativeExprOptional:N1 Term:T2 AddopTermListNullable:A3 {: RESULT=new ExprTerm(N1, T2, A3); RESULT.setLine(N1left); :}
+		|
+			(ExprQQ) NegativeExprOptional:N1 Term:T2 AddopTermListNullable:A3 QQ Expr:E4 {: RESULT=new ExprQQ(N1, T2, A3, E4); RESULT.setLine(N1left); :}
 		;
-		
+					
 NegativeExprOptional ::=
 							(NegativeExprYes) MINUS {: RESULT=new NegativeExprYes(); :}
 						|
@@ -471,7 +468,7 @@ Designator ::=
 /* =========================================================================== */
 /* Label */
 			
-
+Label ::= (Label) IDENT:labelName {: RESULT=new Label(labelName); RESULT.setLine(labelNameleft); :};
 
 /* =========================================================================== */
 /* Assignop */

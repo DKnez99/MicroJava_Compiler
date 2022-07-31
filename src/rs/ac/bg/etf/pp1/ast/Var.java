@@ -1,39 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
-public class Var implements SyntaxNode {
+public abstract class Var implements SyntaxNode {
 
     private SyntaxNode parent;
+
     private int line;
-    private VarName VarName;
-    private BracketsOptional BracketsOptional;
-
-    public Var (VarName VarName, BracketsOptional BracketsOptional) {
-        this.VarName=VarName;
-        if(VarName!=null) VarName.setParent(this);
-        this.BracketsOptional=BracketsOptional;
-        if(BracketsOptional!=null) BracketsOptional.setParent(this);
-    }
-
-    public VarName getVarName() {
-        return VarName;
-    }
-
-    public void setVarName(VarName VarName) {
-        this.VarName=VarName;
-    }
-
-    public BracketsOptional getBracketsOptional() {
-        return BracketsOptional;
-    }
-
-    public void setBracketsOptional(BracketsOptional BracketsOptional) {
-        this.BracketsOptional=BracketsOptional;
-    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -51,46 +27,11 @@ public class Var implements SyntaxNode {
         this.line=line;
     }
 
-    public void accept(Visitor visitor) {
-        visitor.visit(this);
-    }
+    public abstract void accept(Visitor visitor);
+    public abstract void childrenAccept(Visitor visitor);
+    public abstract void traverseTopDown(Visitor visitor);
+    public abstract void traverseBottomUp(Visitor visitor);
 
-    public void childrenAccept(Visitor visitor) {
-        if(VarName!=null) VarName.accept(visitor);
-        if(BracketsOptional!=null) BracketsOptional.accept(visitor);
-    }
-
-    public void traverseTopDown(Visitor visitor) {
-        accept(visitor);
-        if(VarName!=null) VarName.traverseTopDown(visitor);
-        if(BracketsOptional!=null) BracketsOptional.traverseTopDown(visitor);
-    }
-
-    public void traverseBottomUp(Visitor visitor) {
-        if(VarName!=null) VarName.traverseBottomUp(visitor);
-        if(BracketsOptional!=null) BracketsOptional.traverseBottomUp(visitor);
-        accept(visitor);
-    }
-
-    public String toString(String tab) {
-        StringBuffer buffer=new StringBuffer();
-        buffer.append(tab);
-        buffer.append("Var(\n");
-
-        if(VarName!=null)
-            buffer.append(VarName.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(BracketsOptional!=null)
-            buffer.append(BracketsOptional.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(tab);
-        buffer.append(") [Var]");
-        return buffer.toString();
-    }
+    public String toString() { return toString(""); }
+    public abstract String toString(String tab);
 }

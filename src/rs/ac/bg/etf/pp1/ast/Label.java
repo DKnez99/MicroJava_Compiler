@@ -1,15 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
-public abstract class Label implements SyntaxNode {
+public class Label implements SyntaxNode {
 
     private SyntaxNode parent;
-
     private int line;
+    private String labelName;
+
+    public Label (String labelName) {
+        this.labelName=labelName;
+    }
+
+    public String getLabelName() {
+        return labelName;
+    }
+
+    public void setLabelName(String labelName) {
+        this.labelName=labelName;
+    }
 
     public SyntaxNode getParent() {
         return parent;
@@ -27,11 +39,31 @@ public abstract class Label implements SyntaxNode {
         this.line=line;
     }
 
-    public abstract void accept(Visitor visitor);
-    public abstract void childrenAccept(Visitor visitor);
-    public abstract void traverseTopDown(Visitor visitor);
-    public abstract void traverseBottomUp(Visitor visitor);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
+    }
 
-    public String toString() { return toString(""); }
-    public abstract String toString(String tab);
+    public void childrenAccept(Visitor visitor) {
+    }
+
+    public void traverseTopDown(Visitor visitor) {
+        accept(visitor);
+    }
+
+    public void traverseBottomUp(Visitor visitor) {
+        accept(visitor);
+    }
+
+    public String toString(String tab) {
+        StringBuffer buffer=new StringBuffer();
+        buffer.append(tab);
+        buffer.append("Label(\n");
+
+        buffer.append(" "+tab+labelName);
+        buffer.append("\n");
+
+        buffer.append(tab);
+        buffer.append(") [Label]");
+        return buffer.toString();
+    }
 }

@@ -80,7 +80,7 @@ nonterminal ClassDecl, ClassName, ClassExtendsOptional, ClassBody, ClassParentTy
 nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
 nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
 nonterminal Type;
-nonterminal Statement, StatementLabelOptional, StatementListNullable;
+nonterminal Statement, StatementListNullable;
 nonterminal SingleStatement, SingleStatementElseOptional, SingleStatementPrintNumConstOptional;
 nonterminal Statements;
 nonterminal DesignatorStatement;
@@ -154,7 +154,7 @@ VarList ::=
 			;	
 				
 Var ::=
-			(Var) VarName BracketsOptional
+			(VarOk) VarName BracketsOptional
 		|		
 			(VarError) error:l
 			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :}
@@ -220,7 +220,7 @@ FormPars ::=
 			; 
 
 FormPar ::=
-				(FormPar) FormParType FormParName BracketsOptional
+				(FormParOk) FormParType FormParName BracketsOptional
 			|
 				(FormParError) error:l
 				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :}
@@ -245,16 +245,12 @@ Type ::= (Type) IDENT:typeName;
 /* Statement */
 
 Statement ::=
-				(StatementSingle) StatementLabelOptional SingleStatement
+				(StatementLabeled) Label COLON SingleStatement
 			|
-				(StatementMany) Statements
+				(StatementSingle) SingleStatement
+			|
+				(StatementBlock) Statements
 			;
-
-StatementLabelOptional ::=
-							(StatementLabelYes) Label COLON
-						|
-							(StatementLabelNo) /* epsilon */
-						;
 						
 StatementListNullable ::=
 							(StatementList) StatementListNullable Statement
@@ -362,8 +358,10 @@ CondFact ::= (CondFact) Expr RelopExprOptional;
 
 Expr ::=
 			(ExprTerm) NegativeExprOptional Term AddopTermListNullable
+		|
+			(ExprQQ) NegativeExprOptional Term AddopTermListNullable QQ Expr
 		;
-		
+					
 NegativeExprOptional ::=
 							(NegativeExprYes) MINUS
 						|
@@ -431,7 +429,7 @@ Designator ::=
 /* =========================================================================== */
 /* Label */
 			
-
+Label ::= (Label) IDENT:labelName;
 
 /* =========================================================================== */
 /* Assignop */

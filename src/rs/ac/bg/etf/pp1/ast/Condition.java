@@ -1,9 +1,9 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public abstract class Condition implements SyntaxNode {
 

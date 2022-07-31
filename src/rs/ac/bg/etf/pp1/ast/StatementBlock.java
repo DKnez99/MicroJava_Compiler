@@ -1,15 +1,15 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
-public class StatementMany extends Statement {
+public class StatementBlock extends Statement {
 
     private Statements Statements;
 
-    public StatementMany (Statements Statements) {
+    public StatementBlock (Statements Statements) {
         this.Statements=Statements;
         if(Statements!=null) Statements.setParent(this);
     }
@@ -43,7 +43,7 @@ public class StatementMany extends Statement {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("StatementMany(\n");
+        buffer.append("StatementBlock(\n");
 
         if(Statements!=null)
             buffer.append(Statements.toString("  "+tab));
@@ -52,7 +52,7 @@ public class StatementMany extends Statement {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [StatementMany]");
+        buffer.append(") [StatementBlock]");
         return buffer.toString();
     }
 }

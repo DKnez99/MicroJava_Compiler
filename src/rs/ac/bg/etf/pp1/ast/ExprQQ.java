@@ -5,19 +5,22 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ExprTerm extends Expr {
+public class ExprQQ extends Expr {
 
     private NegativeExprOptional NegativeExprOptional;
     private Term Term;
     private AddopTermListNullable AddopTermListNullable;
+    private Expr Expr;
 
-    public ExprTerm (NegativeExprOptional NegativeExprOptional, Term Term, AddopTermListNullable AddopTermListNullable) {
+    public ExprQQ (NegativeExprOptional NegativeExprOptional, Term Term, AddopTermListNullable AddopTermListNullable, Expr Expr) {
         this.NegativeExprOptional=NegativeExprOptional;
         if(NegativeExprOptional!=null) NegativeExprOptional.setParent(this);
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.AddopTermListNullable=AddopTermListNullable;
         if(AddopTermListNullable!=null) AddopTermListNullable.setParent(this);
+        this.Expr=Expr;
+        if(Expr!=null) Expr.setParent(this);
     }
 
     public NegativeExprOptional getNegativeExprOptional() {
@@ -44,6 +47,14 @@ public class ExprTerm extends Expr {
         this.AddopTermListNullable=AddopTermListNullable;
     }
 
+    public Expr getExpr() {
+        return Expr;
+    }
+
+    public void setExpr(Expr Expr) {
+        this.Expr=Expr;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
@@ -52,6 +63,7 @@ public class ExprTerm extends Expr {
         if(NegativeExprOptional!=null) NegativeExprOptional.accept(visitor);
         if(Term!=null) Term.accept(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.accept(visitor);
+        if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
@@ -59,19 +71,21 @@ public class ExprTerm extends Expr {
         if(NegativeExprOptional!=null) NegativeExprOptional.traverseTopDown(visitor);
         if(Term!=null) Term.traverseTopDown(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.traverseTopDown(visitor);
+        if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(NegativeExprOptional!=null) NegativeExprOptional.traverseBottomUp(visitor);
         if(Term!=null) Term.traverseBottomUp(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.traverseBottomUp(visitor);
+        if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ExprTerm(\n");
+        buffer.append("ExprQQ(\n");
 
         if(NegativeExprOptional!=null)
             buffer.append(NegativeExprOptional.toString("  "+tab));
@@ -91,8 +105,14 @@ public class ExprTerm extends Expr {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
+        if(Expr!=null)
+            buffer.append(Expr.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
         buffer.append(tab);
-        buffer.append(") [ExprTerm]");
+        buffer.append(") [ExprQQ]");
         return buffer.toString();
     }
 }

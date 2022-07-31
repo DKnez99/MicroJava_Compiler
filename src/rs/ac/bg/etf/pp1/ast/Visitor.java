@@ -1,9 +1,9 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
 public interface Visitor { 
 
@@ -16,6 +16,7 @@ public interface Visitor {
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
     public void visit(AddopTermListNullable AddopTermListNullable);
+    public void visit(Var Var);
     public void visit(RelopExprOptional RelopExprOptional);
     public void visit(ProgramDecl ProgramDecl);
     public void visit(Addop Addop);
@@ -25,11 +26,9 @@ public interface Visitor {
     public void visit(VarList VarList);
     public void visit(ClassExtendsOptional ClassExtendsOptional);
     public void visit(Designator Designator);
-    public void visit(StatementLabelOptional StatementLabelOptional);
     public void visit(Condition Condition);
     public void visit(FormParsOptional FormParsOptional);
     public void visit(ClassBodyMethodsOptional ClassBodyMethodsOptional);
-    public void visit(Label Label);
     public void visit(SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional);
     public void visit(Expr Expr);
     public void visit(SingleStatementElseOptional SingleStatementElseOptional);
@@ -45,6 +44,7 @@ public interface Visitor {
     public void visit(Statement Statement);
     public void visit(FactorType FactorType);
     public void visit(VarDeclListNullable VarDeclListNullable);
+    public void visit(FormPar FormPar);
     public void visit(SingleStatement SingleStatement);
     public void visit(FormPars FormPars);
     public void visit(BracketsNo BracketsNo);
@@ -64,6 +64,7 @@ public interface Visitor {
     public void visit(NotEqual NotEqual);
     public void visit(IsEqual IsEqual);
     public void visit(Assign Assign);
+    public void visit(Label Label);
     public void visit(DesignatorDefault DesignatorDefault);
     public void visit(DesignatorArray DesignatorArray);
     public void visit(DesignatorClassEntity DesignatorClassEntity);
@@ -84,6 +85,7 @@ public interface Visitor {
     public void visit(ExprYes ExprYes);
     public void visit(NegativeExprNo NegativeExprNo);
     public void visit(NegativeExprYes NegativeExprYes);
+    public void visit(ExprQQ ExprQQ);
     public void visit(ExprTerm ExprTerm);
     public void visit(CondFact CondFact);
     public void visit(CondTermMany CondTermMany);
@@ -115,17 +117,16 @@ public interface Visitor {
     public void visit(SingleStatementDesignatorStatement SingleStatementDesignatorStatement);
     public void visit(EmptyStatementList EmptyStatementList);
     public void visit(StatementList StatementList);
-    public void visit(StatementLabelNo StatementLabelNo);
-    public void visit(StatementLabelYes StatementLabelYes);
-    public void visit(StatementMany StatementMany);
+    public void visit(StatementBlock StatementBlock);
     public void visit(StatementSingle StatementSingle);
+    public void visit(StatementLabeled StatementLabeled);
     public void visit(Type Type);
     public void visit(FormParsNo FormParsNo);
     public void visit(FormParsYes FormParsYes);
     public void visit(FormParName FormParName);
     public void visit(FormParType FormParType);
     public void visit(FormParError FormParError);
-    public void visit(FormPar FormPar);
+    public void visit(FormParOk FormParOk);
     public void visit(FormParsMany FormParsMany);
     public void visit(FormParsSingle FormParsSingle);
     public void visit(EmptyMethodDeclList EmptyMethodDeclList);
@@ -146,7 +147,7 @@ public interface Visitor {
     public void visit(VarDeclList VarDeclList);
     public void visit(VarName VarName);
     public void visit(VarError VarError);
-    public void visit(Var Var);
+    public void visit(VarOk VarOk);
     public void visit(VarListMany VarListMany);
     public void visit(VarListSingle VarListSingle);
     public void visit(VarType VarType);

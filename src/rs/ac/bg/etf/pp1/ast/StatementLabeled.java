@@ -1,17 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/6/2022 17:7:56
+// 31/6/2022 8:35:41
 
 
-package src.rs.ac.bg.etf.pp1.ast;
+package rs.ac.bg.etf.pp1.ast;
 
-public class StatementLabelYes extends StatementLabelOptional {
+public class StatementLabeled extends Statement {
 
     private Label Label;
+    private SingleStatement SingleStatement;
 
-    public StatementLabelYes (Label Label) {
+    public StatementLabeled (Label Label, SingleStatement SingleStatement) {
         this.Label=Label;
         if(Label!=null) Label.setParent(this);
+        this.SingleStatement=SingleStatement;
+        if(SingleStatement!=null) SingleStatement.setParent(this);
     }
 
     public Label getLabel() {
@@ -22,28 +25,39 @@ public class StatementLabelYes extends StatementLabelOptional {
         this.Label=Label;
     }
 
+    public SingleStatement getSingleStatement() {
+        return SingleStatement;
+    }
+
+    public void setSingleStatement(SingleStatement SingleStatement) {
+        this.SingleStatement=SingleStatement;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
         if(Label!=null) Label.accept(visitor);
+        if(SingleStatement!=null) SingleStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Label!=null) Label.traverseTopDown(visitor);
+        if(SingleStatement!=null) SingleStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Label!=null) Label.traverseBottomUp(visitor);
+        if(SingleStatement!=null) SingleStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("StatementLabelYes(\n");
+        buffer.append("StatementLabeled(\n");
 
         if(Label!=null)
             buffer.append(Label.toString("  "+tab));
@@ -51,8 +65,14 @@ public class StatementLabelYes extends StatementLabelOptional {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
+        if(SingleStatement!=null)
+            buffer.append(SingleStatement.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
         buffer.append(tab);
-        buffer.append(") [StatementLabelYes]");
+        buffer.append(") [StatementLabeled]");
         return buffer.toString();
     }
 }

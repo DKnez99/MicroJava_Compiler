@@ -1,0 +1,29 @@
+program NoSyntaxErrors
+	int x, y[], z;
+	const char cc='c';
+	const bool mybool=false, mybool2=true;
+	const int myint=12;
+	class myClass extends int {
+		int myClassVar1[], myClassVar2;
+		{
+			void printSomething(){
+				print(-myClassVar2,4);
+				testLabel: do break; while (myClassVar2??4??31);
+			}
+		}
+	}
+{
+	int k () int c, v; char b, m; {
+		c = 4;
+		return c+2+14-4*3;
+	}
+	
+	int main(int v[], bool q) {
+		y = 2;
+		x = y + 2;
+		y = k() + 3;
+		print(y);
+		read(x);
+		return x;
+	}
+}

@@ -1,0 +1,815 @@
+INFO  07:50:34,430 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\syntax_tests\syntax_test_1.mj
+INFO  07:50:34,458 - #2 program
+INFO  07:50:34,458 - #47 NoSyntaxErrors
+INFO  07:50:34,458 - #47 int
+INFO  07:50:34,459 - #47 x
+INFO  07:50:34,459 - #27 ,
+INFO  07:50:34,461 - #47 y
+INFO  07:50:34,461 - #22 [
+INFO  07:50:34,461 - #23 ]
+INFO  07:50:34,461 - #27 ,
+INFO  07:50:34,461 - #47 z
+INFO  07:50:34,461 - #26 ;
+INFO  07:50:34,461 - #3 const
+INFO  07:50:34,462 - #47 char
+INFO  07:50:34,462 - #47 cc
+INFO  07:50:34,462 - #30 =
+INFO  07:50:34,463 - #49 c
+INFO  07:50:34,463 - #26 ;
+INFO  07:50:34,463 - #3 const
+INFO  07:50:34,464 - #47 bool
+INFO  07:50:34,465 - #47 mybool
+INFO  07:50:34,465 - #30 =
+INFO  07:50:34,465 - #50 false
+INFO  07:50:34,465 - #27 ,
+INFO  07:50:34,465 - #47 mybool2
+INFO  07:50:34,465 - #30 =
+INFO  07:50:34,465 - #50 true
+INFO  07:50:34,465 - #26 ;
+INFO  07:50:34,465 - #3 const
+INFO  07:50:34,465 - #47 int
+INFO  07:50:34,465 - #47 myint
+INFO  07:50:34,465 - #30 =
+INFO  07:50:34,465 - #48 12
+INFO  07:50:34,466 - #26 ;
+INFO  07:50:34,466 - #16 class
+INFO  07:50:34,466 - #47 myClass
+INFO  07:50:34,466 - #4 extends
+INFO  07:50:34,466 - #47 int
+INFO  07:50:34,466 - #20 {
+INFO  07:50:34,467 - #47 int
+INFO  07:50:34,467 - #47 myClassVar1
+INFO  07:50:34,467 - #22 [
+INFO  07:50:34,467 - #23 ]
+INFO  07:50:34,467 - #27 ,
+INFO  07:50:34,467 - #47 myClassVar2
+INFO  07:50:34,467 - #26 ;
+INFO  07:50:34,467 - #20 {
+INFO  07:50:34,467 - #15 void
+INFO  07:50:34,468 - #47 printSomething
+INFO  07:50:34,468 - #24 (
+INFO  07:50:34,469 - #25 )
+INFO  07:50:34,469 - #20 {
+INFO  07:50:34,469 - #13 print
+INFO  07:50:34,469 - #24 (
+INFO  07:50:34,469 - #40 -
+INFO  07:50:34,470 - #47 myClassVar2
+INFO  07:50:34,470 - #27 ,
+INFO  07:50:34,472 - #48 4
+INFO  07:50:34,472 - #25 )
+INFO  07:50:34,472 - #26 ;
+INFO  07:50:34,472 - #47 testLabel
+INFO  07:50:34,472 - #28 :
+INFO  07:50:34,472 - #7 do
+INFO  07:50:34,473 - #9 break
+INFO  07:50:34,473 - #26 ;
+INFO  07:50:34,473 - #8 while
+INFO  07:50:34,473 - #24 (
+INFO  07:50:34,473 - #47 myClassVar2
+INFO  07:50:34,473 - #33 >
+INFO  07:50:34,474 - #48 0
+INFO  07:50:34,474 - #25 )
+INFO  07:50:34,475 - #26 ;
+INFO  07:50:34,475 - #21 }
+INFO  07:50:34,475 - #21 }
+INFO  07:50:34,475 - #21 }
+INFO  07:50:34,476 - #20 {
+INFO  07:50:34,476 - #47 int
+INFO  07:50:34,477 - #47 k
+INFO  07:50:34,477 - #24 (
+INFO  07:50:34,477 - #25 )
+INFO  07:50:34,477 - #47 int
+INFO  07:50:34,477 - #47 c
+INFO  07:50:34,477 - #27 ,
+INFO  07:50:34,477 - #47 v
+INFO  07:50:34,477 - #26 ;
+INFO  07:50:34,477 - #47 char
+INFO  07:50:34,477 - #47 b
+INFO  07:50:34,477 - #27 ,
+INFO  07:50:34,477 - #47 m
+INFO  07:50:34,477 - #26 ;
+INFO  07:50:34,477 - #20 {
+INFO  07:50:34,477 - #47 c
+INFO  07:50:34,477 - #30 =
+INFO  07:50:34,477 - #48 4
+INFO  07:50:34,478 - #26 ;
+INFO  07:50:34,478 - #11 return
+INFO  07:50:34,478 - #47 c
+INFO  07:50:34,478 - #39 +
+INFO  07:50:34,478 - #48 2
+INFO  07:50:34,479 - #39 +
+INFO  07:50:34,479 - #48 14
+INFO  07:50:34,479 - #40 -
+INFO  07:50:34,479 - #48 4
+INFO  07:50:34,479 - #41 *
+INFO  07:50:34,479 - #48 3
+INFO  07:50:34,480 - #26 ;
+INFO  07:50:34,480 - #21 }
+INFO  07:50:34,480 - #47 int
+INFO  07:50:34,480 - #47 main
+INFO  07:50:34,480 - #24 (
+INFO  07:50:34,480 - #47 int
+INFO  07:50:34,480 - #47 v
+INFO  07:50:34,481 - #22 [
+INFO  07:50:34,481 - #23 ]
+INFO  07:50:34,481 - #27 ,
+INFO  07:50:34,481 - #47 bool
+INFO  07:50:34,482 - #47 q
+INFO  07:50:34,482 - #25 )
+INFO  07:50:34,482 - #20 {
+INFO  07:50:34,482 - #47 y
+INFO  07:50:34,482 - #30 =
+INFO  07:50:34,482 - #48 2
+INFO  07:50:34,482 - #26 ;
+INFO  07:50:34,482 - #47 x
+INFO  07:50:34,482 - #30 =
+INFO  07:50:34,482 - #47 y
+INFO  07:50:34,482 - #39 +
+INFO  07:50:34,482 - #48 2
+INFO  07:50:34,482 - #26 ;
+INFO  07:50:34,482 - #47 y
+INFO  07:50:34,482 - #30 =
+INFO  07:50:34,482 - #47 k
+INFO  07:50:34,482 - #24 (
+INFO  07:50:34,482 - #25 )
+INFO  07:50:34,483 - #39 +
+INFO  07:50:34,483 - #48 3
+INFO  07:50:34,483 - #26 ;
+INFO  07:50:34,483 - #13 print
+INFO  07:50:34,483 - #24 (
+INFO  07:50:34,483 - #47 y
+INFO  07:50:34,483 - #25 )
+INFO  07:50:34,483 - #26 ;
+INFO  07:50:34,483 - #12 read
+INFO  07:50:34,484 - #24 (
+INFO  07:50:34,484 - #47 x
+INFO  07:50:34,484 - #25 )
+INFO  07:50:34,484 - #26 ;
+INFO  07:50:34,484 - #11 return
+INFO  07:50:34,484 - #47 x
+INFO  07:50:34,484 - #26 ;
+INFO  07:50:34,484 - #21 }
+INFO  07:50:34,484 - #21 }
+INFO  07:50:34,487 - Program(
+  ProgramName(
+   NoSyntaxErrors
+  ) [ProgramName]
+  ProgramDeclList(
+    ProgramDeclList(
+      ProgramDeclList(
+        ProgramDeclList(
+          ProgramDeclList(
+            EmptyProgramDeclList(
+            ) [EmptyProgramDeclList]
+            ProgramDeclVar(
+              VarDecl(
+                VarType(
+                  Type(
+                   int
+                  ) [Type]
+                ) [VarType]
+                VarListMany(
+                  VarListMany(
+                    VarListSingle(
+                      VarOk(
+                        VarName(
+                         x
+                        ) [VarName]
+                        BracketsNo(
+                        ) [BracketsNo]
+                      ) [VarOk]
+                    ) [VarListSingle]
+                    VarOk(
+                      VarName(
+                       y
+                      ) [VarName]
+                      BracketsYes(
+                      ) [BracketsYes]
+                    ) [VarOk]
+                  ) [VarListMany]
+                  VarOk(
+                    VarName(
+                     z
+                    ) [VarName]
+                    BracketsNo(
+                    ) [BracketsNo]
+                  ) [VarOk]
+                ) [VarListMany]
+              ) [VarDecl]
+            ) [ProgramDeclVar]
+          ) [ProgramDeclList]
+          ProgramDeclConst(
+            ConstDecl(
+              ConstType(
+                Type(
+                 char
+                ) [Type]
+              ) [ConstType]
+              ConstListSingle(
+                ConstAssign(
+                  ConstName(
+                   cc
+                  ) [ConstName]
+                  CharConst(
+                   c
+                  ) [CharConst]
+                ) [ConstAssign]
+              ) [ConstListSingle]
+            ) [ConstDecl]
+          ) [ProgramDeclConst]
+        ) [ProgramDeclList]
+        ProgramDeclConst(
+          ConstDecl(
+            ConstType(
+              Type(
+               bool
+              ) [Type]
+            ) [ConstType]
+            ConstListMany(
+              ConstListSingle(
+                ConstAssign(
+                  ConstName(
+                   mybool
+                  ) [ConstName]
+                  BoolConst(
+                   false
+                  ) [BoolConst]
+                ) [ConstAssign]
+              ) [ConstListSingle]
+              ConstAssign(
+                ConstName(
+                 mybool2
+                ) [ConstName]
+                BoolConst(
+                 true
+                ) [BoolConst]
+              ) [ConstAssign]
+            ) [ConstListMany]
+          ) [ConstDecl]
+        ) [ProgramDeclConst]
+      ) [ProgramDeclList]
+      ProgramDeclConst(
+        ConstDecl(
+          ConstType(
+            Type(
+             int
+            ) [Type]
+          ) [ConstType]
+          ConstListSingle(
+            ConstAssign(
+              ConstName(
+               myint
+              ) [ConstName]
+              NumConst(
+               12
+              ) [NumConst]
+            ) [ConstAssign]
+          ) [ConstListSingle]
+        ) [ConstDecl]
+      ) [ProgramDeclConst]
+    ) [ProgramDeclList]
+    ProgramDeclClass(
+      ClassDecl(
+        ClassName(
+         myClass
+        ) [ClassName]
+        ClassExtendsYes(
+          ClassParentType(
+            Type(
+             int
+            ) [Type]
+          ) [ClassParentType]
+        ) [ClassExtendsYes]
+        ClassBody(
+          VarDeclList(
+            EmptyVarDeclListNullable(
+            ) [EmptyVarDeclListNullable]
+            VarDecl(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarListMany(
+                VarListSingle(
+                  VarOk(
+                    VarName(
+                     myClassVar1
+                    ) [VarName]
+                    BracketsYes(
+                    ) [BracketsYes]
+                  ) [VarOk]
+                ) [VarListSingle]
+                VarOk(
+                  VarName(
+                   myClassVar2
+                  ) [VarName]
+                  BracketsNo(
+                  ) [BracketsNo]
+                ) [VarOk]
+              ) [VarListMany]
+            ) [VarDecl]
+          ) [VarDeclList]
+          ClassBodyMethodsYes(
+            MethodDeclList(
+              EmptyMethodDeclList(
+              ) [EmptyMethodDeclList]
+              MethodDecl(
+                MethodReturnTypeVoid(
+                ) [MethodReturnTypeVoid]
+                MethodName(
+                 printSomething
+                ) [MethodName]
+                FormParsNo(
+                ) [FormParsNo]
+                EmptyVarDeclListNullable(
+                ) [EmptyVarDeclListNullable]
+                StatementList(
+                  StatementList(
+                    EmptyStatementList(
+                    ) [EmptyStatementList]
+                    StatementSingle(
+                      SingleStatementPrint(
+                        ExprTerm(
+                          NegativeExprYes(
+                          ) [NegativeExprYes]
+                          Term(
+                            FactorDesignator(
+                              DesignatorDefault(
+                               myClassVar2
+                              ) [DesignatorDefault]
+                              FactorDesignatorParenNo(
+                              ) [FactorDesignatorParenNo]
+                            ) [FactorDesignator]
+                            EmptyMulopFactorList(
+                            ) [EmptyMulopFactorList]
+                          ) [Term]
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                        ) [ExprTerm]
+                        SingleStatementPrintNumConstYes(
+                         4
+                        ) [SingleStatementPrintNumConstYes]
+                      ) [SingleStatementPrint]
+                    ) [StatementSingle]
+                  ) [StatementList]
+                  StatementLabeled(
+                    Label(
+                     testLabel
+                    ) [Label]
+                    SingleStatementDo(
+                      StatementSingle(
+                        SingleStatementBreak(
+                        ) [SingleStatementBreak]
+                      ) [StatementSingle]
+                      ConditionSingle(
+                        CondTermSingle(
+                          CondFact(
+                            ExprTerm(
+                              NegativeExprNo(
+                              ) [NegativeExprNo]
+                              Term(
+                                FactorDesignator(
+                                  DesignatorDefault(
+                                   myClassVar2
+                                  ) [DesignatorDefault]
+                                  FactorDesignatorParenNo(
+                                  ) [FactorDesignatorParenNo]
+                                ) [FactorDesignator]
+                                EmptyMulopFactorList(
+                                ) [EmptyMulopFactorList]
+                              ) [Term]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [ExprTerm]
+                            RelopExprYes(
+                              GreaterThan(
+                              ) [GreaterThan]
+                              ExprTerm(
+                                NegativeExprNo(
+                                ) [NegativeExprNo]
+                                Term(
+                                  FactorConstant(
+                                    NumConst(
+                                     0
+                                    ) [NumConst]
+                                  ) [FactorConstant]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [ExprTerm]
+                            ) [RelopExprYes]
+                          ) [CondFact]
+                        ) [CondTermSingle]
+                      ) [ConditionSingle]
+                    ) [SingleStatementDo]
+                  ) [StatementLabeled]
+                ) [StatementList]
+              ) [MethodDecl]
+            ) [MethodDeclList]
+          ) [ClassBodyMethodsYes]
+        ) [ClassBody]
+      ) [ClassDecl]
+    ) [ProgramDeclClass]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    MethodDeclList(
+      EmptyMethodDeclList(
+      ) [EmptyMethodDeclList]
+      MethodDecl(
+        MethodReturnTypeRegular(
+          Type(
+           int
+          ) [Type]
+        ) [MethodReturnTypeRegular]
+        MethodName(
+         k
+        ) [MethodName]
+        FormParsNo(
+        ) [FormParsNo]
+        VarDeclList(
+          VarDeclList(
+            EmptyVarDeclListNullable(
+            ) [EmptyVarDeclListNullable]
+            VarDecl(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarListMany(
+                VarListSingle(
+                  VarOk(
+                    VarName(
+                     c
+                    ) [VarName]
+                    BracketsNo(
+                    ) [BracketsNo]
+                  ) [VarOk]
+                ) [VarListSingle]
+                VarOk(
+                  VarName(
+                   v
+                  ) [VarName]
+                  BracketsNo(
+                  ) [BracketsNo]
+                ) [VarOk]
+              ) [VarListMany]
+            ) [VarDecl]
+          ) [VarDeclList]
+          VarDecl(
+            VarType(
+              Type(
+               char
+              ) [Type]
+            ) [VarType]
+            VarListMany(
+              VarListSingle(
+                VarOk(
+                  VarName(
+                   b
+                  ) [VarName]
+                  BracketsNo(
+                  ) [BracketsNo]
+                ) [VarOk]
+              ) [VarListSingle]
+              VarOk(
+                VarName(
+                 m
+                ) [VarName]
+                BracketsNo(
+                ) [BracketsNo]
+              ) [VarOk]
+            ) [VarListMany]
+          ) [VarDecl]
+        ) [VarDeclList]
+        StatementList(
+          StatementList(
+            EmptyStatementList(
+            ) [EmptyStatementList]
+            StatementSingle(
+              SingleStatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  DesignatorDefault(
+                   c
+                  ) [DesignatorDefault]
+                  Assign(
+                  ) [Assign]
+                  ExprTerm(
+                    NegativeExprNo(
+                    ) [NegativeExprNo]
+                    Term(
+                      FactorConstant(
+                        NumConst(
+                         4
+                        ) [NumConst]
+                      ) [FactorConstant]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [ExprTerm]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignatorStatement]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementReturn(
+              ExprYes(
+                ExprTerm(
+                  NegativeExprNo(
+                  ) [NegativeExprNo]
+                  Term(
+                    FactorDesignator(
+                      DesignatorDefault(
+                       c
+                      ) [DesignatorDefault]
+                      FactorDesignatorParenNo(
+                      ) [FactorDesignatorParenNo]
+                    ) [FactorDesignator]
+                    EmptyMulopFactorList(
+                    ) [EmptyMulopFactorList]
+                  ) [Term]
+                  AddopTermList(
+                    AddopTermList(
+                      AddopTermList(
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                        Plus(
+                        ) [Plus]
+                        Term(
+                          FactorConstant(
+                            NumConst(
+                             2
+                            ) [NumConst]
+                          ) [FactorConstant]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                      ) [AddopTermList]
+                      Plus(
+                      ) [Plus]
+                      Term(
+                        FactorConstant(
+                          NumConst(
+                           14
+                          ) [NumConst]
+                        ) [FactorConstant]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                    ) [AddopTermList]
+                    Minus(
+                    ) [Minus]
+                    Term(
+                      FactorConstant(
+                        NumConst(
+                         4
+                        ) [NumConst]
+                      ) [FactorConstant]
+                      MulopFactorList(
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                        Mul(
+                        ) [Mul]
+                        FactorConstant(
+                          NumConst(
+                           3
+                          ) [NumConst]
+                        ) [FactorConstant]
+                      ) [MulopFactorList]
+                    ) [Term]
+                  ) [AddopTermList]
+                ) [ExprTerm]
+              ) [ExprYes]
+            ) [SingleStatementReturn]
+          ) [StatementSingle]
+        ) [StatementList]
+      ) [MethodDecl]
+    ) [MethodDeclList]
+    MethodDecl(
+      MethodReturnTypeRegular(
+        Type(
+         int
+        ) [Type]
+      ) [MethodReturnTypeRegular]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsYes(
+        FormParsMany(
+          FormParsSingle(
+            FormParOk(
+              FormParType(
+                Type(
+                 int
+                ) [Type]
+              ) [FormParType]
+              FormParName(
+               v
+              ) [FormParName]
+              BracketsYes(
+              ) [BracketsYes]
+            ) [FormParOk]
+          ) [FormParsSingle]
+          FormParOk(
+            FormParType(
+              Type(
+               bool
+              ) [Type]
+            ) [FormParType]
+            FormParName(
+             q
+            ) [FormParName]
+            BracketsNo(
+            ) [BracketsNo]
+          ) [FormParOk]
+        ) [FormParsMany]
+      ) [FormParsYes]
+      EmptyVarDeclListNullable(
+      ) [EmptyVarDeclListNullable]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              StatementList(
+                StatementList(
+                  EmptyStatementList(
+                  ) [EmptyStatementList]
+                  StatementSingle(
+                    SingleStatementDesignatorStatement(
+                      DesignatorStatementAssign(
+                        DesignatorDefault(
+                         y
+                        ) [DesignatorDefault]
+                        Assign(
+                        ) [Assign]
+                        ExprTerm(
+                          NegativeExprNo(
+                          ) [NegativeExprNo]
+                          Term(
+                            FactorConstant(
+                              NumConst(
+                               2
+                              ) [NumConst]
+                            ) [FactorConstant]
+                            EmptyMulopFactorList(
+                            ) [EmptyMulopFactorList]
+                          ) [Term]
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                        ) [ExprTerm]
+                      ) [DesignatorStatementAssign]
+                    ) [SingleStatementDesignatorStatement]
+                  ) [StatementSingle]
+                ) [StatementList]
+                StatementSingle(
+                  SingleStatementDesignatorStatement(
+                    DesignatorStatementAssign(
+                      DesignatorDefault(
+                       x
+                      ) [DesignatorDefault]
+                      Assign(
+                      ) [Assign]
+                      ExprTerm(
+                        NegativeExprNo(
+                        ) [NegativeExprNo]
+                        Term(
+                          FactorDesignator(
+                            DesignatorDefault(
+                             y
+                            ) [DesignatorDefault]
+                            FactorDesignatorParenNo(
+                            ) [FactorDesignatorParenNo]
+                          ) [FactorDesignator]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                        AddopTermList(
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                          Plus(
+                          ) [Plus]
+                          Term(
+                            FactorConstant(
+                              NumConst(
+                               2
+                              ) [NumConst]
+                            ) [FactorConstant]
+                            EmptyMulopFactorList(
+                            ) [EmptyMulopFactorList]
+                          ) [Term]
+                        ) [AddopTermList]
+                      ) [ExprTerm]
+                    ) [DesignatorStatementAssign]
+                  ) [SingleStatementDesignatorStatement]
+                ) [StatementSingle]
+              ) [StatementList]
+              StatementSingle(
+                SingleStatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    DesignatorDefault(
+                     y
+                    ) [DesignatorDefault]
+                    Assign(
+                    ) [Assign]
+                    ExprTerm(
+                      NegativeExprNo(
+                      ) [NegativeExprNo]
+                      Term(
+                        FactorDesignator(
+                          DesignatorDefault(
+                           k
+                          ) [DesignatorDefault]
+                          FactorDesignatorParenYes(
+                            ActParsNo(
+                            ) [ActParsNo]
+                          ) [FactorDesignatorParenYes]
+                        ) [FactorDesignator]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      AddopTermList(
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                        Plus(
+                        ) [Plus]
+                        Term(
+                          FactorConstant(
+                            NumConst(
+                             3
+                            ) [NumConst]
+                          ) [FactorConstant]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                      ) [AddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorStatementAssign]
+                ) [SingleStatementDesignatorStatement]
+              ) [StatementSingle]
+            ) [StatementList]
+            StatementSingle(
+              SingleStatementPrint(
+                ExprTerm(
+                  NegativeExprNo(
+                  ) [NegativeExprNo]
+                  Term(
+                    FactorDesignator(
+                      DesignatorDefault(
+                       y
+                      ) [DesignatorDefault]
+                      FactorDesignatorParenNo(
+                      ) [FactorDesignatorParenNo]
+                    ) [FactorDesignator]
+                    EmptyMulopFactorList(
+                    ) [EmptyMulopFactorList]
+                  ) [Term]
+                  EmptyAddopTermList(
+                  ) [EmptyAddopTermList]
+                ) [ExprTerm]
+                SingleStatementPrintNumConstNo(
+                ) [SingleStatementPrintNumConstNo]
+              ) [SingleStatementPrint]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementRead(
+              DesignatorDefault(
+               x
+              ) [DesignatorDefault]
+            ) [SingleStatementRead]
+          ) [StatementSingle]
+        ) [StatementList]
+        StatementSingle(
+          SingleStatementReturn(
+            ExprYes(
+              ExprTerm(
+                NegativeExprNo(
+                ) [NegativeExprNo]
+                Term(
+                  FactorDesignator(
+                    DesignatorDefault(
+                     x
+                    ) [DesignatorDefault]
+                    FactorDesignatorParenNo(
+                    ) [FactorDesignatorParenNo]
+                  ) [FactorDesignator]
+                  EmptyMulopFactorList(
+                  ) [EmptyMulopFactorList]
+                ) [Term]
+                EmptyAddopTermList(
+                ) [EmptyAddopTermList]
+              ) [ExprTerm]
+            ) [ExprYes]
+          ) [SingleStatementReturn]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  07:50:34,488 - ===========================
+INFO  07:50:34,488 - Parsing SUCCESSFUL!

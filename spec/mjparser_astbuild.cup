@@ -21,11 +21,11 @@ parser code {:
     }
   
     public void syntax_error(Symbol cur_token) {
-        report_error("\nSyntax error!", cur_token);
+        report_error("Syntax error", cur_token);
     }
   
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
-        report_fatal_error("Fatal syntax error! Parsing stopped!", cur_token);
+        report_fatal_error("Fatal syntax error! Parsing stopped", cur_token);
     }
 
     public void report_error(String message, Object info) {
@@ -73,10 +73,13 @@ terminal Boolean BOOL_CONST;
 /* =========================================================================== */
 /* nonterminals */
 
-nonterminal Program Program;
-nonterminal ProgramName ProgramName;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program,
+			ProgramName;
+
 nonterminal ProgramDeclListNullable ProgramDeclListNullable;
-nonterminal ProgramDecl ProgramDecl;
+nonterminal
+			ProgramDecl ProgramDecl;
+			
 nonterminal ConstDecl ConstDecl;
 nonterminal ConstType ConstType;
 nonterminal ConstAssignList ConstAssignList;
@@ -144,7 +147,7 @@ precedence left ELSE;
 /* =========================================================================== */
 /* Program */
 
-Program ::= (Program) PROG ProgramName:P1 ProgramDeclListNullable:P2 LBRACE MethodDeclListNullable:M3 RBRACE {: RESULT=new Program(P1, P2, M3); RESULT.setLine(P1left); :};
+Program ::= (Program) PROG ProgramName:p ProgramDeclListNullable:P1 LBRACE MethodDeclListNullable:M2 RBRACE {: RESULT=new Program(p, P1, M2); RESULT.setLine(pleft); :};
 
 ProgramName ::= (ProgramName) IDENT:programName {: RESULT=new ProgramName(programName); RESULT.setLine(programNameleft); :};
 
@@ -301,7 +304,7 @@ StatementListNullable ::=
 /* SingleStatement */
 
 SingleStatement ::=
-					(SingleStatementDesignatorStatement) DesignatorStatement:D1 SEMI {: RESULT=new SingleStatementDesignatorStatement(D1); RESULT.setLine(D1left); :}
+					(SingleStatementDesignatorStatement) DesignatorStatement:D1 {: RESULT=new SingleStatementDesignatorStatement(D1); RESULT.setLine(D1left); :}
 				|
 					(SingleStatementIf) IF LPAREN Condition:C1 RPAREN Statement:S2 SingleStatementElseOptional:S3 {: RESULT=new SingleStatementIf(C1, S2, S3); RESULT.setLine(C1left); :}
 				|
@@ -339,16 +342,16 @@ Statements ::= (Statements) LBRACE StatementListNullable:S1 RBRACE {: RESULT=new
 /* DesignatorStatement */
 
 DesignatorStatement ::=
-							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI {: RESULT=new DesignatorStatementAssign(desination, expr); RESULT.setLine(desinationleft); :}
-						|
-							(DesignatorStatementAssignError) error:l SEMI
-							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :} {: RESULT=new DesignatorStatementAssignError(); :}
+							(DesignatorStatementAssign) Designator:destination Assignop:A1 Expr:expr SEMI {: RESULT=new DesignatorStatementAssign(destination, A1, expr); RESULT.setLine(destinationleft); :}
 						|
 							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional:A1 RPAREN SEMI {: RESULT=new DesignatorStatementFunctionCall(functionName, A1); RESULT.setLine(functionNameleft); :}
 						|
 							(DesignatorStatementPostInc) Designator:varName INC SEMI {: RESULT=new DesignatorStatementPostInc(varName); RESULT.setLine(varNameleft); :}
 						|
 							(DesignatorStatementPostDec) Designator:varName DEC SEMI {: RESULT=new DesignatorStatementPostDec(varName); RESULT.setLine(varNameleft); :}
+						|
+							(ErrorDesignatorStatementAssign) error SEMI:l
+							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :} {: RESULT=new ErrorDesignatorStatementAssign(); :}
 						;
 						
 /* =========================================================================== */
@@ -374,8 +377,8 @@ Condition ::=
 			|
 				(ConditionMany) Condition:C1 OR CondTerm:C2 {: RESULT=new ConditionMany(C1, C2); RESULT.setLine(C1left); :}
 			|
-				(ConditionError) Condition:C1 error:l
-				{: parser.report_error("Error recovery (level B) in condition at line " + lleft + ". Recovered to the next )", null); :} {: RESULT=new ConditionError(C1); RESULT.setLine(C1left); :}
+				(ConditionError) error:l
+				{: parser.report_error("Error recovery (level B) in condition at line " + lleft + ". Recovered to the next )", null); :} {: RESULT=new ConditionError(); :}
 			;
 
 /* =========================================================================== */
@@ -429,17 +432,23 @@ RelopExprOptional ::=
 
 Term ::= (Term) Factor:F1 MulopFactorListNullable:M2 {: RESULT=new Term(F1, M2); RESULT.setLine(F1left); :};
 
+AddopTermListNullable ::=
+							(AddopTermList) AddopTermListNullable:A1 Addop:A2 Term:T3 {: RESULT=new AddopTermList(A1, A2, T3); RESULT.setLine(A1left); :}
+						|
+							(EmptyAddopTermList) {: RESULT=new EmptyAddopTermList(); :} /* epsilon */
+						;
+
 /* =========================================================================== */
 /* Factor */
 
 Factor ::=
-				(FactorDesignator) Designator:D1 FactorDesignatorParenOptional:F2 {: RESULT=new FactorDesignator(D1, F2); RESULT.setLine(D1left); :}
+				(FactorDesignator) Designator:designator FactorDesignatorParenOptional:F1 {: RESULT=new FactorDesignator(designator, F1); RESULT.setLine(designatorleft); :}
 			|
-				(FactorConstant) Constant:C1 {: RESULT=new FactorConstant(C1); RESULT.setLine(C1left); :}
+				(FactorConstant) Constant:constant {: RESULT=new FactorConstant(constant); RESULT.setLine(constantleft); :}
 			|
 				(FactorNewType) NEW Type:objectType ExprInBracketsOptional:E1 {: RESULT=new FactorNewType(objectType, E1); RESULT.setLine(objectTypeleft); :}
 			|
-				(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}	
+				(FactorExpr) LPAREN Expr:expr RPAREN {: RESULT=new FactorExpr(expr); RESULT.setLine(exprleft); :}	
 			;
 			
 FactorDesignatorParenOptional ::=

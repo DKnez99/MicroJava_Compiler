@@ -21,11 +21,11 @@ parser code {:
     }
   
     public void syntax_error(Symbol cur_token) {
-        report_error("\nSyntax error!", cur_token);
+        report_error("Syntax error", cur_token);
     }
   
     public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
-        report_fatal_error("Fatal syntax error! Parsing stopped!", cur_token);
+        report_fatal_error("Fatal syntax error! Parsing stopped", cur_token);
     }
 
     public void report_error(String message, Object info) {
@@ -73,13 +73,20 @@ terminal Boolean BOOL_CONST;
 /* =========================================================================== */
 /* nonterminals */
 
-nonterminal Program, ProgramName, ProgramDeclListNullable, ProgramDecl;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Program,
+			ProgramName;
+
+nonterminal ProgramDeclListNullable,
+			ProgramDecl;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+	
 nonterminal ConstDecl, ConstType, ConstAssignList, ConstAssign, ConstName;
 nonterminal VarDecl, VarType, VarList, Var, VarName, VarDeclListNullable;
 nonterminal ClassDecl, ClassName, ClassExtendsOptional, ClassBody, ClassParentType, ClassBodyMethodsOptional;
 nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
 nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
-nonterminal Type;
+
 nonterminal Statement, StatementListNullable;
 nonterminal SingleStatement, SingleStatementElseOptional, SingleStatementPrintNumConstOptional;
 nonterminal Statements;
@@ -105,7 +112,7 @@ precedence left ELSE;
 /* =========================================================================== */
 /* Program */
 
-Program ::= (Program) PROG ProgramName ProgramDeclListNullable LBRACE MethodDeclListNullable RBRACE;
+Program ::= (Program) PROG ProgramName:p ProgramDeclListNullable LBRACE MethodDeclListNullable RBRACE;
 
 ProgramName ::= (ProgramName) IDENT:programName;
 
@@ -262,7 +269,7 @@ StatementListNullable ::=
 /* SingleStatement */
 
 SingleStatement ::=
-					(SingleStatementDesignatorStatement) DesignatorStatement SEMI
+					(SingleStatementDesignatorStatement) DesignatorStatement
 				|
 					(SingleStatementIf) IF LPAREN Condition RPAREN Statement SingleStatementElseOptional
 				|
@@ -300,16 +307,16 @@ Statements ::= (Statements) LBRACE StatementListNullable RBRACE;
 /* DesignatorStatement */
 
 DesignatorStatement ::=
-							(DesignatorStatementAssign) Designator:desination ASSIGN Expr:expr SEMI
-						|
-							(DesignatorStatementAssignError) error:l SEMI
-							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :}
+							(DesignatorStatementAssign) Designator:destination Assignop Expr:expr SEMI
 						|
 							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional RPAREN SEMI
 						|
 							(DesignatorStatementPostInc) Designator:varName INC SEMI
 						|
 							(DesignatorStatementPostDec) Designator:varName DEC SEMI
+						|
+							(ErrorDesignatorStatementAssign) error SEMI:l
+							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :}
 						;
 						
 /* =========================================================================== */
@@ -335,7 +342,7 @@ Condition ::=
 			|
 				(ConditionMany) Condition OR CondTerm
 			|
-				(ConditionError) Condition error:l
+				(ConditionError) error:l
 				{: parser.report_error("Error recovery (level B) in condition at line " + lleft + ". Recovered to the next )", null); :}
 			;
 
@@ -390,17 +397,23 @@ RelopExprOptional ::=
 
 Term ::= (Term) Factor MulopFactorListNullable;
 
+AddopTermListNullable ::=
+							(AddopTermList) AddopTermListNullable Addop Term
+						|
+							(EmptyAddopTermList) /* epsilon */
+						;
+
 /* =========================================================================== */
 /* Factor */
 
 Factor ::=
-				(FactorDesignator) Designator FactorDesignatorParenOptional
+				(FactorDesignator) Designator:designator FactorDesignatorParenOptional
 			|
-				(FactorConstant) Constant
+				(FactorConstant) Constant:constant
 			|
 				(FactorNewType) NEW Type:objectType ExprInBracketsOptional
 			|
-				(FactorExpr) LPAREN Expr RPAREN	
+				(FactorExpr) LPAREN Expr:expr RPAREN	
 			;
 			
 FactorDesignatorParenOptional ::=

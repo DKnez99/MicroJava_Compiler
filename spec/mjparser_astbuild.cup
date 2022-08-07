@@ -79,18 +79,25 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj Program,
 nonterminal ProgramDeclListNullable ProgramDeclListNullable;
 nonterminal
 			ProgramDecl ProgramDecl;
-			
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+	
 nonterminal ConstDecl ConstDecl;
 nonterminal ConstType ConstType;
 nonterminal ConstAssignList ConstAssignList;
 nonterminal ConstAssign ConstAssign;
 nonterminal ConstName ConstName;
-nonterminal VarDecl VarDecl;
-nonterminal VarType VarType;
-nonterminal VarList VarList;
+			
 nonterminal Var Var;
-nonterminal VarName VarName;
-nonterminal VarDeclListNullable VarDeclListNullable;
+nonterminal
+			VarDecl VarDecl;
+nonterminal
+			VarType VarType;
+nonterminal
+			VarList VarList;
+nonterminal
+			VarDeclListNullable VarDeclListNullable;
+			
 nonterminal ClassDecl ClassDecl;
 nonterminal ClassName ClassName;
 nonterminal ClassExtendsOptional ClassExtendsOptional;
@@ -106,7 +113,7 @@ nonterminal FormPar FormPar;
 nonterminal FormParType FormParType;
 nonterminal FormParName FormParName;
 nonterminal FormParsOptional FormParsOptional;
-nonterminal Type Type;
+
 nonterminal Statement Statement;
 nonterminal StatementListNullable StatementListNullable;
 nonterminal SingleStatement SingleStatement;
@@ -137,7 +144,6 @@ nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 nonterminal Constant Constant;
-nonterminal BracketsOptional BracketsOptional;
 
 /* =========================================================================== */
 /* precedences */
@@ -196,13 +202,13 @@ VarList ::=
 			;	
 				
 Var ::=
-			(VarOk) VarName:V1 BracketsOptional:B2 {: RESULT=new VarOk(V1, B2); RESULT.setLine(V1left); :}
+			(VarSingle) IDENT:varName {: RESULT=new VarSingle(varName); RESULT.setLine(varNameleft); :}
 		|		
+			(VarArray) IDENT:varName LBRACKET RBRACKET {: RESULT=new VarArray(varName); RESULT.setLine(varNameleft); :}
+		|
 			(VarError) error:l
 			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :} {: RESULT=new VarError(); :}
 		;
-		
-VarName ::= (VarName) IDENT:varName {: RESULT=new VarName(varName); RESULT.setLine(varNameleft); :};
 
 VarDeclListNullable ::=
 					(VarDeclList) VarDeclListNullable:V1 VarDecl:V2 {: RESULT=new VarDeclList(V1, V2); RESULT.setLine(V1left); :}
@@ -262,7 +268,9 @@ FormPars ::=
 			; 
 
 FormPar ::=
-				(FormParOk) FormParType:F1 FormParName:F2 BracketsOptional:B3 {: RESULT=new FormParOk(F1, F2, B3); RESULT.setLine(F1left); :}
+				(FormParSingle) FormParType:F1 FormParName:F2 {: RESULT=new FormParSingle(F1, F2); RESULT.setLine(F1left); :}
+			|
+				(FormParArray) FormParType:F1 FormParName:F2 LBRACKET RBRACKET {: RESULT=new FormParArray(F1, F2); RESULT.setLine(F1left); :}
 			|
 				(FormParError) error:l
 				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :} {: RESULT=new FormParError(); :}
@@ -531,14 +539,6 @@ Constant ::=
 			|
 				(BoolConst) BOOL_CONST:boolValue {: RESULT=new BoolConst(boolValue); RESULT.setLine(boolValueleft); :}
 			;
-
-/* =========================================================================== */
-/* BracketsOptional */
-				
-BracketsOptional ::=
-						(BracketsYes) LBRACKET RBRACKET {: RESULT=new BracketsYes(); :}
-					|
-						(BracketsNo) {: RESULT=new BracketsNo(); :} /* epsilon */
-					;		
+	
 		
 /* =========================================================================== */

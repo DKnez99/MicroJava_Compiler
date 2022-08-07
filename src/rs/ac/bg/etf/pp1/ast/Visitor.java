@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/7/2022 9:59:59
+// 7/7/2022 10:57:53
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -36,7 +36,6 @@ public interface Visitor {
     public void visit(ActPars ActPars);
     public void visit(ProgramDeclListNullable ProgramDeclListNullable);
     public void visit(DesignatorStatement DesignatorStatement);
-    public void visit(BracketsOptional BracketsOptional);
     public void visit(NegativeExprOptional NegativeExprOptional);
     public void visit(MethodReturnType MethodReturnType);
     public void visit(ConstAssignList ConstAssignList);
@@ -47,8 +46,6 @@ public interface Visitor {
     public void visit(FormPar FormPar);
     public void visit(SingleStatement SingleStatement);
     public void visit(FormPars FormPars);
-    public void visit(BracketsNo BracketsNo);
-    public void visit(BracketsYes BracketsYes);
     public void visit(BoolConst BoolConst);
     public void visit(CharConst CharConst);
     public void visit(NumConst NumConst);
@@ -128,7 +125,8 @@ public interface Visitor {
     public void visit(FormParName FormParName);
     public void visit(FormParType FormParType);
     public void visit(FormParError FormParError);
-    public void visit(FormParOk FormParOk);
+    public void visit(FormParArray FormParArray);
+    public void visit(FormParSingle FormParSingle);
     public void visit(FormParsMany FormParsMany);
     public void visit(FormParsSingle FormParsSingle);
     public void visit(EmptyMethodDeclList EmptyMethodDeclList);
@@ -147,9 +145,9 @@ public interface Visitor {
     public void visit(ClassDecl ClassDecl);
     public void visit(EmptyVarDeclListNullable EmptyVarDeclListNullable);
     public void visit(VarDeclList VarDeclList);
-    public void visit(VarName VarName);
     public void visit(VarError VarError);
-    public void visit(VarOk VarOk);
+    public void visit(VarArray VarArray);
+    public void visit(VarSingle VarSingle);
     public void visit(VarListMany VarListMany);
     public void visit(VarListSingle VarListSingle);
     public void visit(VarType VarType);

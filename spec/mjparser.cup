@@ -82,7 +82,13 @@ nonterminal ProgramDeclListNullable,
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 	
 nonterminal ConstDecl, ConstType, ConstAssignList, ConstAssign, ConstName;
-nonterminal VarDecl, VarType, VarList, Var, VarName, VarDeclListNullable;
+			
+nonterminal Var,
+			VarDecl,
+			VarType,
+			VarList,
+			VarDeclListNullable;
+			
 nonterminal ClassDecl, ClassName, ClassExtendsOptional, ClassBody, ClassParentType, ClassBodyMethodsOptional;
 nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
 nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
@@ -102,7 +108,6 @@ nonterminal Designator;
 nonterminal Label;
 nonterminal Assignop, Relop, Addop, Mulop;
 nonterminal Constant;
-nonterminal BracketsOptional;
 
 /* =========================================================================== */
 /* precedences */
@@ -161,13 +166,13 @@ VarList ::=
 			;	
 				
 Var ::=
-			(VarOk) VarName BracketsOptional
+			(VarSingle) IDENT:varName
 		|		
+			(VarArray) IDENT:varName LBRACKET RBRACKET
+		|
 			(VarError) error:l
 			{: parser.report_error("Error recovery (level A) in variable declaration at line "+lleft+". Recovered to the next , or ;", null); :}
 		;
-		
-VarName ::= (VarName) IDENT:varName;
 
 VarDeclListNullable ::=
 					(VarDeclList) VarDeclListNullable VarDecl
@@ -227,7 +232,9 @@ FormPars ::=
 			; 
 
 FormPar ::=
-				(FormParOk) FormParType FormParName BracketsOptional
+				(FormParSingle) FormParType FormParName
+			|
+				(FormParArray) FormParType FormParName LBRACKET RBRACKET
 			|
 				(FormParError) error:l
 				{: parser.report_error("Error recovery (level B) in formal parameters at line "+lleft+". Recovered to the next , or )", null); :}
@@ -496,14 +503,6 @@ Constant ::=
 			|
 				(BoolConst) BOOL_CONST:boolValue
 			;
-
-/* =========================================================================== */
-/* BracketsOptional */
-				
-BracketsOptional ::=
-						(BracketsYes) LBRACKET RBRACKET
-					|
-						(BracketsNo) /* epsilon */
-					;		
+	
 		
 /* =========================================================================== */

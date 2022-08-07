@@ -37,23 +37,26 @@ public class Compiler {
 			
 		log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 		
-		
+		log.info("===========================");
+    	log.info("PARSING...");
 		try (BufferedReader br = new BufferedReader(new FileReader(sourceCode))) {
 			Yylex lexer = new Yylex(br);
 			MJParser parser = new MJParser(lexer);
 	        Symbol s = parser.parse();
 	        
-	        Program prog = (Program)(s.value);
-	        
 	        if (!parser.errorDetected) {
+	        	Program prog = (Program)(s.value);
 	        	//print syntax tree
 		        log.info(prog.toString(""));
-		        log.info("===========================");
-	        	log.info("Parsing SUCCESSFUL!");
+	        	log.info("PARSING SUCCESSFUL!");
+	        	log.info("===========================");
+	        	
+	        	Tab.init();
+	        	prog.traverseBottomUp(new SemanticAnalyzer());
 	        }
 	        else {
 	        	log.info("===========================");
-	        	log.error("Parsing FAILED!");
+	        	log.error("PARSING FAILED!");
 	        }
 		}
 	}

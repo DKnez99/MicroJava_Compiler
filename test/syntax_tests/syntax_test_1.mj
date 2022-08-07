@@ -1,6 +1,6 @@
 program NoSyntaxErrors
 	int x, y[], z;
-	const char cc='c';
+	char cc;
 	const bool mybool=false, mybool2=true;
 	const int myint=12;
 	class myClass extends int {

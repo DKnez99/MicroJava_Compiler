@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 5/7/2022 9:59:59
+// 7/7/2022 10:57:53
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -36,7 +36,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActPars ActPars) { }
     public void visit(ProgramDeclListNullable ProgramDeclListNullable) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(BracketsOptional BracketsOptional) { }
     public void visit(NegativeExprOptional NegativeExprOptional) { }
     public void visit(MethodReturnType MethodReturnType) { }
     public void visit(ConstAssignList ConstAssignList) { }
@@ -47,8 +46,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormPar FormPar) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(FormPars FormPars) { }
-    public void visit(BracketsNo BracketsNo) { visit(); }
-    public void visit(BracketsYes BracketsYes) { visit(); }
     public void visit(BoolConst BoolConst) { visit(); }
     public void visit(CharConst CharConst) { visit(); }
     public void visit(NumConst NumConst) { visit(); }
@@ -128,7 +125,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormParName FormParName) { visit(); }
     public void visit(FormParType FormParType) { visit(); }
     public void visit(FormParError FormParError) { visit(); }
-    public void visit(FormParOk FormParOk) { visit(); }
+    public void visit(FormParArray FormParArray) { visit(); }
+    public void visit(FormParSingle FormParSingle) { visit(); }
     public void visit(FormParsMany FormParsMany) { visit(); }
     public void visit(FormParsSingle FormParsSingle) { visit(); }
     public void visit(EmptyMethodDeclList EmptyMethodDeclList) { visit(); }
@@ -147,9 +145,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ClassDecl ClassDecl) { visit(); }
     public void visit(EmptyVarDeclListNullable EmptyVarDeclListNullable) { visit(); }
     public void visit(VarDeclList VarDeclList) { visit(); }
-    public void visit(VarName VarName) { visit(); }
     public void visit(VarError VarError) { visit(); }
-    public void visit(VarOk VarOk) { visit(); }
+    public void visit(VarArray VarArray) { visit(); }
+    public void visit(VarSingle VarSingle) { visit(); }
     public void visit(VarListMany VarListMany) { visit(); }
     public void visit(VarListSingle VarListSingle) { visit(); }
     public void visit(VarType VarType) { visit(); }

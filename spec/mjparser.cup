@@ -107,7 +107,6 @@ nonterminal Factor, FactorType, MulopFactorListNullable, FactorDesignatorParenOp
 nonterminal Designator;
 nonterminal Label;
 nonterminal Assignop, Relop, Addop, Mulop;
-nonterminal Constant;
 
 /* =========================================================================== */
 /* precedences */
@@ -148,9 +147,13 @@ ConstAssignList ::=
 					(ConstListMany) ConstAssignList COMMA ConstAssign
 				;
 
-ConstAssign ::= (ConstAssign) ConstName ASSIGN Constant;
-
-ConstName ::= (ConstName) IDENT:constName;
+ConstAssign ::=
+					(ConstAssignNum) IDENT:constName ASSIGN NUMBER_CONST:numberValue
+				|
+					(ConstAssignChar) IDENT:constName ASSIGN CHAR_CONST:charValue
+				|
+					(ConstAssignBool) IDENT:constName ASSIGN BOOL_CONST:boolValue
+				;
 
 /* =========================================================================== */
 /* VarDecl */
@@ -416,7 +419,11 @@ AddopTermListNullable ::=
 Factor ::=
 				(FactorDesignator) Designator:designator FactorDesignatorParenOptional
 			|
-				(FactorConstant) Constant:constant
+				(FactorConstNum) NUMBER_CONST:numberValue
+			|
+				(FactorConstChar) CHAR_CONST:charValue
+			|
+				(FactorConstBool) BOOL_CONST:boolValue
 			|
 				(FactorNewType) NEW Type:objectType ExprInBracketsOptional
 			|
@@ -492,17 +499,5 @@ Mulop ::=
 		|
 			(Mod) MOD
 		;
-
-/* =========================================================================== */
-/* Constant */
-
-Constant ::=
-				(NumConst) NUMBER_CONST:numberValue
-			|
-				(CharConst) CHAR_CONST:charValue
-			|
-				(BoolConst) BOOL_CONST:boolValue
-			;
-	
 		
 /* =========================================================================== */

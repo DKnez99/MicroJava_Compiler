@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/7/2022 10:57:53
+// 7/7/2022 14:19:48
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,13 +11,13 @@ public interface Visitor {
     public void visit(ActParsOptional ActParsOptional);
     public void visit(ExprOptional ExprOptional);
     public void visit(Mulop Mulop);
-    public void visit(Constant Constant);
     public void visit(StatementListNullable StatementListNullable);
     public void visit(Relop Relop);
     public void visit(Assignop Assignop);
     public void visit(AddopTermListNullable AddopTermListNullable);
     public void visit(Var Var);
     public void visit(RelopExprOptional RelopExprOptional);
+    public void visit(ConstName ConstName);
     public void visit(ProgramDecl ProgramDecl);
     public void visit(Addop Addop);
     public void visit(ExprInBracketsOptional ExprInBracketsOptional);
@@ -39,6 +39,7 @@ public interface Visitor {
     public void visit(NegativeExprOptional NegativeExprOptional);
     public void visit(MethodReturnType MethodReturnType);
     public void visit(ConstAssignList ConstAssignList);
+    public void visit(ConstAssign ConstAssign);
     public void visit(MulopFactorListNullable MulopFactorListNullable);
     public void visit(Statement Statement);
     public void visit(FactorType FactorType);
@@ -46,9 +47,6 @@ public interface Visitor {
     public void visit(FormPar FormPar);
     public void visit(SingleStatement SingleStatement);
     public void visit(FormPars FormPars);
-    public void visit(BoolConst BoolConst);
-    public void visit(CharConst CharConst);
-    public void visit(NumConst NumConst);
     public void visit(Mod Mod);
     public void visit(Div Div);
     public void visit(Mul Mul);
@@ -71,7 +69,9 @@ public interface Visitor {
     public void visit(FactorDesignatorParenYes FactorDesignatorParenYes);
     public void visit(FactorExpr FactorExpr);
     public void visit(FactorNewType FactorNewType);
-    public void visit(FactorConstant FactorConstant);
+    public void visit(FactorConstBool FactorConstBool);
+    public void visit(FactorConstChar FactorConstChar);
+    public void visit(FactorConstNum FactorConstNum);
     public void visit(FactorDesignator FactorDesignator);
     public void visit(EmptyAddopTermList EmptyAddopTermList);
     public void visit(AddopTermList AddopTermList);
@@ -152,8 +152,9 @@ public interface Visitor {
     public void visit(VarListSingle VarListSingle);
     public void visit(VarType VarType);
     public void visit(VarDecl VarDecl);
-    public void visit(ConstName ConstName);
-    public void visit(ConstAssign ConstAssign);
+    public void visit(ConstAssignBool ConstAssignBool);
+    public void visit(ConstAssignChar ConstAssignChar);
+    public void visit(ConstAssignNum ConstAssignNum);
     public void visit(ConstListMany ConstListMany);
     public void visit(ConstListSingle ConstListSingle);
     public void visit(ConstType ConstType);

@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/7/2022 10:57:53
+// 7/7/2022 14:19:48
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class NumConst extends Constant {
+public class FactorConstChar extends Factor {
 
-    private Integer numberValue;
+    private Character charValue;
 
-    public NumConst (Integer numberValue) {
-        this.numberValue=numberValue;
+    public FactorConstChar (Character charValue) {
+        this.charValue=charValue;
     }
 
-    public Integer getNumberValue() {
-        return numberValue;
+    public Character getCharValue() {
+        return charValue;
     }
 
-    public void setNumberValue(Integer numberValue) {
-        this.numberValue=numberValue;
+    public void setCharValue(Character charValue) {
+        this.charValue=charValue;
     }
 
     public void accept(Visitor visitor) {
@@ -39,13 +39,13 @@ public class NumConst extends Constant {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("NumConst(\n");
+        buffer.append("FactorConstChar(\n");
 
-        buffer.append(" "+tab+numberValue);
+        buffer.append(" "+tab+charValue);
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [NumConst]");
+        buffer.append(") [FactorConstChar]");
         return buffer.toString();
     }
 }

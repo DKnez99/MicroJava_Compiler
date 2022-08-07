@@ -143,7 +143,6 @@ nonterminal Assignop Assignop;
 nonterminal Relop Relop;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
-nonterminal Constant Constant;
 
 /* =========================================================================== */
 /* precedences */
@@ -184,9 +183,13 @@ ConstAssignList ::=
 					(ConstListMany) ConstAssignList:C1 COMMA ConstAssign:C2 {: RESULT=new ConstListMany(C1, C2); RESULT.setLine(C1left); :}
 				;
 
-ConstAssign ::= (ConstAssign) ConstName:C1 ASSIGN Constant:C2 {: RESULT=new ConstAssign(C1, C2); RESULT.setLine(C1left); :};
-
-ConstName ::= (ConstName) IDENT:constName {: RESULT=new ConstName(constName); RESULT.setLine(constNameleft); :};
+ConstAssign ::=
+					(ConstAssignNum) IDENT:constName ASSIGN NUMBER_CONST:numberValue {: RESULT=new ConstAssignNum(constName, numberValue); RESULT.setLine(constNameleft); :}
+				|
+					(ConstAssignChar) IDENT:constName ASSIGN CHAR_CONST:charValue {: RESULT=new ConstAssignChar(constName, charValue); RESULT.setLine(constNameleft); :}
+				|
+					(ConstAssignBool) IDENT:constName ASSIGN BOOL_CONST:boolValue {: RESULT=new ConstAssignBool(constName, boolValue); RESULT.setLine(constNameleft); :}
+				;
 
 /* =========================================================================== */
 /* VarDecl */
@@ -452,7 +455,11 @@ AddopTermListNullable ::=
 Factor ::=
 				(FactorDesignator) Designator:designator FactorDesignatorParenOptional:F1 {: RESULT=new FactorDesignator(designator, F1); RESULT.setLine(designatorleft); :}
 			|
-				(FactorConstant) Constant:constant {: RESULT=new FactorConstant(constant); RESULT.setLine(constantleft); :}
+				(FactorConstNum) NUMBER_CONST:numberValue {: RESULT=new FactorConstNum(numberValue); RESULT.setLine(numberValueleft); :}
+			|
+				(FactorConstChar) CHAR_CONST:charValue {: RESULT=new FactorConstChar(charValue); RESULT.setLine(charValueleft); :}
+			|
+				(FactorConstBool) BOOL_CONST:boolValue {: RESULT=new FactorConstBool(boolValue); RESULT.setLine(boolValueleft); :}
 			|
 				(FactorNewType) NEW Type:objectType ExprInBracketsOptional:E1 {: RESULT=new FactorNewType(objectType, E1); RESULT.setLine(objectTypeleft); :}
 			|
@@ -528,17 +535,5 @@ Mulop ::=
 		|
 			(Mod) MOD {: RESULT=new Mod(); :}
 		;
-
-/* =========================================================================== */
-/* Constant */
-
-Constant ::=
-				(NumConst) NUMBER_CONST:numberValue {: RESULT=new NumConst(numberValue); RESULT.setLine(numberValueleft); :}
-			|
-				(CharConst) CHAR_CONST:charValue {: RESULT=new CharConst(charValue); RESULT.setLine(charValueleft); :}
-			|
-				(BoolConst) BOOL_CONST:boolValue {: RESULT=new BoolConst(boolValue); RESULT.setLine(boolValueleft); :}
-			;
-	
 		
 /* =========================================================================== */

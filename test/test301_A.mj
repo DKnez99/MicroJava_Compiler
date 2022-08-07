@@ -9,7 +9,8 @@ program test301
 
 	int niz[];
 	char nizch[];
-	
+	const bool tacno=true;
+	const char myChar='a';
 {
 	void main()	
 		int bodovi;

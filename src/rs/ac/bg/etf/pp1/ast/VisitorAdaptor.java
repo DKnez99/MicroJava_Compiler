@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/7/2022 10:57:53
+// 7/7/2022 14:19:48
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,13 +11,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActParsOptional ActParsOptional) { }
     public void visit(ExprOptional ExprOptional) { }
     public void visit(Mulop Mulop) { }
-    public void visit(Constant Constant) { }
     public void visit(StatementListNullable StatementListNullable) { }
     public void visit(Relop Relop) { }
     public void visit(Assignop Assignop) { }
     public void visit(AddopTermListNullable AddopTermListNullable) { }
     public void visit(Var Var) { }
     public void visit(RelopExprOptional RelopExprOptional) { }
+    public void visit(ConstName ConstName) { }
     public void visit(ProgramDecl ProgramDecl) { }
     public void visit(Addop Addop) { }
     public void visit(ExprInBracketsOptional ExprInBracketsOptional) { }
@@ -39,6 +39,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(NegativeExprOptional NegativeExprOptional) { }
     public void visit(MethodReturnType MethodReturnType) { }
     public void visit(ConstAssignList ConstAssignList) { }
+    public void visit(ConstAssign ConstAssign) { }
     public void visit(MulopFactorListNullable MulopFactorListNullable) { }
     public void visit(Statement Statement) { }
     public void visit(FactorType FactorType) { }
@@ -46,9 +47,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormPar FormPar) { }
     public void visit(SingleStatement SingleStatement) { }
     public void visit(FormPars FormPars) { }
-    public void visit(BoolConst BoolConst) { visit(); }
-    public void visit(CharConst CharConst) { visit(); }
-    public void visit(NumConst NumConst) { visit(); }
     public void visit(Mod Mod) { visit(); }
     public void visit(Div Div) { visit(); }
     public void visit(Mul Mul) { visit(); }
@@ -71,7 +69,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FactorDesignatorParenYes FactorDesignatorParenYes) { visit(); }
     public void visit(FactorExpr FactorExpr) { visit(); }
     public void visit(FactorNewType FactorNewType) { visit(); }
-    public void visit(FactorConstant FactorConstant) { visit(); }
+    public void visit(FactorConstBool FactorConstBool) { visit(); }
+    public void visit(FactorConstChar FactorConstChar) { visit(); }
+    public void visit(FactorConstNum FactorConstNum) { visit(); }
     public void visit(FactorDesignator FactorDesignator) { visit(); }
     public void visit(EmptyAddopTermList EmptyAddopTermList) { visit(); }
     public void visit(AddopTermList AddopTermList) { visit(); }
@@ -152,8 +152,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarListSingle VarListSingle) { visit(); }
     public void visit(VarType VarType) { visit(); }
     public void visit(VarDecl VarDecl) { visit(); }
-    public void visit(ConstName ConstName) { visit(); }
-    public void visit(ConstAssign ConstAssign) { visit(); }
+    public void visit(ConstAssignBool ConstAssignBool) { visit(); }
+    public void visit(ConstAssignChar ConstAssignChar) { visit(); }
+    public void visit(ConstAssignNum ConstAssignNum) { visit(); }
     public void visit(ConstListMany ConstListMany) { visit(); }
     public void visit(ConstListSingle ConstListSingle) { visit(); }
     public void visit(ConstType ConstType) { visit(); }

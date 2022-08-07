@@ -51,7 +51,7 @@ public class Compiler {
 	        	log.info("PARSING SUCCESSFUL!");
 	        	log.info("===========================");
 	        	
-	        	Tab.init();
+	        	TabEx.init();
 	        	prog.traverseBottomUp(new SemanticAnalyzer());
 	        }
 	        else {

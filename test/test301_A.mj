@@ -9,6 +9,7 @@ program test301
 
 	int niz[];
 	char nizch[];
+	bool netacno;
 	const bool tacno=true;
 	const char myChar='a';
 {
@@ -23,11 +24,11 @@ program test301
 		bodovi--;
 		print(bodovi); 
 			
-		
 		niz = new int[3];
 		niz[nula] = jedan;
 		niz[1] = 2;
-		niz[niz[jedan] ?? -1] = niz[(niz[0] - jedan) ?? (bodovi * nula ?? jedan) ] * 3;
+		niz[niz[jedan] ?? -1] = niz[(niz[0] - jedan) ?? (bodovi * nula ?? jedan) ]*3;
+		print(bodovi);
 		bodovi = niz[2] / niz[0];
 		print(bodovi); 
 		print(niz[2]);

@@ -126,18 +126,21 @@ nonterminal ActParsOptional ActParsOptional;
 nonterminal Condition Condition;
 nonterminal CondTerm CondTerm;
 nonterminal CondFact CondFact;
-nonterminal Expr Expr;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
 nonterminal ExprOptional ExprOptional;
 nonterminal RelopExprOptional RelopExprOptional;
 nonterminal NegativeExprOptional NegativeExprOptional;
 nonterminal ExprInBracketsOptional ExprInBracketsOptional;
+
 nonterminal Term Term;
 nonterminal AddopTermListNullable AddopTermListNullable;
-nonterminal Factor Factor;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
 nonterminal FactorType FactorType;
 nonterminal MulopFactorListNullable MulopFactorListNullable;
-nonterminal FactorDesignatorParenOptional FactorDesignatorParenOptional;
-nonterminal Designator Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal Label Label;
 nonterminal Assignop Assignop;
 nonterminal Relop Relop;
@@ -453,7 +456,9 @@ AddopTermListNullable ::=
 /* Factor */
 
 Factor ::=
-				(FactorDesignator) Designator:designator FactorDesignatorParenOptional:F1 {: RESULT=new FactorDesignator(designator, F1); RESULT.setLine(designatorleft); :}
+				(FactorDesignator) Designator:designatorName {: RESULT=new FactorDesignator(designatorName); RESULT.setLine(designatorNameleft); :}
+			|
+				(FactorDesignatorMethod) Designator:methodName LPAREN ActParsOptional:actPars RPAREN {: RESULT=new FactorDesignatorMethod(methodName, actPars); RESULT.setLine(methodNameleft); :}
 			|
 				(FactorConstNum) NUMBER_CONST:numberValue {: RESULT=new FactorConstNum(numberValue); RESULT.setLine(numberValueleft); :}
 			|
@@ -465,12 +470,6 @@ Factor ::=
 			|
 				(FactorExpr) LPAREN Expr:expr RPAREN {: RESULT=new FactorExpr(expr); RESULT.setLine(exprleft); :}	
 			;
-			
-FactorDesignatorParenOptional ::=
-									(FactorDesignatorParenYes) LPAREN ActParsOptional:A1 RPAREN {: RESULT=new FactorDesignatorParenYes(A1); RESULT.setLine(A1left); :}
-								|
-									(FactorDesignatorParenNo) {: RESULT=new FactorDesignatorParenNo(); :} /* epsilon */
-								;
 
 MulopFactorListNullable ::=
 								(MulopFactorList) MulopFactorListNullable:M1 Mulop:M2 Factor:F3 {: RESULT=new MulopFactorList(M1, M2, F3); RESULT.setLine(M1left); :}
@@ -482,9 +481,9 @@ MulopFactorListNullable ::=
 /* Designator */
 			
 Designator ::=	
-					(DesignatorClassEntity) Designator:designatorEntityName DOT IDENT:classField {: RESULT=new DesignatorClassEntity(designatorEntityName, classField); RESULT.setLine(designatorEntityNameleft); :}
+					(DesignatorClassEntity) Designator:designatorEntity DOT IDENT:classField {: RESULT=new DesignatorClassEntity(designatorEntity, classField); RESULT.setLine(designatorEntityleft); :}
 				|
-					(DesignatorArray) Designator:designatorArrayName LBRACKET Expr:arrayIndex RBRACKET {: RESULT=new DesignatorArray(designatorArrayName, arrayIndex); RESULT.setLine(designatorArrayNameleft); :}
+					(DesignatorArray) Designator:designatorArray LBRACKET Expr:arrayIndex RBRACKET {: RESULT=new DesignatorArray(designatorArray, arrayIndex); RESULT.setLine(designatorArrayleft); :}
 				|
 					(DesignatorDefault) IDENT:designatorName {: RESULT=new DesignatorDefault(designatorName); RESULT.setLine(designatorNameleft); :}
 				; 

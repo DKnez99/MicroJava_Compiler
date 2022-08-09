@@ -101,10 +101,16 @@ nonterminal ActPars, ActParsOptional;
 nonterminal Condition;
 nonterminal CondTerm;
 nonterminal CondFact;
-nonterminal Expr, ExprOptional, RelopExprOptional, NegativeExprOptional, ExprInBracketsOptional;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal ExprOptional, RelopExprOptional, NegativeExprOptional, ExprInBracketsOptional;
+
 nonterminal Term, AddopTermListNullable;
-nonterminal Factor, FactorType, MulopFactorListNullable, FactorDesignatorParenOptional;
-nonterminal Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal FactorType, MulopFactorListNullable;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
 nonterminal Label;
 nonterminal Assignop, Relop, Addop, Mulop;
 
@@ -417,7 +423,9 @@ AddopTermListNullable ::=
 /* Factor */
 
 Factor ::=
-				(FactorDesignator) Designator:designator FactorDesignatorParenOptional
+				(FactorDesignator) Designator:designatorName
+			|
+				(FactorDesignatorMethod) Designator:methodName LPAREN ActParsOptional:actPars RPAREN
 			|
 				(FactorConstNum) NUMBER_CONST:numberValue
 			|
@@ -429,12 +437,6 @@ Factor ::=
 			|
 				(FactorExpr) LPAREN Expr:expr RPAREN	
 			;
-			
-FactorDesignatorParenOptional ::=
-									(FactorDesignatorParenYes) LPAREN ActParsOptional RPAREN
-								|
-									(FactorDesignatorParenNo) /* epsilon */
-								;
 
 MulopFactorListNullable ::=
 								(MulopFactorList) MulopFactorListNullable Mulop Factor
@@ -446,9 +448,9 @@ MulopFactorListNullable ::=
 /* Designator */
 			
 Designator ::=	
-					(DesignatorClassEntity) Designator:designatorEntityName DOT IDENT:classField
+					(DesignatorClassEntity) Designator:designatorEntity DOT IDENT:classField
 				|
-					(DesignatorArray) Designator:designatorArrayName LBRACKET Expr:arrayIndex RBRACKET
+					(DesignatorArray) Designator:designatorArray LBRACKET Expr:arrayIndex RBRACKET
 				|
 					(DesignatorDefault) IDENT:designatorName
 				; 

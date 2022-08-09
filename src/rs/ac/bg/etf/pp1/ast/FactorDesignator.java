@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/7/2022 14:19:48
+// 9/7/2022 19:7:11
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,10 @@ package rs.ac.bg.etf.pp1.ast;
 public class FactorDesignator extends Factor {
 
     private Designator Designator;
-    private FactorDesignatorParenOptional FactorDesignatorParenOptional;
 
-    public FactorDesignator (Designator Designator, FactorDesignatorParenOptional FactorDesignatorParenOptional) {
+    public FactorDesignator (Designator Designator) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.FactorDesignatorParenOptional=FactorDesignatorParenOptional;
-        if(FactorDesignatorParenOptional!=null) FactorDesignatorParenOptional.setParent(this);
     }
 
     public Designator getDesignator() {
@@ -25,32 +22,21 @@ public class FactorDesignator extends Factor {
         this.Designator=Designator;
     }
 
-    public FactorDesignatorParenOptional getFactorDesignatorParenOptional() {
-        return FactorDesignatorParenOptional;
-    }
-
-    public void setFactorDesignatorParenOptional(FactorDesignatorParenOptional FactorDesignatorParenOptional) {
-        this.FactorDesignatorParenOptional=FactorDesignatorParenOptional;
-    }
-
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
-        if(FactorDesignatorParenOptional!=null) FactorDesignatorParenOptional.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(FactorDesignatorParenOptional!=null) FactorDesignatorParenOptional.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(FactorDesignatorParenOptional!=null) FactorDesignatorParenOptional.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -61,12 +47,6 @@ public class FactorDesignator extends Factor {
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        if(FactorDesignatorParenOptional!=null)
-            buffer.append(FactorDesignatorParenOptional.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

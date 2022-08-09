@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/7/2022 14:19:48
+// 9/7/2022 19:7:11
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -32,7 +32,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional) { }
     public void visit(Expr Expr) { }
     public void visit(SingleStatementElseOptional SingleStatementElseOptional) { }
-    public void visit(FactorDesignatorParenOptional FactorDesignatorParenOptional) { }
     public void visit(ActPars ActPars) { }
     public void visit(ProgramDeclListNullable ProgramDeclListNullable) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
@@ -65,13 +64,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorClassEntity DesignatorClassEntity) { visit(); }
     public void visit(EmptyMulopFactorList EmptyMulopFactorList) { visit(); }
     public void visit(MulopFactorList MulopFactorList) { visit(); }
-    public void visit(FactorDesignatorParenNo FactorDesignatorParenNo) { visit(); }
-    public void visit(FactorDesignatorParenYes FactorDesignatorParenYes) { visit(); }
     public void visit(FactorExpr FactorExpr) { visit(); }
     public void visit(FactorNewType FactorNewType) { visit(); }
     public void visit(FactorConstBool FactorConstBool) { visit(); }
     public void visit(FactorConstChar FactorConstChar) { visit(); }
     public void visit(FactorConstNum FactorConstNum) { visit(); }
+    public void visit(FactorDesignatorMethod FactorDesignatorMethod) { visit(); }
     public void visit(FactorDesignator FactorDesignator) { visit(); }
     public void visit(EmptyAddopTermList EmptyAddopTermList) { visit(); }
     public void visit(AddopTermList AddopTermList) { visit(); }

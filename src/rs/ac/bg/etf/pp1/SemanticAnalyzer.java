@@ -239,4 +239,94 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		//end of var decl list
 		currentType=TabEx.noType;
 	}
+	/* ====================== Designators ====================== */
+	@Override
+	public void visit(DesignatorDefault designatorDefault) {
+		
+		String designatorName=designatorDefault.getDesignatorName();
+		designatorDefault.obj=TabEx.find(designatorName);
+		if(designatorDefault.obj==TabEx.noObj) {
+			report_error(designatorName+" hasn't been declared yet!",designatorDefault);
+		}
+		else {
+			String designatorType=structToString(designatorDefault.obj.getType());
+			report_info("Accessing "+designatorType+" "+designatorName+".",designatorDefault);
+		}
+	}
+	
+	private boolean arrayIsArrayType(Struct arrayType) {
+		if(arrayType.getKind()!=Struct.Array) {
+			return false;
+		}
+		return true;
+	}
+	
+	private boolean arrayIndexIsInt(Struct indexType) {
+		if(indexType!=TabEx.intType) {
+			return false;
+		}
+		return true;
+	}
+	
+	@Override
+	public void visit(DesignatorArray designatorArray) {
+		String arrayName=designatorArray.getDesignator().obj.getName();
+		Struct arrayType=designatorArray.getDesignator().obj.getType();
+		String arrayTypeName=structToString(arrayType);
+		Struct indexType=designatorArray.getExpr().struct;
+		if(arrayIsArrayType(arrayType)==false) {
+			report_error("Not possible to access element of "+arrayTypeName+" "+arrayName+" as it's not an array!",designatorArray);
+			designatorArray.obj=TabEx.noObj;
+			return;
+		}
+		Struct elemType=arrayType.getElemType();
+		String elemTypeName=structToString(elemType);
+		/*
+		//uncomment when you implement expr types
+		if(arrayIndexIsInt(indexType)==false) {
+			report_error("Index of "+elemTypeName+" "+arrayName+"[] must be of type int!",designatorArray);
+			designatorArray.obj=TabEx.noObj;
+			return;
+		}
+		*/
+		report_info("Accessing an element of "+elemTypeName+" "+arrayName+"[].",designatorArray);
+		designatorArray.obj=new Obj(Obj.Elem, arrayName, elemType);	//CHECK
+	}
+	
+	/* ====================== Factors ====================== */
+	@Override
+	//variables, elements of an array
+	public void visit(FactorDesignator factorDesignator) {
+		if(factorDesignator.getDesignator().obj.equals(TabEx.noObj)) {
+			factorDesignator.struct=TabEx.noType;
+			return;
+		}	
+		factorDesignator.struct=factorDesignator.getDesignator().obj.getType();
+	}
+	
+	
+	//constant factors
+	@Override
+	public void visit(FactorConstNum factorConstNum) {
+		factorConstNum.struct=TabEx.intType;
+	}
+	
+	@Override
+	public void visit(FactorConstChar factorConstChar) {
+		factorConstChar.struct=TabEx.charType;
+	}
+	
+	@Override
+	public void visit(FactorConstBool factorConstBool) {
+		factorConstBool.struct=TabEx.boolType;
+	}
+	/* ====================== Terms ====================== */
+	
+	/* ====================== Expressions ====================== */
+	
+	/* ====================== Methods ====================== */
+
+	
+	
+
 }

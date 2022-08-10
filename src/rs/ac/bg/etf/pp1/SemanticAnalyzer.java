@@ -342,12 +342,12 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	public void visit(Term term) {
 		Struct factorType=term.getFactor().struct;
 		String factorTypeName=structToString(factorType);
-		if(factorType!=TabEx.intType) {
+		if(factorType!=TabEx.intType && term.getMulopFactorListNullable().struct!=TabEx.noType) {
 			term.struct=TabEx.noType;
 			report_error("Factor in a term must be of type int! Detected term of type "+factorTypeName+".",term);
 			return;
 		}
-		term.struct=TabEx.intType;
+		term.struct=factorType;
 	}
 	
 	@Override
@@ -362,6 +362,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		mulopFactorList.struct=TabEx.intType;
 	}
 	
+	@Override
+	public void visit(EmptyMulopFactorList emptyMulopFactorList) {
+		emptyMulopFactorList.struct=TabEx.noType;
+	}
 	/* ====================== Expressions ====================== */
 	@Override
 	public void visit(ExprTerm exprTerm) {
@@ -424,12 +428,14 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Struct destType=dest.getType();
 		int destKind=dest.getKind();
 		Struct srcType=designatorStatementAssign.getExpr().struct;
+		
 		if(destKind!=Obj.Var && destKind!=Obj.Elem && destKind!=Obj.Fld) {
 			report_error("Left side of assignment must be a variable, an array element or a class field! Detected "+kindToString(destKind)+".",designatorStatementAssign);
 			return;
 		}
 		if(srcType.assignableTo(destType)==false) {
 			report_error("Destination isn't assignable to source! Dest type: "+structToString(destType)+", Src type: "+structToString(srcType)+".",designatorStatementAssign);
+			return;
 		}
 	}
 	

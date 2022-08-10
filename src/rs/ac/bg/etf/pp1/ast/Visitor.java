@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/7/2022 19:7:11
+// 10/7/2022 10:8:45
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -20,7 +20,6 @@ public interface Visitor {
     public void visit(ConstName ConstName);
     public void visit(ProgramDecl ProgramDecl);
     public void visit(Addop Addop);
-    public void visit(ExprInBracketsOptional ExprInBracketsOptional);
     public void visit(Factor Factor);
     public void visit(CondTerm CondTerm);
     public void visit(VarList VarList);
@@ -35,7 +34,6 @@ public interface Visitor {
     public void visit(ActPars ActPars);
     public void visit(ProgramDeclListNullable ProgramDeclListNullable);
     public void visit(DesignatorStatement DesignatorStatement);
-    public void visit(NegativeExprOptional NegativeExprOptional);
     public void visit(MethodReturnType MethodReturnType);
     public void visit(ConstAssignList ConstAssignList);
     public void visit(ConstAssign ConstAssign);
@@ -65,7 +63,8 @@ public interface Visitor {
     public void visit(EmptyMulopFactorList EmptyMulopFactorList);
     public void visit(MulopFactorList MulopFactorList);
     public void visit(FactorExpr FactorExpr);
-    public void visit(FactorNewType FactorNewType);
+    public void visit(FactorNewUserType FactorNewUserType);
+    public void visit(FactorNewArray FactorNewArray);
     public void visit(FactorConstBool FactorConstBool);
     public void visit(FactorConstChar FactorConstChar);
     public void visit(FactorConstNum FactorConstNum);
@@ -76,13 +75,11 @@ public interface Visitor {
     public void visit(Term Term);
     public void visit(RelopExprNo RelopExprNo);
     public void visit(RelopExprYes RelopExprYes);
-    public void visit(ExprInBracketsNo ExprInBracketsNo);
-    public void visit(ExprInBracketsYes ExprInBracketsYes);
     public void visit(ExprNo ExprNo);
     public void visit(ExprYes ExprYes);
-    public void visit(NegativeExprNo NegativeExprNo);
-    public void visit(NegativeExprYes NegativeExprYes);
+    public void visit(ExprNegQQ ExprNegQQ);
     public void visit(ExprQQ ExprQQ);
+    public void visit(ExprNegTerm ExprNegTerm);
     public void visit(ExprTerm ExprTerm);
     public void visit(CondFact CondFact);
     public void visit(CondTermMany CondTermMany);

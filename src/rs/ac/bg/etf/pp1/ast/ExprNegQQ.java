@@ -5,13 +5,13 @@
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ExprQQ extends Expr {
+public class ExprNegQQ extends Expr {
 
     private Term Term;
     private AddopTermListNullable AddopTermListNullable;
     private Expr Expr;
 
-    public ExprQQ (Term Term, AddopTermListNullable AddopTermListNullable, Expr Expr) {
+    public ExprNegQQ (Term Term, AddopTermListNullable AddopTermListNullable, Expr Expr) {
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.AddopTermListNullable=AddopTermListNullable;
@@ -71,7 +71,7 @@ public class ExprQQ extends Expr {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ExprQQ(\n");
+        buffer.append("ExprNegQQ(\n");
 
         if(Term!=null)
             buffer.append(Term.toString("  "+tab));
@@ -92,7 +92,7 @@ public class ExprQQ extends Expr {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ExprQQ]");
+        buffer.append(") [ExprNegQQ]");
         return buffer.toString();
     }
 }

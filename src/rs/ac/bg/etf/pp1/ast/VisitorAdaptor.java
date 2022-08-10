@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/7/2022 19:7:11
+// 10/7/2022 10:8:45
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -20,7 +20,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConstName ConstName) { }
     public void visit(ProgramDecl ProgramDecl) { }
     public void visit(Addop Addop) { }
-    public void visit(ExprInBracketsOptional ExprInBracketsOptional) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
     public void visit(VarList VarList) { }
@@ -35,7 +34,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActPars ActPars) { }
     public void visit(ProgramDeclListNullable ProgramDeclListNullable) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(NegativeExprOptional NegativeExprOptional) { }
     public void visit(MethodReturnType MethodReturnType) { }
     public void visit(ConstAssignList ConstAssignList) { }
     public void visit(ConstAssign ConstAssign) { }
@@ -65,7 +63,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(EmptyMulopFactorList EmptyMulopFactorList) { visit(); }
     public void visit(MulopFactorList MulopFactorList) { visit(); }
     public void visit(FactorExpr FactorExpr) { visit(); }
-    public void visit(FactorNewType FactorNewType) { visit(); }
+    public void visit(FactorNewUserType FactorNewUserType) { visit(); }
+    public void visit(FactorNewArray FactorNewArray) { visit(); }
     public void visit(FactorConstBool FactorConstBool) { visit(); }
     public void visit(FactorConstChar FactorConstChar) { visit(); }
     public void visit(FactorConstNum FactorConstNum) { visit(); }
@@ -76,13 +75,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Term Term) { visit(); }
     public void visit(RelopExprNo RelopExprNo) { visit(); }
     public void visit(RelopExprYes RelopExprYes) { visit(); }
-    public void visit(ExprInBracketsNo ExprInBracketsNo) { visit(); }
-    public void visit(ExprInBracketsYes ExprInBracketsYes) { visit(); }
     public void visit(ExprNo ExprNo) { visit(); }
     public void visit(ExprYes ExprYes) { visit(); }
-    public void visit(NegativeExprNo NegativeExprNo) { visit(); }
-    public void visit(NegativeExprYes NegativeExprYes) { visit(); }
+    public void visit(ExprNegQQ ExprNegQQ) { visit(); }
     public void visit(ExprQQ ExprQQ) { visit(); }
+    public void visit(ExprNegTerm ExprNegTerm) { visit(); }
     public void visit(ExprTerm ExprTerm) { visit(); }
     public void visit(CondFact CondFact) { visit(); }
     public void visit(CondTermMany CondTermMany) { visit(); }

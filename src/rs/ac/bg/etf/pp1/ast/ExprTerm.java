@@ -1,31 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/7/2022 19:7:11
+// 10/7/2022 10:8:45
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ExprTerm extends Expr {
 
-    private NegativeExprOptional NegativeExprOptional;
     private Term Term;
     private AddopTermListNullable AddopTermListNullable;
 
-    public ExprTerm (NegativeExprOptional NegativeExprOptional, Term Term, AddopTermListNullable AddopTermListNullable) {
-        this.NegativeExprOptional=NegativeExprOptional;
-        if(NegativeExprOptional!=null) NegativeExprOptional.setParent(this);
+    public ExprTerm (Term Term, AddopTermListNullable AddopTermListNullable) {
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.AddopTermListNullable=AddopTermListNullable;
         if(AddopTermListNullable!=null) AddopTermListNullable.setParent(this);
-    }
-
-    public NegativeExprOptional getNegativeExprOptional() {
-        return NegativeExprOptional;
-    }
-
-    public void setNegativeExprOptional(NegativeExprOptional NegativeExprOptional) {
-        this.NegativeExprOptional=NegativeExprOptional;
     }
 
     public Term getTerm() {
@@ -49,20 +38,17 @@ public class ExprTerm extends Expr {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(NegativeExprOptional!=null) NegativeExprOptional.accept(visitor);
         if(Term!=null) Term.accept(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(NegativeExprOptional!=null) NegativeExprOptional.traverseTopDown(visitor);
         if(Term!=null) Term.traverseTopDown(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(NegativeExprOptional!=null) NegativeExprOptional.traverseBottomUp(visitor);
         if(Term!=null) Term.traverseBottomUp(visitor);
         if(AddopTermListNullable!=null) AddopTermListNullable.traverseBottomUp(visitor);
         accept(visitor);
@@ -72,12 +58,6 @@ public class ExprTerm extends Expr {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ExprTerm(\n");
-
-        if(NegativeExprOptional!=null)
-            buffer.append(NegativeExprOptional.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
-        buffer.append("\n");
 
         if(Term!=null)
             buffer.append(Term.toString("  "+tab));

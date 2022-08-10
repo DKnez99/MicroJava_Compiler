@@ -281,21 +281,20 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		}
 		Struct elemType=arrayType.getElemType();
 		String elemTypeName=structToString(elemType);
-		/*
+		
 		//uncomment when you implement expr types
 		if(arrayIndexIsInt(indexType)==false) {
 			report_error("Index of "+elemTypeName+" "+arrayName+"[] must be of type int!",designatorArray);
 			designatorArray.obj=TabEx.noObj;
 			return;
 		}
-		*/
+		
 		report_info("Accessing an element of "+elemTypeName+" "+arrayName+"[].",designatorArray);
 		designatorArray.obj=new Obj(Obj.Elem, arrayName, elemType);	//CHECK
 	}
 	
 	/* ====================== Factors ====================== */
 	@Override
-	//variables, elements of an array
 	public void visit(FactorDesignator factorDesignator) {
 		if(factorDesignator.getDesignator().obj.equals(TabEx.noObj)) {
 			factorDesignator.struct=TabEx.noType;
@@ -304,8 +303,6 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		factorDesignator.struct=factorDesignator.getDesignator().obj.getType();
 	}
 	
-	
-	//constant factors
 	@Override
 	public void visit(FactorConstNum factorConstNum) {
 		factorConstNum.struct=TabEx.intType;
@@ -320,9 +317,121 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	public void visit(FactorConstBool factorConstBool) {
 		factorConstBool.struct=TabEx.boolType;
 	}
+	
+	@Override
+	public void visit(FactorNewArray factorNewArray) {
+		Struct exprType=factorNewArray.getExpr().struct;
+		String exprTypeName=structToString(exprType);
+		Struct elemType=factorNewArray.getType().struct; //int<-- arr[] for example
+		if(exprType!=Tab.intType) {
+			factorNewArray.struct=TabEx.noType;
+			report_error("Expression representing the number of elements of an array can't be of type "+exprTypeName+"!",factorNewArray);
+			return;
+		}
+		factorNewArray.struct=new Struct(Struct.Array,elemType);
+	}
+	
+	@Override
+	public void visit(FactorExpr factorExpr) {
+		factorExpr.struct=factorExpr.getExpr().struct;
+	}
+	
 	/* ====================== Terms ====================== */
 	
+	@Override
+	public void visit(Term term) {
+		Struct factorType=term.getFactor().struct;
+		String factorTypeName=structToString(factorType);
+		if(factorType!=TabEx.intType) {
+			term.struct=TabEx.noType;
+			report_error("Factor in a term must be of type int! Detected term of type "+factorTypeName+".",term);
+			return;
+		}
+		term.struct=TabEx.intType;
+	}
+	
+	@Override
+	public void visit(MulopFactorList mulopFactorList) {
+		Struct factorType=mulopFactorList.getFactor().struct;
+		String factorTypeName=structToString(factorType);
+		if(factorType!=TabEx.intType) {
+			mulopFactorList.struct=TabEx.noType;
+			report_error("All factors in a term must be of type int! Detected term of type "+factorTypeName+".",mulopFactorList);
+			return;
+		}
+		mulopFactorList.struct=TabEx.intType;
+	}
+	
 	/* ====================== Expressions ====================== */
+	@Override
+	public void visit(ExprTerm exprTerm) {
+		exprTerm.struct=exprTerm.getTerm().struct;
+	}
+	
+	@Override
+	public void visit(ExprNegTerm exprNegTerm) {
+		Struct termType=exprNegTerm.getTerm().struct;
+		String termTypeName=structToString(termType);
+		if(termType!=TabEx.intType) {
+			report_error("Can't negate "+termTypeName+" type in an expression!",exprNegTerm);
+			exprNegTerm.struct=TabEx.noType;
+			return;
+		}
+		exprNegTerm.struct=TabEx.intType;
+	}
+	
+	@Override
+	public void visit(AddopTermList addopTermList) {
+		Struct termType=addopTermList.getTerm().struct;
+		String termTypeName=structToString(termType);
+		if(termType!=TabEx.intType) {
+			addopTermList.struct=TabEx.noType;
+			report_error("All terms in an expression must be of type int! Detected term of type "+termTypeName+".",addopTermList);
+			return;
+		}
+		addopTermList.struct=TabEx.intType;
+	}
+	
+	@Override
+	public void visit(ExprQQ exprQQ) {
+		Struct termType=exprQQ.getTerm().struct;
+		Struct exprType=exprQQ.getExpr().struct;
+		if(termType!=TabEx.intType || exprType!=TabEx.intType) {
+			exprQQ.struct=TabEx.noType;
+			report_error("All subexpressions in an expression must be of type int!",exprQQ);
+			return;
+		}
+		exprQQ.struct=TabEx.intType;
+	}
+	
+	@Override
+	public void visit(ExprNegQQ exprNegQQ) {
+		Struct termType=exprNegQQ.getTerm().struct;
+		Struct exprType=exprNegQQ.getExpr().struct;
+		if(termType!=TabEx.intType || exprType!=TabEx.intType) {
+			exprNegQQ.struct=TabEx.noType;
+			report_error("All subexpressions in an expression must be of type int!",exprNegQQ);
+			return;
+		}
+		exprNegQQ.struct=TabEx.intType;
+	}
+	
+	/* ====================== Designator Statement ====================== */
+	
+	@Override
+	public void visit(DesignatorStatementAssign designatorStatementAssign) {
+		Obj dest=designatorStatementAssign.getDesignator().obj;
+		Struct destType=dest.getType();
+		int destKind=dest.getKind();
+		Struct srcType=designatorStatementAssign.getExpr().struct;
+		if(destKind!=Obj.Var && destKind!=Obj.Elem && destKind!=Obj.Fld) {
+			report_error("Left side of assignment must be a variable, an array element or a class field! Detected "+kindToString(destKind)+".",designatorStatementAssign);
+			return;
+		}
+		if(srcType.assignableTo(destType)==false) {
+			report_error("Destination isn't assignable to source! Dest type: "+structToString(destType)+", Src type: "+structToString(srcType)+".",designatorStatementAssign);
+		}
+	}
 	
 	/* ====================== Methods ====================== */
 

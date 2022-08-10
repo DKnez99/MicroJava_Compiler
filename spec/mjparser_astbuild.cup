@@ -130,17 +130,17 @@ nonterminal CondFact CondFact;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
 nonterminal ExprOptional ExprOptional;
 nonterminal RelopExprOptional RelopExprOptional;
-nonterminal NegativeExprOptional NegativeExprOptional;
-nonterminal ExprInBracketsOptional ExprInBracketsOptional;
 
-nonterminal Term Term;
-nonterminal AddopTermListNullable AddopTermListNullable;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term,
+			AddopTermListNullable;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor,
+			MulopFactorListNullable;
+
 nonterminal FactorType FactorType;
-nonterminal MulopFactorListNullable MulopFactorListNullable;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
 nonterminal Label Label;
 nonterminal Assignop Assignop;
 nonterminal Relop Relop;
@@ -413,27 +413,20 @@ CondFact ::= (CondFact) Expr:E1 RelopExprOptional:R2 {: RESULT=new CondFact(E1, 
 /* Expr */
 
 Expr ::=
-			(ExprTerm) NegativeExprOptional:N1 Term:T2 AddopTermListNullable:A3 {: RESULT=new ExprTerm(N1, T2, A3); RESULT.setLine(N1left); :}
+			(ExprTerm) Term:T1 AddopTermListNullable:A2 {: RESULT=new ExprTerm(T1, A2); RESULT.setLine(T1left); :}
 		|
-			(ExprQQ) NegativeExprOptional:N1 Term:T2 AddopTermListNullable:A3 QQ Expr:E4 {: RESULT=new ExprQQ(N1, T2, A3, E4); RESULT.setLine(N1left); :}
+			(ExprNegTerm) MINUS Term:T1 AddopTermListNullable:A2 {: RESULT=new ExprNegTerm(T1, A2); RESULT.setLine(T1left); :}
+		|
+			(ExprQQ) Term:T1 AddopTermListNullable:A2 QQ Expr:E3 {: RESULT=new ExprQQ(T1, A2, E3); RESULT.setLine(T1left); :}
+		|
+			(ExprNegQQ) MINUS Term:T1 AddopTermListNullable:A2 QQ Expr:E3 {: RESULT=new ExprNegQQ(T1, A2, E3); RESULT.setLine(T1left); :}
 		;
 					
-NegativeExprOptional ::=
-							(NegativeExprYes) MINUS {: RESULT=new NegativeExprYes(); :}
-						|
-							(NegativeExprNo) {: RESULT=new NegativeExprNo(); :} /* epsilon */
-						;
 ExprOptional ::=
 					(ExprYes) Expr:E1 {: RESULT=new ExprYes(E1); RESULT.setLine(E1left); :}
 				|
 					(ExprNo) {: RESULT=new ExprNo(); :} /* epsilon */
 				;
-
-ExprInBracketsOptional ::=
-							(ExprInBracketsYes) LBRACKET Expr:E1 RBRACKET {: RESULT=new ExprInBracketsYes(E1); RESULT.setLine(E1left); :}
-						|
-							(ExprInBracketsNo) {: RESULT=new ExprInBracketsNo(); :} /* epsilon */
-						;
 
 RelopExprOptional ::=
 						(RelopExprYes) Relop:R1 Expr:E2 {: RESULT=new RelopExprYes(R1, E2); RESULT.setLine(R1left); :}
@@ -466,7 +459,9 @@ Factor ::=
 			|
 				(FactorConstBool) BOOL_CONST:boolValue {: RESULT=new FactorConstBool(boolValue); RESULT.setLine(boolValueleft); :}
 			|
-				(FactorNewType) NEW Type:objectType ExprInBracketsOptional:E1 {: RESULT=new FactorNewType(objectType, E1); RESULT.setLine(objectTypeleft); :}
+				(FactorNewArray) NEW Type:elementType LBRACKET Expr:expr RBRACKET {: RESULT=new FactorNewArray(elementType, expr); RESULT.setLine(elementTypeleft); :}
+			|
+				(FactorNewUserType) NEW Type:userDefinedType {: RESULT=new FactorNewUserType(userDefinedType); RESULT.setLine(userDefinedTypeleft); :}
 			|
 				(FactorExpr) LPAREN Expr:expr RPAREN {: RESULT=new FactorExpr(expr); RESULT.setLine(exprleft); :}	
 			;

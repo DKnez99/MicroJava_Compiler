@@ -103,14 +103,18 @@ nonterminal CondTerm;
 nonterminal CondFact;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
-nonterminal ExprOptional, RelopExprOptional, NegativeExprOptional, ExprInBracketsOptional;
+nonterminal ExprOptional, RelopExprOptional;
 
-nonterminal Term, AddopTermListNullable;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term,
+			AddopTermListNullable;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
-nonterminal FactorType, MulopFactorListNullable;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor,
+			MulopFactorListNullable;
+
+nonterminal FactorType;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
 nonterminal Label;
 nonterminal Assignop, Relop, Addop, Mulop;
 
@@ -380,27 +384,20 @@ CondFact ::= (CondFact) Expr RelopExprOptional;
 /* Expr */
 
 Expr ::=
-			(ExprTerm) NegativeExprOptional Term AddopTermListNullable
+			(ExprTerm) Term AddopTermListNullable
 		|
-			(ExprQQ) NegativeExprOptional Term AddopTermListNullable QQ Expr
+			(ExprNegTerm) MINUS Term AddopTermListNullable
+		|
+			(ExprQQ) Term AddopTermListNullable QQ Expr
+		|
+			(ExprNegQQ) MINUS Term AddopTermListNullable QQ Expr
 		;
 					
-NegativeExprOptional ::=
-							(NegativeExprYes) MINUS
-						|
-							(NegativeExprNo) /* epsilon */
-						;
 ExprOptional ::=
 					(ExprYes) Expr
 				|
 					(ExprNo) /* epsilon */
 				;
-
-ExprInBracketsOptional ::=
-							(ExprInBracketsYes) LBRACKET Expr RBRACKET
-						|
-							(ExprInBracketsNo) /* epsilon */
-						;
 
 RelopExprOptional ::=
 						(RelopExprYes) Relop Expr
@@ -433,7 +430,9 @@ Factor ::=
 			|
 				(FactorConstBool) BOOL_CONST:boolValue
 			|
-				(FactorNewType) NEW Type:objectType ExprInBracketsOptional
+				(FactorNewArray) NEW Type:elementType LBRACKET Expr:expr RBRACKET
+			|
+				(FactorNewUserType) NEW Type:userDefinedType
 			|
 				(FactorExpr) LPAREN Expr:expr RPAREN	
 			;

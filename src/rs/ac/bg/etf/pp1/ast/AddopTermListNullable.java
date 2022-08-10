@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 9/7/2022 19:7:11
+// 10/7/2022 10:8:45
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -10,6 +10,8 @@ public abstract class AddopTermListNullable implements SyntaxNode {
     private SyntaxNode parent;
 
     private int line;
+
+    public rs.etf.pp1.symboltable.concepts.Struct struct = null;
 
     public SyntaxNode getParent() {
         return parent;

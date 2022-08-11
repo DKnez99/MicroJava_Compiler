@@ -1,278 +1,278 @@
-INFO  11:41:33,024 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301_A.mj
-INFO  11:41:33,024 - ===========================
-INFO  11:41:33,024 - PARSING...
-INFO  11:41:33,053 - #2 program
-INFO  11:41:33,053 - #47 test301
-INFO  11:41:33,053 - #3 const
-INFO  11:41:33,054 - #47 int
-INFO  11:41:33,054 - #47 nula
-INFO  11:41:33,054 - #30 =
-INFO  11:41:33,054 - #48 0
-INFO  11:41:33,055 - #26 ;
-INFO  11:41:33,055 - #3 const
-INFO  11:41:33,055 - #47 int
-INFO  11:41:33,055 - #47 jedan
-INFO  11:41:33,055 - #30 =
-INFO  11:41:33,055 - #48 1
-INFO  11:41:33,055 - #26 ;
-INFO  11:41:33,055 - #3 const
-INFO  11:41:33,056 - #47 int
-INFO  11:41:33,056 - #47 tri
-INFO  11:41:33,056 - #30 =
-INFO  11:41:33,056 - #48 3
-INFO  11:41:33,056 - #26 ;
-INFO  11:41:33,057 - #3 const
-INFO  11:41:33,057 - #47 int
-INFO  11:41:33,057 - #47 pet
-INFO  11:41:33,057 - #30 =
-INFO  11:41:33,057 - #48 5
-INFO  11:41:33,057 - #26 ;
-INFO  11:41:33,057 - #47 int
-INFO  11:41:33,057 - #47 niz
-INFO  11:41:33,057 - #22 [
-INFO  11:41:33,057 - #23 ]
-INFO  11:41:33,057 - #26 ;
-INFO  11:41:33,058 - #47 char
-INFO  11:41:33,058 - #47 nizch
-INFO  11:41:33,058 - #22 [
-INFO  11:41:33,058 - #23 ]
-INFO  11:41:33,058 - #26 ;
-INFO  11:41:33,058 - #47 bool
-INFO  11:41:33,058 - #47 netacno
-INFO  11:41:33,058 - #26 ;
-INFO  11:41:33,058 - #3 const
-INFO  11:41:33,058 - #47 bool
-INFO  11:41:33,058 - #47 tacno
-INFO  11:41:33,059 - #30 =
-INFO  11:41:33,059 - #50 true
-INFO  11:41:33,059 - #26 ;
-INFO  11:41:33,059 - #3 const
-INFO  11:41:33,059 - #47 char
-INFO  11:41:33,059 - #47 myChar
-INFO  11:41:33,059 - #30 =
-INFO  11:41:33,059 - #49 a
-INFO  11:41:33,059 - #26 ;
-INFO  11:41:33,059 - #20 {
-INFO  11:41:33,059 - #15 void
-INFO  11:41:33,060 - #47 main
-INFO  11:41:33,060 - #24 (
-INFO  11:41:33,060 - #25 )
-INFO  11:41:33,061 - #47 int
-INFO  11:41:33,061 - #47 bodovi
-INFO  11:41:33,061 - #26 ;
-INFO  11:41:33,061 - #47 bool
-INFO  11:41:33,061 - #47 bt
-INFO  11:41:33,061 - #26 ;
-INFO  11:41:33,061 - #20 {
-INFO  11:41:33,061 - #47 bodovi
-INFO  11:41:33,062 - #30 =
-INFO  11:41:33,062 - #48 0
-INFO  11:41:33,063 - #26 ;
-INFO  11:41:33,067 - #47 bodovi
-INFO  11:41:33,068 - #37 ++
-INFO  11:41:33,068 - #26 ;
-INFO  11:41:33,068 - #47 bodovi
-INFO  11:41:33,068 - #30 =
-INFO  11:41:33,068 - #24 (
-INFO  11:41:33,068 - #47 bodovi
-INFO  11:41:33,068 - #39 +
-INFO  11:41:33,068 - #47 jedan
-INFO  11:41:33,069 - #25 )
-INFO  11:41:33,069 - #44 ??
-INFO  11:41:33,069 - #47 tri
-INFO  11:41:33,069 - #26 ;
-INFO  11:41:33,069 - #47 bodovi
-INFO  11:41:33,069 - #30 =
-INFO  11:41:33,069 - #47 bodovi
-INFO  11:41:33,069 - #41 *
-INFO  11:41:33,069 - #47 pet
-INFO  11:41:33,070 - #26 ;
-INFO  11:41:33,070 - #47 bodovi
-INFO  11:41:33,070 - #38 --
-INFO  11:41:33,070 - #26 ;
-INFO  11:41:33,070 - #13 print
-INFO  11:41:33,070 - #24 (
-INFO  11:41:33,070 - #47 bodovi
-INFO  11:41:33,070 - #25 )
-INFO  11:41:33,071 - #26 ;
-INFO  11:41:33,071 - #47 niz
-INFO  11:41:33,071 - #30 =
-INFO  11:41:33,071 - #14 new
-INFO  11:41:33,071 - #47 int
-INFO  11:41:33,071 - #22 [
-INFO  11:41:33,071 - #48 3
-INFO  11:41:33,071 - #23 ]
-INFO  11:41:33,071 - #26 ;
-INFO  11:41:33,071 - #47 niz
-INFO  11:41:33,071 - #22 [
-INFO  11:41:33,071 - #47 nula
-INFO  11:41:33,071 - #23 ]
-INFO  11:41:33,071 - #30 =
-INFO  11:41:33,071 - #47 jedan
-INFO  11:41:33,071 - #26 ;
-INFO  11:41:33,071 - #47 niz
-INFO  11:41:33,071 - #22 [
-INFO  11:41:33,071 - #48 1
-INFO  11:41:33,071 - #23 ]
-INFO  11:41:33,071 - #30 =
-INFO  11:41:33,072 - #48 2
-INFO  11:41:33,072 - #26 ;
-INFO  11:41:33,072 - #47 niz
-INFO  11:41:33,072 - #22 [
-INFO  11:41:33,072 - #47 niz
-INFO  11:41:33,072 - #22 [
-INFO  11:41:33,072 - #47 jedan
-INFO  11:41:33,072 - #23 ]
-INFO  11:41:33,072 - #44 ??
-INFO  11:41:33,072 - #40 -
-INFO  11:41:33,072 - #48 1
-INFO  11:41:33,072 - #23 ]
-INFO  11:41:33,072 - #30 =
-INFO  11:41:33,072 - #47 niz
-INFO  11:41:33,072 - #22 [
-INFO  11:41:33,072 - #24 (
-INFO  11:41:33,072 - #47 niz
-INFO  11:41:33,072 - #22 [
-INFO  11:41:33,072 - #48 0
-INFO  11:41:33,072 - #23 ]
-INFO  11:41:33,072 - #40 -
-INFO  11:41:33,072 - #47 jedan
-INFO  11:41:33,073 - #25 )
-INFO  11:41:33,073 - #44 ??
-INFO  11:41:33,073 - #24 (
-INFO  11:41:33,073 - #47 bodovi
-INFO  11:41:33,073 - #41 *
-INFO  11:41:33,073 - #47 nula
-INFO  11:41:33,073 - #44 ??
-INFO  11:41:33,073 - #47 jedan
-INFO  11:41:33,073 - #25 )
-INFO  11:41:33,073 - #23 ]
-INFO  11:41:33,073 - #41 *
-INFO  11:41:33,073 - #48 3
-INFO  11:41:33,073 - #26 ;
-INFO  11:41:33,073 - #13 print
-INFO  11:41:33,073 - #24 (
-INFO  11:41:33,073 - #47 bodovi
-INFO  11:41:33,073 - #25 )
-INFO  11:41:33,073 - #26 ;
-INFO  11:41:33,073 - #47 bodovi
-INFO  11:41:33,073 - #30 =
-INFO  11:41:33,073 - #47 niz
-INFO  11:41:33,073 - #22 [
-INFO  11:41:33,073 - #48 2
-INFO  11:41:33,073 - #23 ]
-INFO  11:41:33,073 - #42 /
-INFO  11:41:33,073 - #47 niz
-INFO  11:41:33,074 - #22 [
-INFO  11:41:33,074 - #48 0
-INFO  11:41:33,074 - #23 ]
-INFO  11:41:33,074 - #26 ;
-INFO  11:41:33,074 - #13 print
-INFO  11:41:33,074 - #24 (
-INFO  11:41:33,074 - #47 bodovi
-INFO  11:41:33,074 - #25 )
-INFO  11:41:33,074 - #26 ;
-INFO  11:41:33,074 - #13 print
-INFO  11:41:33,074 - #24 (
-INFO  11:41:33,074 - #47 niz
-INFO  11:41:33,074 - #22 [
-INFO  11:41:33,074 - #48 2
-INFO  11:41:33,074 - #23 ]
-INFO  11:41:33,074 - #25 )
-INFO  11:41:33,074 - #26 ;
-INFO  11:41:33,074 - #47 nizch
-INFO  11:41:33,074 - #30 =
-INFO  11:41:33,074 - #14 new
-INFO  11:41:33,074 - #47 char
-INFO  11:41:33,074 - #22 [
-INFO  11:41:33,074 - #48 3
-INFO  11:41:33,074 - #23 ]
-INFO  11:41:33,075 - #26 ;
-INFO  11:41:33,075 - #47 nizch
-INFO  11:41:33,075 - #22 [
-INFO  11:41:33,075 - #48 0
-INFO  11:41:33,075 - #23 ]
-INFO  11:41:33,075 - #30 =
-INFO  11:41:33,075 - #49 a
-INFO  11:41:33,075 - #26 ;
-INFO  11:41:33,075 - #47 nizch
-INFO  11:41:33,075 - #22 [
-INFO  11:41:33,075 - #47 jedan
-INFO  11:41:33,075 - #23 ]
-INFO  11:41:33,075 - #30 =
-INFO  11:41:33,075 - #49 b
-INFO  11:41:33,075 - #26 ;
-INFO  11:41:33,075 - #47 nizch
-INFO  11:41:33,075 - #22 [
-INFO  11:41:33,075 - #47 pet
-INFO  11:41:33,075 - #40 -
-INFO  11:41:33,075 - #48 3
-INFO  11:41:33,075 - #23 ]
-INFO  11:41:33,075 - #30 =
-INFO  11:41:33,075 - #49 c
-INFO  11:41:33,075 - #26 ;
-INFO  11:41:33,075 - #13 print
-INFO  11:41:33,075 - #24 (
-INFO  11:41:33,075 - #47 nizch
-INFO  11:41:33,075 - #22 [
-INFO  11:41:33,075 - #48 1
-INFO  11:41:33,075 - #23 ]
-INFO  11:41:33,076 - #25 )
-INFO  11:41:33,076 - #26 ;
-INFO  11:41:33,076 - #13 print
-INFO  11:41:33,076 - #24 (
-INFO  11:41:33,076 - #47 nizch
-INFO  11:41:33,076 - #22 [
-INFO  11:41:33,076 - #47 jedan
-INFO  11:41:33,076 - #41 *
-INFO  11:41:33,076 - #48 2
-INFO  11:41:33,076 - #23 ]
-INFO  11:41:33,076 - #25 )
-INFO  11:41:33,076 - #26 ;
-INFO  11:41:33,076 - #47 bodovi
-INFO  11:41:33,076 - #30 =
-INFO  11:41:33,076 - #47 bodovi
-INFO  11:41:33,076 - #39 +
-INFO  11:41:33,076 - #24 (
-INFO  11:41:33,076 - #47 pet
-INFO  11:41:33,076 - #41 *
-INFO  11:41:33,076 - #47 jedan
-INFO  11:41:33,077 - #40 -
-INFO  11:41:33,077 - #48 1
-INFO  11:41:33,077 - #25 )
-INFO  11:41:33,077 - #41 *
-INFO  11:41:33,077 - #47 bodovi
-INFO  11:41:33,077 - #40 -
-INFO  11:41:33,077 - #24 (
-INFO  11:41:33,077 - #48 3
-INFO  11:41:33,077 - #43 %
-INFO  11:41:33,077 - #48 2
-INFO  11:41:33,078 - #39 +
-INFO  11:41:33,078 - #48 3
-INFO  11:41:33,078 - #41 *
-INFO  11:41:33,078 - #48 2
-INFO  11:41:33,078 - #40 -
-INFO  11:41:33,078 - #48 3
-INFO  11:41:33,078 - #25 )
-INFO  11:41:33,078 - #26 ;
-INFO  11:41:33,078 - #13 print
-INFO  11:41:33,078 - #24 (
-INFO  11:41:33,078 - #47 bodovi
-INFO  11:41:33,078 - #25 )
-INFO  11:41:33,078 - #26 ;
-INFO  11:41:33,078 - #12 read
-INFO  11:41:33,079 - #24 (
-INFO  11:41:33,079 - #47 bodovi
-INFO  11:41:33,079 - #25 )
-INFO  11:41:33,079 - #26 ;
-INFO  11:41:33,079 - #13 print
-INFO  11:41:33,079 - #24 (
-INFO  11:41:33,079 - #47 bodovi
-INFO  11:41:33,079 - #25 )
-INFO  11:41:33,079 - #26 ;
-INFO  11:41:33,079 - #21 }
-INFO  11:41:33,079 - #21 }
-INFO  11:41:33,086 - Program(
+INFO  09:18:26,536 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301_A.mj
+INFO  09:18:26,536 - ===========================
+INFO  09:18:26,537 - PARSING...
+INFO  09:18:26,565 - #2 program
+INFO  09:18:26,565 - #47 test301
+INFO  09:18:26,565 - #3 const
+INFO  09:18:26,566 - #47 int
+INFO  09:18:26,566 - #47 nula
+INFO  09:18:26,566 - #30 =
+INFO  09:18:26,567 - #48 0
+INFO  09:18:26,567 - #26 ;
+INFO  09:18:26,567 - #3 const
+INFO  09:18:26,567 - #47 int
+INFO  09:18:26,567 - #47 jedan
+INFO  09:18:26,567 - #30 =
+INFO  09:18:26,567 - #48 1
+INFO  09:18:26,568 - #26 ;
+INFO  09:18:26,568 - #3 const
+INFO  09:18:26,568 - #47 int
+INFO  09:18:26,568 - #47 tri
+INFO  09:18:26,568 - #30 =
+INFO  09:18:26,568 - #48 3
+INFO  09:18:26,568 - #26 ;
+INFO  09:18:26,568 - #3 const
+INFO  09:18:26,568 - #47 int
+INFO  09:18:26,569 - #47 pet
+INFO  09:18:26,569 - #30 =
+INFO  09:18:26,569 - #48 5
+INFO  09:18:26,569 - #26 ;
+INFO  09:18:26,569 - #47 int
+INFO  09:18:26,569 - #47 niz
+INFO  09:18:26,569 - #22 [
+INFO  09:18:26,569 - #23 ]
+INFO  09:18:26,569 - #26 ;
+INFO  09:18:26,569 - #47 char
+INFO  09:18:26,570 - #47 nizch
+INFO  09:18:26,570 - #22 [
+INFO  09:18:26,570 - #23 ]
+INFO  09:18:26,570 - #26 ;
+INFO  09:18:26,570 - #47 bool
+INFO  09:18:26,570 - #47 netacno
+INFO  09:18:26,570 - #26 ;
+INFO  09:18:26,570 - #3 const
+INFO  09:18:26,570 - #47 bool
+INFO  09:18:26,570 - #47 tacno
+INFO  09:18:26,570 - #30 =
+INFO  09:18:26,570 - #50 true
+INFO  09:18:26,570 - #26 ;
+INFO  09:18:26,571 - #3 const
+INFO  09:18:26,571 - #47 char
+INFO  09:18:26,571 - #47 myChar
+INFO  09:18:26,571 - #30 =
+INFO  09:18:26,571 - #49 a
+INFO  09:18:26,571 - #26 ;
+INFO  09:18:26,571 - #20 {
+INFO  09:18:26,571 - #15 void
+INFO  09:18:26,572 - #47 main
+INFO  09:18:26,572 - #24 (
+INFO  09:18:26,572 - #25 )
+INFO  09:18:26,573 - #47 int
+INFO  09:18:26,573 - #47 bodovi
+INFO  09:18:26,573 - #26 ;
+INFO  09:18:26,573 - #47 bool
+INFO  09:18:26,573 - #47 bt
+INFO  09:18:26,573 - #26 ;
+INFO  09:18:26,573 - #20 {
+INFO  09:18:26,573 - #47 bodovi
+INFO  09:18:26,574 - #30 =
+INFO  09:18:26,574 - #48 0
+INFO  09:18:26,574 - #26 ;
+INFO  09:18:26,579 - #47 bodovi
+INFO  09:18:26,579 - #37 ++
+INFO  09:18:26,579 - #26 ;
+INFO  09:18:26,580 - #47 bodovi
+INFO  09:18:26,580 - #30 =
+INFO  09:18:26,580 - #24 (
+INFO  09:18:26,580 - #47 bodovi
+INFO  09:18:26,580 - #39 +
+INFO  09:18:26,580 - #47 jedan
+INFO  09:18:26,580 - #25 )
+INFO  09:18:26,581 - #44 ??
+INFO  09:18:26,581 - #47 tri
+INFO  09:18:26,581 - #26 ;
+INFO  09:18:26,581 - #47 bodovi
+INFO  09:18:26,581 - #30 =
+INFO  09:18:26,581 - #47 bodovi
+INFO  09:18:26,581 - #41 *
+INFO  09:18:26,581 - #47 pet
+INFO  09:18:26,582 - #26 ;
+INFO  09:18:26,582 - #47 bodovi
+INFO  09:18:26,582 - #38 --
+INFO  09:18:26,582 - #26 ;
+INFO  09:18:26,582 - #13 print
+INFO  09:18:26,582 - #24 (
+INFO  09:18:26,582 - #47 bodovi
+INFO  09:18:26,582 - #25 )
+INFO  09:18:26,582 - #26 ;
+INFO  09:18:26,582 - #47 niz
+INFO  09:18:26,583 - #30 =
+INFO  09:18:26,583 - #14 new
+INFO  09:18:26,583 - #47 int
+INFO  09:18:26,583 - #22 [
+INFO  09:18:26,583 - #48 3
+INFO  09:18:26,583 - #23 ]
+INFO  09:18:26,583 - #26 ;
+INFO  09:18:26,583 - #47 niz
+INFO  09:18:26,583 - #22 [
+INFO  09:18:26,583 - #47 nula
+INFO  09:18:26,583 - #23 ]
+INFO  09:18:26,583 - #30 =
+INFO  09:18:26,583 - #47 jedan
+INFO  09:18:26,583 - #26 ;
+INFO  09:18:26,583 - #47 niz
+INFO  09:18:26,583 - #22 [
+INFO  09:18:26,583 - #48 1
+INFO  09:18:26,583 - #23 ]
+INFO  09:18:26,584 - #30 =
+INFO  09:18:26,584 - #48 2
+INFO  09:18:26,584 - #26 ;
+INFO  09:18:26,584 - #47 niz
+INFO  09:18:26,584 - #22 [
+INFO  09:18:26,584 - #47 niz
+INFO  09:18:26,584 - #22 [
+INFO  09:18:26,584 - #47 jedan
+INFO  09:18:26,584 - #23 ]
+INFO  09:18:26,584 - #44 ??
+INFO  09:18:26,584 - #40 -
+INFO  09:18:26,584 - #48 1
+INFO  09:18:26,584 - #23 ]
+INFO  09:18:26,584 - #30 =
+INFO  09:18:26,584 - #47 niz
+INFO  09:18:26,584 - #22 [
+INFO  09:18:26,584 - #24 (
+INFO  09:18:26,584 - #47 niz
+INFO  09:18:26,584 - #22 [
+INFO  09:18:26,585 - #48 0
+INFO  09:18:26,585 - #23 ]
+INFO  09:18:26,585 - #40 -
+INFO  09:18:26,585 - #47 jedan
+INFO  09:18:26,585 - #25 )
+INFO  09:18:26,585 - #44 ??
+INFO  09:18:26,585 - #24 (
+INFO  09:18:26,585 - #47 bodovi
+INFO  09:18:26,585 - #41 *
+INFO  09:18:26,585 - #47 nula
+INFO  09:18:26,585 - #44 ??
+INFO  09:18:26,585 - #47 jedan
+INFO  09:18:26,585 - #25 )
+INFO  09:18:26,585 - #23 ]
+INFO  09:18:26,585 - #41 *
+INFO  09:18:26,585 - #48 3
+INFO  09:18:26,585 - #26 ;
+INFO  09:18:26,585 - #13 print
+INFO  09:18:26,586 - #24 (
+INFO  09:18:26,586 - #47 bodovi
+INFO  09:18:26,586 - #25 )
+INFO  09:18:26,586 - #26 ;
+INFO  09:18:26,586 - #47 bodovi
+INFO  09:18:26,586 - #30 =
+INFO  09:18:26,586 - #47 niz
+INFO  09:18:26,586 - #22 [
+INFO  09:18:26,586 - #48 2
+INFO  09:18:26,586 - #23 ]
+INFO  09:18:26,586 - #42 /
+INFO  09:18:26,586 - #47 niz
+INFO  09:18:26,586 - #22 [
+INFO  09:18:26,586 - #48 0
+INFO  09:18:26,586 - #23 ]
+INFO  09:18:26,586 - #26 ;
+INFO  09:18:26,586 - #13 print
+INFO  09:18:26,586 - #24 (
+INFO  09:18:26,586 - #47 bodovi
+INFO  09:18:26,586 - #25 )
+INFO  09:18:26,586 - #26 ;
+INFO  09:18:26,587 - #13 print
+INFO  09:18:26,587 - #24 (
+INFO  09:18:26,587 - #47 niz
+INFO  09:18:26,587 - #22 [
+INFO  09:18:26,587 - #48 2
+INFO  09:18:26,587 - #23 ]
+INFO  09:18:26,587 - #25 )
+INFO  09:18:26,587 - #26 ;
+INFO  09:18:26,587 - #47 nizch
+INFO  09:18:26,587 - #30 =
+INFO  09:18:26,587 - #14 new
+INFO  09:18:26,587 - #47 char
+INFO  09:18:26,587 - #22 [
+INFO  09:18:26,587 - #48 3
+INFO  09:18:26,587 - #23 ]
+INFO  09:18:26,587 - #26 ;
+INFO  09:18:26,587 - #47 nizch
+INFO  09:18:26,587 - #22 [
+INFO  09:18:26,587 - #48 0
+INFO  09:18:26,587 - #23 ]
+INFO  09:18:26,587 - #30 =
+INFO  09:18:26,587 - #49 a
+INFO  09:18:26,587 - #26 ;
+INFO  09:18:26,587 - #47 nizch
+INFO  09:18:26,587 - #22 [
+INFO  09:18:26,587 - #47 jedan
+INFO  09:18:26,587 - #23 ]
+INFO  09:18:26,587 - #30 =
+INFO  09:18:26,587 - #49 b
+INFO  09:18:26,587 - #26 ;
+INFO  09:18:26,588 - #47 nizch
+INFO  09:18:26,588 - #22 [
+INFO  09:18:26,588 - #47 pet
+INFO  09:18:26,588 - #40 -
+INFO  09:18:26,588 - #48 3
+INFO  09:18:26,588 - #23 ]
+INFO  09:18:26,588 - #30 =
+INFO  09:18:26,588 - #49 c
+INFO  09:18:26,588 - #26 ;
+INFO  09:18:26,588 - #13 print
+INFO  09:18:26,588 - #24 (
+INFO  09:18:26,588 - #47 nizch
+INFO  09:18:26,588 - #22 [
+INFO  09:18:26,588 - #48 1
+INFO  09:18:26,588 - #23 ]
+INFO  09:18:26,588 - #25 )
+INFO  09:18:26,588 - #26 ;
+INFO  09:18:26,588 - #13 print
+INFO  09:18:26,588 - #24 (
+INFO  09:18:26,588 - #47 nizch
+INFO  09:18:26,588 - #22 [
+INFO  09:18:26,588 - #47 jedan
+INFO  09:18:26,588 - #41 *
+INFO  09:18:26,588 - #48 2
+INFO  09:18:26,588 - #23 ]
+INFO  09:18:26,589 - #25 )
+INFO  09:18:26,589 - #26 ;
+INFO  09:18:26,589 - #47 bodovi
+INFO  09:18:26,589 - #30 =
+INFO  09:18:26,589 - #47 bodovi
+INFO  09:18:26,589 - #39 +
+INFO  09:18:26,589 - #24 (
+INFO  09:18:26,589 - #47 pet
+INFO  09:18:26,589 - #41 *
+INFO  09:18:26,590 - #47 jedan
+INFO  09:18:26,590 - #40 -
+INFO  09:18:26,590 - #48 1
+INFO  09:18:26,590 - #25 )
+INFO  09:18:26,590 - #41 *
+INFO  09:18:26,590 - #47 bodovi
+INFO  09:18:26,590 - #40 -
+INFO  09:18:26,590 - #24 (
+INFO  09:18:26,590 - #48 3
+INFO  09:18:26,590 - #43 %
+INFO  09:18:26,590 - #48 2
+INFO  09:18:26,591 - #39 +
+INFO  09:18:26,591 - #48 3
+INFO  09:18:26,591 - #41 *
+INFO  09:18:26,591 - #48 2
+INFO  09:18:26,591 - #40 -
+INFO  09:18:26,591 - #48 3
+INFO  09:18:26,591 - #25 )
+INFO  09:18:26,591 - #26 ;
+INFO  09:18:26,591 - #13 print
+INFO  09:18:26,591 - #24 (
+INFO  09:18:26,591 - #47 bodovi
+INFO  09:18:26,592 - #25 )
+INFO  09:18:26,592 - #26 ;
+INFO  09:18:26,592 - #12 read
+INFO  09:18:26,592 - #24 (
+INFO  09:18:26,592 - #47 bodovi
+INFO  09:18:26,592 - #25 )
+INFO  09:18:26,592 - #26 ;
+INFO  09:18:26,592 - #13 print
+INFO  09:18:26,592 - #24 (
+INFO  09:18:26,592 - #47 bodovi
+INFO  09:18:26,592 - #25 )
+INFO  09:18:26,592 - #26 ;
+INFO  09:18:26,592 - #21 }
+INFO  09:18:26,592 - #21 }
+INFO  09:18:26,599 - Program(
   ProgramName(
    test301
   ) [ProgramName]
@@ -1486,93 +1486,79 @@ INFO  11:41:33,086 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  11:41:33,088 - PARSING SUCCESSFUL!
-INFO  11:41:33,088 - ===========================
-INFO  11:41:33,100 - Info at line 5: Created new constant int nula. ObjNode[Name = nula, Type = int, Kind = constant, Value = 0, Level = 0]
-INFO  11:41:33,100 - Info at line 6: Created new constant int jedan. ObjNode[Name = jedan, Type = int, Kind = constant, Value = 1, Level = 0]
-INFO  11:41:33,100 - Info at line 7: Created new constant int tri. ObjNode[Name = tri, Type = int, Kind = constant, Value = 3, Level = 0]
-INFO  11:41:33,100 - Info at line 8: Created new constant int pet. ObjNode[Name = pet, Type = int, Kind = constant, Value = 5, Level = 0]
-INFO  11:41:33,101 - Info at line 10: Created new variable int niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 0, Level = 0]
-INFO  11:41:33,101 - Info at line 11: Created new variable char nizch[]. ObjNode[Name = nizch, Type = array, Kind = variable, Address = 1, Level = 0]
-INFO  11:41:33,101 - Info at line 12: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 2, Level = 0]
-INFO  11:41:33,101 - Info at line 13: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
-INFO  11:41:33,101 - Info at line 14: Created new constant char myChar. ObjNode[Name = myChar, Type = char, Kind = constant, Value = 97, Level = 0]
-INFO  11:41:33,101 - Info at line 17: Created new variable int bodovi. ObjNode[Name = bodovi, Type = int, Kind = variable, Address = 3, Level = 0]
-INFO  11:41:33,101 - Info at line 18: Created new variable bool bt. ObjNode[Name = bt, Type = bool, Kind = variable, Address = 4, Level = 0]
-INFO  11:41:33,101 - Info at line 20: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 21: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 22: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 22: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 22: Accessing int jedan.
-INFO  11:41:33,101 - Info at line 22: Accessing int tri.
-INFO  11:41:33,101 - Info at line 23: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 23: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 23: Accessing int pet.
-INFO  11:41:33,101 - Info at line 24: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 25: Accessing int bodovi.
-INFO  11:41:33,101 - Info at line 27: Accessing array niz.
-INFO  11:41:33,101 - Info at line 27: ===Adding array struct with elements of type int to this factor.
-ERROR 11:41:33,101 - Error detected at line 27: Factor in a term must be of type int! Detected term of type array.
-ERROR 11:41:33,101 - Error detected at line 27: Destination isn't assignable to source! Dest type: array, Src type: none.
-INFO  11:41:33,101 - Info at line 28: Accessing array niz.
-INFO  11:41:33,101 - Info at line 28: Accessing int nula.
-INFO  11:41:33,101 - Info at line 28: Accessing an element of int niz[].
-INFO  11:41:33,101 - Info at line 28: Accessing int jedan.
-INFO  11:41:33,101 - Info at line 29: Accessing array niz.
-INFO  11:41:33,101 - Info at line 29: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 30: Accessing array niz.
-INFO  11:41:33,102 - Info at line 30: Accessing array niz.
-INFO  11:41:33,102 - Info at line 30: Accessing int jedan.
-INFO  11:41:33,102 - Info at line 30: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 30: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 30: Accessing array niz.
-INFO  11:41:33,102 - Info at line 30: Accessing array niz.
-INFO  11:41:33,102 - Info at line 30: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 30: Accessing int jedan.
-INFO  11:41:33,102 - Info at line 30: Accessing int bodovi.
-INFO  11:41:33,102 - Info at line 30: Accessing int nula.
-INFO  11:41:33,102 - Info at line 30: Accessing int jedan.
-INFO  11:41:33,102 - Info at line 30: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 31: Accessing int bodovi.
-INFO  11:41:33,102 - Info at line 32: Accessing int bodovi.
-INFO  11:41:33,102 - Info at line 32: Accessing array niz.
-INFO  11:41:33,102 - Info at line 32: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 32: Accessing array niz.
-INFO  11:41:33,102 - Info at line 32: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 33: Accessing int bodovi.
-INFO  11:41:33,102 - Info at line 34: Accessing array niz.
-INFO  11:41:33,102 - Info at line 34: Accessing an element of int niz[].
-INFO  11:41:33,102 - Info at line 37: Accessing array nizch.
-INFO  11:41:33,102 - Info at line 37: ===Adding array struct with elements of type char to this factor.
-ERROR 11:41:33,102 - Error detected at line 37: Factor in a term must be of type int! Detected term of type array.
-ERROR 11:41:33,102 - Error detected at line 37: Destination isn't assignable to source! Dest type: array, Src type: none.
-INFO  11:41:33,102 - Info at line 38: Accessing array nizch.
-INFO  11:41:33,102 - Info at line 38: Accessing an element of char nizch[].
-ERROR 11:41:33,102 - Error detected at line 38: Factor in a term must be of type int! Detected term of type char.
-ERROR 11:41:33,102 - Error detected at line 38: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  11:41:33,102 - Info at line 39: Accessing array nizch.
-INFO  11:41:33,103 - Info at line 39: Accessing int jedan.
-INFO  11:41:33,103 - Info at line 39: Accessing an element of char nizch[].
-ERROR 11:41:33,103 - Error detected at line 39: Factor in a term must be of type int! Detected term of type char.
-ERROR 11:41:33,103 - Error detected at line 39: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  11:41:33,103 - Info at line 40: Accessing array nizch.
-INFO  11:41:33,103 - Info at line 40: Accessing int pet.
-INFO  11:41:33,103 - Info at line 40: Accessing an element of char nizch[].
-ERROR 11:41:33,103 - Error detected at line 40: Factor in a term must be of type int! Detected term of type char.
-ERROR 11:41:33,103 - Error detected at line 40: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  11:41:33,103 - Info at line 41: Accessing array nizch.
-INFO  11:41:33,103 - Info at line 41: Accessing an element of char nizch[].
-ERROR 11:41:33,103 - Error detected at line 41: Factor in a term must be of type int! Detected term of type char.
-INFO  11:41:33,103 - Info at line 42: Accessing array nizch.
-INFO  11:41:33,103 - Info at line 42: Accessing int jedan.
-INFO  11:41:33,103 - Info at line 42: Accessing an element of char nizch[].
-ERROR 11:41:33,103 - Error detected at line 42: Factor in a term must be of type int! Detected term of type char.
-INFO  11:41:33,103 - Info at line 45: Accessing int bodovi.
-INFO  11:41:33,103 - Info at line 45: Accessing int bodovi.
-INFO  11:41:33,103 - Info at line 45: Accessing int pet.
-INFO  11:41:33,103 - Info at line 45: Accessing int jedan.
-INFO  11:41:33,103 - Info at line 45: Accessing int bodovi.
-INFO  11:41:33,103 - Info at line 46: Accessing int bodovi.
-INFO  11:41:33,103 - Info at line 48: Accessing int bodovi.
-INFO  11:41:33,103 - Info at line 49: Accessing int bodovi.
-ERROR 11:41:33,103 - Error detected: Function void main() doesn't exist.
+INFO  09:18:26,601 - PARSING SUCCESSFUL!
+INFO  09:18:26,601 - ===========================
+INFO  09:18:26,619 - Info at line 5: Created new constant int nula. ObjNode[Name = nula, Type = int, Kind = constant, Value = 0, Level = 0]
+INFO  09:18:26,619 - Info at line 6: Created new constant int jedan. ObjNode[Name = jedan, Type = int, Kind = constant, Value = 1, Level = 0]
+INFO  09:18:26,619 - Info at line 7: Created new constant int tri. ObjNode[Name = tri, Type = int, Kind = constant, Value = 3, Level = 0]
+INFO  09:18:26,619 - Info at line 8: Created new constant int pet. ObjNode[Name = pet, Type = int, Kind = constant, Value = 5, Level = 0]
+INFO  09:18:26,620 - Info at line 10: Created new variable int niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 0, Level = 0]
+INFO  09:18:26,620 - Info at line 11: Created new variable char nizch[]. ObjNode[Name = nizch, Type = array, Kind = variable, Address = 1, Level = 0]
+INFO  09:18:26,620 - Info at line 12: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 2, Level = 0]
+INFO  09:18:26,620 - Info at line 13: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  09:18:26,620 - Info at line 14: Created new constant char myChar. ObjNode[Name = myChar, Type = char, Kind = constant, Value = 97, Level = 0]
+INFO  09:18:26,620 - Info at line 17: Created new variable int bodovi. ObjNode[Name = bodovi, Type = int, Kind = variable, Address = 3, Level = 0]
+INFO  09:18:26,620 - Info at line 18: Created new variable bool bt. ObjNode[Name = bt, Type = bool, Kind = variable, Address = 4, Level = 0]
+INFO  09:18:26,620 - Info at line 20: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 21: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 22: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 22: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 22: Accessed a constant int jedan.
+INFO  09:18:26,620 - Info at line 22: Accessed a constant int tri.
+INFO  09:18:26,620 - Info at line 23: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 23: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 23: Accessed a constant int pet.
+INFO  09:18:26,620 - Info at line 24: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 25: Accessed a variable int bodovi.
+INFO  09:18:26,620 - Info at line 27: Accessed a variable int niz[].
+INFO  09:18:26,620 - Info at line 28: Accessed a variable int niz[].
+INFO  09:18:26,620 - Info at line 28: Accessed a constant int nula.
+INFO  09:18:26,620 - Info at line 28: Accessed an element of int niz[].
+INFO  09:18:26,620 - Info at line 28: Accessed a constant int jedan.
+INFO  09:18:26,620 - Info at line 29: Accessed a variable int niz[].
+INFO  09:18:26,620 - Info at line 29: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a constant int jedan.
+INFO  09:18:26,621 - Info at line 30: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 30: Accessed a constant int jedan.
+INFO  09:18:26,621 - Info at line 30: Accessed a variable int bodovi.
+INFO  09:18:26,621 - Info at line 30: Accessed a constant int nula.
+INFO  09:18:26,621 - Info at line 30: Accessed a constant int jedan.
+INFO  09:18:26,621 - Info at line 30: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 31: Accessed a variable int bodovi.
+INFO  09:18:26,621 - Info at line 32: Accessed a variable int bodovi.
+INFO  09:18:26,621 - Info at line 32: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 32: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 32: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 32: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 33: Accessed a variable int bodovi.
+INFO  09:18:26,621 - Info at line 34: Accessed a variable int niz[].
+INFO  09:18:26,621 - Info at line 34: Accessed an element of int niz[].
+INFO  09:18:26,621 - Info at line 37: Accessed a variable char nizch[].
+INFO  09:18:26,621 - Info at line 38: Accessed a variable char nizch[].
+INFO  09:18:26,621 - Info at line 38: Accessed an element of char nizch[].
+INFO  09:18:26,621 - Info at line 39: Accessed a variable char nizch[].
+INFO  09:18:26,621 - Info at line 39: Accessed a constant int jedan.
+INFO  09:18:26,621 - Info at line 39: Accessed an element of char nizch[].
+INFO  09:18:26,621 - Info at line 40: Accessed a variable char nizch[].
+INFO  09:18:26,621 - Info at line 40: Accessed a constant int pet.
+INFO  09:18:26,621 - Info at line 40: Accessed an element of char nizch[].
+INFO  09:18:26,622 - Info at line 41: Accessed a variable char nizch[].
+INFO  09:18:26,622 - Info at line 41: Accessed an element of char nizch[].
+INFO  09:18:26,622 - Info at line 42: Accessed a variable char nizch[].
+INFO  09:18:26,622 - Info at line 42: Accessed a constant int jedan.
+INFO  09:18:26,622 - Info at line 42: Accessed an element of char nizch[].
+INFO  09:18:26,622 - Info at line 45: Accessed a variable int bodovi.
+INFO  09:18:26,622 - Info at line 45: Accessed a variable int bodovi.
+INFO  09:18:26,622 - Info at line 45: Accessed a constant int pet.
+INFO  09:18:26,622 - Info at line 45: Accessed a constant int jedan.
+INFO  09:18:26,622 - Info at line 45: Accessed a variable int bodovi.
+INFO  09:18:26,622 - Info at line 46: Accessed a variable int bodovi.
+INFO  09:18:26,622 - Info at line 48: Accessed a variable int bodovi.
+INFO  09:18:26,622 - Info at line 49: Accessed a variable int bodovi.
+ERROR 09:18:26,622 - Error detected: Function void main() doesn't exist.

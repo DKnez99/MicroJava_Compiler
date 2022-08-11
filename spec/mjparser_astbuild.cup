@@ -83,10 +83,14 @@ nonterminal
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 	
 nonterminal ConstDecl ConstDecl;
-nonterminal ConstType ConstType;
-nonterminal ConstAssignList ConstAssignList;
-nonterminal ConstAssign ConstAssign;
-nonterminal ConstName ConstName;
+nonterminal
+			ConstType ConstType;
+nonterminal
+			ConstAssignList ConstAssignList;
+nonterminal
+			ConstAssign ConstAssign;
+nonterminal
+			ConstName ConstName;
 			
 nonterminal Var Var;
 nonterminal
@@ -99,37 +103,63 @@ nonterminal
 			VarDeclListNullable VarDeclListNullable;
 			
 nonterminal ClassDecl ClassDecl;
-nonterminal ClassName ClassName;
-nonterminal ClassExtendsOptional ClassExtendsOptional;
-nonterminal ClassBody ClassBody;
-nonterminal ClassParentType ClassParentType;
-nonterminal ClassBodyMethodsOptional ClassBodyMethodsOptional;
+nonterminal
+			ClassName ClassName;
+nonterminal
+			ClassExtendsOptional ClassExtendsOptional;
+nonterminal
+			ClassBody ClassBody;
+nonterminal
+			ClassParentType ClassParentType;
+nonterminal
+			ClassBodyMethodsOptional ClassBodyMethodsOptional;
+			
 nonterminal MethodDecl MethodDecl;
-nonterminal MethodReturnType MethodReturnType;
-nonterminal MethodName MethodName;
-nonterminal MethodDeclListNullable MethodDeclListNullable;
+nonterminal
+			MethodReturnType MethodReturnType;
+nonterminal
+			MethodName MethodName;
+nonterminal
+			MethodDeclListNullable MethodDeclListNullable;
+			
 nonterminal FormPars FormPars;
-nonterminal FormPar FormPar;
-nonterminal FormParType FormParType;
-nonterminal FormParName FormParName;
-nonterminal FormParsOptional FormParsOptional;
+nonterminal
+			FormPar FormPar;
+nonterminal
+			FormParType FormParType;
+nonterminal
+			FormParName FormParName;
+nonterminal
+			FormParsOptional FormParsOptional;
 
 nonterminal Statement Statement;
-nonterminal StatementListNullable StatementListNullable;
+nonterminal
+			StatementListNullable StatementListNullable;
+
 nonterminal SingleStatement SingleStatement;
-nonterminal SingleStatementElseOptional SingleStatementElseOptional;
-nonterminal SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional;
+nonterminal
+			SingleStatementElseOptional SingleStatementElseOptional;
+nonterminal
+			SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional;
+
 nonterminal Statements Statements;
+
 nonterminal DesignatorStatement DesignatorStatement;
+
 nonterminal ActPars ActPars;
-nonterminal ActParsOptional ActParsOptional;
+nonterminal
+			ActParsOptional ActParsOptional;
+
 nonterminal Condition Condition;
+
 nonterminal CondTerm CondTerm;
+
 nonterminal CondFact CondFact;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
 nonterminal ExprOptional ExprOptional;
-nonterminal RelopExprOptional RelopExprOptional;
+nonterminal
+			RelopExprOptional RelopExprOptional;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term,
 			AddopTermListNullable;
@@ -356,13 +386,13 @@ Statements ::= (Statements) LBRACE StatementListNullable:S1 RBRACE {: RESULT=new
 /* DesignatorStatement */
 
 DesignatorStatement ::=
-							(DesignatorStatementAssign) Designator:destination Assignop:A1 Expr:expr SEMI {: RESULT=new DesignatorStatementAssign(destination, A1, expr); RESULT.setLine(destinationleft); :}
+							(DesignatorStatementAssign) Designator:D1 Assignop:A2 Expr:E3 SEMI {: RESULT=new DesignatorStatementAssign(D1, A2, E3); RESULT.setLine(D1left); :}
 						|
-							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional:A1 RPAREN SEMI {: RESULT=new DesignatorStatementFunctionCall(functionName, A1); RESULT.setLine(functionNameleft); :}
+							(DesignatorStatementFunctionCall) Designator:D1 LPAREN ActParsOptional:A2 RPAREN SEMI {: RESULT=new DesignatorStatementFunctionCall(D1, A2); RESULT.setLine(D1left); :}
 						|
-							(DesignatorStatementPostInc) Designator:varName INC SEMI {: RESULT=new DesignatorStatementPostInc(varName); RESULT.setLine(varNameleft); :}
+							(DesignatorStatementPostInc) Designator:D1 INC SEMI {: RESULT=new DesignatorStatementPostInc(D1); RESULT.setLine(D1left); :}
 						|
-							(DesignatorStatementPostDec) Designator:varName DEC SEMI {: RESULT=new DesignatorStatementPostDec(varName); RESULT.setLine(varNameleft); :}
+							(DesignatorStatementPostDec) Designator:D1 DEC SEMI {: RESULT=new DesignatorStatementPostDec(D1); RESULT.setLine(D1left); :}
 						|
 							(ErrorDesignatorStatementAssign) error SEMI:l
 							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :} {: RESULT=new ErrorDesignatorStatementAssign(); :}

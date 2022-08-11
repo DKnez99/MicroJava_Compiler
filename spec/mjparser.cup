@@ -81,7 +81,11 @@ nonterminal ProgramDeclListNullable,
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 	
-nonterminal ConstDecl, ConstType, ConstAssignList, ConstAssign, ConstName;
+nonterminal ConstDecl,
+			ConstType,
+			ConstAssignList,
+			ConstAssign,
+			ConstName;
 			
 nonterminal Var,
 			VarDecl,
@@ -89,21 +93,47 @@ nonterminal Var,
 			VarList,
 			VarDeclListNullable;
 			
-nonterminal ClassDecl, ClassName, ClassExtendsOptional, ClassBody, ClassParentType, ClassBodyMethodsOptional;
-nonterminal MethodDecl, MethodReturnType, MethodName, MethodDeclListNullable;
-nonterminal FormPars, FormPar, FormParType, FormParName, FormParsOptional;
+nonterminal ClassDecl,
+			ClassName,
+			ClassExtendsOptional,
+			ClassBody,
+			ClassParentType,
+			ClassBodyMethodsOptional;
+			
+nonterminal MethodDecl,
+			MethodReturnType,
+			MethodName,
+			MethodDeclListNullable;
+			
+nonterminal FormPars,
+			FormPar,
+			FormParType,
+			FormParName,
+			FormParsOptional;
 
-nonterminal Statement, StatementListNullable;
-nonterminal SingleStatement, SingleStatementElseOptional, SingleStatementPrintNumConstOptional;
+nonterminal Statement,
+			StatementListNullable;
+
+nonterminal SingleStatement,
+			SingleStatementElseOptional,
+			SingleStatementPrintNumConstOptional;
+
 nonterminal Statements;
+
 nonterminal DesignatorStatement;
-nonterminal ActPars, ActParsOptional;
+
+nonterminal ActPars,
+			ActParsOptional;
+
 nonterminal Condition;
+
 nonterminal CondTerm;
+
 nonterminal CondFact;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
-nonterminal ExprOptional, RelopExprOptional;
+nonterminal ExprOptional,
+			RelopExprOptional;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term,
 			AddopTermListNullable;
@@ -327,13 +357,13 @@ Statements ::= (Statements) LBRACE StatementListNullable RBRACE;
 /* DesignatorStatement */
 
 DesignatorStatement ::=
-							(DesignatorStatementAssign) Designator:destination Assignop Expr:expr SEMI
+							(DesignatorStatementAssign) Designator Assignop Expr SEMI
 						|
-							(DesignatorStatementFunctionCall) Designator:functionName LPAREN ActParsOptional RPAREN SEMI
+							(DesignatorStatementFunctionCall) Designator LPAREN ActParsOptional RPAREN SEMI
 						|
-							(DesignatorStatementPostInc) Designator:varName INC SEMI
+							(DesignatorStatementPostInc) Designator INC SEMI
 						|
-							(DesignatorStatementPostDec) Designator:varName DEC SEMI
+							(DesignatorStatementPostDec) Designator DEC SEMI
 						|
 							(ErrorDesignatorStatementAssign) error SEMI:l
 							{: parser.report_error("Error recovery (level A) in designator assignment at line "+lleft+". Recovered to the next ;", null); :}

@@ -1,278 +1,281 @@
-INFO  17:46:44,647 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301_A.mj
-INFO  17:46:44,647 - ===========================
-INFO  17:46:44,648 - PARSING...
-INFO  17:46:44,677 - #2 program
-INFO  17:46:44,677 - #47 test301
-INFO  17:46:44,677 - #3 const
-INFO  17:46:44,678 - #47 int
-INFO  17:46:44,678 - #47 nula
-INFO  17:46:44,679 - #30 =
-INFO  17:46:44,679 - #48 0
-INFO  17:46:44,679 - #26 ;
-INFO  17:46:44,679 - #3 const
-INFO  17:46:44,680 - #47 int
-INFO  17:46:44,680 - #47 jedan
-INFO  17:46:44,680 - #30 =
-INFO  17:46:44,680 - #48 1
-INFO  17:46:44,680 - #26 ;
-INFO  17:46:44,680 - #3 const
-INFO  17:46:44,680 - #47 int
-INFO  17:46:44,680 - #47 tri
-INFO  17:46:44,681 - #30 =
-INFO  17:46:44,681 - #48 3
-INFO  17:46:44,681 - #26 ;
-INFO  17:46:44,681 - #3 const
-INFO  17:46:44,681 - #47 int
-INFO  17:46:44,681 - #47 pet
-INFO  17:46:44,681 - #30 =
-INFO  17:46:44,681 - #48 5
-INFO  17:46:44,681 - #26 ;
-INFO  17:46:44,681 - #47 int
-INFO  17:46:44,681 - #47 niz
-INFO  17:46:44,681 - #22 [
-INFO  17:46:44,681 - #23 ]
-INFO  17:46:44,681 - #26 ;
-INFO  17:46:44,682 - #47 char
-INFO  17:46:44,682 - #47 nizch
-INFO  17:46:44,682 - #22 [
-INFO  17:46:44,682 - #23 ]
-INFO  17:46:44,682 - #26 ;
-INFO  17:46:44,682 - #47 bool
-INFO  17:46:44,682 - #47 netacno
-INFO  17:46:44,682 - #26 ;
-INFO  17:46:44,682 - #3 const
-INFO  17:46:44,682 - #47 bool
-INFO  17:46:44,683 - #47 tacno
-INFO  17:46:44,683 - #30 =
-INFO  17:46:44,683 - #50 true
-INFO  17:46:44,683 - #26 ;
-INFO  17:46:44,683 - #3 const
-INFO  17:46:44,683 - #47 char
-INFO  17:46:44,683 - #47 myChar
-INFO  17:46:44,683 - #30 =
-INFO  17:46:44,683 - #49 a
-INFO  17:46:44,683 - #26 ;
-INFO  17:46:44,684 - #20 {
-INFO  17:46:44,684 - #15 void
-INFO  17:46:44,684 - #47 main
-INFO  17:46:44,684 - #24 (
-INFO  17:46:44,685 - #25 )
-INFO  17:46:44,685 - #47 int
-INFO  17:46:44,685 - #47 bodovi
-INFO  17:46:44,685 - #26 ;
-INFO  17:46:44,685 - #47 bool
-INFO  17:46:44,686 - #47 bt
-INFO  17:46:44,686 - #26 ;
-INFO  17:46:44,686 - #20 {
-INFO  17:46:44,686 - #47 bodovi
-INFO  17:46:44,686 - #30 =
-INFO  17:46:44,686 - #48 0
-INFO  17:46:44,687 - #26 ;
-INFO  17:46:44,688 - #47 bodovi
-INFO  17:46:44,688 - #37 ++
-INFO  17:46:44,688 - #26 ;
-INFO  17:46:44,688 - #47 bodovi
-INFO  17:46:44,688 - #30 =
-INFO  17:46:44,688 - #24 (
-INFO  17:46:44,689 - #47 bodovi
-INFO  17:46:44,689 - #39 +
-INFO  17:46:44,689 - #47 jedan
-INFO  17:46:44,689 - #25 )
-INFO  17:46:44,689 - #44 ??
-INFO  17:46:44,689 - #47 tri
-INFO  17:46:44,689 - #26 ;
-INFO  17:46:44,690 - #47 bodovi
-INFO  17:46:44,690 - #30 =
-INFO  17:46:44,690 - #47 bodovi
-INFO  17:46:44,690 - #41 *
-INFO  17:46:44,690 - #47 pet
-INFO  17:46:44,691 - #26 ;
-INFO  17:46:44,691 - #47 bodovi
-INFO  17:46:44,691 - #38 --
-INFO  17:46:44,691 - #26 ;
-INFO  17:46:44,691 - #13 print
-INFO  17:46:44,691 - #24 (
-INFO  17:46:44,691 - #47 bodovi
-INFO  17:46:44,691 - #25 )
-INFO  17:46:44,692 - #26 ;
-INFO  17:46:44,692 - #47 niz
-INFO  17:46:44,692 - #30 =
-INFO  17:46:44,692 - #14 new
-INFO  17:46:44,692 - #47 int
-INFO  17:46:44,692 - #22 [
-INFO  17:46:44,692 - #48 3
-INFO  17:46:44,692 - #23 ]
-INFO  17:46:44,692 - #26 ;
-INFO  17:46:44,692 - #47 niz
-INFO  17:46:44,692 - #22 [
-INFO  17:46:44,692 - #47 nula
-INFO  17:46:44,692 - #23 ]
-INFO  17:46:44,692 - #30 =
-INFO  17:46:44,692 - #47 jedan
-INFO  17:46:44,692 - #26 ;
-INFO  17:46:44,692 - #47 niz
-INFO  17:46:44,692 - #22 [
-INFO  17:46:44,693 - #48 1
-INFO  17:46:44,693 - #23 ]
-INFO  17:46:44,693 - #30 =
-INFO  17:46:44,693 - #48 2
-INFO  17:46:44,693 - #26 ;
-INFO  17:46:44,693 - #47 niz
-INFO  17:46:44,693 - #22 [
-INFO  17:46:44,693 - #47 niz
-INFO  17:46:44,693 - #22 [
-INFO  17:46:44,693 - #47 jedan
-INFO  17:46:44,693 - #23 ]
-INFO  17:46:44,693 - #44 ??
-INFO  17:46:44,693 - #40 -
-INFO  17:46:44,693 - #48 1
-INFO  17:46:44,693 - #23 ]
-INFO  17:46:44,693 - #30 =
-INFO  17:46:44,693 - #47 niz
-INFO  17:46:44,693 - #22 [
-INFO  17:46:44,693 - #24 (
-INFO  17:46:44,693 - #47 niz
-INFO  17:46:44,697 - #22 [
-INFO  17:46:44,697 - #48 0
-INFO  17:46:44,697 - #23 ]
-INFO  17:46:44,697 - #40 -
-INFO  17:46:44,697 - #47 jedan
-INFO  17:46:44,698 - #25 )
-INFO  17:46:44,698 - #44 ??
-INFO  17:46:44,698 - #24 (
-INFO  17:46:44,698 - #47 bodovi
-INFO  17:46:44,698 - #41 *
-INFO  17:46:44,698 - #47 nula
-INFO  17:46:44,698 - #44 ??
-INFO  17:46:44,698 - #47 jedan
-INFO  17:46:44,698 - #25 )
-INFO  17:46:44,698 - #23 ]
-INFO  17:46:44,698 - #41 *
-INFO  17:46:44,698 - #48 3
-INFO  17:46:44,698 - #26 ;
-INFO  17:46:44,698 - #13 print
-INFO  17:46:44,698 - #24 (
-INFO  17:46:44,698 - #47 bodovi
-INFO  17:46:44,698 - #25 )
-INFO  17:46:44,698 - #26 ;
-INFO  17:46:44,698 - #47 bodovi
-INFO  17:46:44,698 - #30 =
-INFO  17:46:44,698 - #47 niz
-INFO  17:46:44,698 - #22 [
-INFO  17:46:44,698 - #48 2
-INFO  17:46:44,698 - #23 ]
-INFO  17:46:44,698 - #42 /
-INFO  17:46:44,698 - #47 niz
-INFO  17:46:44,699 - #22 [
-INFO  17:46:44,699 - #48 0
-INFO  17:46:44,699 - #23 ]
-INFO  17:46:44,699 - #26 ;
-INFO  17:46:44,699 - #13 print
-INFO  17:46:44,699 - #24 (
-INFO  17:46:44,699 - #47 bodovi
-INFO  17:46:44,699 - #25 )
-INFO  17:46:44,699 - #26 ;
-INFO  17:46:44,699 - #13 print
-INFO  17:46:44,699 - #24 (
-INFO  17:46:44,699 - #47 niz
-INFO  17:46:44,700 - #22 [
-INFO  17:46:44,700 - #48 2
-INFO  17:46:44,700 - #23 ]
-INFO  17:46:44,700 - #25 )
-INFO  17:46:44,700 - #26 ;
-INFO  17:46:44,700 - #47 nizch
-INFO  17:46:44,700 - #30 =
-INFO  17:46:44,700 - #14 new
-INFO  17:46:44,700 - #47 char
-INFO  17:46:44,700 - #22 [
-INFO  17:46:44,700 - #48 3
-INFO  17:46:44,700 - #23 ]
-INFO  17:46:44,700 - #26 ;
-INFO  17:46:44,700 - #47 nizch
-INFO  17:46:44,700 - #22 [
-INFO  17:46:44,700 - #48 0
-INFO  17:46:44,700 - #23 ]
-INFO  17:46:44,700 - #30 =
-INFO  17:46:44,700 - #49 a
-INFO  17:46:44,700 - #26 ;
-INFO  17:46:44,701 - #47 nizch
-INFO  17:46:44,701 - #22 [
-INFO  17:46:44,701 - #47 jedan
-INFO  17:46:44,701 - #23 ]
-INFO  17:46:44,701 - #30 =
-INFO  17:46:44,701 - #49 b
-INFO  17:46:44,701 - #26 ;
-INFO  17:46:44,701 - #47 nizch
-INFO  17:46:44,701 - #22 [
-INFO  17:46:44,701 - #47 pet
-INFO  17:46:44,701 - #40 -
-INFO  17:46:44,701 - #48 3
-INFO  17:46:44,701 - #23 ]
-INFO  17:46:44,701 - #30 =
-INFO  17:46:44,701 - #49 c
-INFO  17:46:44,701 - #26 ;
-INFO  17:46:44,701 - #13 print
-INFO  17:46:44,701 - #24 (
-INFO  17:46:44,701 - #47 nizch
-INFO  17:46:44,701 - #22 [
-INFO  17:46:44,701 - #48 1
-INFO  17:46:44,701 - #23 ]
-INFO  17:46:44,701 - #25 )
-INFO  17:46:44,701 - #26 ;
-INFO  17:46:44,701 - #13 print
-INFO  17:46:44,701 - #24 (
-INFO  17:46:44,701 - #47 nizch
-INFO  17:46:44,701 - #22 [
-INFO  17:46:44,702 - #47 jedan
-INFO  17:46:44,702 - #41 *
-INFO  17:46:44,702 - #48 2
-INFO  17:46:44,702 - #23 ]
-INFO  17:46:44,702 - #25 )
-INFO  17:46:44,702 - #26 ;
-INFO  17:46:44,702 - #47 bodovi
-INFO  17:46:44,702 - #30 =
-INFO  17:46:44,702 - #47 bodovi
-INFO  17:46:44,702 - #39 +
-INFO  17:46:44,702 - #24 (
-INFO  17:46:44,702 - #47 pet
-INFO  17:46:44,702 - #41 *
-INFO  17:46:44,702 - #47 jedan
-INFO  17:46:44,702 - #40 -
-INFO  17:46:44,702 - #48 1
-INFO  17:46:44,702 - #25 )
-INFO  17:46:44,702 - #41 *
-INFO  17:46:44,702 - #47 bodovi
-INFO  17:46:44,703 - #40 -
-INFO  17:46:44,703 - #24 (
-INFO  17:46:44,703 - #48 3
-INFO  17:46:44,703 - #43 %
-INFO  17:46:44,703 - #48 2
-INFO  17:46:44,703 - #39 +
-INFO  17:46:44,703 - #48 3
-INFO  17:46:44,703 - #41 *
-INFO  17:46:44,704 - #48 2
-INFO  17:46:44,704 - #40 -
-INFO  17:46:44,704 - #48 3
-INFO  17:46:44,704 - #25 )
-INFO  17:46:44,704 - #26 ;
-INFO  17:46:44,704 - #13 print
-INFO  17:46:44,704 - #24 (
-INFO  17:46:44,704 - #47 bodovi
-INFO  17:46:44,704 - #25 )
-INFO  17:46:44,704 - #26 ;
-INFO  17:46:44,704 - #12 read
-INFO  17:46:44,704 - #24 (
-INFO  17:46:44,705 - #47 bodovi
-INFO  17:46:44,705 - #25 )
-INFO  17:46:44,705 - #26 ;
-INFO  17:46:44,705 - #13 print
-INFO  17:46:44,705 - #24 (
-INFO  17:46:44,705 - #47 bodovi
-INFO  17:46:44,705 - #25 )
-INFO  17:46:44,705 - #26 ;
-INFO  17:46:44,705 - #21 }
-INFO  17:46:44,705 - #21 }
-INFO  17:46:44,714 - Program(
+INFO  06:31:13,749 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301_A.mj
+INFO  06:31:13,749 - ===========================
+INFO  06:31:13,749 - PARSING...
+INFO  06:31:13,778 - #2 program
+INFO  06:31:13,778 - #47 test301
+INFO  06:31:13,778 - #3 const
+INFO  06:31:13,779 - #47 int
+INFO  06:31:13,779 - #47 nula
+INFO  06:31:13,780 - #30 =
+INFO  06:31:13,780 - #48 0
+INFO  06:31:13,780 - #26 ;
+INFO  06:31:13,780 - #3 const
+INFO  06:31:13,781 - #47 int
+INFO  06:31:13,781 - #47 jedan
+INFO  06:31:13,781 - #30 =
+INFO  06:31:13,781 - #48 1
+INFO  06:31:13,781 - #26 ;
+INFO  06:31:13,781 - #3 const
+INFO  06:31:13,781 - #47 int
+INFO  06:31:13,781 - #47 tri
+INFO  06:31:13,782 - #30 =
+INFO  06:31:13,782 - #48 3
+INFO  06:31:13,782 - #26 ;
+INFO  06:31:13,782 - #3 const
+INFO  06:31:13,782 - #47 int
+INFO  06:31:13,782 - #47 pet
+INFO  06:31:13,782 - #30 =
+INFO  06:31:13,782 - #48 5
+INFO  06:31:13,782 - #26 ;
+INFO  06:31:13,782 - #47 int
+INFO  06:31:13,782 - #47 niz
+INFO  06:31:13,783 - #22 [
+INFO  06:31:13,783 - #23 ]
+INFO  06:31:13,783 - #26 ;
+INFO  06:31:13,783 - #47 char
+INFO  06:31:13,783 - #47 nizch
+INFO  06:31:13,783 - #22 [
+INFO  06:31:13,783 - #23 ]
+INFO  06:31:13,783 - #26 ;
+INFO  06:31:13,783 - #47 bool
+INFO  06:31:13,783 - #47 netacno
+INFO  06:31:13,784 - #26 ;
+INFO  06:31:13,784 - #3 const
+INFO  06:31:13,784 - #47 bool
+INFO  06:31:13,784 - #47 tacno
+INFO  06:31:13,784 - #30 =
+INFO  06:31:13,784 - #50 true
+INFO  06:31:13,784 - #26 ;
+INFO  06:31:13,784 - #3 const
+INFO  06:31:13,784 - #47 char
+INFO  06:31:13,784 - #47 myChar
+INFO  06:31:13,784 - #30 =
+INFO  06:31:13,784 - #49 a
+INFO  06:31:13,784 - #26 ;
+INFO  06:31:13,785 - #20 {
+INFO  06:31:13,785 - #15 void
+INFO  06:31:13,785 - #47 main
+INFO  06:31:13,785 - #24 (
+INFO  06:31:13,786 - #25 )
+INFO  06:31:13,786 - #47 int
+INFO  06:31:13,786 - #47 bodovi
+INFO  06:31:13,787 - #26 ;
+INFO  06:31:13,787 - #47 bool
+INFO  06:31:13,787 - #47 bt
+INFO  06:31:13,787 - #26 ;
+INFO  06:31:13,787 - #20 {
+INFO  06:31:13,787 - #47 bodovi
+INFO  06:31:13,787 - #30 =
+INFO  06:31:13,787 - #48 0
+INFO  06:31:13,788 - #26 ;
+INFO  06:31:13,793 - #47 bodovi
+INFO  06:31:13,793 - #37 ++
+INFO  06:31:13,793 - #26 ;
+INFO  06:31:13,794 - #47 bodovi
+INFO  06:31:13,794 - #30 =
+INFO  06:31:13,794 - #24 (
+INFO  06:31:13,794 - #47 bodovi
+INFO  06:31:13,794 - #39 +
+INFO  06:31:13,794 - #47 jedan
+INFO  06:31:13,794 - #25 )
+INFO  06:31:13,795 - #44 ??
+INFO  06:31:13,795 - #47 tri
+INFO  06:31:13,795 - #26 ;
+INFO  06:31:13,795 - #47 bodovi
+INFO  06:31:13,796 - #30 =
+INFO  06:31:13,796 - #47 bodovi
+INFO  06:31:13,796 - #41 *
+INFO  06:31:13,796 - #47 pet
+INFO  06:31:13,796 - #26 ;
+INFO  06:31:13,797 - #47 bodovi
+INFO  06:31:13,797 - #38 --
+INFO  06:31:13,797 - #26 ;
+INFO  06:31:13,797 - #13 print
+INFO  06:31:13,797 - #24 (
+INFO  06:31:13,797 - #47 bodovi
+INFO  06:31:13,797 - #25 )
+INFO  06:31:13,797 - #26 ;
+INFO  06:31:13,797 - #47 nula
+INFO  06:31:13,797 - #37 ++
+INFO  06:31:13,797 - #26 ;
+INFO  06:31:13,797 - #47 niz
+INFO  06:31:13,797 - #30 =
+INFO  06:31:13,797 - #14 new
+INFO  06:31:13,797 - #47 int
+INFO  06:31:13,798 - #22 [
+INFO  06:31:13,798 - #48 3
+INFO  06:31:13,798 - #23 ]
+INFO  06:31:13,798 - #26 ;
+INFO  06:31:13,798 - #47 niz
+INFO  06:31:13,798 - #22 [
+INFO  06:31:13,798 - #47 nula
+INFO  06:31:13,798 - #23 ]
+INFO  06:31:13,798 - #30 =
+INFO  06:31:13,798 - #47 jedan
+INFO  06:31:13,798 - #26 ;
+INFO  06:31:13,798 - #47 niz
+INFO  06:31:13,798 - #22 [
+INFO  06:31:13,798 - #48 1
+INFO  06:31:13,798 - #23 ]
+INFO  06:31:13,798 - #30 =
+INFO  06:31:13,798 - #48 2
+INFO  06:31:13,798 - #26 ;
+INFO  06:31:13,798 - #47 niz
+INFO  06:31:13,798 - #22 [
+INFO  06:31:13,798 - #47 niz
+INFO  06:31:13,798 - #22 [
+INFO  06:31:13,798 - #47 jedan
+INFO  06:31:13,798 - #23 ]
+INFO  06:31:13,798 - #44 ??
+INFO  06:31:13,799 - #40 -
+INFO  06:31:13,799 - #48 1
+INFO  06:31:13,799 - #23 ]
+INFO  06:31:13,799 - #30 =
+INFO  06:31:13,799 - #47 niz
+INFO  06:31:13,799 - #22 [
+INFO  06:31:13,799 - #24 (
+INFO  06:31:13,799 - #47 niz
+INFO  06:31:13,799 - #22 [
+INFO  06:31:13,799 - #48 0
+INFO  06:31:13,799 - #23 ]
+INFO  06:31:13,799 - #40 -
+INFO  06:31:13,799 - #47 jedan
+INFO  06:31:13,800 - #25 )
+INFO  06:31:13,800 - #44 ??
+INFO  06:31:13,800 - #24 (
+INFO  06:31:13,800 - #47 bodovi
+INFO  06:31:13,800 - #41 *
+INFO  06:31:13,800 - #47 nula
+INFO  06:31:13,800 - #44 ??
+INFO  06:31:13,800 - #47 jedan
+INFO  06:31:13,800 - #25 )
+INFO  06:31:13,800 - #23 ]
+INFO  06:31:13,800 - #41 *
+INFO  06:31:13,800 - #48 3
+INFO  06:31:13,800 - #26 ;
+INFO  06:31:13,800 - #13 print
+INFO  06:31:13,800 - #24 (
+INFO  06:31:13,800 - #47 bodovi
+INFO  06:31:13,800 - #25 )
+INFO  06:31:13,800 - #26 ;
+INFO  06:31:13,800 - #47 bodovi
+INFO  06:31:13,800 - #30 =
+INFO  06:31:13,800 - #47 niz
+INFO  06:31:13,800 - #22 [
+INFO  06:31:13,800 - #48 2
+INFO  06:31:13,800 - #23 ]
+INFO  06:31:13,800 - #42 /
+INFO  06:31:13,800 - #47 niz
+INFO  06:31:13,801 - #22 [
+INFO  06:31:13,801 - #48 0
+INFO  06:31:13,801 - #23 ]
+INFO  06:31:13,801 - #26 ;
+INFO  06:31:13,801 - #13 print
+INFO  06:31:13,801 - #24 (
+INFO  06:31:13,801 - #47 bodovi
+INFO  06:31:13,801 - #25 )
+INFO  06:31:13,801 - #26 ;
+INFO  06:31:13,801 - #13 print
+INFO  06:31:13,802 - #24 (
+INFO  06:31:13,802 - #47 niz
+INFO  06:31:13,802 - #22 [
+INFO  06:31:13,802 - #48 2
+INFO  06:31:13,802 - #23 ]
+INFO  06:31:13,802 - #25 )
+INFO  06:31:13,802 - #26 ;
+INFO  06:31:13,802 - #47 nizch
+INFO  06:31:13,802 - #30 =
+INFO  06:31:13,802 - #14 new
+INFO  06:31:13,802 - #47 char
+INFO  06:31:13,802 - #22 [
+INFO  06:31:13,802 - #48 3
+INFO  06:31:13,802 - #23 ]
+INFO  06:31:13,802 - #26 ;
+INFO  06:31:13,802 - #47 nizch
+INFO  06:31:13,802 - #22 [
+INFO  06:31:13,802 - #48 0
+INFO  06:31:13,802 - #23 ]
+INFO  06:31:13,802 - #30 =
+INFO  06:31:13,802 - #49 a
+INFO  06:31:13,802 - #26 ;
+INFO  06:31:13,803 - #47 nizch
+INFO  06:31:13,803 - #22 [
+INFO  06:31:13,803 - #47 jedan
+INFO  06:31:13,803 - #23 ]
+INFO  06:31:13,803 - #30 =
+INFO  06:31:13,803 - #49 b
+INFO  06:31:13,803 - #26 ;
+INFO  06:31:13,803 - #47 nizch
+INFO  06:31:13,803 - #22 [
+INFO  06:31:13,803 - #47 pet
+INFO  06:31:13,803 - #40 -
+INFO  06:31:13,803 - #48 3
+INFO  06:31:13,803 - #23 ]
+INFO  06:31:13,803 - #30 =
+INFO  06:31:13,803 - #49 c
+INFO  06:31:13,803 - #26 ;
+INFO  06:31:13,803 - #13 print
+INFO  06:31:13,803 - #24 (
+INFO  06:31:13,803 - #47 nizch
+INFO  06:31:13,803 - #22 [
+INFO  06:31:13,803 - #48 1
+INFO  06:31:13,803 - #23 ]
+INFO  06:31:13,803 - #25 )
+INFO  06:31:13,803 - #26 ;
+INFO  06:31:13,803 - #13 print
+INFO  06:31:13,803 - #24 (
+INFO  06:31:13,803 - #47 nizch
+INFO  06:31:13,803 - #22 [
+INFO  06:31:13,803 - #47 jedan
+INFO  06:31:13,803 - #41 *
+INFO  06:31:13,803 - #48 2
+INFO  06:31:13,804 - #23 ]
+INFO  06:31:13,804 - #25 )
+INFO  06:31:13,804 - #26 ;
+INFO  06:31:13,804 - #47 bodovi
+INFO  06:31:13,804 - #30 =
+INFO  06:31:13,804 - #47 bodovi
+INFO  06:31:13,804 - #39 +
+INFO  06:31:13,804 - #24 (
+INFO  06:31:13,804 - #47 pet
+INFO  06:31:13,804 - #41 *
+INFO  06:31:13,804 - #47 jedan
+INFO  06:31:13,804 - #40 -
+INFO  06:31:13,804 - #48 1
+INFO  06:31:13,804 - #25 )
+INFO  06:31:13,804 - #41 *
+INFO  06:31:13,804 - #47 bodovi
+INFO  06:31:13,804 - #40 -
+INFO  06:31:13,804 - #24 (
+INFO  06:31:13,804 - #48 3
+INFO  06:31:13,804 - #43 %
+INFO  06:31:13,804 - #48 2
+INFO  06:31:13,805 - #39 +
+INFO  06:31:13,805 - #48 3
+INFO  06:31:13,805 - #41 *
+INFO  06:31:13,807 - #48 2
+INFO  06:31:13,807 - #40 -
+INFO  06:31:13,807 - #48 3
+INFO  06:31:13,807 - #25 )
+INFO  06:31:13,807 - #26 ;
+INFO  06:31:13,807 - #13 print
+INFO  06:31:13,807 - #24 (
+INFO  06:31:13,807 - #47 bodovi
+INFO  06:31:13,807 - #25 )
+INFO  06:31:13,807 - #26 ;
+INFO  06:31:13,807 - #12 read
+INFO  06:31:13,807 - #24 (
+INFO  06:31:13,807 - #47 bodovi
+INFO  06:31:13,808 - #25 )
+INFO  06:31:13,808 - #26 ;
+INFO  06:31:13,808 - #13 print
+INFO  06:31:13,808 - #24 (
+INFO  06:31:13,808 - #47 bodovi
+INFO  06:31:13,808 - #25 )
+INFO  06:31:13,808 - #26 ;
+INFO  06:31:13,808 - #21 }
+INFO  06:31:13,808 - #21 }
+INFO  06:31:13,815 - Program(
   ProgramName(
    test301
   ) [ProgramName]
@@ -493,38 +496,100 @@ INFO  17:46:44,714 - Program(
                                                 StatementList(
                                                   StatementList(
                                                     StatementList(
-                                                      EmptyStatementList(
-                                                      ) [EmptyStatementList]
+                                                      StatementList(
+                                                        EmptyStatementList(
+                                                        ) [EmptyStatementList]
+                                                        StatementSingle(
+                                                          SingleStatementDesignatorStatement(
+                                                            DesignatorStatementAssign(
+                                                              DesignatorDefault(
+                                                               bodovi
+                                                              ) [DesignatorDefault]
+                                                              Assign(
+                                                              ) [Assign]
+                                                              ExprTerm(
+                                                                Term(
+                                                                  FactorConstNum(
+                                                                   0
+                                                                  ) [FactorConstNum]
+                                                                  EmptyMulopFactorList(
+                                                                  ) [EmptyMulopFactorList]
+                                                                ) [Term]
+                                                                EmptyAddopTermList(
+                                                                ) [EmptyAddopTermList]
+                                                              ) [ExprTerm]
+                                                            ) [DesignatorStatementAssign]
+                                                          ) [SingleStatementDesignatorStatement]
+                                                        ) [StatementSingle]
+                                                      ) [StatementList]
                                                       StatementSingle(
                                                         SingleStatementDesignatorStatement(
-                                                          DesignatorStatementAssign(
+                                                          DesignatorStatementPostInc(
                                                             DesignatorDefault(
                                                              bodovi
                                                             ) [DesignatorDefault]
-                                                            Assign(
-                                                            ) [Assign]
+                                                          ) [DesignatorStatementPostInc]
+                                                        ) [SingleStatementDesignatorStatement]
+                                                      ) [StatementSingle]
+                                                    ) [StatementList]
+                                                    StatementSingle(
+                                                      SingleStatementDesignatorStatement(
+                                                        DesignatorStatementAssign(
+                                                          DesignatorDefault(
+                                                           bodovi
+                                                          ) [DesignatorDefault]
+                                                          Assign(
+                                                          ) [Assign]
+                                                          ExprQQ(
+                                                            Term(
+                                                              FactorExpr(
+                                                                ExprTerm(
+                                                                  Term(
+                                                                    FactorDesignator(
+                                                                      DesignatorDefault(
+                                                                       bodovi
+                                                                      ) [DesignatorDefault]
+                                                                    ) [FactorDesignator]
+                                                                    EmptyMulopFactorList(
+                                                                    ) [EmptyMulopFactorList]
+                                                                  ) [Term]
+                                                                  AddopTermList(
+                                                                    EmptyAddopTermList(
+                                                                    ) [EmptyAddopTermList]
+                                                                    Plus(
+                                                                    ) [Plus]
+                                                                    Term(
+                                                                      FactorDesignator(
+                                                                        DesignatorDefault(
+                                                                         jedan
+                                                                        ) [DesignatorDefault]
+                                                                      ) [FactorDesignator]
+                                                                      EmptyMulopFactorList(
+                                                                      ) [EmptyMulopFactorList]
+                                                                    ) [Term]
+                                                                  ) [AddopTermList]
+                                                                ) [ExprTerm]
+                                                              ) [FactorExpr]
+                                                              EmptyMulopFactorList(
+                                                              ) [EmptyMulopFactorList]
+                                                            ) [Term]
+                                                            EmptyAddopTermList(
+                                                            ) [EmptyAddopTermList]
                                                             ExprTerm(
                                                               Term(
-                                                                FactorConstNum(
-                                                                 0
-                                                                ) [FactorConstNum]
+                                                                FactorDesignator(
+                                                                  DesignatorDefault(
+                                                                   tri
+                                                                  ) [DesignatorDefault]
+                                                                ) [FactorDesignator]
                                                                 EmptyMulopFactorList(
                                                                 ) [EmptyMulopFactorList]
                                                               ) [Term]
                                                               EmptyAddopTermList(
                                                               ) [EmptyAddopTermList]
                                                             ) [ExprTerm]
-                                                          ) [DesignatorStatementAssign]
-                                                        ) [SingleStatementDesignatorStatement]
-                                                      ) [StatementSingle]
-                                                    ) [StatementList]
-                                                    StatementSingle(
-                                                      SingleStatementDesignatorStatement(
-                                                        DesignatorStatementPostInc(
-                                                          DesignatorDefault(
-                                                           bodovi
-                                                          ) [DesignatorDefault]
-                                                        ) [DesignatorStatementPostInc]
+                                                          ) [ExprQQ]
+                                                        ) [DesignatorStatementAssign]
                                                       ) [SingleStatementDesignatorStatement]
                                                     ) [StatementSingle]
                                                   ) [StatementList]
@@ -536,121 +601,70 @@ INFO  17:46:44,714 - Program(
                                                         ) [DesignatorDefault]
                                                         Assign(
                                                         ) [Assign]
-                                                        ExprQQ(
+                                                        ExprTerm(
                                                           Term(
-                                                            FactorExpr(
-                                                              ExprTerm(
-                                                                Term(
-                                                                  FactorDesignator(
-                                                                    DesignatorDefault(
-                                                                     bodovi
-                                                                    ) [DesignatorDefault]
-                                                                  ) [FactorDesignator]
-                                                                  EmptyMulopFactorList(
-                                                                  ) [EmptyMulopFactorList]
-                                                                ) [Term]
-                                                                AddopTermList(
-                                                                  EmptyAddopTermList(
-                                                                  ) [EmptyAddopTermList]
-                                                                  Plus(
-                                                                  ) [Plus]
-                                                                  Term(
-                                                                    FactorDesignator(
-                                                                      DesignatorDefault(
-                                                                       jedan
-                                                                      ) [DesignatorDefault]
-                                                                    ) [FactorDesignator]
-                                                                    EmptyMulopFactorList(
-                                                                    ) [EmptyMulopFactorList]
-                                                                  ) [Term]
-                                                                ) [AddopTermList]
-                                                              ) [ExprTerm]
-                                                            ) [FactorExpr]
-                                                            EmptyMulopFactorList(
-                                                            ) [EmptyMulopFactorList]
+                                                            FactorDesignator(
+                                                              DesignatorDefault(
+                                                               bodovi
+                                                              ) [DesignatorDefault]
+                                                            ) [FactorDesignator]
+                                                            MulopFactorList(
+                                                              EmptyMulopFactorList(
+                                                              ) [EmptyMulopFactorList]
+                                                              Mul(
+                                                              ) [Mul]
+                                                              FactorDesignator(
+                                                                DesignatorDefault(
+                                                                 pet
+                                                                ) [DesignatorDefault]
+                                                              ) [FactorDesignator]
+                                                            ) [MulopFactorList]
                                                           ) [Term]
                                                           EmptyAddopTermList(
                                                           ) [EmptyAddopTermList]
-                                                          ExprTerm(
-                                                            Term(
-                                                              FactorDesignator(
-                                                                DesignatorDefault(
-                                                                 tri
-                                                                ) [DesignatorDefault]
-                                                              ) [FactorDesignator]
-                                                              EmptyMulopFactorList(
-                                                              ) [EmptyMulopFactorList]
-                                                            ) [Term]
-                                                            EmptyAddopTermList(
-                                                            ) [EmptyAddopTermList]
-                                                          ) [ExprTerm]
-                                                        ) [ExprQQ]
+                                                        ) [ExprTerm]
                                                       ) [DesignatorStatementAssign]
                                                     ) [SingleStatementDesignatorStatement]
                                                   ) [StatementSingle]
                                                 ) [StatementList]
                                                 StatementSingle(
                                                   SingleStatementDesignatorStatement(
-                                                    DesignatorStatementAssign(
+                                                    DesignatorStatementPostDec(
                                                       DesignatorDefault(
                                                        bodovi
                                                       ) [DesignatorDefault]
-                                                      Assign(
-                                                      ) [Assign]
-                                                      ExprTerm(
-                                                        Term(
-                                                          FactorDesignator(
-                                                            DesignatorDefault(
-                                                             bodovi
-                                                            ) [DesignatorDefault]
-                                                          ) [FactorDesignator]
-                                                          MulopFactorList(
-                                                            EmptyMulopFactorList(
-                                                            ) [EmptyMulopFactorList]
-                                                            Mul(
-                                                            ) [Mul]
-                                                            FactorDesignator(
-                                                              DesignatorDefault(
-                                                               pet
-                                                              ) [DesignatorDefault]
-                                                            ) [FactorDesignator]
-                                                          ) [MulopFactorList]
-                                                        ) [Term]
-                                                        EmptyAddopTermList(
-                                                        ) [EmptyAddopTermList]
-                                                      ) [ExprTerm]
-                                                    ) [DesignatorStatementAssign]
+                                                    ) [DesignatorStatementPostDec]
                                                   ) [SingleStatementDesignatorStatement]
                                                 ) [StatementSingle]
                                               ) [StatementList]
                                               StatementSingle(
-                                                SingleStatementDesignatorStatement(
-                                                  DesignatorStatementPostDec(
-                                                    DesignatorDefault(
-                                                     bodovi
-                                                    ) [DesignatorDefault]
-                                                  ) [DesignatorStatementPostDec]
-                                                ) [SingleStatementDesignatorStatement]
+                                                SingleStatementPrint(
+                                                  ExprTerm(
+                                                    Term(
+                                                      FactorDesignator(
+                                                        DesignatorDefault(
+                                                         bodovi
+                                                        ) [DesignatorDefault]
+                                                      ) [FactorDesignator]
+                                                      EmptyMulopFactorList(
+                                                      ) [EmptyMulopFactorList]
+                                                    ) [Term]
+                                                    EmptyAddopTermList(
+                                                    ) [EmptyAddopTermList]
+                                                  ) [ExprTerm]
+                                                  SingleStatementPrintNumConstNo(
+                                                  ) [SingleStatementPrintNumConstNo]
+                                                ) [SingleStatementPrint]
                                               ) [StatementSingle]
                                             ) [StatementList]
                                             StatementSingle(
-                                              SingleStatementPrint(
-                                                ExprTerm(
-                                                  Term(
-                                                    FactorDesignator(
-                                                      DesignatorDefault(
-                                                       bodovi
-                                                      ) [DesignatorDefault]
-                                                    ) [FactorDesignator]
-                                                    EmptyMulopFactorList(
-                                                    ) [EmptyMulopFactorList]
-                                                  ) [Term]
-                                                  EmptyAddopTermList(
-                                                  ) [EmptyAddopTermList]
-                                                ) [ExprTerm]
-                                                SingleStatementPrintNumConstNo(
-                                                ) [SingleStatementPrintNumConstNo]
-                                              ) [SingleStatementPrint]
+                                              SingleStatementDesignatorStatement(
+                                                DesignatorStatementPostInc(
+                                                  DesignatorDefault(
+                                                   nula
+                                                  ) [DesignatorDefault]
+                                                ) [DesignatorStatementPostInc]
+                                              ) [SingleStatementDesignatorStatement]
                                             ) [StatementSingle]
                                           ) [StatementList]
                                           StatementSingle(
@@ -1486,91 +1500,81 @@ INFO  17:46:44,714 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  17:46:44,716 - PARSING SUCCESSFUL!
-INFO  17:46:44,716 - ===========================
-INFO  17:46:44,731 - Info at line 5: Created new constant int nula. ObjNode[Name = nula, Type = int, Kind = constant, Value = 0, Level = 0]
-INFO  17:46:44,731 - Info at line 6: Created new constant int jedan. ObjNode[Name = jedan, Type = int, Kind = constant, Value = 1, Level = 0]
-INFO  17:46:44,731 - Info at line 7: Created new constant int tri. ObjNode[Name = tri, Type = int, Kind = constant, Value = 3, Level = 0]
-INFO  17:46:44,731 - Info at line 8: Created new constant int pet. ObjNode[Name = pet, Type = int, Kind = constant, Value = 5, Level = 0]
-INFO  17:46:44,731 - Info at line 10: Created new variable int niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 0, Level = 0]
-INFO  17:46:44,731 - Info at line 11: Created new variable char nizch[]. ObjNode[Name = nizch, Type = array, Kind = variable, Address = 1, Level = 0]
-INFO  17:46:44,731 - Info at line 12: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 2, Level = 0]
-INFO  17:46:44,731 - Info at line 13: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
-INFO  17:46:44,732 - Info at line 14: Created new constant char myChar. ObjNode[Name = myChar, Type = char, Kind = constant, Value = 97, Level = 0]
-INFO  17:46:44,732 - Info at line 17: Created new variable int bodovi. ObjNode[Name = bodovi, Type = int, Kind = variable, Address = 3, Level = 0]
-INFO  17:46:44,732 - Info at line 18: Created new variable bool bt. ObjNode[Name = bt, Type = bool, Kind = variable, Address = 4, Level = 0]
-INFO  17:46:44,732 - Info at line 20: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 21: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 22: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 22: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 22: Accessing int jedan.
-INFO  17:46:44,732 - Info at line 22: Accessing int tri.
-INFO  17:46:44,732 - Info at line 23: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 23: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 23: Accessing int pet.
-INFO  17:46:44,732 - Info at line 24: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 25: Accessing int bodovi.
-INFO  17:46:44,732 - Info at line 27: Accessing array niz.
-ERROR 17:46:44,732 - Error detected at line 27: Factor in a term must be of type int! Detected term of type array.
-ERROR 17:46:44,732 - Error detected at line 27: Destination isn't assignable to source! Dest type: array, Src type: none.
-INFO  17:46:44,732 - Info at line 28: Accessing array niz.
-INFO  17:46:44,732 - Info at line 28: Accessing int nula.
-INFO  17:46:44,732 - Info at line 28: Accessing an element of int niz[].
-INFO  17:46:44,732 - Info at line 28: Accessing int jedan.
-INFO  17:46:44,732 - Info at line 29: Accessing array niz.
-INFO  17:46:44,732 - Info at line 29: Accessing an element of int niz[].
-INFO  17:46:44,732 - Info at line 30: Accessing array niz.
-INFO  17:46:44,732 - Info at line 30: Accessing array niz.
-INFO  17:46:44,732 - Info at line 30: Accessing int jedan.
-INFO  17:46:44,733 - Info at line 30: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 30: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 30: Accessing array niz.
-INFO  17:46:44,733 - Info at line 30: Accessing array niz.
-INFO  17:46:44,733 - Info at line 30: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 30: Accessing int jedan.
-INFO  17:46:44,733 - Info at line 30: Accessing int bodovi.
-INFO  17:46:44,733 - Info at line 30: Accessing int nula.
-INFO  17:46:44,733 - Info at line 30: Accessing int jedan.
-INFO  17:46:44,733 - Info at line 30: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 31: Accessing int bodovi.
-INFO  17:46:44,733 - Info at line 32: Accessing int bodovi.
-INFO  17:46:44,733 - Info at line 32: Accessing array niz.
-INFO  17:46:44,733 - Info at line 32: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 32: Accessing array niz.
-INFO  17:46:44,733 - Info at line 32: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 33: Accessing int bodovi.
-INFO  17:46:44,733 - Info at line 34: Accessing array niz.
-INFO  17:46:44,733 - Info at line 34: Accessing an element of int niz[].
-INFO  17:46:44,733 - Info at line 37: Accessing array nizch.
-ERROR 17:46:44,733 - Error detected at line 37: Factor in a term must be of type int! Detected term of type array.
-ERROR 17:46:44,733 - Error detected at line 37: Destination isn't assignable to source! Dest type: array, Src type: none.
-INFO  17:46:44,733 - Info at line 38: Accessing array nizch.
-INFO  17:46:44,733 - Info at line 38: Accessing an element of char nizch[].
-ERROR 17:46:44,733 - Error detected at line 38: Factor in a term must be of type int! Detected term of type char.
-ERROR 17:46:44,733 - Error detected at line 38: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  17:46:44,733 - Info at line 39: Accessing array nizch.
-INFO  17:46:44,733 - Info at line 39: Accessing int jedan.
-INFO  17:46:44,733 - Info at line 39: Accessing an element of char nizch[].
-ERROR 17:46:44,733 - Error detected at line 39: Factor in a term must be of type int! Detected term of type char.
-ERROR 17:46:44,733 - Error detected at line 39: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  17:46:44,733 - Info at line 40: Accessing array nizch.
-INFO  17:46:44,733 - Info at line 40: Accessing int pet.
-INFO  17:46:44,733 - Info at line 40: Accessing an element of char nizch[].
-ERROR 17:46:44,733 - Error detected at line 40: Factor in a term must be of type int! Detected term of type char.
-ERROR 17:46:44,733 - Error detected at line 40: Destination isn't assignable to source! Dest type: char, Src type: none.
-INFO  17:46:44,734 - Info at line 41: Accessing array nizch.
-INFO  17:46:44,734 - Info at line 41: Accessing an element of char nizch[].
-ERROR 17:46:44,734 - Error detected at line 41: Factor in a term must be of type int! Detected term of type char.
-INFO  17:46:44,734 - Info at line 42: Accessing array nizch.
-INFO  17:46:44,734 - Info at line 42: Accessing int jedan.
-INFO  17:46:44,734 - Info at line 42: Accessing an element of char nizch[].
-ERROR 17:46:44,734 - Error detected at line 42: Factor in a term must be of type int! Detected term of type char.
-INFO  17:46:44,734 - Info at line 45: Accessing int bodovi.
-INFO  17:46:44,734 - Info at line 45: Accessing int bodovi.
-INFO  17:46:44,734 - Info at line 45: Accessing int pet.
-INFO  17:46:44,734 - Info at line 45: Accessing int jedan.
-INFO  17:46:44,734 - Info at line 45: Accessing int bodovi.
-INFO  17:46:44,734 - Info at line 46: Accessing int bodovi.
-INFO  17:46:44,734 - Info at line 48: Accessing int bodovi.
-INFO  17:46:44,734 - Info at line 49: Accessing int bodovi.
-ERROR 17:46:44,734 - Error detected: Function void main() doesn't exist.
+INFO  06:31:13,817 - PARSING SUCCESSFUL!
+INFO  06:31:13,817 - ===========================
+INFO  06:31:13,834 - Info at line 5: Created new constant int nula. ObjNode[Name = nula, Type = int, Kind = constant, Value = 0, Level = 0]
+INFO  06:31:13,834 - Info at line 6: Created new constant int jedan. ObjNode[Name = jedan, Type = int, Kind = constant, Value = 1, Level = 0]
+INFO  06:31:13,834 - Info at line 7: Created new constant int tri. ObjNode[Name = tri, Type = int, Kind = constant, Value = 3, Level = 0]
+INFO  06:31:13,834 - Info at line 8: Created new constant int pet. ObjNode[Name = pet, Type = int, Kind = constant, Value = 5, Level = 0]
+INFO  06:31:13,834 - Info at line 10: Created new variable int niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 0, Level = 0]
+INFO  06:31:13,834 - Info at line 11: Created new variable char nizch[]. ObjNode[Name = nizch, Type = array, Kind = variable, Address = 1, Level = 0]
+INFO  06:31:13,834 - Info at line 12: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 2, Level = 0]
+INFO  06:31:13,835 - Info at line 13: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  06:31:13,835 - Info at line 14: Created new constant char myChar. ObjNode[Name = myChar, Type = char, Kind = constant, Value = 97, Level = 0]
+INFO  06:31:13,835 - Info at line 17: Created new variable int bodovi. ObjNode[Name = bodovi, Type = int, Kind = variable, Address = 3, Level = 0]
+INFO  06:31:13,835 - Info at line 18: Created new variable bool bt. ObjNode[Name = bt, Type = bool, Kind = variable, Address = 4, Level = 0]
+INFO  06:31:13,835 - Info at line 20: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 21: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 22: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 22: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 22: Accessing int jedan.
+INFO  06:31:13,835 - Info at line 22: Accessing int tri.
+INFO  06:31:13,835 - Info at line 23: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 23: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 23: Accessing int pet.
+INFO  06:31:13,835 - Info at line 24: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 25: Accessing int bodovi.
+INFO  06:31:13,835 - Info at line 27: Accessing int nula.
+ERROR 06:31:13,835 - Error detected at line 27: Increment can't be performed on a constant.
+INFO  06:31:13,835 - Info at line 28: Accessing array niz.
+INFO  06:31:13,835 - Info at line 29: Accessing array niz.
+INFO  06:31:13,835 - Info at line 29: Accessing int nula.
+INFO  06:31:13,835 - Info at line 29: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 29: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 30: Accessing array niz.
+INFO  06:31:13,836 - Info at line 30: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 31: Accessing array niz.
+INFO  06:31:13,836 - Info at line 31: Accessing array niz.
+INFO  06:31:13,836 - Info at line 31: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 31: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 31: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 31: Accessing array niz.
+INFO  06:31:13,836 - Info at line 31: Accessing array niz.
+INFO  06:31:13,836 - Info at line 31: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 31: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 31: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 31: Accessing int nula.
+INFO  06:31:13,836 - Info at line 31: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 31: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 32: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 33: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 33: Accessing array niz.
+INFO  06:31:13,836 - Info at line 33: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 33: Accessing array niz.
+INFO  06:31:13,836 - Info at line 33: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 34: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 35: Accessing array niz.
+INFO  06:31:13,836 - Info at line 35: Accessing an element of int niz[].
+INFO  06:31:13,836 - Info at line 38: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 39: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 39: Accessing an element of char nizch[].
+INFO  06:31:13,836 - Info at line 40: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 40: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 40: Accessing an element of char nizch[].
+INFO  06:31:13,836 - Info at line 41: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 41: Accessing int pet.
+INFO  06:31:13,836 - Info at line 41: Accessing an element of char nizch[].
+INFO  06:31:13,836 - Info at line 42: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 42: Accessing an element of char nizch[].
+INFO  06:31:13,836 - Info at line 43: Accessing array nizch.
+INFO  06:31:13,836 - Info at line 43: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 43: Accessing an element of char nizch[].
+INFO  06:31:13,836 - Info at line 46: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 46: Accessing int bodovi.
+INFO  06:31:13,836 - Info at line 46: Accessing int pet.
+INFO  06:31:13,836 - Info at line 46: Accessing int jedan.
+INFO  06:31:13,836 - Info at line 46: Accessing int bodovi.
+INFO  06:31:13,837 - Info at line 47: Accessing int bodovi.
+INFO  06:31:13,837 - Info at line 49: Accessing int bodovi.
+INFO  06:31:13,837 - Info at line 50: Accessing int bodovi.
+ERROR 06:31:13,837 - Error detected: Function void main() doesn't exist.

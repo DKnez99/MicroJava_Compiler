@@ -37,7 +37,7 @@ public class Compiler {
 			
 		log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 		
-		log.info("===========================");
+		log.info("=====================================");
     	log.info("PARSING...");
 		try (BufferedReader br = new BufferedReader(new FileReader(sourceCode))) {
 			Yylex lexer = new Yylex(br);
@@ -49,13 +49,22 @@ public class Compiler {
 	        	//print syntax tree
 		        log.info(prog.toString(""));
 	        	log.info("PARSING SUCCESSFUL!");
-	        	log.info("===========================");
-	        	
+	        	log.info("=====================================");
+	        	log.info("SEMANTIC ANALYSIS...");
 	        	TabEx.init();
-	        	prog.traverseBottomUp(new SemanticAnalyzer());
+	        	SemanticAnalyzer semanticAnalyzer=new SemanticAnalyzer();
+	        	prog.traverseBottomUp(semanticAnalyzer);
+	        	if(!semanticAnalyzer.errorDetected) {
+	        		log.info("SEMANTIC ANALYSIS DETECTED NO ERRROS!");
+		        	log.info("=====================================");
+	        	}
+	        	else {
+	        		log.info("=====================================");
+		        	log.error("SEMANTIC ERROR DETECTED!");
+	        	}
 	        }
 	        else {
-	        	log.info("===========================");
+	        	log.info("=====================================");
 	        	log.error("PARSING FAILED!");
 	        }
 		}

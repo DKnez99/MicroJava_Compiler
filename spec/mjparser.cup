@@ -100,9 +100,10 @@ nonterminal ClassDecl,
 			ClassParentType,
 			ClassBodyMethodsOptional;
 			
-nonterminal MethodDecl,
-			MethodReturnType,
-			MethodName,
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodDecl,
+			MethodName;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct MethodReturnType,
 			MethodDeclListNullable;
 			
 nonterminal FormPars,
@@ -131,9 +132,10 @@ nonterminal CondTerm;
 
 nonterminal CondFact;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
-nonterminal ExprOptional,
-			RelopExprOptional;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr,
+			ExprOptional;
+
+nonterminal RelopExprOptional;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term,
 			AddopTermListNullable;

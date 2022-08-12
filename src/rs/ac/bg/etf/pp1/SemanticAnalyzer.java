@@ -4,14 +4,18 @@ import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
 
+import java.util.Stack;
+
 import org.apache.log4j.Logger;
 
 public class SemanticAnalyzer extends VisitorAdaptor{
 	Logger log = Logger.getLogger(getClass());
 	public boolean errorDetected=false;
-	private boolean mainFunctionExists=false;
+	private boolean mainMethodExists=false;
 	private Struct currentType=TabEx.noType;
-	
+	private Obj currentMethod=TabEx.noObj;
+	private boolean returnExists=false;
+	private boolean formParsExist=false;
 	//add bool type to universe scope
 	public SemanticAnalyzer(){
 		TabEx.currentScope.addToLocals(new Obj(Obj.Type,"bool",new Struct(Struct.Bool)));
@@ -43,7 +47,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	/* ====================== Helper display functions ====================== */
 	private String structToString(Struct s) {
 		switch(s.getKind()) {
-			case Struct.None: return "none"; 
+			case Struct.None: return "void"; 
 			case Struct.Int: return "int";
 			case Struct.Char: return "char";
 			case Struct.Bool: return "bool";
@@ -90,9 +94,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	
 	@Override
 	public void visit(Program program) {
-		if(mainFunctionExists==false) {
+		if(mainMethodExists==false) {
 			report_error("Function void main() doesn't exist.",null);
 		}
+		
 		TabEx.chainLocalSymbols(program.getProgramName().obj);
 		TabEx.closeScope();
 	}
@@ -527,9 +532,96 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		}
 	}
 	
+	@Override
+	public void visit(SingleStatementReturn singleStatementReturn) {
+		returnExists=true;
+		Struct returnType=singleStatementReturn.getExprOptional().struct;
+		Struct neededMethodReturnType=currentMethod.getType();
+		String returnTypeName=(returnType==TabEx.noType)?"void":structToString(returnType);
+		String neededMethodReturnTypeName=(neededMethodReturnType==TabEx.noType)?"void":structToString(neededMethodReturnType);
+		if(neededMethodReturnType!=returnType) {
+			report_error("Return type "+returnTypeName+" doesn't match methods needed return type "+neededMethodReturnTypeName+"!",singleStatementReturn);
+		}
+	}
+	
+	@Override
+	public void visit(ExprYes exprYes) {
+		exprYes.struct=exprYes.getExpr().struct;
+	}
+	
+	@Override
+	public void visit(ExprNo exprNo) {
+		exprNo.struct=TabEx.noType;
+	}
+	/* ====================== FormPars ====================== */
+	
+	@Override
+	public void visit(FormParsYes formParsYes) {
+		formParsExist=true;
+	}
+	
+	@Override
+	public void visit(FormParsNo formParsNo) {
+		formParsExist=false;
+	}
+	
 	/* ====================== Methods ====================== */
 
+	@Override
+	public void visit(MethodReturnTypeRegular methodReturnTypeRegular) {
+		methodReturnTypeRegular.struct=currentType;
+	}
 	
+	@Override
+	public void visit(MethodReturnTypeVoid methodReturnTypeVoid) {
+		methodReturnTypeVoid.struct=TabEx.noType;
+	}
 	
-
+	private boolean methodIsAlreadyDefined(String methodName, SyntaxNode info) {
+		if(TabEx.currentScope().findSymbol(methodName)==null) {
+			return false;
+		}
+		else {
+			report_error("Method with the name "+methodName+" has already been defined in the current scope!",info);
+			return true;
+		}
+	}
+	
+	@Override
+	public void visit(MethodName methodName) {
+		String name=methodName.getMethodName();
+		
+		if(methodIsAlreadyDefined(name,methodName)==true) {
+			methodName.obj=TabEx.noObj;
+			currentMethod=methodName.obj;
+			TabEx.openScope();//we open the scope nonetheless since we want to catch other errors
+			return;
+		}
+		
+		methodName.obj=TabEx.insert(Obj.Meth, name, currentType);
+		currentMethod=methodName.obj;
+		TabEx.openScope();
+		String methodReturnTypeName=(currentType==TabEx.noType)?"void":structToString(currentType);
+		report_info("Entering method "+methodReturnTypeName+" "+name+".",methodName);
+		currentType=TabEx.noType;
+	}
+	
+	@Override
+	public void visit(MethodDecl methodDecl) {
+		String methodName=currentMethod.getName();
+		Struct returnType=currentMethod.getType();
+		String returnTypeName=(returnType==TabEx.noType)?"void":structToString(returnType);
+		if(returnExists==false && returnType!=TabEx.noType) {
+			report_error("Method "+returnTypeName+" "+methodName+" doesn't have a return statement.",methodDecl);
+		}
+		if(methodName.equals("main") && returnType==TabEx.noType && formParsExist==false) {
+			mainMethodExists=true;
+		}
+		
+		TabEx.chainLocalSymbols(currentMethod);
+		TabEx.closeScope();
+		
+		returnExists=false;
+		currentMethod=TabEx.noObj;
+	}
 }

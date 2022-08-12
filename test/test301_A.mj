@@ -5,7 +5,7 @@ program test301
 	const int nula = 0;
 	const int jedan = 1;
 	const int tri = 3;
-        const int pet = 5;
+    const int pet = 5;
 
 	int niz[];
 	char nizch[];
@@ -46,7 +46,7 @@ program test301
 		print(bodovi);
 		
 		read(bodovi);
-		print(bodovi);		
+		print(bodovi);
 	}
 }
 

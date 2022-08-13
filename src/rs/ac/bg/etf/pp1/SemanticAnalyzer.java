@@ -16,6 +16,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	private Obj currentMethod=TabEx.noObj;
 	private boolean returnExists=false;
 	private boolean formParsExist=false;
+	private int globalVarCnt=0;
 	//add bool type to universe scope
 	public SemanticAnalyzer(){
 		TabEx.currentScope.addToLocals(new Obj(Obj.Type,"bool",new Struct(Struct.Bool)));
@@ -84,7 +85,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		sb.append(", Level = "+o.getLevel()+"]");
 		return sb.toString();
 	}
-	
+	/* ====================== Code Generator Helpers ====================== */
+	public int getNumberOfGlobalVariables() {
+		return globalVarCnt;
+	}
 	/* ====================== Program ====================== */
 	@Override
 	public void visit(ProgramName programName) {
@@ -93,11 +97,11 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	}
 	
 	@Override
-	public void visit(Program program) {
+	public void visit(Program program) {	//last node that is visited
 		if(mainMethodExists==false) {
 			report_error("Function void main() doesn't exist.",null);
 		}
-		
+		globalVarCnt=TabEx.currentScope().getnVars();	//count global variables
 		TabEx.chainLocalSymbols(program.getProgramName().obj);
 		TabEx.closeScope();
 	}

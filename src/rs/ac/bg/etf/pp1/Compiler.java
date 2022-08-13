@@ -24,8 +24,8 @@ public class Compiler {
 	
 	public static void main(String[] args) throws Exception {
 		Logger log = Logger.getLogger(Compiler.class);
-		if (args.length < 1) {
-			log.error("Error! <source-file> not provided as an argument.");
+		if (args.length < 2) {
+			log.error("Error! Provide <source-file> and <output-file> as command line arguments.");
 			return;
 		}
 		
@@ -55,17 +55,37 @@ public class Compiler {
 	        	SemanticAnalyzer semanticAnalyzer=new SemanticAnalyzer();
 	        	prog.traverseBottomUp(semanticAnalyzer);
 	        	if(!semanticAnalyzer.errorDetected) {
-	        		log.info("SEMANTIC ANALYSIS DETECTED NO ERRROS!");
+	        		log.info("SEMANTIC ANALYSIS SUCCESSFUL!");
 		        	log.info("=====================================");
+		        	log.info("CODE GENERATION...");
+		        	//file stuff
+		        	File outputFile=new File(args[1]);
+		        	FileOutputStream outputFileStream=new FileOutputStream(outputFile);
+		        	if(outputFile.exists()) {
+		        		outputFile.delete();
+		        	}
+		        	CodeGenerator codeGenerator=new CodeGenerator();
+		        	prog.traverseBottomUp(codeGenerator);
+		        	Code.dataSize=semanticAnalyzer.getNumberOfGlobalVariables();
+		        	Code.mainPc=codeGenerator.getMainPc();
+		        	if(Code.greska==true) {
+			        	log.info("CODE GENERATION FAILED! RUNTIME ERROR(S) DETECTED!");
+		        	}
+		        	else {
+			        	log.info("CODE GENERATION SUCCESSFUL!");
+			        	log.info("Results saved in the output file "+outputFile.getPath()+".");
+		        		Code.write(outputFileStream);
+		        	}
+		        	outputFileStream.close();
 	        	}
 	        	else {
 	        		log.info("=====================================");
-		        	log.error("SEMANTIC ERROR DETECTED!");
+		        	log.error("SEMANTIC ANALYSIS FAILED! SEMANTIC ERROR(S) DETECTED!");
 	        	}
 	        }
 	        else {
 	        	log.info("=====================================");
-	        	log.error("PARSING FAILED!");
+	        	log.error("PARSING FAILED! PARSING ERROR(S) DETECTED!");
 	        }
 		}
 	}

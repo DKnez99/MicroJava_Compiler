@@ -22,7 +22,7 @@ program test301
 		bodovi = (bodovi + jedan) ?? tri;
 		bodovi = bodovi * pet;
 		bodovi--;
-		print(bodovi); 
+		print('c',4); 
 			
 		niz = new int[3];
 		niz[nula] = jedan;

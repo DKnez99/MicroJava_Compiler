@@ -1,0 +1,68 @@
+INFO  23:19:30,684 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  23:19:30,685 - =====================================
+INFO  23:19:30,685 - PARSING...
+INFO  23:19:30,715 - #2 program
+INFO  23:19:30,715 - #47 test301
+INFO  23:19:30,715 - #20 {
+INFO  23:19:30,716 - #15 void
+INFO  23:19:30,716 - #47 main
+INFO  23:19:30,716 - #24 (
+INFO  23:19:30,717 - #25 )
+INFO  23:19:30,717 - #20 {
+INFO  23:19:30,718 - #13 print
+INFO  23:19:30,718 - #24 (
+INFO  23:19:30,718 - #48 12
+INFO  23:19:30,718 - #25 )
+INFO  23:19:30,719 - #26 ;
+INFO  23:19:30,719 - #21 }
+INFO  23:19:30,720 - #21 }
+INFO  23:19:30,721 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  EmptyProgramDeclList(
+  ) [EmptyProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      EmptyVarDeclListNullable(
+      ) [EmptyVarDeclListNullable]
+      StatementList(
+        EmptyStatementList(
+        ) [EmptyStatementList]
+        StatementSingle(
+          SingleStatementPrint(
+            ExprTerm(
+              Term(
+                FactorConstNum(
+                 12
+                ) [FactorConstNum]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  23:19:30,722 - PARSING SUCCESSFUL!
+INFO  23:19:30,722 - =====================================
+INFO  23:19:30,722 - SEMANTIC ANALYSIS...
+INFO  23:19:30,732 - Info at line 5: Entering method void main.
+INFO  23:19:30,732 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  23:19:30,732 - =====================================
+INFO  23:19:30,732 - CODE GENERATION...
+INFO  23:19:30,760 - CODE GENERATION SUCCESSFUL!
+INFO  23:19:30,760 - Results saved in the output file test\test301.obj.

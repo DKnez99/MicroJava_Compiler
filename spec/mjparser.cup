@@ -116,8 +116,7 @@ nonterminal Statement,
 			StatementListNullable;
 
 nonterminal SingleStatement,
-			SingleStatementElseOptional,
-			SingleStatementPrintNumConstOptional;
+			SingleStatementElseOptional;
 
 nonterminal Statements;
 
@@ -335,7 +334,9 @@ SingleStatement ::=
 				|
 					(SingleStatementRead) READ LPAREN Designator RPAREN SEMI
 				|
-					(SingleStatementPrint) PRINT LPAREN Expr SingleStatementPrintNumConstOptional RPAREN SEMI
+					(SingleStatementPrint) PRINT LPAREN Expr RPAREN SEMI
+				|
+					(SingleStatementPrintWithNumber) PRINT LPAREN Expr COMMA NUMBER_CONST:printNumber RPAREN SEMI
 				;
 				
 SingleStatementElseOptional ::=
@@ -343,12 +344,6 @@ SingleStatementElseOptional ::=
 							|
 								(SingleStatementElseNo) /* epsilon */
 							;
-
-SingleStatementPrintNumConstOptional ::=
-											(SingleStatementPrintNumConstYes) COMMA NUMBER_CONST:printNumber
-										|
-											(SingleStatementPrintNumConstNo) /* epsilon */
-										;
 
 /* =========================================================================== */
 /* Statements */

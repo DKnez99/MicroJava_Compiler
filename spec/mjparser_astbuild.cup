@@ -137,8 +137,6 @@ nonterminal
 nonterminal SingleStatement SingleStatement;
 nonterminal
 			SingleStatementElseOptional SingleStatementElseOptional;
-nonterminal
-			SingleStatementPrintNumConstOptional SingleStatementPrintNumConstOptional;
 
 nonterminal Statements Statements;
 
@@ -360,7 +358,9 @@ SingleStatement ::=
 				|
 					(SingleStatementRead) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new SingleStatementRead(D1); RESULT.setLine(D1left); :}
 				|
-					(SingleStatementPrint) PRINT LPAREN Expr:E1 SingleStatementPrintNumConstOptional:S2 RPAREN SEMI {: RESULT=new SingleStatementPrint(E1, S2); RESULT.setLine(E1left); :}
+					(SingleStatementPrint) PRINT LPAREN Expr:E1 RPAREN SEMI {: RESULT=new SingleStatementPrint(E1); RESULT.setLine(E1left); :}
+				|
+					(SingleStatementPrintWithNumber) PRINT LPAREN Expr:E1 COMMA NUMBER_CONST:printNumber RPAREN SEMI {: RESULT=new SingleStatementPrintWithNumber(E1, printNumber); RESULT.setLine(E1left); :}
 				;
 				
 SingleStatementElseOptional ::=
@@ -368,12 +368,6 @@ SingleStatementElseOptional ::=
 							|
 								(SingleStatementElseNo) {: RESULT=new SingleStatementElseNo(); :} /* epsilon */
 							;
-
-SingleStatementPrintNumConstOptional ::=
-											(SingleStatementPrintNumConstYes) COMMA NUMBER_CONST:printNumber {: RESULT=new SingleStatementPrintNumConstYes(printNumber); RESULT.setLine(printNumberleft); :}
-										|
-											(SingleStatementPrintNumConstNo) {: RESULT=new SingleStatementPrintNumConstNo(); :} /* epsilon */
-										;
 
 /* =========================================================================== */
 /* Statements */

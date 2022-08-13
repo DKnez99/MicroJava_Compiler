@@ -537,6 +537,20 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	}
 	
 	@Override
+	public void visit(SingleStatementPrintWithNumber singleStatementPrintWithNumber) {
+		int printWidth=singleStatementPrintWithNumber.getPrintNumber();
+		Struct exprType=singleStatementPrintWithNumber.getExpr().struct;
+		String exprTypeName=structToString(exprType);
+		if(exprType!=TabEx.intType && exprType!=TabEx.charType && exprType!=TabEx.boolType) {
+			report_error("Expression in print statement can't be of type "+exprTypeName+".",singleStatementPrintWithNumber);
+			return;
+		}
+		if(printWidth<1) {
+			report_error("Print width can't be less than 1!",singleStatementPrintWithNumber);
+		}
+	}
+	
+	@Override
 	public void visit(SingleStatementReturn singleStatementReturn) {
 		returnExists=true;
 		Struct returnType=singleStatementReturn.getExprOptional().struct;

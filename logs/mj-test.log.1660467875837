@@ -1,0 +1,63 @@
+INFO  11:03:31,903 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  11:03:31,904 - =====================================
+INFO  11:03:31,904 - PARSING...
+INFO  11:03:31,932 - #2 program
+INFO  11:03:31,932 - #47 test301
+INFO  11:03:31,932 - #3 const
+INFO  11:03:31,933 - #47 bool
+INFO  11:03:31,933 - #47 tacno
+INFO  11:03:31,934 - #30 =
+INFO  11:03:31,934 - #50 true
+INFO  11:03:31,934 - #26 ;
+INFO  11:03:31,934 - #47 char
+INFO  11:03:31,934 - #47 c
+INFO  11:03:31,935 - #26 ;
+INFO  11:03:31,935 - #47 int
+INFO  11:03:31,936 - #47 y
+INFO  11:03:31,936 - #26 ;
+INFO  11:03:31,936 - #20 {
+INFO  11:03:31,936 - #15 void
+INFO  11:03:31,936 - #47 main
+INFO  11:03:31,937 - #24 (
+INFO  11:03:31,938 - #25 )
+INFO  11:03:31,938 - #47 bool
+INFO  11:03:31,939 - #47 netacno
+INFO  11:03:31,939 - #26 ;
+INFO  11:03:31,939 - #47 int
+INFO  11:03:31,939 - #47 x
+INFO  11:03:31,939 - #27 ,
+INFO  11:03:31,939 - #47 y
+INFO  11:03:31,939 - #26 ;
+INFO  11:03:31,939 - #47 char
+INFO  11:03:31,939 - #47 c
+INFO  11:03:31,939 - #26 ;
+INFO  11:03:31,939 - #20 {
+INFO  11:03:31,939 - #12 read
+INFO  11:03:31,939 - #24 (
+INFO  11:03:31,939 - #47 y
+INFO  11:03:31,940 - #25 )
+INFO  11:03:31,940 - #26 ;
+INFO  11:03:31,940 - #13 print
+INFO  11:03:31,940 - #24 (
+INFO  11:03:31,940 - #49  
+INFO  11:03:31,940 - #25 )
+INFO  11:03:31,941 - #26 ;
+INFO  11:03:31,941 - #13 print
+INFO  11:03:31,941 - #24 (
+INFO  11:03:31,942 - #47 y
+INFO  11:03:31,942 - #37 ++
+ERROR 11:03:31,942 - Syntax error at line 15
+INFO  11:03:31,942 - #25 )
+INFO  11:03:31,942 - #26 ;
+INFO  11:03:31,942 - #11 return
+INFO  11:03:31,942 - #26 ;
+INFO  11:03:31,942 - #12 read
+ERROR 11:03:31,943 - Error recovery (level A) in designator assignment at line 15. Recovered to the next ;
+INFO  11:03:31,944 - #24 (
+INFO  11:03:31,944 - #47 netacno
+INFO  11:03:31,944 - #25 )
+INFO  11:03:31,944 - #26 ;
+INFO  11:03:31,944 - #21 }
+INFO  11:03:31,944 - #21 }
+INFO  11:03:31,945 - =====================================
+ERROR 11:03:31,945 - PARSING FAILED! PARSING ERROR(S) DETECTED!

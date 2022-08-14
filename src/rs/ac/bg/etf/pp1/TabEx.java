@@ -11,7 +11,9 @@ public class TabEx extends Tab {
 	
 	public static void init() {
 		Tab.init();
-		Tab.currentScope.addToLocals(new Obj(Obj.Type, "bool", boolType));
+		Obj boolObj=new Obj(Obj.Type, "bool", boolType);
+		Tab.currentScope.addToLocals(boolObj);
+		TabEx.currentScope.addToLocals(boolObj);
 		currentLevel=-1;
 	}
 }

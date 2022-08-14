@@ -1,0 +1,91 @@
+INFO  07:58:21,352 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  07:58:21,352 - =====================================
+INFO  07:58:21,352 - PARSING...
+INFO  07:58:21,381 - #2 program
+INFO  07:58:21,381 - #47 test301
+INFO  07:58:21,381 - #47 bool
+INFO  07:58:21,382 - #47 tacno
+INFO  07:58:21,383 - #26 ;
+INFO  07:58:21,383 - #20 {
+INFO  07:58:21,384 - #15 void
+INFO  07:58:21,384 - #47 main
+INFO  07:58:21,385 - #24 (
+INFO  07:58:21,385 - #25 )
+INFO  07:58:21,386 - #20 {
+INFO  07:58:21,386 - #13 print
+INFO  07:58:21,386 - #24 (
+INFO  07:58:21,387 - #49 x
+INFO  07:58:21,387 - #27 ,
+INFO  07:58:21,388 - #48 7
+INFO  07:58:21,388 - #25 )
+INFO  07:58:21,389 - #26 ;
+INFO  07:58:21,389 - #21 }
+INFO  07:58:21,389 - #21 }
+INFO  07:58:21,390 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  ProgramDeclList(
+    EmptyProgramDeclList(
+    ) [EmptyProgramDeclList]
+    ProgramDeclVar(
+      VarDecl(
+        VarType(
+          Type(
+           bool
+          ) [Type]
+        ) [VarType]
+        VarListSingle(
+          VarSingle(
+           tacno
+          ) [VarSingle]
+        ) [VarListSingle]
+      ) [VarDecl]
+    ) [ProgramDeclVar]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      EmptyVarDeclListNullable(
+      ) [EmptyVarDeclListNullable]
+      StatementList(
+        EmptyStatementList(
+        ) [EmptyStatementList]
+        StatementSingle(
+          SingleStatementPrintWithNumber(
+            ExprTerm(
+              Term(
+                FactorConstChar(
+                 x
+                ) [FactorConstChar]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+           7
+          ) [SingleStatementPrintWithNumber]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  07:58:21,390 - PARSING SUCCESSFUL!
+INFO  07:58:21,391 - =====================================
+INFO  07:58:21,391 - SEMANTIC ANALYSIS...
+INFO  07:58:21,409 - Info at line 4: Created new variable bool tacno. ObjNode[Name = tacno, Type = bool, Kind = variable, Address = 0, Level = 0]
+INFO  07:58:21,409 - Info at line 6: Entering method void main.
+INFO  07:58:21,409 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  07:58:21,409 - =====================================
+INFO  07:58:21,409 - CODE GENERATION...
+INFO  07:58:21,412 - CODE GENERATION SUCCESSFUL!
+INFO  07:58:21,412 - Results saved in the output file test\test301.obj.

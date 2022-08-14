@@ -1,0 +1,113 @@
+INFO  08:11:01,112 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  08:11:01,112 - =====================================
+INFO  08:11:01,113 - PARSING...
+INFO  08:11:01,145 - #2 program
+INFO  08:11:01,145 - #47 test301
+INFO  08:11:01,145 - #3 const
+INFO  08:11:01,146 - #47 bool
+INFO  08:11:01,146 - #47 tacno
+INFO  08:11:01,147 - #30 =
+INFO  08:11:01,147 - #50 true
+INFO  08:11:01,147 - #26 ;
+INFO  08:11:01,147 - #20 {
+INFO  08:11:01,148 - #15 void
+INFO  08:11:01,148 - #47 main
+INFO  08:11:01,149 - #24 (
+INFO  08:11:01,149 - #25 )
+INFO  08:11:01,150 - #47 bool
+INFO  08:11:01,150 - #47 netacno
+INFO  08:11:01,150 - #26 ;
+INFO  08:11:01,151 - #20 {
+INFO  08:11:01,152 - #13 print
+INFO  08:11:01,152 - #24 (
+INFO  08:11:01,153 - #49 x
+INFO  08:11:01,153 - #27 ,
+INFO  08:11:01,154 - #48 7
+INFO  08:11:01,154 - #25 )
+INFO  08:11:01,154 - #26 ;
+INFO  08:11:01,154 - #21 }
+INFO  08:11:01,155 - #21 }
+INFO  08:11:01,156 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  ProgramDeclList(
+    EmptyProgramDeclList(
+    ) [EmptyProgramDeclList]
+    ProgramDeclConst(
+      ConstDecl(
+        ConstType(
+          Type(
+           bool
+          ) [Type]
+        ) [ConstType]
+        ConstListSingle(
+          ConstAssignBool(
+           tacno
+           true
+          ) [ConstAssignBool]
+        ) [ConstListSingle]
+      ) [ConstDecl]
+    ) [ProgramDeclConst]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        EmptyVarDeclListNullable(
+        ) [EmptyVarDeclListNullable]
+        VarDecl(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             netacno
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        EmptyStatementList(
+        ) [EmptyStatementList]
+        StatementSingle(
+          SingleStatementPrintWithNumber(
+            ExprTerm(
+              Term(
+                FactorConstChar(
+                 x
+                ) [FactorConstChar]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+           7
+          ) [SingleStatementPrintWithNumber]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  08:11:01,156 - PARSING SUCCESSFUL!
+INFO  08:11:01,157 - =====================================
+INFO  08:11:01,157 - SEMANTIC ANALYSIS...
+INFO  08:11:01,178 - Info at line 4: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  08:11:01,178 - Info at line 6: Entering method void main.
+INFO  08:11:01,178 - Info at line 7: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 0, Level = 1]
+INFO  08:11:01,178 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  08:11:01,178 - =====================================
+INFO  08:11:01,178 - CODE GENERATION...
+INFO  08:11:01,181 - CODE GENERATION SUCCESSFUL!
+INFO  08:11:01,181 - Results saved in the output file test\test301.obj.

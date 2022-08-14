@@ -1,0 +1,71 @@
+INFO  07:55:14,290 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  07:55:14,290 - =====================================
+INFO  07:55:14,290 - PARSING...
+INFO  07:55:14,320 - #2 program
+INFO  07:55:14,320 - #47 test301
+INFO  07:55:14,320 - #20 {
+INFO  07:55:14,321 - #15 void
+INFO  07:55:14,321 - #47 main
+INFO  07:55:14,322 - #24 (
+INFO  07:55:14,322 - #25 )
+INFO  07:55:14,322 - #20 {
+INFO  07:55:14,323 - #13 print
+INFO  07:55:14,323 - #24 (
+INFO  07:55:14,323 - #49 x
+INFO  07:55:14,323 - #27 ,
+INFO  07:55:14,324 - #48 7
+INFO  07:55:14,324 - #25 )
+INFO  07:55:14,325 - #26 ;
+INFO  07:55:14,325 - #21 }
+INFO  07:55:14,325 - #21 }
+INFO  07:55:14,333 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  EmptyProgramDeclList(
+  ) [EmptyProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      EmptyVarDeclListNullable(
+      ) [EmptyVarDeclListNullable]
+      StatementList(
+        EmptyStatementList(
+        ) [EmptyStatementList]
+        StatementSingle(
+          SingleStatementPrintWithNumber(
+            ExprTerm(
+              Term(
+                FactorConstChar(
+                 x
+                ) [FactorConstChar]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+           7
+          ) [SingleStatementPrintWithNumber]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  07:55:14,333 - PARSING SUCCESSFUL!
+INFO  07:55:14,333 - =====================================
+INFO  07:55:14,333 - SEMANTIC ANALYSIS...
+INFO  07:55:14,339 - Info at line 5: Entering method void main.
+INFO  07:55:14,339 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  07:55:14,339 - =====================================
+INFO  07:55:14,339 - CODE GENERATION...
+INFO  07:55:14,341 - CODE GENERATION SUCCESSFUL!
+INFO  07:55:14,341 - Results saved in the output file test\test301.obj.

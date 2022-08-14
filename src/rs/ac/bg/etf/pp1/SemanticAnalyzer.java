@@ -19,7 +19,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 	private int globalVarCnt=0;
 	//add bool type to universe scope
 	public SemanticAnalyzer(){
-		TabEx.currentScope.addToLocals(new Obj(Obj.Type,"bool",new Struct(Struct.Bool)));
+		//TabEx.currentScope.addToLocals(new Obj(Obj.Type,"bool",new Struct(Struct.Bool)));
 	}
 	
 	/* ====================== Logging ======================*/

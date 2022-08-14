@@ -1,0 +1,153 @@
+INFO  08:12:44,218 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  08:12:44,219 - =====================================
+INFO  08:12:44,219 - PARSING...
+INFO  08:12:44,248 - #2 program
+INFO  08:12:44,249 - #47 test301
+INFO  08:12:44,249 - #3 const
+INFO  08:12:44,249 - #47 bool
+INFO  08:12:44,249 - #47 tacno
+INFO  08:12:44,250 - #30 =
+INFO  08:12:44,250 - #50 true
+INFO  08:12:44,250 - #26 ;
+INFO  08:12:44,250 - #47 char
+INFO  08:12:44,251 - #47 c
+INFO  08:12:44,251 - #26 ;
+INFO  08:12:44,252 - #47 int
+INFO  08:12:44,252 - #47 y
+INFO  08:12:44,252 - #26 ;
+INFO  08:12:44,252 - #20 {
+INFO  08:12:44,252 - #15 void
+INFO  08:12:44,253 - #47 main
+INFO  08:12:44,254 - #24 (
+INFO  08:12:44,254 - #25 )
+INFO  08:12:44,254 - #47 bool
+INFO  08:12:44,255 - #47 netacno
+INFO  08:12:44,255 - #26 ;
+INFO  08:12:44,255 - #20 {
+INFO  08:12:44,255 - #13 print
+INFO  08:12:44,255 - #24 (
+INFO  08:12:44,256 - #49 x
+INFO  08:12:44,256 - #27 ,
+INFO  08:12:44,257 - #48 2
+INFO  08:12:44,257 - #25 )
+INFO  08:12:44,257 - #26 ;
+INFO  08:12:44,257 - #21 }
+INFO  08:12:44,257 - #21 }
+INFO  08:12:44,260 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  ProgramDeclList(
+    ProgramDeclList(
+      ProgramDeclList(
+        EmptyProgramDeclList(
+        ) [EmptyProgramDeclList]
+        ProgramDeclConst(
+          ConstDecl(
+            ConstType(
+              Type(
+               bool
+              ) [Type]
+            ) [ConstType]
+            ConstListSingle(
+              ConstAssignBool(
+               tacno
+               true
+              ) [ConstAssignBool]
+            ) [ConstListSingle]
+          ) [ConstDecl]
+        ) [ProgramDeclConst]
+      ) [ProgramDeclList]
+      ProgramDeclVar(
+        VarDecl(
+          VarType(
+            Type(
+             char
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             c
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [ProgramDeclVar]
+    ) [ProgramDeclList]
+    ProgramDeclVar(
+      VarDecl(
+        VarType(
+          Type(
+           int
+          ) [Type]
+        ) [VarType]
+        VarListSingle(
+          VarSingle(
+           y
+          ) [VarSingle]
+        ) [VarListSingle]
+      ) [VarDecl]
+    ) [ProgramDeclVar]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        EmptyVarDeclListNullable(
+        ) [EmptyVarDeclListNullable]
+        VarDecl(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             netacno
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        EmptyStatementList(
+        ) [EmptyStatementList]
+        StatementSingle(
+          SingleStatementPrintWithNumber(
+            ExprTerm(
+              Term(
+                FactorConstChar(
+                 x
+                ) [FactorConstChar]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+           2
+          ) [SingleStatementPrintWithNumber]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  08:12:44,260 - PARSING SUCCESSFUL!
+INFO  08:12:44,260 - =====================================
+INFO  08:12:44,260 - SEMANTIC ANALYSIS...
+INFO  08:12:44,266 - Info at line 4: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  08:12:44,267 - Info at line 5: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 0, Level = 0]
+INFO  08:12:44,267 - Info at line 6: Created new variable int y. ObjNode[Name = y, Type = int, Kind = variable, Address = 1, Level = 0]
+INFO  08:12:44,267 - Info at line 8: Entering method void main.
+INFO  08:12:44,267 - Info at line 9: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 0, Level = 1]
+INFO  08:12:44,267 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  08:12:44,267 - =====================================
+INFO  08:12:44,267 - CODE GENERATION...
+INFO  08:12:44,269 - CODE GENERATION SUCCESSFUL!
+INFO  08:12:44,269 - Results saved in the output file test\test301.obj.

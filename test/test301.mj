@@ -1,10 +1,31 @@
 // Test301
 
 program test301
+const bool tacno=true;
+char c;
+int y;
 {
 	void main()
+	bool netacno;
+	int x,y[];
+	char c;
 	{
-		print('x',7);
+		y=new int[3];
+		read(y[0]);
+		y[0]--;
+		print(y[0]);
+		y[0]++;
+		y[0]++;
+		print(y[0]);
+		print(y[1]);
+		read(x);
+		x--;
+		print(x);
+		x++;
+		x++;
+		print(x);
+		return;
+		read(netacno);
 	}
 }
 

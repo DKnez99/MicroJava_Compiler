@@ -10,6 +10,7 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 public class CodeGenerator extends VisitorAdaptor {
 	Logger log = Logger.getLogger(getClass());
 	private boolean errorDetected=false;
+	private boolean termAlreadyNegated=false;
 	private int mainPc=-1;	//main() start address
 	// private int dataSize;
 	
@@ -114,8 +115,52 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.pop);	//remove extra arr addr
 	}
 	
+	/* ==================== Terms ==================== */
+	
+	@Override
+	public void visit(Term term) {
+		if((term.getParent() instanceof ExprNegTerm || term.getParent() instanceof ExprNegQQ) && termAlreadyNegated==false) {
+			//report_info("STACK NEGATED!",term);
+			termAlreadyNegated=true;
+			Code.put(Code.neg);
+		}
+	}
+	
+	@Override
+	public void visit(AddopTermList addopTermList) {
+		if(addopTermList.getAddop() instanceof Plus) {
+			Code.put(Code.add);
+		}
+		else if(addopTermList.getAddop() instanceof Minus){
+			Code.put(Code.sub);
+		}
+	}
+	/* ==================== Expr ==================== */
+	
+	@Override
+	public void visit(ExprNegTerm e) {
+		termAlreadyNegated=false;
+	}
+	
+	@Override
+	public void visit(ExprNegQQ e) {
+		termAlreadyNegated=false;
+	}
+	
 	/* ==================== Factors ==================== */
-
+	@Override
+	public void visit(MulopFactorList mulopFactorList) {
+		if(mulopFactorList.getMulop() instanceof Mul) {
+			Code.put(Code.mul);
+		}
+		else if(mulopFactorList.getMulop() instanceof Div) {
+			Code.put(Code.div);
+		}
+		else if(mulopFactorList.getMulop() instanceof Mod) {
+			Code.put(Code.rem);
+		}
+	}
+	
 	@Override
 	public void visit(FactorConstNum factorConstNum) {
 		//create dummy obj so load function will take care of calculating which Code method needs to be called

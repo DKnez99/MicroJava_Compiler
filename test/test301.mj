@@ -10,20 +10,10 @@ int y;
 	int x,y[];
 	char c;
 	{
-		y=new int[3];
-		read(y[0]);
-		y[0]--;
-		print(y[0]);
-		y[0]++;
-		y[0]++;
-		print(y[0]);
-		print(y[1]);
-		read(x);
-		x--;
+		x=-5-7+4*4;
 		print(x);
-		x++;
-		x++;
-		print(x);
+		x=5;
+		print(x,5);
 		return;
 		read(netacno);
 	}

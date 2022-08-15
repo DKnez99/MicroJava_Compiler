@@ -7,15 +7,13 @@ int y;
 {
 	void main()
 	bool netacno;
-	int x,y[];
+	int x,a,b;
 	char c;
 	{
-		x=-5-7+4*4;
+		a=-4;
+		b=5;	
+		x=a??b-5??12;
 		print(x);
-		x=5;
-		print(x,5);
-		return;
-		read(netacno);
 	}
 }
 

@@ -145,6 +145,63 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(ExprNegQQ e) {
 		termAlreadyNegated=false;
+		
+		//a??b
+		
+		//stack:ab
+		Code.put(Code.dup_x1);
+		//stack:bab
+		Code.put(Code.pop);
+		//stack:ba
+		Code.put(Code.dup);
+		//stack:baa
+		Code.loadConst(0);
+		//stack:baa0
+		int addrToBackPatch=Code.pc+1; //since jmp is 1 byte and addr is on bytes 2 and 3
+		Code.putFalseJump(Code.ne, 0);//3 bytes
+		//stack:ba in BOTH cases
+		
+			//if a!=0 we will pass through here
+			Code.put(Code.dup_x1);
+			//stack:aba
+			Code.put(Code.pop);
+			//stack:ab
+		
+		//jmp here
+		Code.fixup(addrToBackPatch);
+		Code.put(Code.pop);
+		//1) a == 0 -> stack: b
+		//2) a != 0 -> stack: a
+	}
+	
+	@Override
+	public void visit(ExprQQ e) {
+		//a??b
+		
+		//stack:ab
+		Code.put(Code.dup_x1);
+		//stack:bab
+		Code.put(Code.pop);
+		//stack:ba
+		Code.put(Code.dup);
+		//stack:baa
+		Code.loadConst(0);
+		//stack:baa0
+		int addrToBackPatch=Code.pc+1; //since jmp is 1 byte and addr is on bytes 2 and 3
+		Code.putFalseJump(Code.ne, 0);//3 bytes
+		//stack:ba in BOTH cases
+		
+			//if a!=0 we will pass through here
+			Code.put(Code.dup_x1);
+			//stack:aba
+			Code.put(Code.pop);
+			//stack:ab
+		
+		//jmp here
+		Code.fixup(addrToBackPatch);
+		Code.put(Code.pop);
+		//1) a == 0 -> stack: b
+		//2) a != 0 -> stack: a
 	}
 	
 	/* ==================== Factors ==================== */

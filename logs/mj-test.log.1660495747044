@@ -1,0 +1,311 @@
+INFO  18:48:10,573 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  18:48:10,573 - =====================================
+INFO  18:48:10,573 - PARSING...
+INFO  18:48:10,601 - #2 program
+INFO  18:48:10,601 - #47 test301
+INFO  18:48:10,601 - #3 const
+INFO  18:48:10,602 - #47 bool
+INFO  18:48:10,602 - #47 tacno
+INFO  18:48:10,602 - #30 =
+INFO  18:48:10,602 - #50 true
+INFO  18:48:10,602 - #26 ;
+INFO  18:48:10,603 - #47 char
+INFO  18:48:10,603 - #47 c
+INFO  18:48:10,604 - #26 ;
+INFO  18:48:10,604 - #47 int
+INFO  18:48:10,604 - #47 y
+INFO  18:48:10,604 - #26 ;
+INFO  18:48:10,604 - #20 {
+INFO  18:48:10,604 - #15 void
+INFO  18:48:10,605 - #47 main
+INFO  18:48:10,606 - #24 (
+INFO  18:48:10,606 - #25 )
+INFO  18:48:10,606 - #47 bool
+INFO  18:48:10,607 - #47 netacno
+INFO  18:48:10,607 - #26 ;
+INFO  18:48:10,607 - #47 int
+INFO  18:48:10,607 - #47 x
+INFO  18:48:10,607 - #27 ,
+INFO  18:48:10,607 - #47 a
+INFO  18:48:10,607 - #27 ,
+INFO  18:48:10,607 - #47 b
+INFO  18:48:10,607 - #26 ;
+INFO  18:48:10,607 - #47 char
+INFO  18:48:10,607 - #47 c
+INFO  18:48:10,607 - #26 ;
+INFO  18:48:10,607 - #20 {
+INFO  18:48:10,607 - #47 a
+INFO  18:48:10,608 - #30 =
+INFO  18:48:10,608 - #48 9
+INFO  18:48:10,608 - #26 ;
+INFO  18:48:10,610 - #47 b
+INFO  18:48:10,610 - #30 =
+INFO  18:48:10,610 - #48 5
+INFO  18:48:10,610 - #26 ;
+INFO  18:48:10,610 - #47 x
+INFO  18:48:10,610 - #30 =
+INFO  18:48:10,610 - #47 a
+INFO  18:48:10,610 - #44 ??
+INFO  18:48:10,610 - #47 b
+INFO  18:48:10,610 - #26 ;
+INFO  18:48:10,610 - #13 print
+INFO  18:48:10,610 - #24 (
+INFO  18:48:10,611 - #47 x
+INFO  18:48:10,611 - #25 )
+INFO  18:48:10,611 - #26 ;
+INFO  18:48:10,611 - #21 }
+INFO  18:48:10,611 - #21 }
+INFO  18:48:10,612 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  ProgramDeclList(
+    ProgramDeclList(
+      ProgramDeclList(
+        EmptyProgramDeclList(
+        ) [EmptyProgramDeclList]
+        ProgramDeclConst(
+          ConstDecl(
+            ConstType(
+              Type(
+               bool
+              ) [Type]
+            ) [ConstType]
+            ConstListSingle(
+              ConstAssignBool(
+               tacno
+               true
+              ) [ConstAssignBool]
+            ) [ConstListSingle]
+          ) [ConstDecl]
+        ) [ProgramDeclConst]
+      ) [ProgramDeclList]
+      ProgramDeclVar(
+        VarDecl(
+          VarType(
+            Type(
+             char
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             c
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [ProgramDeclVar]
+    ) [ProgramDeclList]
+    ProgramDeclVar(
+      VarDecl(
+        VarType(
+          Type(
+           int
+          ) [Type]
+        ) [VarType]
+        VarListSingle(
+          VarSingle(
+           y
+          ) [VarSingle]
+        ) [VarListSingle]
+      ) [VarDecl]
+    ) [ProgramDeclVar]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        VarDeclList(
+          VarDeclList(
+            EmptyVarDeclListNullable(
+            ) [EmptyVarDeclListNullable]
+            VarDecl(
+              VarType(
+                Type(
+                 bool
+                ) [Type]
+              ) [VarType]
+              VarListSingle(
+                VarSingle(
+                 netacno
+                ) [VarSingle]
+              ) [VarListSingle]
+            ) [VarDecl]
+          ) [VarDeclList]
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarListMany(
+              VarListMany(
+                VarListSingle(
+                  VarSingle(
+                   x
+                  ) [VarSingle]
+                ) [VarListSingle]
+                VarSingle(
+                 a
+                ) [VarSingle]
+              ) [VarListMany]
+              VarSingle(
+               b
+              ) [VarSingle]
+            ) [VarListMany]
+          ) [VarDecl]
+        ) [VarDeclList]
+        VarDecl(
+          VarType(
+            Type(
+             char
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             c
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              EmptyStatementList(
+              ) [EmptyStatementList]
+              StatementSingle(
+                SingleStatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    DesignatorDefault(
+                     a
+                    ) [DesignatorDefault]
+                    Assign(
+                    ) [Assign]
+                    ExprTerm(
+                      Term(
+                        FactorConstNum(
+                         9
+                        ) [FactorConstNum]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorStatementAssign]
+                ) [SingleStatementDesignatorStatement]
+              ) [StatementSingle]
+            ) [StatementList]
+            StatementSingle(
+              SingleStatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  DesignatorDefault(
+                   b
+                  ) [DesignatorDefault]
+                  Assign(
+                  ) [Assign]
+                  ExprTerm(
+                    Term(
+                      FactorConstNum(
+                       5
+                      ) [FactorConstNum]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [ExprTerm]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignatorStatement]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementDesignatorStatement(
+              DesignatorStatementAssign(
+                DesignatorDefault(
+                 x
+                ) [DesignatorDefault]
+                Assign(
+                ) [Assign]
+                ExprQQ(
+                  Term(
+                    FactorDesignator(
+                      DesignatorDefault(
+                       a
+                      ) [DesignatorDefault]
+                    ) [FactorDesignator]
+                    EmptyMulopFactorList(
+                    ) [EmptyMulopFactorList]
+                  ) [Term]
+                  EmptyAddopTermList(
+                  ) [EmptyAddopTermList]
+                  ExprTerm(
+                    Term(
+                      FactorDesignator(
+                        DesignatorDefault(
+                         b
+                        ) [DesignatorDefault]
+                      ) [FactorDesignator]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [ExprTerm]
+                ) [ExprQQ]
+              ) [DesignatorStatementAssign]
+            ) [SingleStatementDesignatorStatement]
+          ) [StatementSingle]
+        ) [StatementList]
+        StatementSingle(
+          SingleStatementPrint(
+            ExprTerm(
+              Term(
+                FactorDesignator(
+                  DesignatorDefault(
+                   x
+                  ) [DesignatorDefault]
+                ) [FactorDesignator]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  18:48:10,613 - PARSING SUCCESSFUL!
+INFO  18:48:10,613 - =====================================
+INFO  18:48:10,613 - SEMANTIC ANALYSIS...
+INFO  18:48:10,631 - Info at line 4: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  18:48:10,631 - Info at line 5: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 0, Level = 0]
+INFO  18:48:10,631 - Info at line 6: Created new variable int y. ObjNode[Name = y, Type = int, Kind = variable, Address = 1, Level = 0]
+INFO  18:48:10,631 - Info at line 8: Entering method void main.
+INFO  18:48:10,631 - Info at line 9: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 0, Level = 1]
+INFO  18:48:10,631 - Info at line 10: Created new variable int x. ObjNode[Name = x, Type = int, Kind = variable, Address = 1, Level = 1]
+INFO  18:48:10,631 - Info at line 10: Created new variable int a. ObjNode[Name = a, Type = int, Kind = variable, Address = 2, Level = 1]
+INFO  18:48:10,631 - Info at line 10: Created new variable int b. ObjNode[Name = b, Type = int, Kind = variable, Address = 3, Level = 1]
+INFO  18:48:10,635 - Info at line 11: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 4, Level = 1]
+INFO  18:48:10,635 - Info at line 13: Accessed a variable int a.
+INFO  18:48:10,635 - Info at line 14: Accessed a variable int b.
+INFO  18:48:10,635 - Info at line 15: Accessed a variable int x.
+INFO  18:48:10,635 - Info at line 15: Accessed a variable int a.
+INFO  18:48:10,635 - Info at line 15: Accessed a variable int b.
+INFO  18:48:10,635 - Info at line 16: Accessed a variable int x.
+INFO  18:48:10,635 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  18:48:10,635 - =====================================
+INFO  18:48:10,635 - CODE GENERATION...
+INFO  18:48:10,637 - CODE GENERATION SUCCESSFUL!
+INFO  18:48:10,637 - Results saved in the output file test\test301.obj.

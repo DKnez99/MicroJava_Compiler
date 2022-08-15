@@ -1,0 +1,9 @@
+program prog123
+{
+void main()int x,y;{
+	x=4;
+	y=-4;
+	x=x+y??-4+y;
+	print(x);
+}
+}

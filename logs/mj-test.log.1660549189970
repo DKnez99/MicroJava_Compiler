@@ -1,0 +1,46 @@
+INFO  09:25:22,610 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test.mj
+INFO  09:25:22,611 - =====================================
+INFO  09:25:22,611 - PARSING...
+INFO  09:25:22,639 - #2 program
+INFO  09:25:22,639 - #47 prog123
+INFO  09:25:22,639 - #20 {
+INFO  09:25:22,640 - #15 void
+INFO  09:25:22,640 - #47 main
+INFO  09:25:22,640 - #24 (
+INFO  09:25:22,641 - #25 )
+INFO  09:25:22,641 - #47 int
+INFO  09:25:22,642 - #47 x
+INFO  09:25:22,642 - #27 ,
+INFO  09:25:22,642 - #47 y
+INFO  09:25:22,642 - #26 ;
+INFO  09:25:22,643 - #20 {
+INFO  09:25:22,643 - #47 x
+INFO  09:25:22,643 - #30 =
+INFO  09:25:22,644 - #48 4
+INFO  09:25:22,644 - #26 ;
+INFO  09:25:22,646 - #47 y
+INFO  09:25:22,646 - #30 =
+INFO  09:25:22,646 - #40 -
+INFO  09:25:22,647 - #48 4
+INFO  09:25:22,647 - #26 ;
+INFO  09:25:22,647 - #47 x
+INFO  09:25:22,647 - #30 =
+INFO  09:25:22,647 - #47 x
+INFO  09:25:22,647 - #39 +
+INFO  09:25:22,647 - #47 y
+INFO  09:25:22,647 - #44 ??
+INFO  09:25:22,648 - #40 -
+INFO  09:25:22,648 - #48 4
+INFO  09:25:22,648 - #47 y
+ERROR 09:25:22,648 - Syntax error at line 6
+INFO  09:25:22,648 - #26 ;
+INFO  09:25:22,648 - #13 print
+INFO  09:25:22,648 - #24 (
+INFO  09:25:22,648 - #47 x
+ERROR 09:25:22,648 - Error recovery (level A) in designator assignment at line 6. Recovered to the next ;
+INFO  09:25:22,649 - #25 )
+INFO  09:25:22,649 - #26 ;
+INFO  09:25:22,649 - #21 }
+INFO  09:25:22,649 - #21 }
+INFO  09:25:22,650 - =====================================
+ERROR 09:25:22,650 - PARSING FAILED! PARSING ERROR(S) DETECTED!

@@ -1,0 +1,502 @@
+INFO  09:41:59,719 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\syntax_test_1.mj
+INFO  09:41:59,719 - =====================================
+INFO  09:41:59,719 - PARSING...
+INFO  09:41:59,748 - #2 program
+INFO  09:41:59,748 - #47 syntaxTest1
+INFO  09:41:59,748 - #47 int
+INFO  09:41:59,749 - #47 a
+INFO  09:41:59,750 - #27 ,
+INFO  09:41:59,750 - #47 b
+INFO  09:41:59,750 - #26 ;
+INFO  09:41:59,750 - #3 const
+INFO  09:41:59,750 - #47 char
+INFO  09:41:59,751 - #47 c
+INFO  09:41:59,751 - #30 =
+INFO  09:41:59,751 - #49 c
+INFO  09:41:59,751 - #26 ;
+INFO  09:41:59,751 - #47 bool
+INFO  09:41:59,752 - #47 niz
+INFO  09:41:59,752 - #22 [
+INFO  09:41:59,753 - #23 ]
+INFO  09:41:59,753 - #26 ;
+INFO  09:41:59,753 - #20 {
+INFO  09:41:59,753 - #15 void
+INFO  09:41:59,753 - #47 main
+INFO  09:41:59,754 - #24 (
+INFO  09:41:59,754 - #25 )
+INFO  09:41:59,754 - #47 int
+INFO  09:41:59,755 - #47 x
+INFO  09:41:59,755 - #26 ;
+INFO  09:41:59,755 - #47 bool
+INFO  09:41:59,755 - #47 tacno
+INFO  09:41:59,755 - #26 ;
+INFO  09:41:59,755 - #47 int
+INFO  09:41:59,755 - #47 nizBrojeva
+INFO  09:41:59,755 - #22 [
+INFO  09:41:59,755 - #23 ]
+INFO  09:41:59,755 - #26 ;
+INFO  09:41:59,755 - #20 {
+INFO  09:41:59,755 - #47 x
+INFO  09:41:59,756 - #30 =
+INFO  09:41:59,756 - #48 20
+INFO  09:41:59,756 - #26 ;
+INFO  09:41:59,757 - #47 nizBrojeva
+INFO  09:41:59,758 - #30 =
+INFO  09:41:59,758 - #14 new
+INFO  09:41:59,758 - #47 int
+INFO  09:41:59,758 - #22 [
+INFO  09:41:59,758 - #47 x
+INFO  09:41:59,758 - #23 ]
+INFO  09:41:59,758 - #26 ;
+INFO  09:41:59,758 - #47 tacno
+INFO  09:41:59,758 - #30 =
+INFO  09:41:59,758 - #50 true
+INFO  09:41:59,758 - #26 ;
+INFO  09:41:59,758 - #5 if
+INFO  09:41:59,758 - #24 (
+INFO  09:41:59,759 - #47 tacno
+INFO  09:41:59,759 - #31 ==
+INFO  09:41:59,759 - #50 true
+INFO  09:41:59,759 - #25 )
+INFO  09:41:59,760 - #20 {
+INFO  09:41:59,760 - #47 nizBrojeva
+INFO  09:41:59,760 - #22 [
+INFO  09:41:59,760 - #48 0
+INFO  09:41:59,760 - #23 ]
+INFO  09:41:59,760 - #30 =
+INFO  09:41:59,760 - #48 0
+INFO  09:41:59,760 - #26 ;
+INFO  09:41:59,760 - #21 }
+INFO  09:41:59,760 - #6 else
+INFO  09:41:59,761 - #20 {
+INFO  09:41:59,761 - #47 nizBrojeva
+INFO  09:41:59,761 - #22 [
+INFO  09:41:59,761 - #48 0
+INFO  09:41:59,761 - #23 ]
+INFO  09:41:59,761 - #30 =
+INFO  09:41:59,761 - #48 1
+INFO  09:41:59,761 - #26 ;
+INFO  09:41:59,761 - #21 }
+INFO  09:41:59,761 - #13 print
+INFO  09:41:59,761 - #24 (
+INFO  09:41:59,761 - #47 nizBrojeva
+INFO  09:41:59,761 - #22 [
+INFO  09:41:59,762 - #48 0
+INFO  09:41:59,762 - #23 ]
+INFO  09:41:59,762 - #44 ??
+INFO  09:41:59,762 - #47 x
+INFO  09:41:59,762 - #25 )
+INFO  09:41:59,762 - #26 ;
+INFO  09:41:59,762 - #21 }
+INFO  09:41:59,762 - #21 }
+INFO  09:41:59,763 - =====================================
+INFO  09:41:59,763 - SYNTAX TREE:
+INFO  09:41:59,765 - 
+Program(
+  ProgramName(
+   syntaxTest1
+  ) [ProgramName]
+  ProgramDeclList(
+    ProgramDeclList(
+      ProgramDeclList(
+        EmptyProgramDeclList(
+        ) [EmptyProgramDeclList]
+        ProgramDeclVar(
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarListMany(
+              VarListSingle(
+                VarSingle(
+                 a
+                ) [VarSingle]
+              ) [VarListSingle]
+              VarSingle(
+               b
+              ) [VarSingle]
+            ) [VarListMany]
+          ) [VarDecl]
+        ) [ProgramDeclVar]
+      ) [ProgramDeclList]
+      ProgramDeclConst(
+        ConstDecl(
+          ConstType(
+            Type(
+             char
+            ) [Type]
+          ) [ConstType]
+          ConstListSingle(
+            ConstAssignChar(
+             c
+             c
+            ) [ConstAssignChar]
+          ) [ConstListSingle]
+        ) [ConstDecl]
+      ) [ProgramDeclConst]
+    ) [ProgramDeclList]
+    ProgramDeclVar(
+      VarDecl(
+        VarType(
+          Type(
+           bool
+          ) [Type]
+        ) [VarType]
+        VarListSingle(
+          VarArray(
+           niz
+          ) [VarArray]
+        ) [VarListSingle]
+      ) [VarDecl]
+    ) [ProgramDeclVar]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        VarDeclList(
+          VarDeclList(
+            EmptyVarDeclListNullable(
+            ) [EmptyVarDeclListNullable]
+            VarDecl(
+              VarType(
+                Type(
+                 int
+                ) [Type]
+              ) [VarType]
+              VarListSingle(
+                VarSingle(
+                 x
+                ) [VarSingle]
+              ) [VarListSingle]
+            ) [VarDecl]
+          ) [VarDeclList]
+          VarDecl(
+            VarType(
+              Type(
+               bool
+              ) [Type]
+            ) [VarType]
+            VarListSingle(
+              VarSingle(
+               tacno
+              ) [VarSingle]
+            ) [VarListSingle]
+          ) [VarDecl]
+        ) [VarDeclList]
+        VarDecl(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarArray(
+             nizBrojeva
+            ) [VarArray]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              StatementList(
+                EmptyStatementList(
+                ) [EmptyStatementList]
+                StatementSingle(
+                  SingleStatementDesignatorStatement(
+                    DesignatorStatementAssign(
+                      DesignatorDefault(
+                       x
+                      ) [DesignatorDefault]
+                      Assign(
+                      ) [Assign]
+                      ExprTerm(
+                        Term(
+                          FactorConstNum(
+                           20
+                          ) [FactorConstNum]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [ExprTerm]
+                    ) [DesignatorStatementAssign]
+                  ) [SingleStatementDesignatorStatement]
+                ) [StatementSingle]
+              ) [StatementList]
+              StatementSingle(
+                SingleStatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    DesignatorDefault(
+                     nizBrojeva
+                    ) [DesignatorDefault]
+                    Assign(
+                    ) [Assign]
+                    ExprTerm(
+                      Term(
+                        FactorNewArray(
+                          Type(
+                           int
+                          ) [Type]
+                          ExprTerm(
+                            Term(
+                              FactorDesignator(
+                                DesignatorDefault(
+                                 x
+                                ) [DesignatorDefault]
+                              ) [FactorDesignator]
+                              EmptyMulopFactorList(
+                              ) [EmptyMulopFactorList]
+                            ) [Term]
+                            EmptyAddopTermList(
+                            ) [EmptyAddopTermList]
+                          ) [ExprTerm]
+                        ) [FactorNewArray]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorStatementAssign]
+                ) [SingleStatementDesignatorStatement]
+              ) [StatementSingle]
+            ) [StatementList]
+            StatementSingle(
+              SingleStatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  DesignatorDefault(
+                   tacno
+                  ) [DesignatorDefault]
+                  Assign(
+                  ) [Assign]
+                  ExprTerm(
+                    Term(
+                      FactorConstBool(
+                       true
+                      ) [FactorConstBool]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [ExprTerm]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignatorStatement]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementIf(
+              ConditionSingle(
+                CondTermSingle(
+                  CondFact(
+                    ExprTerm(
+                      Term(
+                        FactorDesignator(
+                          DesignatorDefault(
+                           tacno
+                          ) [DesignatorDefault]
+                        ) [FactorDesignator]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                    RelopExprYes(
+                      IsEqual(
+                      ) [IsEqual]
+                      ExprTerm(
+                        Term(
+                          FactorConstBool(
+                           true
+                          ) [FactorConstBool]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [ExprTerm]
+                    ) [RelopExprYes]
+                  ) [CondFact]
+                ) [CondTermSingle]
+              ) [ConditionSingle]
+              StatementBlock(
+                Statements(
+                  StatementList(
+                    EmptyStatementList(
+                    ) [EmptyStatementList]
+                    StatementSingle(
+                      SingleStatementDesignatorStatement(
+                        DesignatorStatementAssign(
+                          DesignatorArray(
+                            DesignatorDefault(
+                             nizBrojeva
+                            ) [DesignatorDefault]
+                            ExprTerm(
+                              Term(
+                                FactorConstNum(
+                                 0
+                                ) [FactorConstNum]
+                                EmptyMulopFactorList(
+                                ) [EmptyMulopFactorList]
+                              ) [Term]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [ExprTerm]
+                          ) [DesignatorArray]
+                          Assign(
+                          ) [Assign]
+                          ExprTerm(
+                            Term(
+                              FactorConstNum(
+                               0
+                              ) [FactorConstNum]
+                              EmptyMulopFactorList(
+                              ) [EmptyMulopFactorList]
+                            ) [Term]
+                            EmptyAddopTermList(
+                            ) [EmptyAddopTermList]
+                          ) [ExprTerm]
+                        ) [DesignatorStatementAssign]
+                      ) [SingleStatementDesignatorStatement]
+                    ) [StatementSingle]
+                  ) [StatementList]
+                ) [Statements]
+              ) [StatementBlock]
+              SingleStatementElseYes(
+                StatementBlock(
+                  Statements(
+                    StatementList(
+                      EmptyStatementList(
+                      ) [EmptyStatementList]
+                      StatementSingle(
+                        SingleStatementDesignatorStatement(
+                          DesignatorStatementAssign(
+                            DesignatorArray(
+                              DesignatorDefault(
+                               nizBrojeva
+                              ) [DesignatorDefault]
+                              ExprTerm(
+                                Term(
+                                  FactorConstNum(
+                                   0
+                                  ) [FactorConstNum]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [ExprTerm]
+                            ) [DesignatorArray]
+                            Assign(
+                            ) [Assign]
+                            ExprTerm(
+                              Term(
+                                FactorConstNum(
+                                 1
+                                ) [FactorConstNum]
+                                EmptyMulopFactorList(
+                                ) [EmptyMulopFactorList]
+                              ) [Term]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [ExprTerm]
+                          ) [DesignatorStatementAssign]
+                        ) [SingleStatementDesignatorStatement]
+                      ) [StatementSingle]
+                    ) [StatementList]
+                  ) [Statements]
+                ) [StatementBlock]
+              ) [SingleStatementElseYes]
+            ) [SingleStatementIf]
+          ) [StatementSingle]
+        ) [StatementList]
+        StatementSingle(
+          SingleStatementPrint(
+            ExprQQ(
+              Term(
+                FactorDesignator(
+                  DesignatorArray(
+                    DesignatorDefault(
+                     nizBrojeva
+                    ) [DesignatorDefault]
+                    ExprTerm(
+                      Term(
+                        FactorConstNum(
+                         0
+                        ) [FactorConstNum]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorArray]
+                ) [FactorDesignator]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+              ExprTerm(
+                Term(
+                  FactorDesignator(
+                    DesignatorDefault(
+                     x
+                    ) [DesignatorDefault]
+                  ) [FactorDesignator]
+                  EmptyMulopFactorList(
+                  ) [EmptyMulopFactorList]
+                ) [Term]
+                EmptyAddopTermList(
+                ) [EmptyAddopTermList]
+              ) [ExprTerm]
+            ) [ExprQQ]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  09:41:59,765 - PARSING SUCCESSFUL!
+INFO  09:41:59,765 - =====================================
+INFO  09:41:59,765 - SEMANTIC ANALYSIS...
+INFO  09:41:59,779 - Info at line 2: Created new variable int a. ObjNode[Name = a, Type = int, Kind = variable, Address = 0, Level = 0]
+INFO  09:41:59,779 - Info at line 2: Created new variable int b. ObjNode[Name = b, Type = int, Kind = variable, Address = 1, Level = 0]
+INFO  09:41:59,779 - Info at line 3: Created new constant char c. ObjNode[Name = c, Type = char, Kind = constant, Value = 99, Level = 0]
+INFO  09:41:59,779 - Info at line 4: Created new variable bool niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 2, Level = 0]
+INFO  09:41:59,779 - Info at line 6: Entering method void main.
+INFO  09:41:59,779 - Info at line 7: Created new variable int x. ObjNode[Name = x, Type = int, Kind = variable, Address = 0, Level = 1]
+INFO  09:41:59,779 - Info at line 8: Created new variable bool tacno. ObjNode[Name = tacno, Type = bool, Kind = variable, Address = 1, Level = 1]
+INFO  09:41:59,779 - Info at line 9: Created new variable int nizBrojeva[]. ObjNode[Name = nizBrojeva, Type = array, Kind = variable, Address = 2, Level = 1]
+INFO  09:41:59,779 - Info at line 11: Accessed a variable int x.
+INFO  09:41:59,779 - Info at line 12: Accessed a variable int nizBrojeva[].
+INFO  09:41:59,779 - Info at line 12: Accessed a variable int x.
+INFO  09:41:59,779 - Info at line 13: Accessed a variable bool tacno.
+INFO  09:41:59,779 - Info at line 14: Accessed a variable bool tacno.
+INFO  09:41:59,779 - Info at line 15: Accessed a variable int nizBrojeva[].
+INFO  09:41:59,779 - Info at line 15: Accessed an element of int nizBrojeva[].
+INFO  09:41:59,780 - Info at line 18: Accessed a variable int nizBrojeva[].
+INFO  09:41:59,780 - Info at line 18: Accessed an element of int nizBrojeva[].
+INFO  09:41:59,780 - Info at line 21: Accessed a variable int nizBrojeva[].
+INFO  09:41:59,780 - Info at line 21: Accessed an element of int nizBrojeva[].
+INFO  09:41:59,780 - Info at line 21: Accessed a variable int x.
+INFO  09:41:59,780 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  09:41:59,780 - =====================================
+INFO  09:41:59,780 - CODE GENERATION...
+INFO  09:41:59,782 - CODE GENERATION SUCCESSFUL!
+INFO  09:41:59,782 - Results saved in the output file test\syntax_test_1.obj.

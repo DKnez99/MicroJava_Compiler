@@ -20,6 +20,15 @@ public class Compiler {
 		Log4JUtils.instance().prepareLogFile(Logger.getRootLogger());
 	}
 	
+	
+	
+	public static void tsdump() {
+		Logger log = Logger.getLogger(Compiler.class);
+		log.info("=====================================");
+		log.info("SYMBOL TABLE DUMP:");
+		TabEx.dump();
+	}
+	
 	public static void main(String[] args) throws Exception {
 		Logger log = Logger.getLogger(Compiler.class);
 		if (args.length < 2) {
@@ -45,7 +54,8 @@ public class Compiler {
 	        if (!parser.errorDetected) {
 	        	Program prog = (Program)(s.value);
 	        	//print syntax tree
-		        log.info(prog.toString(""));
+	        	log.info("=====================================");
+	        	log.info("SYNTAX TREE:\n"+prog.toString(""));
 	        	log.info("PARSING SUCCESSFUL!");
 	        	log.info("=====================================");
 	        	log.info("SEMANTIC ANALYSIS...");
@@ -53,6 +63,7 @@ public class Compiler {
 	        	SemanticAnalyzer semanticAnalyzer=new SemanticAnalyzer();
 	        	prog.traverseBottomUp(semanticAnalyzer);
 	        	if(!semanticAnalyzer.errorDetected) {
+	        		Compiler.tsdump();
 	        		log.info("SEMANTIC ANALYSIS SUCCESSFUL!");
 		        	log.info("=====================================");
 		        	log.info("CODE GENERATION...");
@@ -77,8 +88,10 @@ public class Compiler {
 		        	outputFileStream.close();
 	        	}
 	        	else {
+	        		Compiler.tsdump();
 	        		log.info("=====================================");
 		        	log.error("SEMANTIC ANALYSIS FAILED! SEMANTIC ERROR(S) DETECTED!");
+		        	
 	        	}
 	        }
 	        else {

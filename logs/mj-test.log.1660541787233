@@ -1,65 +1,66 @@
-INFO  18:09:24,082 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
-INFO  18:09:24,083 - =====================================
-INFO  18:09:24,083 - PARSING...
-INFO  18:09:24,113 - #2 program
-INFO  18:09:24,114 - #47 test301
-INFO  18:09:24,114 - #3 const
-INFO  18:09:24,114 - #47 bool
-INFO  18:09:24,114 - #47 tacno
-INFO  18:09:24,115 - #30 =
-INFO  18:09:24,115 - #50 true
-INFO  18:09:24,115 - #26 ;
-INFO  18:09:24,115 - #47 char
-INFO  18:09:24,116 - #47 c
-INFO  18:09:24,116 - #26 ;
-INFO  18:09:24,117 - #47 int
-INFO  18:09:24,117 - #47 y
-INFO  18:09:24,117 - #26 ;
-INFO  18:09:24,117 - #20 {
-INFO  18:09:24,117 - #15 void
-INFO  18:09:24,118 - #47 main
-INFO  18:09:24,119 - #24 (
-INFO  18:09:24,119 - #25 )
-INFO  18:09:24,119 - #47 bool
-INFO  18:09:24,120 - #47 netacno
-INFO  18:09:24,120 - #26 ;
-INFO  18:09:24,120 - #47 int
-INFO  18:09:24,120 - #47 x
-INFO  18:09:24,120 - #27 ,
-INFO  18:09:24,120 - #47 y
-INFO  18:09:24,120 - #22 [
-INFO  18:09:24,120 - #23 ]
-INFO  18:09:24,120 - #27 ,
-INFO  18:09:24,120 - #47 a
-INFO  18:09:24,120 - #27 ,
-INFO  18:09:24,120 - #47 b
-INFO  18:09:24,120 - #26 ;
-INFO  18:09:24,120 - #47 char
-INFO  18:09:24,120 - #47 c
-INFO  18:09:24,121 - #26 ;
-INFO  18:09:24,121 - #20 {
-INFO  18:09:24,121 - #47 a
-INFO  18:09:24,121 - #30 =
-INFO  18:09:24,121 - #48 9
-INFO  18:09:24,122 - #26 ;
-INFO  18:09:24,124 - #47 b
-INFO  18:09:24,124 - #30 =
-INFO  18:09:24,124 - #48 5
-INFO  18:09:24,124 - #26 ;
-INFO  18:09:24,124 - #47 x
-INFO  18:09:24,124 - #30 =
-INFO  18:09:24,124 - #47 a
-INFO  18:09:24,124 - #44 ??
-INFO  18:09:24,124 - #47 b
-INFO  18:09:24,124 - #26 ;
-INFO  18:09:24,124 - #13 print
-INFO  18:09:24,124 - #24 (
-INFO  18:09:24,125 - #47 x
-INFO  18:09:24,125 - #25 )
-INFO  18:09:24,125 - #26 ;
-INFO  18:09:24,125 - #21 }
-INFO  18:09:24,125 - #21 }
-INFO  18:09:24,127 - Program(
+INFO  07:33:25,000 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301.mj
+INFO  07:33:25,000 - =====================================
+INFO  07:33:25,000 - PARSING...
+INFO  07:33:25,028 - #2 program
+INFO  07:33:25,028 - #47 test301
+INFO  07:33:25,028 - #3 const
+INFO  07:33:25,029 - #47 bool
+INFO  07:33:25,029 - #47 tacno
+INFO  07:33:25,030 - #30 =
+INFO  07:33:25,030 - #50 true
+INFO  07:33:25,030 - #26 ;
+INFO  07:33:25,030 - #47 char
+INFO  07:33:25,031 - #47 c
+INFO  07:33:25,031 - #26 ;
+INFO  07:33:25,031 - #47 int
+INFO  07:33:25,032 - #47 y
+INFO  07:33:25,032 - #26 ;
+INFO  07:33:25,032 - #20 {
+INFO  07:33:25,032 - #15 void
+INFO  07:33:25,032 - #47 main
+INFO  07:33:25,033 - #24 (
+INFO  07:33:25,033 - #25 )
+INFO  07:33:25,034 - #47 bool
+INFO  07:33:25,034 - #47 netacno
+INFO  07:33:25,034 - #26 ;
+INFO  07:33:25,034 - #47 int
+INFO  07:33:25,034 - #47 x
+INFO  07:33:25,034 - #27 ,
+INFO  07:33:25,034 - #47 a
+INFO  07:33:25,034 - #27 ,
+INFO  07:33:25,035 - #47 b
+INFO  07:33:25,035 - #26 ;
+INFO  07:33:25,035 - #47 char
+INFO  07:33:25,035 - #47 c
+INFO  07:33:25,035 - #26 ;
+INFO  07:33:25,035 - #20 {
+INFO  07:33:25,035 - #47 a
+INFO  07:33:25,035 - #30 =
+INFO  07:33:25,035 - #40 -
+INFO  07:33:25,036 - #48 4
+INFO  07:33:25,036 - #26 ;
+INFO  07:33:25,037 - #47 b
+INFO  07:33:25,037 - #30 =
+INFO  07:33:25,037 - #48 5
+INFO  07:33:25,037 - #26 ;
+INFO  07:33:25,038 - #47 x
+INFO  07:33:25,038 - #30 =
+INFO  07:33:25,038 - #47 a
+INFO  07:33:25,038 - #44 ??
+INFO  07:33:25,038 - #47 b
+INFO  07:33:25,038 - #40 -
+INFO  07:33:25,038 - #48 5
+INFO  07:33:25,038 - #44 ??
+INFO  07:33:25,039 - #48 12
+INFO  07:33:25,039 - #26 ;
+INFO  07:33:25,039 - #13 print
+INFO  07:33:25,039 - #24 (
+INFO  07:33:25,039 - #47 x
+INFO  07:33:25,039 - #25 )
+INFO  07:33:25,039 - #26 ;
+INFO  07:33:25,039 - #21 }
+INFO  07:33:25,039 - #21 }
+INFO  07:33:25,041 - Program(
   ProgramName(
    test301
   ) [ProgramName]
@@ -151,16 +152,11 @@ INFO  18:09:24,127 - Program(
             ) [VarType]
             VarListMany(
               VarListMany(
-                VarListMany(
-                  VarListSingle(
-                    VarSingle(
-                     x
-                    ) [VarSingle]
-                  ) [VarListSingle]
-                  VarArray(
-                   y
-                  ) [VarArray]
-                ) [VarListMany]
+                VarListSingle(
+                  VarSingle(
+                   x
+                  ) [VarSingle]
+                ) [VarListSingle]
                 VarSingle(
                  a
                 ) [VarSingle]
@@ -198,17 +194,17 @@ INFO  18:09:24,127 - Program(
                     ) [DesignatorDefault]
                     Assign(
                     ) [Assign]
-                    ExprTerm(
+                    ExprNegTerm(
                       Term(
                         FactorConstNum(
-                         9
+                         4
                         ) [FactorConstNum]
                         EmptyMulopFactorList(
                         ) [EmptyMulopFactorList]
                       ) [Term]
                       EmptyAddopTermList(
                       ) [EmptyAddopTermList]
-                    ) [ExprTerm]
+                    ) [ExprNegTerm]
                   ) [DesignatorStatementAssign]
                 ) [SingleStatementDesignatorStatement]
               ) [StatementSingle]
@@ -256,7 +252,7 @@ INFO  18:09:24,127 - Program(
                   ) [Term]
                   EmptyAddopTermList(
                   ) [EmptyAddopTermList]
-                  ExprTerm(
+                  ExprQQ(
                     Term(
                       FactorDesignator(
                         DesignatorDefault(
@@ -266,9 +262,31 @@ INFO  18:09:24,127 - Program(
                       EmptyMulopFactorList(
                       ) [EmptyMulopFactorList]
                     ) [Term]
-                    EmptyAddopTermList(
-                    ) [EmptyAddopTermList]
-                  ) [ExprTerm]
+                    AddopTermList(
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                      Minus(
+                      ) [Minus]
+                      Term(
+                        FactorConstNum(
+                         5
+                        ) [FactorConstNum]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                    ) [AddopTermList]
+                    ExprTerm(
+                      Term(
+                        FactorConstNum(
+                         12
+                        ) [FactorConstNum]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [ExprQQ]
                 ) [ExprQQ]
               ) [DesignatorStatementAssign]
             ) [SingleStatementDesignatorStatement]
@@ -295,43 +313,26 @@ INFO  18:09:24,127 - Program(
     ) [MethodDecl]
   ) [MethodDeclList]
 ) [Program]
-INFO  18:09:24,127 - PARSING SUCCESSFUL!
-INFO  18:09:24,127 - =====================================
-INFO  18:09:24,127 - SEMANTIC ANALYSIS...
-INFO  18:09:24,144 - Info at line 4: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
-INFO  18:09:24,144 - Info at line 5: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 0, Level = 0]
-INFO  18:09:24,144 - Info at line 6: Created new variable int y. ObjNode[Name = y, Type = int, Kind = variable, Address = 1, Level = 0]
-INFO  18:09:24,144 - Info at line 8: Entering method void main.
-INFO  18:09:24,148 - Info at line 9: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 0, Level = 1]
-INFO  18:09:24,148 - Info at line 10: Created new variable int x. ObjNode[Name = x, Type = int, Kind = variable, Address = 1, Level = 1]
-INFO  18:09:24,148 - Info at line 10: Created new variable int y[]. ObjNode[Name = y, Type = array, Kind = variable, Address = 2, Level = 1]
-INFO  18:09:24,148 - Info at line 10: Created new variable int a. ObjNode[Name = a, Type = int, Kind = variable, Address = 3, Level = 1]
-INFO  18:09:24,148 - Info at line 10: Created new variable int b. ObjNode[Name = b, Type = int, Kind = variable, Address = 4, Level = 1]
-INFO  18:09:24,148 - Info at line 11: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 5, Level = 1]
-INFO  18:09:24,148 - Info at line 13: Accessed a variable int a.
-INFO  18:09:24,148 - Info at line 14: Accessed a variable int b.
-INFO  18:09:24,148 - Info at line 15: Accessed a variable int x.
-INFO  18:09:24,148 - Info at line 15: Accessed a variable int a.
-INFO  18:09:24,148 - Info at line 15: Accessed a variable int b.
-INFO  18:09:24,148 - Info at line 16: Accessed a variable int x.
-INFO  18:09:24,148 - SEMANTIC ANALYSIS SUCCESSFUL!
-INFO  18:09:24,148 - =====================================
-INFO  18:09:24,148 - CODE GENERATION...
-INFO  18:09:24,152 - Info at line 15: 15: 0
-INFO  18:09:24,152 - Info at line 15: 14: 4
-INFO  18:09:24,152 - Info at line 15: 13: 1
-INFO  18:09:24,152 - Info at line 15: 12: 5
-INFO  18:09:24,152 - Info at line 15: 11: 4
-INFO  18:09:24,152 - Info at line 15: 10: 6
-INFO  18:09:24,152 - Info at line 15: 9: 20
-INFO  18:09:24,152 - Info at line 15: 8: 10
-INFO  18:09:24,152 - Info at line 15: 7: 9
-INFO  18:09:24,152 - Info at line 15: 6: 0
-INFO  18:09:24,152 - Info at line 15: 5: 0
-INFO  18:09:24,152 - Info at line 15: 4: 0
-INFO  18:09:24,152 - Info at line 15: 3: 22
-INFO  18:09:24,152 - Info at line 15: 2: 6
-INFO  18:09:24,152 - Info at line 15: 1: 0
-INFO  18:09:24,152 - Info at line 15: 0: 51
-INFO  18:09:24,152 - CODE GENERATION SUCCESSFUL!
-INFO  18:09:24,152 - Results saved in the output file test\test301.obj.
+INFO  07:33:25,041 - PARSING SUCCESSFUL!
+INFO  07:33:25,042 - =====================================
+INFO  07:33:25,042 - SEMANTIC ANALYSIS...
+INFO  07:33:25,059 - Info at line 4: Created new constant bool tacno. ObjNode[Name = tacno, Type = bool, Kind = constant, Value = 1, Level = 0]
+INFO  07:33:25,059 - Info at line 5: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 0, Level = 0]
+INFO  07:33:25,059 - Info at line 6: Created new variable int y. ObjNode[Name = y, Type = int, Kind = variable, Address = 1, Level = 0]
+INFO  07:33:25,063 - Info at line 8: Entering method void main.
+INFO  07:33:25,063 - Info at line 9: Created new variable bool netacno. ObjNode[Name = netacno, Type = bool, Kind = variable, Address = 0, Level = 1]
+INFO  07:33:25,063 - Info at line 10: Created new variable int x. ObjNode[Name = x, Type = int, Kind = variable, Address = 1, Level = 1]
+INFO  07:33:25,063 - Info at line 10: Created new variable int a. ObjNode[Name = a, Type = int, Kind = variable, Address = 2, Level = 1]
+INFO  07:33:25,063 - Info at line 10: Created new variable int b. ObjNode[Name = b, Type = int, Kind = variable, Address = 3, Level = 1]
+INFO  07:33:25,063 - Info at line 11: Created new variable char c. ObjNode[Name = c, Type = char, Kind = variable, Address = 4, Level = 1]
+INFO  07:33:25,063 - Info at line 13: Accessed a variable int a.
+INFO  07:33:25,064 - Info at line 14: Accessed a variable int b.
+INFO  07:33:25,064 - Info at line 15: Accessed a variable int x.
+INFO  07:33:25,064 - Info at line 15: Accessed a variable int a.
+INFO  07:33:25,064 - Info at line 15: Accessed a variable int b.
+INFO  07:33:25,064 - Info at line 16: Accessed a variable int x.
+INFO  07:33:25,064 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  07:33:25,064 - =====================================
+INFO  07:33:25,064 - CODE GENERATION...
+INFO  07:33:25,067 - CODE GENERATION SUCCESSFUL!
+INFO  07:33:25,067 - Results saved in the output file test\test301.obj.

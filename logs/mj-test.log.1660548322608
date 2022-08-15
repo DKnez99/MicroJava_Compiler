@@ -1,0 +1,234 @@
+INFO  09:23:06,598 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test.mj
+INFO  09:23:06,599 - =====================================
+INFO  09:23:06,599 - PARSING...
+INFO  09:23:06,629 - #2 program
+INFO  09:23:06,629 - #47 prog123
+INFO  09:23:06,629 - #20 {
+INFO  09:23:06,630 - #15 void
+INFO  09:23:06,630 - #47 main
+INFO  09:23:06,631 - #24 (
+INFO  09:23:06,631 - #25 )
+INFO  09:23:06,631 - #47 int
+INFO  09:23:06,632 - #47 x
+INFO  09:23:06,632 - #27 ,
+INFO  09:23:06,633 - #47 y
+INFO  09:23:06,633 - #26 ;
+INFO  09:23:06,633 - #20 {
+INFO  09:23:06,633 - #47 x
+INFO  09:23:06,634 - #30 =
+INFO  09:23:06,634 - #48 4
+INFO  09:23:06,634 - #26 ;
+INFO  09:23:06,636 - #47 y
+INFO  09:23:06,637 - #30 =
+INFO  09:23:06,637 - #40 -
+INFO  09:23:06,637 - #48 4
+INFO  09:23:06,637 - #26 ;
+INFO  09:23:06,637 - #47 x
+INFO  09:23:06,637 - #30 =
+INFO  09:23:06,637 - #47 x
+INFO  09:23:06,637 - #39 +
+INFO  09:23:06,637 - #47 y
+INFO  09:23:06,638 - #44 ??
+INFO  09:23:06,638 - #40 -
+INFO  09:23:06,638 - #48 4
+INFO  09:23:06,638 - #39 +
+INFO  09:23:06,638 - #47 y
+INFO  09:23:06,638 - #26 ;
+INFO  09:23:06,638 - #13 print
+INFO  09:23:06,638 - #24 (
+INFO  09:23:06,638 - #47 x
+INFO  09:23:06,638 - #25 )
+INFO  09:23:06,638 - #26 ;
+INFO  09:23:06,638 - #21 }
+INFO  09:23:06,639 - #21 }
+INFO  09:23:06,641 - Program(
+  ProgramName(
+   prog123
+  ) [ProgramName]
+  EmptyProgramDeclList(
+  ) [EmptyProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        EmptyVarDeclListNullable(
+        ) [EmptyVarDeclListNullable]
+        VarDecl(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarListMany(
+            VarListSingle(
+              VarSingle(
+               x
+              ) [VarSingle]
+            ) [VarListSingle]
+            VarSingle(
+             y
+            ) [VarSingle]
+          ) [VarListMany]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              EmptyStatementList(
+              ) [EmptyStatementList]
+              StatementSingle(
+                SingleStatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    DesignatorDefault(
+                     x
+                    ) [DesignatorDefault]
+                    Assign(
+                    ) [Assign]
+                    ExprTerm(
+                      Term(
+                        FactorConstNum(
+                         4
+                        ) [FactorConstNum]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorStatementAssign]
+                ) [SingleStatementDesignatorStatement]
+              ) [StatementSingle]
+            ) [StatementList]
+            StatementSingle(
+              SingleStatementDesignatorStatement(
+                DesignatorStatementAssign(
+                  DesignatorDefault(
+                   y
+                  ) [DesignatorDefault]
+                  Assign(
+                  ) [Assign]
+                  ExprNegTerm(
+                    Term(
+                      FactorConstNum(
+                       4
+                      ) [FactorConstNum]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                  ) [ExprNegTerm]
+                ) [DesignatorStatementAssign]
+              ) [SingleStatementDesignatorStatement]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementDesignatorStatement(
+              DesignatorStatementAssign(
+                DesignatorDefault(
+                 x
+                ) [DesignatorDefault]
+                Assign(
+                ) [Assign]
+                ExprQQ(
+                  Term(
+                    FactorDesignator(
+                      DesignatorDefault(
+                       x
+                      ) [DesignatorDefault]
+                    ) [FactorDesignator]
+                    EmptyMulopFactorList(
+                    ) [EmptyMulopFactorList]
+                  ) [Term]
+                  AddopTermList(
+                    EmptyAddopTermList(
+                    ) [EmptyAddopTermList]
+                    Plus(
+                    ) [Plus]
+                    Term(
+                      FactorDesignator(
+                        DesignatorDefault(
+                         y
+                        ) [DesignatorDefault]
+                      ) [FactorDesignator]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                  ) [AddopTermList]
+                  ExprNegTerm(
+                    Term(
+                      FactorConstNum(
+                       4
+                      ) [FactorConstNum]
+                      EmptyMulopFactorList(
+                      ) [EmptyMulopFactorList]
+                    ) [Term]
+                    AddopTermList(
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                      Plus(
+                      ) [Plus]
+                      Term(
+                        FactorDesignator(
+                          DesignatorDefault(
+                           y
+                          ) [DesignatorDefault]
+                        ) [FactorDesignator]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                    ) [AddopTermList]
+                  ) [ExprNegTerm]
+                ) [ExprQQ]
+              ) [DesignatorStatementAssign]
+            ) [SingleStatementDesignatorStatement]
+          ) [StatementSingle]
+        ) [StatementList]
+        StatementSingle(
+          SingleStatementPrint(
+            ExprTerm(
+              Term(
+                FactorDesignator(
+                  DesignatorDefault(
+                   x
+                  ) [DesignatorDefault]
+                ) [FactorDesignator]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  09:23:06,641 - PARSING SUCCESSFUL!
+INFO  09:23:06,641 - =====================================
+INFO  09:23:06,641 - SEMANTIC ANALYSIS...
+INFO  09:23:06,655 - Info at line 3: Entering method void main.
+INFO  09:23:06,656 - Info at line 3: Created new variable int x. ObjNode[Name = x, Type = int, Kind = variable, Address = 0, Level = 1]
+INFO  09:23:06,656 - Info at line 3: Created new variable int y. ObjNode[Name = y, Type = int, Kind = variable, Address = 1, Level = 1]
+INFO  09:23:06,656 - Info at line 4: Accessed a variable int x.
+INFO  09:23:06,656 - Info at line 5: Accessed a variable int y.
+INFO  09:23:06,656 - Info at line 6: Accessed a variable int x.
+INFO  09:23:06,656 - Info at line 6: Accessed a variable int x.
+INFO  09:23:06,656 - Info at line 6: Accessed a variable int y.
+INFO  09:23:06,656 - Info at line 6: Accessed a variable int y.
+INFO  09:23:06,656 - Info at line 7: Accessed a variable int x.
+INFO  09:23:06,656 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  09:23:06,656 - =====================================
+INFO  09:23:06,656 - CODE GENERATION...
+INFO  09:23:06,659 - CODE GENERATION SUCCESSFUL!
+INFO  09:23:06,659 - Results saved in the output file test\test.obj.

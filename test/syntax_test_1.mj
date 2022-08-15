@@ -1,0 +1,23 @@
+program syntaxTest1
+	int a,b;
+	const char c='c';
+	bool niz[];
+{
+	void main()
+	int x;
+	bool tacno;
+	int nizBrojeva[];
+	{
+		x=20;
+		nizBrojeva=new int[x];
+		tacno=true;
+		if(tacno==true){
+			nizBrojeva[0]=0;
+		}
+		else{
+			nizBrojeva[0]=1;
+		}
+		
+		print(nizBrojeva[0]??x);
+	}
+}

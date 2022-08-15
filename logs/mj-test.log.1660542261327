@@ -1,0 +1,1461 @@
+INFO  07:36:27,235 - Compiling source file: E:\Faculty\PP1\Projekat\Tutorijali\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\test301_A.mj
+INFO  07:36:27,235 - =====================================
+INFO  07:36:27,236 - PARSING...
+INFO  07:36:27,267 - #2 program
+INFO  07:36:27,267 - #47 test301
+INFO  07:36:27,267 - #3 const
+INFO  07:36:27,268 - #47 int
+INFO  07:36:27,268 - #47 nula
+INFO  07:36:27,269 - #30 =
+INFO  07:36:27,269 - #48 0
+INFO  07:36:27,269 - #26 ;
+INFO  07:36:27,269 - #3 const
+INFO  07:36:27,269 - #47 int
+INFO  07:36:27,270 - #47 jedan
+INFO  07:36:27,270 - #30 =
+INFO  07:36:27,270 - #48 1
+INFO  07:36:27,270 - #26 ;
+INFO  07:36:27,270 - #3 const
+INFO  07:36:27,270 - #47 int
+INFO  07:36:27,270 - #47 tri
+INFO  07:36:27,271 - #30 =
+INFO  07:36:27,271 - #48 3
+INFO  07:36:27,271 - #26 ;
+INFO  07:36:27,271 - #3 const
+INFO  07:36:27,271 - #47 int
+INFO  07:36:27,271 - #47 pet
+INFO  07:36:27,271 - #30 =
+INFO  07:36:27,271 - #48 5
+INFO  07:36:27,271 - #26 ;
+INFO  07:36:27,271 - #47 int
+INFO  07:36:27,271 - #47 niz
+INFO  07:36:27,271 - #22 [
+INFO  07:36:27,271 - #23 ]
+INFO  07:36:27,272 - #26 ;
+INFO  07:36:27,272 - #47 char
+INFO  07:36:27,272 - #47 nizch
+INFO  07:36:27,272 - #22 [
+INFO  07:36:27,272 - #23 ]
+INFO  07:36:27,272 - #26 ;
+INFO  07:36:27,272 - #20 {
+INFO  07:36:27,272 - #15 void
+INFO  07:36:27,273 - #47 main
+INFO  07:36:27,273 - #24 (
+INFO  07:36:27,273 - #25 )
+INFO  07:36:27,274 - #47 int
+INFO  07:36:27,274 - #47 bodovi
+INFO  07:36:27,274 - #26 ;
+INFO  07:36:27,274 - #47 bool
+INFO  07:36:27,274 - #47 bt
+INFO  07:36:27,274 - #26 ;
+INFO  07:36:27,275 - #20 {
+INFO  07:36:27,275 - #47 bodovi
+INFO  07:36:27,275 - #30 =
+INFO  07:36:27,275 - #48 0
+INFO  07:36:27,276 - #26 ;
+INFO  07:36:27,277 - #47 bodovi
+INFO  07:36:27,277 - #37 ++
+INFO  07:36:27,277 - #26 ;
+INFO  07:36:27,277 - #47 bodovi
+INFO  07:36:27,277 - #30 =
+INFO  07:36:27,277 - #24 (
+INFO  07:36:27,277 - #47 bodovi
+INFO  07:36:27,277 - #39 +
+INFO  07:36:27,278 - #47 jedan
+INFO  07:36:27,278 - #25 )
+INFO  07:36:27,279 - #44 ??
+INFO  07:36:27,279 - #47 tri
+INFO  07:36:27,279 - #26 ;
+INFO  07:36:27,279 - #47 bodovi
+INFO  07:36:27,279 - #30 =
+INFO  07:36:27,279 - #47 bodovi
+INFO  07:36:27,279 - #41 *
+INFO  07:36:27,279 - #47 pet
+INFO  07:36:27,280 - #26 ;
+INFO  07:36:27,280 - #47 bodovi
+INFO  07:36:27,280 - #38 --
+INFO  07:36:27,280 - #26 ;
+INFO  07:36:27,280 - #13 print
+INFO  07:36:27,281 - #24 (
+INFO  07:36:27,281 - #47 bodovi
+INFO  07:36:27,281 - #25 )
+INFO  07:36:27,281 - #26 ;
+INFO  07:36:27,281 - #47 niz
+INFO  07:36:27,281 - #30 =
+INFO  07:36:27,281 - #14 new
+INFO  07:36:27,281 - #47 int
+INFO  07:36:27,281 - #22 [
+INFO  07:36:27,281 - #48 3
+INFO  07:36:27,281 - #23 ]
+INFO  07:36:27,281 - #26 ;
+INFO  07:36:27,281 - #47 niz
+INFO  07:36:27,281 - #22 [
+INFO  07:36:27,281 - #47 nula
+INFO  07:36:27,281 - #23 ]
+INFO  07:36:27,282 - #30 =
+INFO  07:36:27,282 - #47 jedan
+INFO  07:36:27,282 - #26 ;
+INFO  07:36:27,282 - #47 niz
+INFO  07:36:27,282 - #22 [
+INFO  07:36:27,282 - #48 1
+INFO  07:36:27,282 - #23 ]
+INFO  07:36:27,282 - #30 =
+INFO  07:36:27,282 - #48 2
+INFO  07:36:27,282 - #26 ;
+INFO  07:36:27,282 - #47 niz
+INFO  07:36:27,282 - #22 [
+INFO  07:36:27,283 - #47 niz
+INFO  07:36:27,283 - #22 [
+INFO  07:36:27,283 - #47 jedan
+INFO  07:36:27,283 - #23 ]
+INFO  07:36:27,283 - #44 ??
+INFO  07:36:27,283 - #40 -
+INFO  07:36:27,283 - #48 1
+INFO  07:36:27,283 - #23 ]
+INFO  07:36:27,283 - #30 =
+INFO  07:36:27,283 - #47 niz
+INFO  07:36:27,283 - #22 [
+INFO  07:36:27,283 - #24 (
+INFO  07:36:27,283 - #47 niz
+INFO  07:36:27,283 - #22 [
+INFO  07:36:27,283 - #48 0
+INFO  07:36:27,284 - #23 ]
+INFO  07:36:27,284 - #40 -
+INFO  07:36:27,284 - #47 jedan
+INFO  07:36:27,284 - #25 )
+INFO  07:36:27,284 - #44 ??
+INFO  07:36:27,284 - #24 (
+INFO  07:36:27,284 - #47 bodovi
+INFO  07:36:27,284 - #41 *
+INFO  07:36:27,284 - #47 nula
+INFO  07:36:27,284 - #44 ??
+INFO  07:36:27,284 - #47 jedan
+INFO  07:36:27,284 - #25 )
+INFO  07:36:27,285 - #23 ]
+INFO  07:36:27,288 - #41 *
+INFO  07:36:27,289 - #48 3
+INFO  07:36:27,289 - #26 ;
+INFO  07:36:27,289 - #47 bodovi
+INFO  07:36:27,289 - #30 =
+INFO  07:36:27,289 - #47 niz
+INFO  07:36:27,289 - #22 [
+INFO  07:36:27,289 - #48 2
+INFO  07:36:27,289 - #23 ]
+INFO  07:36:27,289 - #42 /
+INFO  07:36:27,289 - #47 niz
+INFO  07:36:27,290 - #22 [
+INFO  07:36:27,290 - #48 0
+INFO  07:36:27,290 - #23 ]
+INFO  07:36:27,290 - #26 ;
+INFO  07:36:27,290 - #13 print
+INFO  07:36:27,290 - #24 (
+INFO  07:36:27,290 - #47 bodovi
+INFO  07:36:27,290 - #25 )
+INFO  07:36:27,290 - #26 ;
+INFO  07:36:27,290 - #13 print
+INFO  07:36:27,290 - #24 (
+INFO  07:36:27,290 - #47 niz
+INFO  07:36:27,290 - #22 [
+INFO  07:36:27,290 - #48 2
+INFO  07:36:27,290 - #23 ]
+INFO  07:36:27,290 - #25 )
+INFO  07:36:27,290 - #26 ;
+INFO  07:36:27,290 - #47 nizch
+INFO  07:36:27,290 - #30 =
+INFO  07:36:27,290 - #14 new
+INFO  07:36:27,290 - #47 char
+INFO  07:36:27,291 - #22 [
+INFO  07:36:27,291 - #48 3
+INFO  07:36:27,291 - #23 ]
+INFO  07:36:27,291 - #26 ;
+INFO  07:36:27,291 - #47 nizch
+INFO  07:36:27,291 - #22 [
+INFO  07:36:27,291 - #48 0
+INFO  07:36:27,291 - #23 ]
+INFO  07:36:27,291 - #30 =
+INFO  07:36:27,291 - #49 a
+INFO  07:36:27,291 - #26 ;
+INFO  07:36:27,291 - #47 nizch
+INFO  07:36:27,292 - #22 [
+INFO  07:36:27,292 - #47 jedan
+INFO  07:36:27,292 - #23 ]
+INFO  07:36:27,292 - #30 =
+INFO  07:36:27,292 - #49 b
+INFO  07:36:27,292 - #26 ;
+INFO  07:36:27,292 - #47 nizch
+INFO  07:36:27,292 - #22 [
+INFO  07:36:27,292 - #47 pet
+INFO  07:36:27,292 - #40 -
+INFO  07:36:27,292 - #48 3
+INFO  07:36:27,292 - #23 ]
+INFO  07:36:27,292 - #30 =
+INFO  07:36:27,292 - #49 c
+INFO  07:36:27,292 - #26 ;
+INFO  07:36:27,292 - #13 print
+INFO  07:36:27,292 - #24 (
+INFO  07:36:27,292 - #47 nizch
+INFO  07:36:27,292 - #22 [
+INFO  07:36:27,292 - #48 1
+INFO  07:36:27,292 - #23 ]
+INFO  07:36:27,293 - #25 )
+INFO  07:36:27,293 - #26 ;
+INFO  07:36:27,293 - #13 print
+INFO  07:36:27,293 - #24 (
+INFO  07:36:27,293 - #47 nizch
+INFO  07:36:27,293 - #22 [
+INFO  07:36:27,293 - #47 jedan
+INFO  07:36:27,293 - #41 *
+INFO  07:36:27,293 - #48 2
+INFO  07:36:27,293 - #23 ]
+INFO  07:36:27,293 - #25 )
+INFO  07:36:27,293 - #26 ;
+INFO  07:36:27,293 - #47 bodovi
+INFO  07:36:27,293 - #30 =
+INFO  07:36:27,293 - #47 bodovi
+INFO  07:36:27,293 - #39 +
+INFO  07:36:27,293 - #24 (
+INFO  07:36:27,293 - #47 pet
+INFO  07:36:27,293 - #41 *
+INFO  07:36:27,293 - #47 jedan
+INFO  07:36:27,293 - #40 -
+INFO  07:36:27,293 - #48 1
+INFO  07:36:27,293 - #25 )
+INFO  07:36:27,293 - #41 *
+INFO  07:36:27,293 - #47 bodovi
+INFO  07:36:27,293 - #40 -
+INFO  07:36:27,293 - #24 (
+INFO  07:36:27,293 - #48 3
+INFO  07:36:27,294 - #43 %
+INFO  07:36:27,294 - #48 2
+INFO  07:36:27,294 - #39 +
+INFO  07:36:27,294 - #48 3
+INFO  07:36:27,294 - #41 *
+INFO  07:36:27,294 - #48 2
+INFO  07:36:27,294 - #40 -
+INFO  07:36:27,294 - #48 3
+INFO  07:36:27,294 - #25 )
+INFO  07:36:27,294 - #26 ;
+INFO  07:36:27,294 - #13 print
+INFO  07:36:27,295 - #24 (
+INFO  07:36:27,295 - #47 bodovi
+INFO  07:36:27,295 - #25 )
+INFO  07:36:27,295 - #26 ;
+INFO  07:36:27,295 - #12 read
+INFO  07:36:27,295 - #24 (
+INFO  07:36:27,295 - #47 bodovi
+INFO  07:36:27,295 - #25 )
+INFO  07:36:27,295 - #26 ;
+INFO  07:36:27,295 - #13 print
+INFO  07:36:27,295 - #24 (
+INFO  07:36:27,295 - #47 bodovi
+INFO  07:36:27,295 - #25 )
+INFO  07:36:27,295 - #26 ;
+INFO  07:36:27,295 - #21 }
+INFO  07:36:27,295 - #21 }
+INFO  07:36:27,302 - Program(
+  ProgramName(
+   test301
+  ) [ProgramName]
+  ProgramDeclList(
+    ProgramDeclList(
+      ProgramDeclList(
+        ProgramDeclList(
+          ProgramDeclList(
+            ProgramDeclList(
+              EmptyProgramDeclList(
+              ) [EmptyProgramDeclList]
+              ProgramDeclConst(
+                ConstDecl(
+                  ConstType(
+                    Type(
+                     int
+                    ) [Type]
+                  ) [ConstType]
+                  ConstListSingle(
+                    ConstAssignNum(
+                     nula
+                     0
+                    ) [ConstAssignNum]
+                  ) [ConstListSingle]
+                ) [ConstDecl]
+              ) [ProgramDeclConst]
+            ) [ProgramDeclList]
+            ProgramDeclConst(
+              ConstDecl(
+                ConstType(
+                  Type(
+                   int
+                  ) [Type]
+                ) [ConstType]
+                ConstListSingle(
+                  ConstAssignNum(
+                   jedan
+                   1
+                  ) [ConstAssignNum]
+                ) [ConstListSingle]
+              ) [ConstDecl]
+            ) [ProgramDeclConst]
+          ) [ProgramDeclList]
+          ProgramDeclConst(
+            ConstDecl(
+              ConstType(
+                Type(
+                 int
+                ) [Type]
+              ) [ConstType]
+              ConstListSingle(
+                ConstAssignNum(
+                 tri
+                 3
+                ) [ConstAssignNum]
+              ) [ConstListSingle]
+            ) [ConstDecl]
+          ) [ProgramDeclConst]
+        ) [ProgramDeclList]
+        ProgramDeclConst(
+          ConstDecl(
+            ConstType(
+              Type(
+               int
+              ) [Type]
+            ) [ConstType]
+            ConstListSingle(
+              ConstAssignNum(
+               pet
+               5
+              ) [ConstAssignNum]
+            ) [ConstListSingle]
+          ) [ConstDecl]
+        ) [ProgramDeclConst]
+      ) [ProgramDeclList]
+      ProgramDeclVar(
+        VarDecl(
+          VarType(
+            Type(
+             int
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarArray(
+             niz
+            ) [VarArray]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [ProgramDeclVar]
+    ) [ProgramDeclList]
+    ProgramDeclVar(
+      VarDecl(
+        VarType(
+          Type(
+           char
+          ) [Type]
+        ) [VarType]
+        VarListSingle(
+          VarArray(
+           nizch
+          ) [VarArray]
+        ) [VarListSingle]
+      ) [VarDecl]
+    ) [ProgramDeclVar]
+  ) [ProgramDeclList]
+  MethodDeclList(
+    EmptyMethodDeclList(
+    ) [EmptyMethodDeclList]
+    MethodDecl(
+      MethodReturnTypeVoid(
+      ) [MethodReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormParsNo(
+      ) [FormParsNo]
+      VarDeclList(
+        VarDeclList(
+          EmptyVarDeclListNullable(
+          ) [EmptyVarDeclListNullable]
+          VarDecl(
+            VarType(
+              Type(
+               int
+              ) [Type]
+            ) [VarType]
+            VarListSingle(
+              VarSingle(
+               bodovi
+              ) [VarSingle]
+            ) [VarListSingle]
+          ) [VarDecl]
+        ) [VarDeclList]
+        VarDecl(
+          VarType(
+            Type(
+             bool
+            ) [Type]
+          ) [VarType]
+          VarListSingle(
+            VarSingle(
+             bt
+            ) [VarSingle]
+          ) [VarListSingle]
+        ) [VarDecl]
+      ) [VarDeclList]
+      StatementList(
+        StatementList(
+          StatementList(
+            StatementList(
+              StatementList(
+                StatementList(
+                  StatementList(
+                    StatementList(
+                      StatementList(
+                        StatementList(
+                          StatementList(
+                            StatementList(
+                              StatementList(
+                                StatementList(
+                                  StatementList(
+                                    StatementList(
+                                      StatementList(
+                                        StatementList(
+                                          StatementList(
+                                            StatementList(
+                                              StatementList(
+                                                StatementList(
+                                                  StatementList(
+                                                    EmptyStatementList(
+                                                    ) [EmptyStatementList]
+                                                    StatementSingle(
+                                                      SingleStatementDesignatorStatement(
+                                                        DesignatorStatementAssign(
+                                                          DesignatorDefault(
+                                                           bodovi
+                                                          ) [DesignatorDefault]
+                                                          Assign(
+                                                          ) [Assign]
+                                                          ExprTerm(
+                                                            Term(
+                                                              FactorConstNum(
+                                                               0
+                                                              ) [FactorConstNum]
+                                                              EmptyMulopFactorList(
+                                                              ) [EmptyMulopFactorList]
+                                                            ) [Term]
+                                                            EmptyAddopTermList(
+                                                            ) [EmptyAddopTermList]
+                                                          ) [ExprTerm]
+                                                        ) [DesignatorStatementAssign]
+                                                      ) [SingleStatementDesignatorStatement]
+                                                    ) [StatementSingle]
+                                                  ) [StatementList]
+                                                  StatementSingle(
+                                                    SingleStatementDesignatorStatement(
+                                                      DesignatorStatementPostInc(
+                                                        DesignatorDefault(
+                                                         bodovi
+                                                        ) [DesignatorDefault]
+                                                      ) [DesignatorStatementPostInc]
+                                                    ) [SingleStatementDesignatorStatement]
+                                                  ) [StatementSingle]
+                                                ) [StatementList]
+                                                StatementSingle(
+                                                  SingleStatementDesignatorStatement(
+                                                    DesignatorStatementAssign(
+                                                      DesignatorDefault(
+                                                       bodovi
+                                                      ) [DesignatorDefault]
+                                                      Assign(
+                                                      ) [Assign]
+                                                      ExprQQ(
+                                                        Term(
+                                                          FactorExpr(
+                                                            ExprTerm(
+                                                              Term(
+                                                                FactorDesignator(
+                                                                  DesignatorDefault(
+                                                                   bodovi
+                                                                  ) [DesignatorDefault]
+                                                                ) [FactorDesignator]
+                                                                EmptyMulopFactorList(
+                                                                ) [EmptyMulopFactorList]
+                                                              ) [Term]
+                                                              AddopTermList(
+                                                                EmptyAddopTermList(
+                                                                ) [EmptyAddopTermList]
+                                                                Plus(
+                                                                ) [Plus]
+                                                                Term(
+                                                                  FactorDesignator(
+                                                                    DesignatorDefault(
+                                                                     jedan
+                                                                    ) [DesignatorDefault]
+                                                                  ) [FactorDesignator]
+                                                                  EmptyMulopFactorList(
+                                                                  ) [EmptyMulopFactorList]
+                                                                ) [Term]
+                                                              ) [AddopTermList]
+                                                            ) [ExprTerm]
+                                                          ) [FactorExpr]
+                                                          EmptyMulopFactorList(
+                                                          ) [EmptyMulopFactorList]
+                                                        ) [Term]
+                                                        EmptyAddopTermList(
+                                                        ) [EmptyAddopTermList]
+                                                        ExprTerm(
+                                                          Term(
+                                                            FactorDesignator(
+                                                              DesignatorDefault(
+                                                               tri
+                                                              ) [DesignatorDefault]
+                                                            ) [FactorDesignator]
+                                                            EmptyMulopFactorList(
+                                                            ) [EmptyMulopFactorList]
+                                                          ) [Term]
+                                                          EmptyAddopTermList(
+                                                          ) [EmptyAddopTermList]
+                                                        ) [ExprTerm]
+                                                      ) [ExprQQ]
+                                                    ) [DesignatorStatementAssign]
+                                                  ) [SingleStatementDesignatorStatement]
+                                                ) [StatementSingle]
+                                              ) [StatementList]
+                                              StatementSingle(
+                                                SingleStatementDesignatorStatement(
+                                                  DesignatorStatementAssign(
+                                                    DesignatorDefault(
+                                                     bodovi
+                                                    ) [DesignatorDefault]
+                                                    Assign(
+                                                    ) [Assign]
+                                                    ExprTerm(
+                                                      Term(
+                                                        FactorDesignator(
+                                                          DesignatorDefault(
+                                                           bodovi
+                                                          ) [DesignatorDefault]
+                                                        ) [FactorDesignator]
+                                                        MulopFactorList(
+                                                          EmptyMulopFactorList(
+                                                          ) [EmptyMulopFactorList]
+                                                          Mul(
+                                                          ) [Mul]
+                                                          FactorDesignator(
+                                                            DesignatorDefault(
+                                                             pet
+                                                            ) [DesignatorDefault]
+                                                          ) [FactorDesignator]
+                                                        ) [MulopFactorList]
+                                                      ) [Term]
+                                                      EmptyAddopTermList(
+                                                      ) [EmptyAddopTermList]
+                                                    ) [ExprTerm]
+                                                  ) [DesignatorStatementAssign]
+                                                ) [SingleStatementDesignatorStatement]
+                                              ) [StatementSingle]
+                                            ) [StatementList]
+                                            StatementSingle(
+                                              SingleStatementDesignatorStatement(
+                                                DesignatorStatementPostDec(
+                                                  DesignatorDefault(
+                                                   bodovi
+                                                  ) [DesignatorDefault]
+                                                ) [DesignatorStatementPostDec]
+                                              ) [SingleStatementDesignatorStatement]
+                                            ) [StatementSingle]
+                                          ) [StatementList]
+                                          StatementSingle(
+                                            SingleStatementPrint(
+                                              ExprTerm(
+                                                Term(
+                                                  FactorDesignator(
+                                                    DesignatorDefault(
+                                                     bodovi
+                                                    ) [DesignatorDefault]
+                                                  ) [FactorDesignator]
+                                                  EmptyMulopFactorList(
+                                                  ) [EmptyMulopFactorList]
+                                                ) [Term]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [ExprTerm]
+                                            ) [SingleStatementPrint]
+                                          ) [StatementSingle]
+                                        ) [StatementList]
+                                        StatementSingle(
+                                          SingleStatementDesignatorStatement(
+                                            DesignatorStatementAssign(
+                                              DesignatorDefault(
+                                               niz
+                                              ) [DesignatorDefault]
+                                              Assign(
+                                              ) [Assign]
+                                              ExprTerm(
+                                                Term(
+                                                  FactorNewArray(
+                                                    Type(
+                                                     int
+                                                    ) [Type]
+                                                    ExprTerm(
+                                                      Term(
+                                                        FactorConstNum(
+                                                         3
+                                                        ) [FactorConstNum]
+                                                        EmptyMulopFactorList(
+                                                        ) [EmptyMulopFactorList]
+                                                      ) [Term]
+                                                      EmptyAddopTermList(
+                                                      ) [EmptyAddopTermList]
+                                                    ) [ExprTerm]
+                                                  ) [FactorNewArray]
+                                                  EmptyMulopFactorList(
+                                                  ) [EmptyMulopFactorList]
+                                                ) [Term]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [ExprTerm]
+                                            ) [DesignatorStatementAssign]
+                                          ) [SingleStatementDesignatorStatement]
+                                        ) [StatementSingle]
+                                      ) [StatementList]
+                                      StatementSingle(
+                                        SingleStatementDesignatorStatement(
+                                          DesignatorStatementAssign(
+                                            DesignatorArray(
+                                              DesignatorDefault(
+                                               niz
+                                              ) [DesignatorDefault]
+                                              ExprTerm(
+                                                Term(
+                                                  FactorDesignator(
+                                                    DesignatorDefault(
+                                                     nula
+                                                    ) [DesignatorDefault]
+                                                  ) [FactorDesignator]
+                                                  EmptyMulopFactorList(
+                                                  ) [EmptyMulopFactorList]
+                                                ) [Term]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [ExprTerm]
+                                            ) [DesignatorArray]
+                                            Assign(
+                                            ) [Assign]
+                                            ExprTerm(
+                                              Term(
+                                                FactorDesignator(
+                                                  DesignatorDefault(
+                                                   jedan
+                                                  ) [DesignatorDefault]
+                                                ) [FactorDesignator]
+                                                EmptyMulopFactorList(
+                                                ) [EmptyMulopFactorList]
+                                              ) [Term]
+                                              EmptyAddopTermList(
+                                              ) [EmptyAddopTermList]
+                                            ) [ExprTerm]
+                                          ) [DesignatorStatementAssign]
+                                        ) [SingleStatementDesignatorStatement]
+                                      ) [StatementSingle]
+                                    ) [StatementList]
+                                    StatementSingle(
+                                      SingleStatementDesignatorStatement(
+                                        DesignatorStatementAssign(
+                                          DesignatorArray(
+                                            DesignatorDefault(
+                                             niz
+                                            ) [DesignatorDefault]
+                                            ExprTerm(
+                                              Term(
+                                                FactorConstNum(
+                                                 1
+                                                ) [FactorConstNum]
+                                                EmptyMulopFactorList(
+                                                ) [EmptyMulopFactorList]
+                                              ) [Term]
+                                              EmptyAddopTermList(
+                                              ) [EmptyAddopTermList]
+                                            ) [ExprTerm]
+                                          ) [DesignatorArray]
+                                          Assign(
+                                          ) [Assign]
+                                          ExprTerm(
+                                            Term(
+                                              FactorConstNum(
+                                               2
+                                              ) [FactorConstNum]
+                                              EmptyMulopFactorList(
+                                              ) [EmptyMulopFactorList]
+                                            ) [Term]
+                                            EmptyAddopTermList(
+                                            ) [EmptyAddopTermList]
+                                          ) [ExprTerm]
+                                        ) [DesignatorStatementAssign]
+                                      ) [SingleStatementDesignatorStatement]
+                                    ) [StatementSingle]
+                                  ) [StatementList]
+                                  StatementSingle(
+                                    SingleStatementDesignatorStatement(
+                                      DesignatorStatementAssign(
+                                        DesignatorArray(
+                                          DesignatorDefault(
+                                           niz
+                                          ) [DesignatorDefault]
+                                          ExprQQ(
+                                            Term(
+                                              FactorDesignator(
+                                                DesignatorArray(
+                                                  DesignatorDefault(
+                                                   niz
+                                                  ) [DesignatorDefault]
+                                                  ExprTerm(
+                                                    Term(
+                                                      FactorDesignator(
+                                                        DesignatorDefault(
+                                                         jedan
+                                                        ) [DesignatorDefault]
+                                                      ) [FactorDesignator]
+                                                      EmptyMulopFactorList(
+                                                      ) [EmptyMulopFactorList]
+                                                    ) [Term]
+                                                    EmptyAddopTermList(
+                                                    ) [EmptyAddopTermList]
+                                                  ) [ExprTerm]
+                                                ) [DesignatorArray]
+                                              ) [FactorDesignator]
+                                              EmptyMulopFactorList(
+                                              ) [EmptyMulopFactorList]
+                                            ) [Term]
+                                            EmptyAddopTermList(
+                                            ) [EmptyAddopTermList]
+                                            ExprNegTerm(
+                                              Term(
+                                                FactorConstNum(
+                                                 1
+                                                ) [FactorConstNum]
+                                                EmptyMulopFactorList(
+                                                ) [EmptyMulopFactorList]
+                                              ) [Term]
+                                              EmptyAddopTermList(
+                                              ) [EmptyAddopTermList]
+                                            ) [ExprNegTerm]
+                                          ) [ExprQQ]
+                                        ) [DesignatorArray]
+                                        Assign(
+                                        ) [Assign]
+                                        ExprTerm(
+                                          Term(
+                                            FactorDesignator(
+                                              DesignatorArray(
+                                                DesignatorDefault(
+                                                 niz
+                                                ) [DesignatorDefault]
+                                                ExprQQ(
+                                                  Term(
+                                                    FactorExpr(
+                                                      ExprTerm(
+                                                        Term(
+                                                          FactorDesignator(
+                                                            DesignatorArray(
+                                                              DesignatorDefault(
+                                                               niz
+                                                              ) [DesignatorDefault]
+                                                              ExprTerm(
+                                                                Term(
+                                                                  FactorConstNum(
+                                                                   0
+                                                                  ) [FactorConstNum]
+                                                                  EmptyMulopFactorList(
+                                                                  ) [EmptyMulopFactorList]
+                                                                ) [Term]
+                                                                EmptyAddopTermList(
+                                                                ) [EmptyAddopTermList]
+                                                              ) [ExprTerm]
+                                                            ) [DesignatorArray]
+                                                          ) [FactorDesignator]
+                                                          EmptyMulopFactorList(
+                                                          ) [EmptyMulopFactorList]
+                                                        ) [Term]
+                                                        AddopTermList(
+                                                          EmptyAddopTermList(
+                                                          ) [EmptyAddopTermList]
+                                                          Minus(
+                                                          ) [Minus]
+                                                          Term(
+                                                            FactorDesignator(
+                                                              DesignatorDefault(
+                                                               jedan
+                                                              ) [DesignatorDefault]
+                                                            ) [FactorDesignator]
+                                                            EmptyMulopFactorList(
+                                                            ) [EmptyMulopFactorList]
+                                                          ) [Term]
+                                                        ) [AddopTermList]
+                                                      ) [ExprTerm]
+                                                    ) [FactorExpr]
+                                                    EmptyMulopFactorList(
+                                                    ) [EmptyMulopFactorList]
+                                                  ) [Term]
+                                                  EmptyAddopTermList(
+                                                  ) [EmptyAddopTermList]
+                                                  ExprTerm(
+                                                    Term(
+                                                      FactorExpr(
+                                                        ExprQQ(
+                                                          Term(
+                                                            FactorDesignator(
+                                                              DesignatorDefault(
+                                                               bodovi
+                                                              ) [DesignatorDefault]
+                                                            ) [FactorDesignator]
+                                                            MulopFactorList(
+                                                              EmptyMulopFactorList(
+                                                              ) [EmptyMulopFactorList]
+                                                              Mul(
+                                                              ) [Mul]
+                                                              FactorDesignator(
+                                                                DesignatorDefault(
+                                                                 nula
+                                                                ) [DesignatorDefault]
+                                                              ) [FactorDesignator]
+                                                            ) [MulopFactorList]
+                                                          ) [Term]
+                                                          EmptyAddopTermList(
+                                                          ) [EmptyAddopTermList]
+                                                          ExprTerm(
+                                                            Term(
+                                                              FactorDesignator(
+                                                                DesignatorDefault(
+                                                                 jedan
+                                                                ) [DesignatorDefault]
+                                                              ) [FactorDesignator]
+                                                              EmptyMulopFactorList(
+                                                              ) [EmptyMulopFactorList]
+                                                            ) [Term]
+                                                            EmptyAddopTermList(
+                                                            ) [EmptyAddopTermList]
+                                                          ) [ExprTerm]
+                                                        ) [ExprQQ]
+                                                      ) [FactorExpr]
+                                                      EmptyMulopFactorList(
+                                                      ) [EmptyMulopFactorList]
+                                                    ) [Term]
+                                                    EmptyAddopTermList(
+                                                    ) [EmptyAddopTermList]
+                                                  ) [ExprTerm]
+                                                ) [ExprQQ]
+                                              ) [DesignatorArray]
+                                            ) [FactorDesignator]
+                                            MulopFactorList(
+                                              EmptyMulopFactorList(
+                                              ) [EmptyMulopFactorList]
+                                              Mul(
+                                              ) [Mul]
+                                              FactorConstNum(
+                                               3
+                                              ) [FactorConstNum]
+                                            ) [MulopFactorList]
+                                          ) [Term]
+                                          EmptyAddopTermList(
+                                          ) [EmptyAddopTermList]
+                                        ) [ExprTerm]
+                                      ) [DesignatorStatementAssign]
+                                    ) [SingleStatementDesignatorStatement]
+                                  ) [StatementSingle]
+                                ) [StatementList]
+                                StatementSingle(
+                                  SingleStatementDesignatorStatement(
+                                    DesignatorStatementAssign(
+                                      DesignatorDefault(
+                                       bodovi
+                                      ) [DesignatorDefault]
+                                      Assign(
+                                      ) [Assign]
+                                      ExprTerm(
+                                        Term(
+                                          FactorDesignator(
+                                            DesignatorArray(
+                                              DesignatorDefault(
+                                               niz
+                                              ) [DesignatorDefault]
+                                              ExprTerm(
+                                                Term(
+                                                  FactorConstNum(
+                                                   2
+                                                  ) [FactorConstNum]
+                                                  EmptyMulopFactorList(
+                                                  ) [EmptyMulopFactorList]
+                                                ) [Term]
+                                                EmptyAddopTermList(
+                                                ) [EmptyAddopTermList]
+                                              ) [ExprTerm]
+                                            ) [DesignatorArray]
+                                          ) [FactorDesignator]
+                                          MulopFactorList(
+                                            EmptyMulopFactorList(
+                                            ) [EmptyMulopFactorList]
+                                            Div(
+                                            ) [Div]
+                                            FactorDesignator(
+                                              DesignatorArray(
+                                                DesignatorDefault(
+                                                 niz
+                                                ) [DesignatorDefault]
+                                                ExprTerm(
+                                                  Term(
+                                                    FactorConstNum(
+                                                     0
+                                                    ) [FactorConstNum]
+                                                    EmptyMulopFactorList(
+                                                    ) [EmptyMulopFactorList]
+                                                  ) [Term]
+                                                  EmptyAddopTermList(
+                                                  ) [EmptyAddopTermList]
+                                                ) [ExprTerm]
+                                              ) [DesignatorArray]
+                                            ) [FactorDesignator]
+                                          ) [MulopFactorList]
+                                        ) [Term]
+                                        EmptyAddopTermList(
+                                        ) [EmptyAddopTermList]
+                                      ) [ExprTerm]
+                                    ) [DesignatorStatementAssign]
+                                  ) [SingleStatementDesignatorStatement]
+                                ) [StatementSingle]
+                              ) [StatementList]
+                              StatementSingle(
+                                SingleStatementPrint(
+                                  ExprTerm(
+                                    Term(
+                                      FactorDesignator(
+                                        DesignatorDefault(
+                                         bodovi
+                                        ) [DesignatorDefault]
+                                      ) [FactorDesignator]
+                                      EmptyMulopFactorList(
+                                      ) [EmptyMulopFactorList]
+                                    ) [Term]
+                                    EmptyAddopTermList(
+                                    ) [EmptyAddopTermList]
+                                  ) [ExprTerm]
+                                ) [SingleStatementPrint]
+                              ) [StatementSingle]
+                            ) [StatementList]
+                            StatementSingle(
+                              SingleStatementPrint(
+                                ExprTerm(
+                                  Term(
+                                    FactorDesignator(
+                                      DesignatorArray(
+                                        DesignatorDefault(
+                                         niz
+                                        ) [DesignatorDefault]
+                                        ExprTerm(
+                                          Term(
+                                            FactorConstNum(
+                                             2
+                                            ) [FactorConstNum]
+                                            EmptyMulopFactorList(
+                                            ) [EmptyMulopFactorList]
+                                          ) [Term]
+                                          EmptyAddopTermList(
+                                          ) [EmptyAddopTermList]
+                                        ) [ExprTerm]
+                                      ) [DesignatorArray]
+                                    ) [FactorDesignator]
+                                    EmptyMulopFactorList(
+                                    ) [EmptyMulopFactorList]
+                                  ) [Term]
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                ) [ExprTerm]
+                              ) [SingleStatementPrint]
+                            ) [StatementSingle]
+                          ) [StatementList]
+                          StatementSingle(
+                            SingleStatementDesignatorStatement(
+                              DesignatorStatementAssign(
+                                DesignatorDefault(
+                                 nizch
+                                ) [DesignatorDefault]
+                                Assign(
+                                ) [Assign]
+                                ExprTerm(
+                                  Term(
+                                    FactorNewArray(
+                                      Type(
+                                       char
+                                      ) [Type]
+                                      ExprTerm(
+                                        Term(
+                                          FactorConstNum(
+                                           3
+                                          ) [FactorConstNum]
+                                          EmptyMulopFactorList(
+                                          ) [EmptyMulopFactorList]
+                                        ) [Term]
+                                        EmptyAddopTermList(
+                                        ) [EmptyAddopTermList]
+                                      ) [ExprTerm]
+                                    ) [FactorNewArray]
+                                    EmptyMulopFactorList(
+                                    ) [EmptyMulopFactorList]
+                                  ) [Term]
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                ) [ExprTerm]
+                              ) [DesignatorStatementAssign]
+                            ) [SingleStatementDesignatorStatement]
+                          ) [StatementSingle]
+                        ) [StatementList]
+                        StatementSingle(
+                          SingleStatementDesignatorStatement(
+                            DesignatorStatementAssign(
+                              DesignatorArray(
+                                DesignatorDefault(
+                                 nizch
+                                ) [DesignatorDefault]
+                                ExprTerm(
+                                  Term(
+                                    FactorConstNum(
+                                     0
+                                    ) [FactorConstNum]
+                                    EmptyMulopFactorList(
+                                    ) [EmptyMulopFactorList]
+                                  ) [Term]
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                ) [ExprTerm]
+                              ) [DesignatorArray]
+                              Assign(
+                              ) [Assign]
+                              ExprTerm(
+                                Term(
+                                  FactorConstChar(
+                                   a
+                                  ) [FactorConstChar]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [ExprTerm]
+                            ) [DesignatorStatementAssign]
+                          ) [SingleStatementDesignatorStatement]
+                        ) [StatementSingle]
+                      ) [StatementList]
+                      StatementSingle(
+                        SingleStatementDesignatorStatement(
+                          DesignatorStatementAssign(
+                            DesignatorArray(
+                              DesignatorDefault(
+                               nizch
+                              ) [DesignatorDefault]
+                              ExprTerm(
+                                Term(
+                                  FactorDesignator(
+                                    DesignatorDefault(
+                                     jedan
+                                    ) [DesignatorDefault]
+                                  ) [FactorDesignator]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [ExprTerm]
+                            ) [DesignatorArray]
+                            Assign(
+                            ) [Assign]
+                            ExprTerm(
+                              Term(
+                                FactorConstChar(
+                                 b
+                                ) [FactorConstChar]
+                                EmptyMulopFactorList(
+                                ) [EmptyMulopFactorList]
+                              ) [Term]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [ExprTerm]
+                          ) [DesignatorStatementAssign]
+                        ) [SingleStatementDesignatorStatement]
+                      ) [StatementSingle]
+                    ) [StatementList]
+                    StatementSingle(
+                      SingleStatementDesignatorStatement(
+                        DesignatorStatementAssign(
+                          DesignatorArray(
+                            DesignatorDefault(
+                             nizch
+                            ) [DesignatorDefault]
+                            ExprTerm(
+                              Term(
+                                FactorDesignator(
+                                  DesignatorDefault(
+                                   pet
+                                  ) [DesignatorDefault]
+                                ) [FactorDesignator]
+                                EmptyMulopFactorList(
+                                ) [EmptyMulopFactorList]
+                              ) [Term]
+                              AddopTermList(
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                                Minus(
+                                ) [Minus]
+                                Term(
+                                  FactorConstNum(
+                                   3
+                                  ) [FactorConstNum]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                              ) [AddopTermList]
+                            ) [ExprTerm]
+                          ) [DesignatorArray]
+                          Assign(
+                          ) [Assign]
+                          ExprTerm(
+                            Term(
+                              FactorConstChar(
+                               c
+                              ) [FactorConstChar]
+                              EmptyMulopFactorList(
+                              ) [EmptyMulopFactorList]
+                            ) [Term]
+                            EmptyAddopTermList(
+                            ) [EmptyAddopTermList]
+                          ) [ExprTerm]
+                        ) [DesignatorStatementAssign]
+                      ) [SingleStatementDesignatorStatement]
+                    ) [StatementSingle]
+                  ) [StatementList]
+                  StatementSingle(
+                    SingleStatementPrint(
+                      ExprTerm(
+                        Term(
+                          FactorDesignator(
+                            DesignatorArray(
+                              DesignatorDefault(
+                               nizch
+                              ) [DesignatorDefault]
+                              ExprTerm(
+                                Term(
+                                  FactorConstNum(
+                                   1
+                                  ) [FactorConstNum]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                                EmptyAddopTermList(
+                                ) [EmptyAddopTermList]
+                              ) [ExprTerm]
+                            ) [DesignatorArray]
+                          ) [FactorDesignator]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                        EmptyAddopTermList(
+                        ) [EmptyAddopTermList]
+                      ) [ExprTerm]
+                    ) [SingleStatementPrint]
+                  ) [StatementSingle]
+                ) [StatementList]
+                StatementSingle(
+                  SingleStatementPrint(
+                    ExprTerm(
+                      Term(
+                        FactorDesignator(
+                          DesignatorArray(
+                            DesignatorDefault(
+                             nizch
+                            ) [DesignatorDefault]
+                            ExprTerm(
+                              Term(
+                                FactorDesignator(
+                                  DesignatorDefault(
+                                   jedan
+                                  ) [DesignatorDefault]
+                                ) [FactorDesignator]
+                                MulopFactorList(
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                  Mul(
+                                  ) [Mul]
+                                  FactorConstNum(
+                                   2
+                                  ) [FactorConstNum]
+                                ) [MulopFactorList]
+                              ) [Term]
+                              EmptyAddopTermList(
+                              ) [EmptyAddopTermList]
+                            ) [ExprTerm]
+                          ) [DesignatorArray]
+                        ) [FactorDesignator]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      EmptyAddopTermList(
+                      ) [EmptyAddopTermList]
+                    ) [ExprTerm]
+                  ) [SingleStatementPrint]
+                ) [StatementSingle]
+              ) [StatementList]
+              StatementSingle(
+                SingleStatementDesignatorStatement(
+                  DesignatorStatementAssign(
+                    DesignatorDefault(
+                     bodovi
+                    ) [DesignatorDefault]
+                    Assign(
+                    ) [Assign]
+                    ExprTerm(
+                      Term(
+                        FactorDesignator(
+                          DesignatorDefault(
+                           bodovi
+                          ) [DesignatorDefault]
+                        ) [FactorDesignator]
+                        EmptyMulopFactorList(
+                        ) [EmptyMulopFactorList]
+                      ) [Term]
+                      AddopTermList(
+                        AddopTermList(
+                          EmptyAddopTermList(
+                          ) [EmptyAddopTermList]
+                          Plus(
+                          ) [Plus]
+                          Term(
+                            FactorExpr(
+                              ExprTerm(
+                                Term(
+                                  FactorDesignator(
+                                    DesignatorDefault(
+                                     pet
+                                    ) [DesignatorDefault]
+                                  ) [FactorDesignator]
+                                  MulopFactorList(
+                                    EmptyMulopFactorList(
+                                    ) [EmptyMulopFactorList]
+                                    Mul(
+                                    ) [Mul]
+                                    FactorDesignator(
+                                      DesignatorDefault(
+                                       jedan
+                                      ) [DesignatorDefault]
+                                    ) [FactorDesignator]
+                                  ) [MulopFactorList]
+                                ) [Term]
+                                AddopTermList(
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                  Minus(
+                                  ) [Minus]
+                                  Term(
+                                    FactorConstNum(
+                                     1
+                                    ) [FactorConstNum]
+                                    EmptyMulopFactorList(
+                                    ) [EmptyMulopFactorList]
+                                  ) [Term]
+                                ) [AddopTermList]
+                              ) [ExprTerm]
+                            ) [FactorExpr]
+                            MulopFactorList(
+                              EmptyMulopFactorList(
+                              ) [EmptyMulopFactorList]
+                              Mul(
+                              ) [Mul]
+                              FactorDesignator(
+                                DesignatorDefault(
+                                 bodovi
+                                ) [DesignatorDefault]
+                              ) [FactorDesignator]
+                            ) [MulopFactorList]
+                          ) [Term]
+                        ) [AddopTermList]
+                        Minus(
+                        ) [Minus]
+                        Term(
+                          FactorExpr(
+                            ExprTerm(
+                              Term(
+                                FactorConstNum(
+                                 3
+                                ) [FactorConstNum]
+                                MulopFactorList(
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                  Mod(
+                                  ) [Mod]
+                                  FactorConstNum(
+                                   2
+                                  ) [FactorConstNum]
+                                ) [MulopFactorList]
+                              ) [Term]
+                              AddopTermList(
+                                AddopTermList(
+                                  EmptyAddopTermList(
+                                  ) [EmptyAddopTermList]
+                                  Plus(
+                                  ) [Plus]
+                                  Term(
+                                    FactorConstNum(
+                                     3
+                                    ) [FactorConstNum]
+                                    MulopFactorList(
+                                      EmptyMulopFactorList(
+                                      ) [EmptyMulopFactorList]
+                                      Mul(
+                                      ) [Mul]
+                                      FactorConstNum(
+                                       2
+                                      ) [FactorConstNum]
+                                    ) [MulopFactorList]
+                                  ) [Term]
+                                ) [AddopTermList]
+                                Minus(
+                                ) [Minus]
+                                Term(
+                                  FactorConstNum(
+                                   3
+                                  ) [FactorConstNum]
+                                  EmptyMulopFactorList(
+                                  ) [EmptyMulopFactorList]
+                                ) [Term]
+                              ) [AddopTermList]
+                            ) [ExprTerm]
+                          ) [FactorExpr]
+                          EmptyMulopFactorList(
+                          ) [EmptyMulopFactorList]
+                        ) [Term]
+                      ) [AddopTermList]
+                    ) [ExprTerm]
+                  ) [DesignatorStatementAssign]
+                ) [SingleStatementDesignatorStatement]
+              ) [StatementSingle]
+            ) [StatementList]
+            StatementSingle(
+              SingleStatementPrint(
+                ExprTerm(
+                  Term(
+                    FactorDesignator(
+                      DesignatorDefault(
+                       bodovi
+                      ) [DesignatorDefault]
+                    ) [FactorDesignator]
+                    EmptyMulopFactorList(
+                    ) [EmptyMulopFactorList]
+                  ) [Term]
+                  EmptyAddopTermList(
+                  ) [EmptyAddopTermList]
+                ) [ExprTerm]
+              ) [SingleStatementPrint]
+            ) [StatementSingle]
+          ) [StatementList]
+          StatementSingle(
+            SingleStatementRead(
+              DesignatorDefault(
+               bodovi
+              ) [DesignatorDefault]
+            ) [SingleStatementRead]
+          ) [StatementSingle]
+        ) [StatementList]
+        StatementSingle(
+          SingleStatementPrint(
+            ExprTerm(
+              Term(
+                FactorDesignator(
+                  DesignatorDefault(
+                   bodovi
+                  ) [DesignatorDefault]
+                ) [FactorDesignator]
+                EmptyMulopFactorList(
+                ) [EmptyMulopFactorList]
+              ) [Term]
+              EmptyAddopTermList(
+              ) [EmptyAddopTermList]
+            ) [ExprTerm]
+          ) [SingleStatementPrint]
+        ) [StatementSingle]
+      ) [StatementList]
+    ) [MethodDecl]
+  ) [MethodDeclList]
+) [Program]
+INFO  07:36:27,304 - PARSING SUCCESSFUL!
+INFO  07:36:27,304 - =====================================
+INFO  07:36:27,304 - SEMANTIC ANALYSIS...
+INFO  07:36:27,315 - Info at line 5: Created new constant int nula. ObjNode[Name = nula, Type = int, Kind = constant, Value = 0, Level = 0]
+INFO  07:36:27,315 - Info at line 6: Created new constant int jedan. ObjNode[Name = jedan, Type = int, Kind = constant, Value = 1, Level = 0]
+INFO  07:36:27,316 - Info at line 7: Created new constant int tri. ObjNode[Name = tri, Type = int, Kind = constant, Value = 3, Level = 0]
+INFO  07:36:27,316 - Info at line 8: Created new constant int pet. ObjNode[Name = pet, Type = int, Kind = constant, Value = 5, Level = 0]
+INFO  07:36:27,316 - Info at line 10: Created new variable int niz[]. ObjNode[Name = niz, Type = array, Kind = variable, Address = 0, Level = 0]
+INFO  07:36:27,316 - Info at line 11: Created new variable char nizch[]. ObjNode[Name = nizch, Type = array, Kind = variable, Address = 1, Level = 0]
+INFO  07:36:27,316 - Info at line 14: Entering method void main.
+INFO  07:36:27,316 - Info at line 15: Created new variable int bodovi. ObjNode[Name = bodovi, Type = int, Kind = variable, Address = 0, Level = 1]
+INFO  07:36:27,316 - Info at line 16: Created new variable bool bt. ObjNode[Name = bt, Type = bool, Kind = variable, Address = 1, Level = 1]
+INFO  07:36:27,316 - Info at line 18: Accessed a variable int bodovi.
+INFO  07:36:27,316 - Info at line 19: Accessed a variable int bodovi.
+INFO  07:36:27,316 - Info at line 20: Accessed a variable int bodovi.
+INFO  07:36:27,316 - Info at line 20: Accessed a variable int bodovi.
+INFO  07:36:27,316 - Info at line 20: Accessed a constant int jedan.
+INFO  07:36:27,316 - Info at line 20: Accessed a constant int tri.
+INFO  07:36:27,316 - Info at line 21: Accessed a variable int bodovi.
+INFO  07:36:27,316 - Info at line 21: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 21: Accessed a constant int pet.
+INFO  07:36:27,317 - Info at line 22: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 23: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 26: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 27: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 27: Accessed a constant int nula.
+INFO  07:36:27,317 - Info at line 27: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 27: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 28: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 28: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 29: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 29: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 29: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 29: Accessed a constant int nula.
+INFO  07:36:27,317 - Info at line 29: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 29: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 30: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 30: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 30: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 30: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 30: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 31: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 32: Accessed a variable int niz[].
+INFO  07:36:27,317 - Info at line 32: Accessed an element of int niz[].
+INFO  07:36:27,317 - Info at line 35: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 36: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 36: Accessed an element of char nizch[].
+INFO  07:36:27,317 - Info at line 37: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 37: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 37: Accessed an element of char nizch[].
+INFO  07:36:27,317 - Info at line 38: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 38: Accessed a constant int pet.
+INFO  07:36:27,317 - Info at line 38: Accessed an element of char nizch[].
+INFO  07:36:27,317 - Info at line 39: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 39: Accessed an element of char nizch[].
+INFO  07:36:27,317 - Info at line 40: Accessed a variable char nizch[].
+INFO  07:36:27,317 - Info at line 40: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 40: Accessed an element of char nizch[].
+INFO  07:36:27,317 - Info at line 43: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 43: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 43: Accessed a constant int pet.
+INFO  07:36:27,317 - Info at line 43: Accessed a constant int jedan.
+INFO  07:36:27,317 - Info at line 43: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 44: Accessed a variable int bodovi.
+INFO  07:36:27,317 - Info at line 46: Accessed a variable int bodovi.
+INFO  07:36:27,318 - Info at line 47: Accessed a variable int bodovi.
+INFO  07:36:27,318 - SEMANTIC ANALYSIS SUCCESSFUL!
+INFO  07:36:27,318 - =====================================
+INFO  07:36:27,318 - CODE GENERATION...
+INFO  07:36:27,321 - CODE GENERATION SUCCESSFUL!
+INFO  07:36:27,321 - Results saved in the output file test\test301_A.obj.

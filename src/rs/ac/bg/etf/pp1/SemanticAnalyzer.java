@@ -140,10 +140,10 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Obj varNode=TabEx.insert(Obj.Var, varName, varType);
 		StringBuilder msg = new StringBuilder("Created new variable ");
 		if(varIsArray==true) {
-			msg.append(structToString(varType.getElemType())+" "+varName+"[]. ");
+			msg.append(structToString(varType.getElemType())+" "+varName+"[].\t\t");
 		}
 		else {
-			msg.append(structToString(varType)+" "+varName+". ");
+			msg.append(structToString(varType)+" "+varName+".\t\t");
 		}
 		msg.append(objectToString(varNode));
 		report_info(msg.toString(),info);
@@ -202,7 +202,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Struct constType=currentType;
 		Obj constNode=TabEx.insert(Obj.Con, constName, constType);
 		constNode.setAdr(constValue);
-		report_info("Created new constant "+structToString(constType)+" "+constName+". "+objectToString(constNode),info);
+		report_info("Created new constant "+structToString(constType)+" "+constName+".\t\t"+objectToString(constNode),info);
 		return constNode;
 	}
 	
@@ -265,11 +265,11 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			String designatorKindName=kindToString(designatorKind);
 			
 			if(designatorType.getKind()!=Struct.Array) {
-				report_info("Accessed a "+designatorKindName+" "+designatorTypeName+" "+designatorName+".",designatorDefault);
+				report_info("Accessed a "+designatorKindName+" "+designatorTypeName+" "+designatorName+".\t\t"+objectToString(designatorDefault.obj),designatorDefault);
 			}
 			else {
 				String elemTypeName=structToString(designatorDefault.obj.getType().getElemType());
-				report_info("Accessed a "+designatorKindName+" "+elemTypeName+" "+designatorName+"[].",designatorDefault);
+				report_info("Accessed a "+designatorKindName+" "+elemTypeName+" "+designatorName+"[].\t\t"+objectToString(designatorDefault.obj),designatorDefault);
 			}
 		}
 	}
@@ -308,9 +308,9 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 			designatorArray.obj=TabEx.noObj;
 			return;
 		}
-		
-		report_info("Accessed an element of "+elemTypeName+" "+arrayName+"[].",designatorArray);
 		designatorArray.obj=new Obj(Obj.Elem, arrayName, elemType);	//CHECK
+		report_info("Accessed an element of "+elemTypeName+" "+arrayName+"[].\t\t"+objectToString(designatorArray.obj),designatorArray);
+		
 	}
 	
 	/* ====================== Factors ====================== */
@@ -365,7 +365,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		String factorTypeName=structToString(factorType);
 		if(factorType!=TabEx.intType && factorListType!=TabEx.noType) {
 			term.struct=TabEx.noType;
-			report_error("Can't perform math operations on factors of type "+factorTypeName+".",term);
+			report_error("Can't perform math operations on a factor of type "+factorTypeName+".",term);
 			return;
 		}
 		term.struct=factorType;
@@ -377,7 +377,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		String factorTypeName=structToString(factorType);
 		if(factorType!=TabEx.intType) {
 			mulopFactorList.struct=TabEx.noType;
-			report_error("Can't perform math operations on factors of type "+factorTypeName+".",mulopFactorList);
+			report_error("Can't perform math operations on a factor of type "+factorTypeName+".",mulopFactorList);
 			return;
 		}
 		mulopFactorList.struct=TabEx.intType;
@@ -395,7 +395,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		Struct termListType=exprTerm.getAddopTermListNullable().struct;
 		if(termType!=TabEx.intType && termListType!=TabEx.noType) {
 			exprTerm.struct=TabEx.noType;
-			report_error("Can't perform math operations on first term (type: "+termTypeName+") in the chain.",exprTerm);
+			report_error("Can't perform math operations on a term of type "+termTypeName+".",exprTerm);
 			return;
 		}
 		exprTerm.struct=exprTerm.getTerm().struct;
@@ -419,7 +419,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		String termTypeName=structToString(termType);
 		if(termType!=TabEx.intType) {
 			addopTermList.struct=TabEx.noType;
-			report_error("Can't perform math operations on a term (type: "+termTypeName+") in the chain.",addopTermList);
+			report_error("Can't perform math operations on a term of type "+termTypeName+".",addopTermList);
 			return;
 		}
 		addopTermList.struct=TabEx.intType;
@@ -620,7 +620,7 @@ public class SemanticAnalyzer extends VisitorAdaptor{
 		currentMethod=methodName.obj;
 		TabEx.openScope();
 		String methodReturnTypeName=(currentType==TabEx.noType)?"void":structToString(currentType);
-		report_info("Entering method "+methodReturnTypeName+" "+name+".",methodName);
+		report_info("Entering method "+methodReturnTypeName+" "+name+".\t\t"+objectToString(methodName.obj),methodName);
 		currentType=TabEx.noType;
 	}
 	

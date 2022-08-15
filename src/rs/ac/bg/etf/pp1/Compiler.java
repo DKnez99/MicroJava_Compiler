@@ -25,7 +25,7 @@ public class Compiler {
 	public static void tsdump() {
 		Logger log = Logger.getLogger(Compiler.class);
 		log.info("=====================================");
-		log.info("SYMBOL TABLE DUMP:");
+		log.info("SYMBOL TABLE DUMP:\n");
 		TabEx.dump();
 	}
 	

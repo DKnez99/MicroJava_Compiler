@@ -1,0 +1,25 @@
+program syntaxTest3
+	int a,b,,p[],x[[];	//2 syntax errors
+	const char c='c';
+	bool niz[][;	//error
+	/ ---------------------------- //fatal error
+{
+	void main()
+	int x;
+	bool tacno;
+	int nizBrojeva[];
+	{
+		x=20;
+		nizBrojeva=new int[x],x+40;	//syntax error
+		tacno=true;
+		if(tacno==true){
+			nizBrojeva[0]=0;
+		}
+		else{
+			
+			nizBrojeva[0]=1;
+		}
+		
+		print(nizBrojeva[0]?x); //lexical (and syntax) error
+	}
+}

@@ -1,0 +1,34 @@
+program semanticsTest1
+	int varA, varB[];
+	char varC, varD[];
+	bool varT, varF[];
+	const int conA=4, conB='v';	//error
+	const someType conC='c', conD='d';	//error
+	const bool conT=true, conF=false;
+{
+	void notMain()	//error
+	char z;
+	char z;
+	bool tacno;
+	int nizBrojeva[];
+	{
+		{
+			tacno=true;
+			nizBrojeva=6;	//error
+			conA++;	//error
+			z++;	//error
+		}
+		
+		nizBrojeva[0]=0;
+		nizBrojeva[tacno??1]=z-z*nizBrojeva[0]; //errors
+		read(nizBrojeva[3]);
+		nizBrojeva[3]=-z;		//error
+		nizBrojeva[4]=-nizBrojeva[3];
+		tacno[2]=5;		//error
+		nizBrojeva[4]++;
+		print(nizBrojeva[0]??nizBrojeva[4],5);
+		print(nizBrojeva);	//error
+		read(conT);	//error
+		return nizBrojeva[4];		//error
+	}
+}
